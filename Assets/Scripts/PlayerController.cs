@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         }
         if (conVec == Vector2.zero)
         {
-            DOTween.To(() => maxSpeed, x => speed = x, 0, 0.5f);
+            DOTween.To(() => maxSpeed, x => speed = x, 0, 0.25f);
             animator.SetBool("isMoving", false);
         }
 

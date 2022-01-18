@@ -835,7 +835,7 @@ MonoBehaviour:
   _move: {x: 0, y: 0, z: 0}
   turnSpeed: 10
   speed: 0
-  maxSpeed: 8
+  maxSpeed: 7
   rotationPower: 0.75
   aimValue: 0
   animator: {fileID: 1865245344}
