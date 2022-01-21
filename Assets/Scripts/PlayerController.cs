@@ -88,11 +88,19 @@ public class PlayerController : MonoBehaviour
         turnPoint.transform.position = transform.position;
 
         transform.rotation = Quaternion.Lerp(transform.rotation, turnPoint.rotation, turnSpeed * Time.deltaTime);
+
     }
 
     private void LateUpdate()
     {
         controller.Move(speed * Time.deltaTime * transform.forward);
         turnPoint.LookAt(new Vector3(_move.x, 0, _move.z) + turnPoint.position);
+
+        if (!controller.isGrounded)
+        {
+            controller.Move(Vector3.down * 9.81f * Time.deltaTime);
+        }
     }
+
+
 }
