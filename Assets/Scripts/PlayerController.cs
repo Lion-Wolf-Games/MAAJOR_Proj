@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
         if (_moveInput == Vector3.zero)
         {
-            DOTween.To(() => 0, x => speed = x, maxSpeed, 0.5f);
+            DOTween.To(() => 0, x => speed = x, maxSpeed, 0.25f);
             animator.SetBool("isMoving", true);
         }
         if (conVec == Vector2.zero)
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         float camFacing = Camera.main.transform.eulerAngles.y;
         _move = Quaternion.Euler(0, camFacing, 0) * _moveInput;
 
-        followTransform.transform.position = transform.position;
+        followTransform.transform.position = transform.position + Vector3.up;
         turnPoint.transform.position = transform.position;
 
         transform.rotation = Quaternion.Lerp(transform.rotation, turnPoint.rotation, turnSpeed * Time.deltaTime);
