@@ -11,8 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform turnPoint;
 
     public Vector3 _moveInput;
+    public float joystickDeadzone;
+    public bool _jumpInput;
     public Vector3 _move;
     public float turnSpeed;
+    public float _jumpForce;
+    private float _verticalSpeed;
 
     public float speed;
     public float maxSpeed;
@@ -31,18 +35,26 @@ public class PlayerController : MonoBehaviour
 
         if (_moveInput == Vector3.zero)
         {
-            DOTween.To(() => 0, x => speed = x, maxSpeed, 0.25f);
+            //DOTween.To(() => 0, x => speed = x, maxSpeed, 0.25f);
             animator.SetBool("isMoving", true);
         }
         if (conVec == Vector2.zero)
         {
-            DOTween.To(() => maxSpeed, x => speed = x, 0, 0.25f);
+            DOTween.To(() => speed, x => speed = x, 0, 0.25f);
             animator.SetBool("isMoving", false);
         }
 
         _moveInput = conVec;
         _moveInput.z = _moveInput.y;
         _moveInput.y = 0;
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (controller.isGrounded)
+        {
+            _jumpInput = true;
+        }
     }
 
     public void OnMouseMove(InputAction.CallbackContext context)
@@ -87,19 +99,41 @@ public class PlayerController : MonoBehaviour
         followTransform.transform.position = transform.position + Vector3.up;
         turnPoint.transform.position = transform.position;
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, turnPoint.rotation, turnSpeed * Time.deltaTime);
+        speed = Mathf.Lerp(speed, _moveInput.magnitude * maxSpeed, Time.deltaTime * 5);
 
+        transform.rotation = Quaternion.Lerp(transform.rotation, turnPoint.rotation, turnSpeed * Time.deltaTime);
     }
 
     private void LateUpdate()
     {
-        controller.Move(speed * Time.deltaTime * transform.forward);
-        turnPoint.LookAt(new Vector3(_move.x, 0, _move.z) + turnPoint.position);
 
         if (!controller.isGrounded)
         {
-            controller.Move(Vector3.down * 9.81f * Time.deltaTime);
+            //controller.Move(Vector3.down * 9.81f * Time.deltaTime);
+            _verticalSpeed -= 9.81f * Time.deltaTime;
+
+            _jumpInput = false;
         }
+        else if (_verticalSpeed != 0)
+        {
+            _verticalSpeed = 0;
+
+            Debug.Log("reseting vertical speed");
+        }
+
+        Debug.Log("isGrounded " + controller.isGrounded);
+
+        if (_jumpInput && controller.isGrounded)
+        {
+            _verticalSpeed = _jumpForce;
+            controller.Move(Vector3.up * _verticalSpeed * Time.deltaTime);
+
+            Debug.Log("is Jumping");
+        }
+
+        controller.Move(Vector3.up * _verticalSpeed * Time.deltaTime);
+        controller.Move(speed * Time.deltaTime * transform.forward);
+        turnPoint.LookAt(new Vector3(_move.x, 0, _move.z) + turnPoint.position);
     }
 
 
