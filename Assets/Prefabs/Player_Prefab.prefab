@@ -466,7 +466,6 @@ GameObject:
   - component: {fileID: 1566719009391129382}
   - component: {fileID: 1566719009391129387}
   - component: {fileID: 1566719009391129386}
-  - component: {fileID: 478919380}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -521,6 +520,7 @@ MonoBehaviour:
   _moveInput: {x: 0, y: 0, z: 0}
   joystickDeadzone: 0.2
   _jumpInput: 0
+  _isGrounded: 0
   _move: {x: 0, y: 0, z: 0}
   turnSpeed: 10
   _jumpForce: 5
@@ -687,19 +687,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!135 &478919380
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566719009391129384}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.23
-  m_Center: {x: 0, y: 0.12, z: 0}
 --- !u!1 &1566719009494421175
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566719009850507726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.4, z: -4.25}
+  m_LocalPosition: {x: 0.5, y: 1.3999999, z: -4.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1566719008809778938}

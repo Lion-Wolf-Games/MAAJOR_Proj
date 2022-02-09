@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 _moveInput;
     public float joystickDeadzone;
     public bool _jumpInput;
+    public bool _isGrounded;
     public Vector3 _move;
     public float turnSpeed;
     public float _jumpForce;
@@ -51,9 +52,9 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (controller.isGrounded)
+        if (_isGrounded)
         {
-            _jumpInput = true;
+            _jumpInput = context.performed;
         }
     }
 
@@ -93,6 +94,21 @@ public class PlayerController : MonoBehaviour
         followTransform.transform.localEulerAngles = angles;
         #endregion
 
+        #region Ground Check
+
+        if (Physics.OverlapSphere(transform.position, 0.25f, 1 << 6).Length > 0)
+        {
+            _isGrounded = true;
+            animator.SetBool("isGrounded", true);
+        }
+        else
+        {
+            _isGrounded = false;
+            animator.SetBool("isGrounded", false);
+        }
+
+        #endregion
+
         float camFacing = Camera.main.transform.eulerAngles.y;
         _move = Quaternion.Euler(0, camFacing, 0) * _moveInput;
 
@@ -107,26 +123,24 @@ public class PlayerController : MonoBehaviour
     private void LateUpdate()
     {
 
-        if (!controller.isGrounded)
+        if (!_isGrounded)
         {
-            //controller.Move(Vector3.down * 9.81f * Time.deltaTime);
             _verticalSpeed -= 9.81f * Time.deltaTime;
 
             _jumpInput = false;
+
         }
-        else if (_verticalSpeed != 0)
+        else if (_verticalSpeed != -3)
         {
-            _verticalSpeed = 0;
-
-            Debug.Log("reseting vertical speed");
+            _verticalSpeed = -3;
         }
 
-        Debug.Log("isGrounded " + controller.isGrounded);
-
-        if (_jumpInput && controller.isGrounded)
+        if (_jumpInput && _isGrounded)
         {
             _verticalSpeed = _jumpForce;
             controller.Move(Vector3.up * _verticalSpeed * Time.deltaTime);
+
+            animator.SetTrigger("isJumping");
 
             Debug.Log("is Jumping");
         }
@@ -136,5 +150,8 @@ public class PlayerController : MonoBehaviour
         turnPoint.LookAt(new Vector3(_move.x, 0, _move.z) + turnPoint.position);
     }
 
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 0.25f);
+    }
 }
