@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     [SerializeField] CharacterController controller;
+    [SerializeField] private GameObject jumpFx;
 
     public void Move(InputAction.CallbackContext context)
     {
@@ -144,6 +145,11 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("isJumping");
 
             Debug.Log("is Jumping");
+
+            if (jumpFx != null)
+            {
+                Instantiate(jumpFx, transform.position, Quaternion.identity);
+            }
         }
 
         controller.Move(Vector3.up * _verticalSpeed * Time.deltaTime);
