@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
         #region Ground Check
 
-        if (Physics.OverlapSphere(transform.position, 0.25f, 1 << 6).Length > 0)
+        if (Physics.OverlapSphere(transform.position, 0.25f, 1 << 6).Length > 0 && _verticalSpeed < 1)
         {
             _isGrounded = true;
             animator.SetBool("isGrounded", true);
@@ -116,8 +116,9 @@ public class PlayerController : MonoBehaviour
         turnPoint.transform.position = transform.position;
 
         speed = Mathf.Lerp(speed, _moveInput.magnitude * maxSpeed, Time.deltaTime * 5);
-
+        animator.SetFloat("MoveSpeed", _moveInput.magnitude);
         transform.rotation = Quaternion.Lerp(transform.rotation, turnPoint.rotation, turnSpeed * Time.deltaTime);
+
     }
 
     private void LateUpdate()
