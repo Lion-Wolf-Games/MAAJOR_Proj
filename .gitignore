@@ -5,6 +5,8 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+MAAJOR_Proj_WwiseProject/.cache/
+
 # Visual Studio cache directory
 .vs/
 
