@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="PIM" ID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="PIM" ID="{EB70A39C-70FA-4AD1-A134-E8D69CD0BFA2}" ShortID="62921696">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PIM" ID="{72BA5848-86F3-4061-9496-F9D22A5EFFE0}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="PIM_FOL" ID="{C8EE77AD-7969-4B3D-8564-3A4C6DB1918D}" ShortID="455794271">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PIM_FOL" ID="{025B24B2-6866-459F-B65A-9E8AAD3F8526}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+								</Reference>
+							</ReferenceList>
+							<ObjectLists/>
+						</ActorMixer>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

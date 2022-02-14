@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{32A4E988-5353-47DC-931D-2B9586AEDBCE}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="NME" ID="{32A4E988-5353-47DC-931D-2B9586AEDBCE}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="NME" ID="{FDD16BDB-F034-4C08-8C71-99E25AE88711}" ShortID="417320572">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="NME" ID="{7D19E491-7FB2-4020-B9F1-CDE1FC7A8C03}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

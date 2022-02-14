@@ -38,8 +38,42 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fbf3588fdb41bd49897c85e19de4d51e
     GuidInternal: 
-    m_lastTime: -8585571303977205471
+    m_lastTime: -8585571164224064455
     List:
+    - name: AMB
+      guid: 035581ea9b145a4bba20803b78eb61a2
+      id: 1117531639
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: AMB
+        ObjectType: 2
+        guid: 035581ea9b145a4bba20803b78eb61a2
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB
+    - name: ENV
+      guid: e58719ad685c344ea9579b2922b474b8
+      id: 529726550
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: ENV
+        ObjectType: 2
+        guid: e58719ad685c344ea9579b2922b474b8
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\ENV
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +88,148 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: MIDENA
+      guid: 286b79bb34b2714f99b68506f8964dc6
+      id: 489596525
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MIDENA
+        ObjectType: 2
+        guid: 286b79bb34b2714f99b68506f8964dc6
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MIDENA
+    - name: MIDENA_FOL
+      guid: 06e303125b611349b36b0f7e5c4e1dad
+      id: 2662486595
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MIDENA
+        ObjectType: 2
+        guid: 286b79bb34b2714f99b68506f8964dc6
+      - ElementName: MIDENA_FOL
+        ObjectType: 2
+        guid: 06e303125b611349b36b0f7e5c4e1dad
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MIDENA\MIDENA_FOL
+    - name: MUSIC
+      guid: 147afb3023db964b8d76c562857debbb
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MUSIC
+        ObjectType: 2
+        guid: 147afb3023db964b8d76c562857debbb
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC
+    - name: NME
+      guid: 91e4197db27f2040b9f1cde1fc7a8c03
+      id: 578529263
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: NME
+        ObjectType: 2
+        guid: 91e4197db27f2040b9f1cde1fc7a8c03
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\NME
+    - name: PIM
+      guid: 4858ba72f38661409496f9d22a5effe0
+      id: 1115118801
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: PIM
+        ObjectType: 2
+        guid: 4858ba72f38661409496f9d22a5effe0
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PIM
+    - name: PIM_FOL
+      guid: b2245b0266689f45b65a9e8aad3f8526
+      id: 43049847
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: PIM
+        ObjectType: 2
+        guid: 4858ba72f38661409496f9d22a5effe0
+      - ElementName: PIM_FOL
+        ObjectType: 2
+        guid: b2245b0266689f45b65a9e8aad3f8526
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PIM\PIM_FOL
+    - name: PROPS
+      guid: 47eb0efe825f804a82dbc5a437f5b58d
+      id: 968010305
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: PROPS
+        ObjectType: 2
+        guid: 47eb0efe825f804a82dbc5a437f5b58d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PROPS
+    - name: UI
+      guid: 77c06ea6e86d2f4aa399996e6355f860
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: UI
+        ObjectType: 2
+        guid: 77c06ea6e86d2f4aa399996e6355f860
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:

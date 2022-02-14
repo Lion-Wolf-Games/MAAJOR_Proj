@@ -9,6 +9,42 @@
 							<ObjectRef Name="System" ID="{9860F2A4-354F-40DE-8BF0-AFA0B0EF567C}" WorkUnitID="{92418837-9BF6-48BC-AC5A-F0D23E9E4CAE}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="AMB" ID="{EA815503-149B-4B5A-BA20-803B78EB61A2}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="ENV" ID="{AD1987E5-5C68-4E34-A957-9B2922B474B8}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="PIM" ID="{72BA5848-86F3-4061-9496-F9D22A5EFFE0}">
+							<ChildrenList>
+								<Bus Name="PIM_FOL" ID="{025B24B2-6866-459F-B65A-9E8AAD3F8526}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="NME" ID="{7D19E491-7FB2-4020-B9F1-CDE1FC7A8C03}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="MIDENA" ID="{BB796B28-B234-4F71-99B6-8506F8964DC6}">
+							<ChildrenList>
+								<Bus Name="MIDENA_FOL" ID="{1203E306-615B-4913-B36B-0F7E5C4E1DAD}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="MUSIC" ID="{30FB7A14-DB23-4B96-8D76-C562857DEBBB}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="PROPS" ID="{FE0EEB47-5F82-4A80-82DB-C5A437F5B58D}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="UI" ID="{A66EC077-6DE8-4A2F-A399-996E6355F860}">
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>

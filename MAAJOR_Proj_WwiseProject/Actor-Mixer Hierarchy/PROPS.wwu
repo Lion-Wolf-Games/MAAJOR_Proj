@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{46795534-FEC9-4959-83E3-49A233A8B557}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="PROPS" ID="{46795534-FEC9-4959-83E3-49A233A8B557}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="PROPS" ID="{9D852A58-79E2-4EBA-B145-D3D80D2F97A2}" ShortID="399990598">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PROPS" ID="{FE0EEB47-5F82-4A80-82DB-C5A437F5B58D}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
