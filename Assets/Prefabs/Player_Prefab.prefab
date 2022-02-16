@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &435831300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 435831301}
+  m_Layer: 8
+  m_Name: SmokeSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &435831301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435831300}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.303, z: -0.774}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1566719009391129385}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &505271649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 505271650}
+  m_Layer: 8
+  m_Name: GrassSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &505271650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505271649}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.056, z: -0.1557697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1566719009391129385}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1347497423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347497424}
+  m_Layer: 8
+  m_Name: HitFxSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1347497424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347497423}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.9442525, z: -0.1557697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1566719009391129385}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566719008371006100
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +576,9 @@ Transform:
   m_Children:
   - {fileID: 1566719008371006101}
   - {fileID: 1311853567026845552}
+  - {fileID: 435831301}
+  - {fileID: 505271650}
+  - {fileID: 1347497424}
   m_Father: {fileID: 5763604688520699904}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -515,6 +608,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b534f4cdd0fd16f4d9fbe1b0e0ef2a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 100
+  _maxHealth: 100
+  _healthBar: {fileID: 0}
+  _canGetHit: 1
+  _invincibilityTime: 0
+  animator: {fileID: 1566719008738073820}
+  _deathFx: {fileID: 0}
+  _hitFx: {fileID: 6039577771053554818, guid: 30783e8333d66bf4d9a08a29981aaf7f, type: 3}
+  _hitSpawnPos: {fileID: 1347497424}
+  _canBeInterupted: 1
   followTransform: {fileID: 1566719008636742881}
   turnPoint: {fileID: 1566719009066024863}
   _moveInput: {x: 0, y: 0, z: 0}
@@ -526,10 +629,44 @@ MonoBehaviour:
   _jumpForce: 5
   speed: 0
   maxSpeed: 6
+  dashDuration: 1
+  dashCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.023296356
+      value: 0
+      inSlope: 8.110539
+      outSlope: 8.110539
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.1495655
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.015576396
+      outSlope: -0.015576396
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16823822
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   rotationPower: 0.75
   aimValue: 0
-  animator: {fileID: 1566719008738073820}
   controller: {fileID: 1566719009391129387}
+  jumpFx: {fileID: 8242363146913805139, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
 --- !u!114 &1566719009391129382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +819,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 775a4097-29ee-4ce3-87fb-0256cf1b847f
     m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1566719009391129380}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Dash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 58f45c3f-7cfc-4af2-8928-52f91aa1168b
+    m_ActionName: Player/Dash[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -875,7 +1028,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566719009850507726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.3999999, z: -4.25}
+  m_LocalPosition: {x: 0.5, y: 1.4000001, z: -4.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1566719008809778938}
@@ -966,6 +1119,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1080819252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837314110636068298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cbbc9e20209d743a6ad6d895137c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smokeParticle: {fileID: 3501014057941490324, guid: a692bf99cfb10f24dbfc1c16917ef1a8, type: 3}
+  grassParticle: {fileID: 3936216733315156393, guid: b547f9be8bf6368498e6b6ddb2873a27, type: 3}
+  smokeSpawnPoint: {fileID: 435831301}
+  grassSpawnPoint: {fileID: 505271650}
 --- !u!1 &6422302146803015422
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +1144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5763604688520699904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

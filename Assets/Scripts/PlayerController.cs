@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : LivingObject
 {
     private Vector2 _look;
     [SerializeField] private Transform followTransform;
@@ -21,12 +21,16 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public float maxSpeed;
+    public float dashDuration;
+    public AnimationCurve dashCurve;
+
+    private float dashTime;
 
     [Header("Camera")]
     public float rotationPower;
     public float aimValue;
 
-    public Animator animator;
+    //public Animator animator;
 
     [SerializeField] CharacterController controller;
     [SerializeField] private GameObject jumpFx;
@@ -62,6 +66,19 @@ public class PlayerController : MonoBehaviour
     public void OnMouseMove(InputAction.CallbackContext context)
     {
         _look = context.ReadValue<Vector2>();
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if(!context.performed)
+        {
+            return;
+        }
+
+        if(dashTime <= Time.time)
+        {
+            dashTime = Time.time + dashDuration;
+        }
     }
 
     private void Update()
@@ -150,6 +167,13 @@ public class PlayerController : MonoBehaviour
             {
                 Instantiate(jumpFx, transform.position, Quaternion.identity);
             }
+        }
+
+        if(dashTime >= Time.time)
+        {
+            float t = (dashTime - Time.time) / dashDuration;
+            float dashVelocity = dashCurve.Evaluate(t);
+            controller.Move(dashVelocity * Time.deltaTime * transform.forward);
         }
 
         controller.Move(Vector3.up * _verticalSpeed * Time.deltaTime);
