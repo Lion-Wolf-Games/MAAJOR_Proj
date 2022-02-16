@@ -24,7 +24,7 @@ public class PlayerController : LivingObject
     public float dashDuration;
     public AnimationCurve dashCurve;
 
-    private float dashTime;
+    [SerializeField] private float dashTime;
 
     [Header("Camera")]
     public float rotationPower;
@@ -70,14 +70,11 @@ public class PlayerController : LivingObject
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if(!context.performed)
-        {
-            return;
-        }
-
-        if(dashTime <= Time.time)
+        
+        if( (context.performed) && (dashTime <= Time.time))
         {
             dashTime = Time.time + dashDuration;
+            animator.SetTrigger("Roll");
         }
     }
 
@@ -137,6 +134,8 @@ public class PlayerController : LivingObject
         animator.SetFloat("MoveSpeed", _moveInput.magnitude);
         transform.rotation = Quaternion.Lerp(transform.rotation, turnPoint.rotation, turnSpeed * Time.deltaTime);
 
+        
+
     }
 
     private void LateUpdate()
@@ -172,6 +171,7 @@ public class PlayerController : LivingObject
         if(dashTime >= Time.time)
         {
             float t = (dashTime - Time.time) / dashDuration;
+            t = Mathf.Abs(t-1);
             float dashVelocity = dashCurve.Evaluate(t);
             controller.Move(dashVelocity * Time.deltaTime * transform.forward);
         }
