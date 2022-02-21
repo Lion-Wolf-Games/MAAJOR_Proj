@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TestingScript : MonoBehaviour
 {
-    [SerializeField] private GameObject smokeParticle;
-    [SerializeField] private GameObject grassParticle;
+    public PlayerInput input;
+    private string currentControlScheme;
+ 
+    private void Update() {
+        if (input.currentControlScheme != currentControlScheme)
+        {
+            currentControlScheme = input.currentControlScheme;
+            Changedcontrol(input);
+        }
+    }
 
-    [SerializeField] private Transform smokeSpawnPoint;
-    [SerializeField] private Transform grassSpawnPoint;
 
-    public void Step()
+    public void Changedcontrol(PlayerInput pi)
     {
-        Instantiate(smokeParticle, smokeSpawnPoint.position, Quaternion.identity);
-        Instantiate(grassParticle, grassSpawnPoint.position, Quaternion.identity);
+        Debug.Log("inputChanged");
     }
 }

@@ -19,6 +19,8 @@ public class LivingObject : MonoBehaviour, IDamagable
     protected bool _isAlive = true;
     public Action<GameObject> OnKill;
     public Action<int> OnHealthChange;
+    public Action<int> OnHit;
+    public Action<int> OnHeal;
 
     [Header("Animation")]
     [SerializeField] protected Animator animator;
@@ -51,7 +53,11 @@ public class LivingObject : MonoBehaviour, IDamagable
 
     }
 
-    public virtual void ChangeHealth(int hP) //Heal or Hurt
+    public virtual void ChangeHealth(int value)
+    {
+        ChangeHealth(value,transform.position);
+    }
+    public virtual void ChangeHealth(int hP, Vector3 origin) //Heal or Hurt
     {
 
         if (!_isAlive)
@@ -61,20 +67,22 @@ public class LivingObject : MonoBehaviour, IDamagable
 
         if (hP > 0)  //Heal
         {
-            Debug.Log("Heal");
-
-            _health = Mathf.Clamp(_health + hP, 0, _maxHealth);
-
-            if (_hasHealthBar)
-            {
-                UpdateHealthBar();
-            }
-
-            OnHealthChange?.Invoke(_health);
+            Heal(hP);
         }
         else if (_canGetHit)   //Hurt
         {
-            _health = Mathf.Clamp(_health + hP, 0, _maxHealth);
+            Hit(hP, origin);
+        }
+
+        if (_hasHealthBar)
+        {
+            UpdateHealthBar();
+        }
+    }
+
+    protected virtual void Hit(int damage , Vector3 origin)
+    {
+        _health = Mathf.Clamp(_health + damage, 0, _maxHealth);
 
             PoolManager.Instance.Spawn(_hitFx, true, _hitSpawnPos.position, _hitSpawnPos.rotation);
 
@@ -98,12 +106,21 @@ public class LivingObject : MonoBehaviour, IDamagable
 
             OnHealthChange?.Invoke(_health);
             InvincibilityFrames();
-        }
+    }
 
-        if (_hasHealthBar)
-        {
-            UpdateHealthBar();
-        }
+    protected virtual void Heal(int healAmmount)
+    {
+        Debug.Log("Heal");
+
+            _health = Mathf.Clamp(_health + healAmmount, 0, _maxHealth);
+
+            if (_hasHealthBar)
+            {
+                UpdateHealthBar();
+            }
+
+            OnHealthChange?.Invoke(_health);
+            OnHeal?.Invoke(_health);
     }
 
     private void UpdateHealthBar()

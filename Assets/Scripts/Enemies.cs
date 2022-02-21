@@ -20,6 +20,7 @@ public class Enemies : MonoBehaviour
     [SerializeField] private float attackRange;
     [SerializeField] private float attackDuration;
     [SerializeField] private LayerMask hostileLayer;
+    [SerializeField] private int damage;
 
     [Space]
     [SerializeField] private float wanderRange;
@@ -76,6 +77,11 @@ public class Enemies : MonoBehaviour
                 case FSM_Enemies.Attacking:
                     navAgent.SetDestination(transform.position);
                     attackTime = Time.time + attackDuration;
+
+                    if (_target.TryGetComponent<IDamagable>(out IDamagable IdTarget))
+                    {
+                        IdTarget.ChangeHealth(-damage,transform.position);
+                    }
 
                     if (anim != null)
                     {

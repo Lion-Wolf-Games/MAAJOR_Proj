@@ -267,7 +267,7 @@ MonoBehaviour:
   CameraDistance: 4.25
   CameraCollisionFilter:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   IgnoreTag: 
   CameraRadius: 0.2
 --- !u!114 &1566719008809778933
@@ -654,11 +654,40 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  dashTime: 0
+  hitRecoilDuration: 1
+  hitForce:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 5
+      inSlope: -15.246742
+      outSlope: -15.246742
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.13452487
+      outWeight: 0.091733895
+    - serializedVersion: 3
+      time: 1
+      value: 0.023590088
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.12796369
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   rotationPower: 0.75
   aimValue: 0
+  smokeParticle: {fileID: 3501014057941490324, guid: a692bf99cfb10f24dbfc1c16917ef1a8, type: 3}
+  grassParticle: {fileID: 3936216733315156393, guid: b547f9be8bf6368498e6b6ddb2873a27, type: 3}
+  smokeSpawnPoint: {fileID: 435831301}
+  grassSpawnPoint: {fileID: 505271650}
   controller: {fileID: 1566719009391129387}
   jumpFx: {fileID: 8242363146913805139, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
+  DashFx: {fileID: 5572883630181288644, guid: 350eb1182d7e81544a999cdf8b900c0f, type: 3}
 --- !u!114 &1566719009391129382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,7 +1140,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1080819252
+--- !u!114 &4075109057323673213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1120,13 +1149,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1837314110636068298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3cbbc9e20209d743a6ad6d895137c23, type: 3}
+  m_Script: {fileID: 11500000, guid: 440f7782eb221a7499d6dfc3e44bb2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smokeParticle: {fileID: 3501014057941490324, guid: a692bf99cfb10f24dbfc1c16917ef1a8, type: 3}
-  grassParticle: {fileID: 3936216733315156393, guid: b547f9be8bf6368498e6b6ddb2873a27, type: 3}
-  smokeSpawnPoint: {fileID: 435831301}
-  grassSpawnPoint: {fileID: 505271650}
+  goTarget: {fileID: 1566719009391129384}
 --- !u!1 &6422302146803015422
 GameObject:
   m_ObjectHideFlags: 0

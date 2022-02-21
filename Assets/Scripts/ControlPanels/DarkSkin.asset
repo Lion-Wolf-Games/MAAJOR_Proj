@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f210e2dc80e2e48809ea980bc9d829, type: 3}
+  m_Name: DarkSkin
+  m_EditorClassIdentifier: 
+  keys:
+  - KeyName: <Keyboard>/a
+    KeyIcon: {fileID: 21300000, guid: f9eacdade686f8247adecedde8e8050d, type: 3}
+  - KeyName: <Keyboard>/b
+    KeyIcon: {fileID: 21300000, guid: 1a2107c92a4839f47a498497d4c57543, type: 3}
+  - KeyName: <Keyboard>/c
+    KeyIcon: {fileID: 21300000, guid: d4f8c7b6cb2dabe4d86de4ce680e88e7, type: 3}
+  - KeyName: <Keyboard>/d
+    KeyIcon: {fileID: 21300000, guid: 2282705987fec8946b78a97872d8ac27, type: 3}
+  - KeyName: <Keyboard>/e
+    KeyIcon: {fileID: 21300000, guid: c5078803026355e4eb0d01d22ac0d059, type: 3}
+  - KeyName: <Keyboard>/f
+    KeyIcon: {fileID: 21300000, guid: 46704cf970eef6548beba6ffc301b03a, type: 3}
+  - KeyName: <Keyboard>/g
+    KeyIcon: {fileID: 21300000, guid: fa694a4a83d7a9748ada271b93008092, type: 3}
+  - KeyName: <Keyboard>/h
+    KeyIcon: {fileID: 21300000, guid: baf9852feae19cb4c89b23f10335bd05, type: 3}
+  - KeyName: <Keyboard>/i
+    KeyIcon: {fileID: 21300000, guid: 0ec5c23926f4a354db95c29484971191, type: 3}
+  - KeyName: <Keyboard>/j
+    KeyIcon: {fileID: 21300000, guid: 42a6acf71d8357d41b4e3c6b3194e813, type: 3}
+  - KeyName: <Keyboard>/k
+    KeyIcon: {fileID: 21300000, guid: 4e39980b809fea248be957b30a299d5f, type: 3}
+  - KeyName: <Keyboard>/l
+    KeyIcon: {fileID: 21300000, guid: 5458239fe34dc0045984da4d09132823, type: 3}
+  - KeyName: <Keyboard>/m
+    KeyIcon: {fileID: 21300000, guid: 07f88a457b2d2e24092301244c52bbbd, type: 3}
+  - KeyName: <Keyboard>/n
+    KeyIcon: {fileID: 21300000, guid: cfa0a20d8d27b4b45a5861a36c3c6985, type: 3}
+  - KeyName: <Keyboard>/o
+    KeyIcon: {fileID: 21300000, guid: afb43c69cf2094944a50d9c912771b5a, type: 3}
+  - KeyName: <Keyboard>/p
+    KeyIcon: {fileID: 21300000, guid: 909e1165a4a5c16498d2b2bc1830bffc, type: 3}
+  - KeyName: <Keyboard>/q
+    KeyIcon: {fileID: 21300000, guid: 7f68f64e0bf9b184cbb3a917aaba908e, type: 3}
+  - KeyName: <Keyboard>/r
+    KeyIcon: {fileID: 21300000, guid: 0983f103962f24640aafe3176e3266d2, type: 3}
+  - KeyName: <Keyboard>/s
+    KeyIcon: {fileID: 21300000, guid: 619192f9a2163434dbfdcbc5a6dca236, type: 3}
+  - KeyName: <Keyboard>/t
+    KeyIcon: {fileID: 21300000, guid: 7f1e80e2978844d49864f61bd35b80db, type: 3}
+  - KeyName: <Keyboard>/u
+    KeyIcon: {fileID: 21300000, guid: 4b4b0c5835c01264fa52c4cc323b8fa1, type: 3}
+  - KeyName: <Keyboard>/v
+    KeyIcon: {fileID: 21300000, guid: 4b40e286685e3dd4291d456cbfeebe80, type: 3}
+  - KeyName: <Keyboard>/w
+    KeyIcon: {fileID: 21300000, guid: ac0c3606d4ca32244a2207dcba11d565, type: 3}
+  - KeyName: <Keyboard>/x
+    KeyIcon: {fileID: 21300000, guid: 97a8f41f02c2f1e48afce561464ff1d8, type: 3}
+  - KeyName: <Keyboard>/y
+    KeyIcon: {fileID: 21300000, guid: 4bf55596dc456634bbedc00e6c8b0626, type: 3}
+  - KeyName: <Keyboard>/z
+    KeyIcon: {fileID: 21300000, guid: 7d80cdc5cb590084b986ed5617dff1c1, type: 3}
+  - KeyName: <Keyboard>/space
+    KeyIcon: {fileID: 21300000, guid: f8f10493b6eb72244b8fcfca42ce4eda, type: 3}
+  - KeyName: <Keyboard>/shift
+    KeyIcon: {fileID: 21300000, guid: 23f63c35670150f4ea115f539f37189b, type: 3}
+  - KeyName: <Keyboard>/alt
+    KeyIcon: {fileID: 21300000, guid: 6bbb50aee87ab174dbe105f6ce508a4c, type: 3}
+  - KeyName: <Keyboard>/leftShift
+    KeyIcon: {fileID: 21300000, guid: 23f63c35670150f4ea115f539f37189b, type: 3}
+  - KeyName: <Pointer>/delta
+    KeyIcon: {fileID: 21300000, guid: 8b8aa3648b0786a4eb0568fc0a72e5e4, type: 3}
+  - KeyName: <Mouse>/leftButton
+    KeyIcon: {fileID: 21300000, guid: 49260db6a38f8734295cbbc89e05e285, type: 3}
+  - KeyName: <Mouse>/rightButton
+    KeyIcon: {fileID: 21300000, guid: cedac693e409a4240819c5cc212f02df, type: 3}
+  - KeyName: <Gamepad>/leftStick
+    KeyIcon: {fileID: 21300000, guid: bbd0768f5c16a4743b48d1e9f287eb20, type: 3}
+  - KeyName: <Gamepad>/rightStick
+    KeyIcon: {fileID: 21300000, guid: d4378d1f3a986f64b8c93250d50b1e92, type: 3}
+  - KeyName: <Gamepad>/rightTrigger
+    KeyIcon: {fileID: 21300000, guid: 8eaa4bf568d14c846bb9d6c1bedc61e7, type: 3}
+  - KeyName: <Gamepad>/leftTrigger
+    KeyIcon: {fileID: 21300000, guid: eb1a7f919c51d844c9fc00e80414a5b1, type: 3}
+  - KeyName: <Gamepad>/buttonWest
+    KeyIcon: {fileID: 21300000, guid: 781e4b965b1be884e846390e4296a148, type: 3}
+  - KeyName: <Gamepad>/buttonEast
+    KeyIcon: {fileID: 21300000, guid: 7620c969a4b7cec439b08f39272a142c, type: 3}
+  - KeyName: <Gamepad>/buttonSouth
+    KeyIcon: {fileID: 21300000, guid: 4bc817fa24c73bd44ae71cb71f1211da, type: 3}
+  - KeyName: <Gamepad>/buttonNorth
+    KeyIcon: {fileID: 21300000, guid: 1811b848b487c1a46bc10050029df2b7, type: 3}

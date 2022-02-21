@@ -18,23 +18,37 @@ public class PlayerController : LivingObject
     public float turnSpeed;
     public float _jumpForce;
     private float _verticalSpeed;
-
     public float speed;
     public float maxSpeed;
+
+    [Header("Dash")]
     public float dashDuration;
     public AnimationCurve dashCurve;
+    private float dashTime;
+    private Vector3 dashDir;
 
-    [SerializeField] private float dashTime;
+    [Header("Hit")]
+    public float hitRecoilDuration;
+    private Vector3 hitDir;
+    private float hitTime;
+    public AnimationCurve hitForce;
 
     [Header("Camera")]
     public float rotationPower;
     public float aimValue;
 
+    [Header("Walk FX")]
+    [SerializeField] private GameObject smokeParticle;
+    [SerializeField] private GameObject grassParticle;
+
+    [SerializeField] private Transform smokeSpawnPoint;
+    [SerializeField] private Transform grassSpawnPoint;
+
     //public Animator animator;
 
     [SerializeField] CharacterController controller;
     [SerializeField] private GameObject jumpFx;
-
+    [SerializeField] private GameObject DashFx;
     public void Move(InputAction.CallbackContext context)
     {
         Vector2 conVec = context.ReadValue<Vector2>();
@@ -74,6 +88,8 @@ public class PlayerController : LivingObject
         if( (context.performed) && (dashTime <= Time.time))
         {
             dashTime = Time.time + dashDuration;
+            dashDir = transform.forward;
+            PoolManager.Instantiate(DashFx,transform.position,transform.rotation);
             animator.SetTrigger("Roll");
         }
     }
@@ -134,7 +150,6 @@ public class PlayerController : LivingObject
         animator.SetFloat("MoveSpeed", _moveInput.magnitude);
         transform.rotation = Quaternion.Lerp(transform.rotation, turnPoint.rotation, turnSpeed * Time.deltaTime);
 
-        
 
     }
 
@@ -168,19 +183,49 @@ public class PlayerController : LivingObject
             }
         }
 
+        #region Dash
         if(dashTime >= Time.time)
         {
             float t = (dashTime - Time.time) / dashDuration;
             t = Mathf.Abs(t-1);
             float dashVelocity = dashCurve.Evaluate(t);
-            controller.Move(dashVelocity * Time.deltaTime * transform.forward);
+            controller.Move(dashVelocity * Time.deltaTime * dashDir);
         }
+        #endregion
+        
+        #region HitRecoil
+        if(hitTime >= Time.time)
+        {
+            float t = (hitTime - Time.time) / hitRecoilDuration;
+            t = Mathf.Abs(t - 1);
+            float hitVelocity = hitForce.Evaluate(t);
+            controller.Move(hitVelocity * Time.deltaTime * hitDir);
+        }
+        #endregion
 
         controller.Move(Vector3.up * _verticalSpeed * Time.deltaTime);
         controller.Move(speed * Time.deltaTime * transform.forward);
         turnPoint.LookAt(new Vector3(_move.x, 0, _move.z) + turnPoint.position);
     }
 
+    protected override void Hit(int damage,Vector3 origin)
+    {
+        base.Hit(damage,origin);
+        hitTime = Time.time + hitRecoilDuration;
+        if(origin == transform.position)
+        {
+            hitDir = -transform.forward;
+        } else
+        {                
+            hitDir = transform.position - origin;
+        }
+    }
+
+    public void Step()
+    {
+        Instantiate(smokeParticle, smokeSpawnPoint.position, Quaternion.identity);
+        Instantiate(grassParticle, grassSpawnPoint.position, Quaternion.identity);
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, 0.25f);
