@@ -37,6 +37,9 @@ public class UiControlDisplay : MonoBehaviour
     }
 
     private void Update() {
+
+        if(!playerInput.isActiveAndEnabled) return;
+
         if(currentcontrolScheme != playerInput.currentControlScheme)
         {
             OnControlChanged();

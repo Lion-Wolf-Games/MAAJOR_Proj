@@ -26,6 +26,7 @@ public class PlayerController : LivingObject
     public AnimationCurve dashCurve;
     private float dashTime;
     private Vector3 dashDir;
+    public bool isDashing;
 
     [Header("Hit")]
     public float hitRecoilDuration;
@@ -37,18 +38,25 @@ public class PlayerController : LivingObject
     public float rotationPower;
     public float aimValue;
 
-    [Header("Walk FX")]
+    [Header("FX")]
     [SerializeField] private GameObject smokeParticle;
     [SerializeField] private GameObject grassParticle;
+    [SerializeField] private GameObject jumpFx;
+    [SerializeField] private GameObject DashFx;
 
     [SerializeField] private Transform smokeSpawnPoint;
     [SerializeField] private Transform grassSpawnPoint;
 
     //public Animator animator;
-
+    private PlayerInput input;
     [SerializeField] CharacterController controller;
-    [SerializeField] private GameObject jumpFx;
-    [SerializeField] private GameObject DashFx;
+
+    private void Start() 
+    {
+        input = GetComponent<PlayerInput>();
+        GameManager.Instance.OnPlay += OnGamePlay;
+    }
+
     public void Move(InputAction.CallbackContext context)
     {
         Vector2 conVec = context.ReadValue<Vector2>();
@@ -77,6 +85,16 @@ public class PlayerController : LivingObject
         }
     }
 
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            GameManager.Instance.ChangeGameState(GameState.Paused);
+            input.SwitchCurrentActionMap("UI");
+        }
+        
+    }
+
     public void OnMouseMove(InputAction.CallbackContext context)
     {
         _look = context.ReadValue<Vector2>();
@@ -87,6 +105,7 @@ public class PlayerController : LivingObject
         
         if( (context.performed) && (dashTime <= Time.time))
         {
+            isDashing = true;
             dashTime = Time.time + dashDuration;
             dashDir = transform.forward;
             PoolManager.Instantiate(DashFx,transform.position,transform.rotation);
@@ -184,12 +203,16 @@ public class PlayerController : LivingObject
         }
 
         #region Dash
-        if(dashTime >= Time.time)
+        if(dashTime >= Time.time && isDashing)
         {
             float t = (dashTime - Time.time) / dashDuration;
             t = Mathf.Abs(t-1);
             float dashVelocity = dashCurve.Evaluate(t);
             controller.Move(dashVelocity * Time.deltaTime * dashDir);
+        }
+        if(dashTime < Time.time && isDashing)
+        {
+            isDashing = false;
         }
         #endregion
         
@@ -208,6 +231,11 @@ public class PlayerController : LivingObject
         turnPoint.LookAt(new Vector3(_move.x, 0, _move.z) + turnPoint.position);
     }
 
+    private void OnGamePlay()
+    {
+        input.SwitchCurrentActionMap("Player");
+    }
+
     protected override void Hit(int damage,Vector3 origin)
     {
         base.Hit(damage,origin);
@@ -219,6 +247,23 @@ public class PlayerController : LivingObject
         {                
             hitDir = transform.position - origin;
         }
+    }
+
+    public void DisableInput()
+    {
+        input.enabled = false;
+        _moveInput = Vector3.zero;
+        isDashing = false;
+    }
+
+    public void EnableInput()
+    {
+        input.enabled = true;
+    }
+
+    public void Move(Vector3 velocity)
+    {
+        controller.Move(velocity);
     }
 
     public void Step()
