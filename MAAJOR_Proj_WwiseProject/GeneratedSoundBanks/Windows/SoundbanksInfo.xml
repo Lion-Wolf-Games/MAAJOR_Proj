@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="860471550" Language="SFX" Hash="3979423392">
+			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
+			<ShortName>PIM_Bank</ShortName>
+			<Path>PIM_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2296463320" Name="PIM_Dash" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Dash" DurationType="OneShot" DurationMin="0.929805" DurationMax="1.075494">
+					<IncludedMemoryFiles>
+						<File Id="130207513" Language="SFX">
+							<ShortName>Swoosh_Swipe-Smooth_04.wav</ShortName>
+							<Path>SFX\Swoosh_Swipe-Smooth_04_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3358588958" Name="PIM_Footstep" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Footstep" DurationType="OneShot" DurationMin="0." DurationMax="1.426916">
+					<IncludedMemoryFiles>
+						<File Id="71630185" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_09.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_09_3F75BDB9.wem</Path>
+						</File>
+						<File Id="88168832" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_11.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_11_3F75BDB9.wem</Path>
+						</File>
+						<File Id="195653497" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_08.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_08_3F75BDB9.wem</Path>
+						</File>
+						<File Id="214378350" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_05.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_05_3F75BDB9.wem</Path>
+						</File>
+						<File Id="298924077" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_04.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_04_3F75BDB9.wem</Path>
+						</File>
+						<File Id="337125983" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_02.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_02_3F75BDB9.wem</Path>
+						</File>
+						<File Id="440898314" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_01.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_01_3F75BDB9.wem</Path>
+						</File>
+						<File Id="554523483" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_07.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_07_3F75BDB9.wem</Path>
+						</File>
+						<File Id="831872434" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_03.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_03_3F75BDB9.wem</Path>
+						</File>
+						<File Id="1037516660" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_06.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_06_3F75BDB9.wem</Path>
+						</File>
+						<File Id="1050756203" Language="SFX">
+							<ShortName>Pim_Footstep_Grass_10.wav</ShortName>
+							<Path>SFX\Pim_Footstep_Grass_10_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{2769EC75-F4BD-4DBB-A004-6E14AAF1D230}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{2769EC75-F4BD-4DBB-A004-6E14AAF1D230}">
+							<Media>
+								<File Id="71630185"/>
+								<File Id="88168832"/>
+								<File Id="195653497"/>
+								<File Id="214378350"/>
+								<File Id="298924077"/>
+								<File Id="337125983"/>
+								<File Id="440898314"/>
+								<File Id="554523483"/>
+								<File Id="831872434"/>
+								<File Id="1037516660"/>
+								<File Id="1050756203"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2539778304" Name="PIM_Jump" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Jump" DurationType="OneShot" DurationMin="1.297823" DurationMax="1.297823">
+					<IncludedMemoryFiles>
+						<File Id="540778946" Language="SFX">
+							<ShortName>Pim_Jump_1.wav</ShortName>
+							<Path>SFX\Pim_Jump_1_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="1570286487" Name="PIM_Footsteps_Material" ObjectPath="\Switches\Default Work Unit\PIM_Footsteps_Material" GUID="{D4B28F84-3206-4653-8625-359F3F3DEF73}">
+					<Switches>
+						<Switch Id="4248645337" Name="Grass" ObjectPath="\Switches\Default Work Unit\PIM_Footsteps_Material\Grass" GUID="{2769EC75-F4BD-4DBB-A004-6E14AAF1D230}"/>
+						<Switch Id="1216965916" Name="Stone" ObjectPath="\Switches\Default Work Unit\PIM_Footsteps_Material\Stone" GUID="{22867B59-5825-45A3-ADF7-0819E944EB31}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3668052462">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c758f1fe023f1a84ebd42193adc0a97e, type: 3}
+  m_Name: CFBA8CA7-B9C6-43BB-94C5-FEFB8DF91318
+  m_EditorClassIdentifier: 
+  objectName: PIM_Bank
+  id: 860471550
+  guid: CFBA8CA7-B9C6-43BB-94C5-FEFB8DF91318

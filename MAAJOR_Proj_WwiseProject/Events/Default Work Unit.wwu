@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="AMB" ID="{E1D9AC50-11B9-4FC1-A5B0-0B99CE19CEA1}" ShortID="525041750"/>
+				<Folder Name="PIM" ID="{12D1D987-C986-427A-B4A9-FA699B1D4C98}" ShortID="612945838">
+					<ChildrenList>
+						<Folder Name="FOL" ID="{BB02B259-CEFB-4F1C-905E-C92C01499871}" ShortID="859794976">
+							<ChildrenList>
+								<Event Name="PIM_Footstep" ID="{8222D9F5-F2EC-4014-B55A-FBDE86795409}">
+									<ChildrenList>
+										<Action Name="" ID="{FC5286F1-3A29-47D9-92FB-1EC584116007}" ShortID="984176203">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Footsteps" ID="{306CE3B7-0B8A-4357-9DB3-888399CBCBA9}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PIM_Dash" ID="{EC2342B2-3431-4BB8-ADFB-F6D0061B0D57}">
+									<ChildrenList>
+										<Action Name="" ID="{C5F86B9E-83D5-4F0A-BEEA-FE1659D05ECF}" ShortID="628482676">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Dash" ID="{B5102762-57F2-4EAD-A474-75B5A7538A74}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PIM_Jump" ID="{548B88BD-2A34-4292-8B4D-7C262BA4E320}">
+									<ChildrenList>
+										<Action Name="" ID="{B9A026AB-EB4E-432E-9634-32DDEC2332B8}" ShortID="99556319">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Jump" ID="{64BC0B7D-63EB-49EB-8AF1-46467679B42A}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="MIDENA" ID="{D4829075-BB2D-4B65-9EB0-A552963D4645}" ShortID="692102280"/>
+				<Folder Name="NME" ID="{C2509053-3C41-4246-BB01-E2B2E55C71B7}" ShortID="16433316"/>
+				<Folder Name="PROPS" ID="{09805075-1FF9-40BA-A7A4-258EDB132175}" ShortID="308137775"/>
+				<Folder Name="UI" ID="{F153EE70-DB81-4EF7-A3B8-CE3F000914D4}" ShortID="801802818"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

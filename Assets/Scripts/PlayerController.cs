@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class PlayerController : LivingObject
 {
+    [Space]
+    [SerializeField] CharacterController controller;
     private Vector2 _look;
     [SerializeField] private Transform followTransform;
     [SerializeField] private Transform turnPoint;
@@ -47,9 +49,13 @@ public class PlayerController : LivingObject
     [SerializeField] private Transform smokeSpawnPoint;
     [SerializeField] private Transform grassSpawnPoint;
 
+    [Space]
+    [SerializeField] private AK.Wwise.Event onStepSFX;
+    [SerializeField] private AK.Wwise.Event onDashSFX;
+    [SerializeField] private AK.Wwise.Event onJumpSFX;
+
     //public Animator animator;
     private PlayerInput input;
-    [SerializeField] CharacterController controller;
 
     private void Start() 
     {
@@ -110,6 +116,8 @@ public class PlayerController : LivingObject
             dashDir = transform.forward;
             PoolManager.Instantiate(DashFx,transform.position,transform.rotation);
             animator.SetTrigger("Roll");
+
+            onDashSFX.Post(gameObject);
         }
     }
 
@@ -175,6 +183,7 @@ public class PlayerController : LivingObject
     private void LateUpdate()
     {
 
+        #region Jump
         if (!_isGrounded)
         {
             _verticalSpeed -= 9.81f * Time.deltaTime;
@@ -200,7 +209,11 @@ public class PlayerController : LivingObject
             {
                 Instantiate(jumpFx, transform.position, Quaternion.identity);
             }
+
+            onJumpSFX.Post(gameObject);
         }
+
+        #endregion
 
         #region Dash
         if(dashTime >= Time.time && isDashing)
@@ -270,6 +283,8 @@ public class PlayerController : LivingObject
     {
         Instantiate(smokeParticle, smokeSpawnPoint.position, Quaternion.identity);
         Instantiate(grassParticle, grassSpawnPoint.position, Quaternion.identity);
+
+        onStepSFX.Post(gameObject);
     }
     private void OnDrawGizmos()
     {
