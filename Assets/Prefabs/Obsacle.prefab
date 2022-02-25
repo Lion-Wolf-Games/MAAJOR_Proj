@@ -124,12 +124,13 @@ GameObject:
   - component: {fileID: 7170825648248985945}
   - component: {fileID: 7170825648248985949}
   - component: {fileID: 7170825648248985950}
+  - component: {fileID: 8490192110144080959}
   m_Layer: 10
   m_Name: Obsacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7170825648248985951
 Transform:
@@ -233,6 +234,22 @@ MonoBehaviour:
   obstacleColider: {fileID: 7170825648248985944}
   visual: {fileID: 7170825648835035915}
   fx: {fileID: 6134927079237534801}
+--- !u!208 &8490192110144080959
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170825648248985946}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 1.055, z: 1.31}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.88, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7170825648549130631
 GameObject:
   m_ObjectHideFlags: 0
