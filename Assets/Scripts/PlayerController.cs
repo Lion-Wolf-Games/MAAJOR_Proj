@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
+using Cinemachine;
 
 public class PlayerController : LivingObject
 {
@@ -23,6 +24,9 @@ public class PlayerController : LivingObject
     public float speed;
     public float maxSpeed;
 
+    [Header("Throw")]
+    public bool isAiming;
+
     [Header("Dash")]
     public float dashDuration;
     public AnimationCurve dashCurve;
@@ -37,6 +41,7 @@ public class PlayerController : LivingObject
     public AnimationCurve hitForce;
 
     [Header("Camera")]
+    public CinemachineVirtualCamera tPSCam;
     public float rotationPower;
     public float aimValue;
 
@@ -63,6 +68,7 @@ public class PlayerController : LivingObject
         GameManager.Instance.OnPlay += OnGamePlay;
     }
 
+    #region Inputs
     public void Move(InputAction.CallbackContext context)
     {
         Vector2 conVec = context.ReadValue<Vector2>();
@@ -98,7 +104,7 @@ public class PlayerController : LivingObject
             GameManager.Instance.ChangeGameState(GameState.Paused);
             input.SwitchCurrentActionMap("UI");
         }
-        
+
     }
 
     public void OnMouseMove(InputAction.CallbackContext context)
@@ -108,18 +114,35 @@ public class PlayerController : LivingObject
 
     public void Dash(InputAction.CallbackContext context)
     {
-        
-        if( (context.performed) && (dashTime <= Time.time))
+
+        if ((context.performed) && (dashTime <= Time.time))
         {
             isDashing = true;
             dashTime = Time.time + dashDuration;
             dashDir = transform.forward;
-            PoolManager.Instantiate(DashFx,transform.position,transform.rotation);
+            PoolManager.Instantiate(DashFx, transform.position, transform.rotation);
             animator.SetTrigger("Roll");
 
             onDashSFX.Post(gameObject);
         }
+    } 
+
+    public void Aim(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            DOTween.To(() => 0.75f, x => tPSCam.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraSide = x, 1f, 0.25f);
+
+            isAiming = true;
+        }
+        else if (context.canceled)
+        {
+            DOTween.To(() => 1f, x => tPSCam.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraSide = x, 0.75f, 0.25f);
+            isAiming = false;
+        }
     }
+
+    #endregion
 
     private void Update()
     {

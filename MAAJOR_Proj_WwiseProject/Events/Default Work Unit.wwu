@@ -41,12 +41,18 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="PIM_Throw" ID="{34B13DB9-C605-4B27-A102-BD7550A84B1D}"/>
+								<Event Name="PIM_Land" ID="{D5B27D8E-C2C0-4685-9F42-428A57A31783}"/>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MIDENA" ID="{D4829075-BB2D-4B65-9EB0-A552963D4645}" ShortID="692102280"/>
-				<Folder Name="NME" ID="{C2509053-3C41-4246-BB01-E2B2E55C71B7}" ShortID="16433316"/>
+				<Folder Name="NME" ID="{C2509053-3C41-4246-BB01-E2B2E55C71B7}" ShortID="16433316">
+					<ChildrenList>
+						<Folder Name="FOL" ID="{7B3F175B-632B-4428-810A-767D30D43D99}" ShortID="441569997"/>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="PROPS" ID="{09805075-1FF9-40BA-A7A4-258EDB132175}" ShortID="308137775"/>
 				<Folder Name="UI" ID="{F153EE70-DB81-4EF7-A3B8-CE3F000914D4}" ShortID="801802818"/>
 			</ChildrenList>

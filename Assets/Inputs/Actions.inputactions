@@ -30,14 +30,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Aim",
-                    "type": "Button",
-                    "id": "a65414d1-b747-45aa-9ad6-111d6502c177",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "775a4097-29ee-4ce3-87fb-0256cf1b847f",
@@ -57,6 +49,22 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "cf4139a5-367b-4349-ac58-7b0185c59259",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Aim",
+                    "type": "Button",
+                    "id": "a65414d1-b747-45aa-9ad6-111d6502c177",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "f279e105-c185-4aa2-9952-10dca5d04941",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -241,28 +249,6 @@
                 },
                 {
                     "name": "",
-                    "id": "bd3d697a-b71c-4949-8ce9-5a80117fb74a",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2b05a988-4c50-454b-a1b1-d05fce6d7ed5",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "69305b83-5df8-404b-a14a-2c579d215c71",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -324,6 +310,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48ca032b-189f-488c-be0c-1cae145ed4ff",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f41c3d6-917b-4c1f-8750-edd115d22cc3",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd3d697a-b71c-4949-8ce9-5a80117fb74a",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b05a988-4c50-454b-a1b1-d05fce6d7ed5",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
