@@ -261,9 +261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0.5, y: 0, z: 0}
+  ShoulderOffset: {x: 0.75, y: 0, z: 0}
   VerticalArmLength: 0.4
-  CameraSide: 1
+  CameraSide: 0.75
   CameraDistance: 4.75
   CameraCollisionFilter:
     serializedVersion: 2
@@ -631,6 +631,7 @@ MonoBehaviour:
   _jumpForce: 5
   speed: 0
   maxSpeed: 6
+  isAiming: 0
   dashDuration: 1
   dashCurve:
     serializedVersion: 2
@@ -682,6 +683,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  tPSCam: {fileID: 1566719009850507727}
   rotationPower: 0.75
   aimValue: 0
   smokeParticle: {fileID: 3501014057941490324, guid: a692bf99cfb10f24dbfc1c16917ef1a8, type: 3}
@@ -795,7 +797,19 @@ MonoBehaviour:
     m_ActionId: 1d435462-6d19-4d34-a7b4-ce4343535da3
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1566719009391129380}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Aim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a65414d1-b747-45aa-9ad6-111d6502c177
     m_ActionName: Player/Aim[/Keyboard/shift]
   - m_PersistentCalls:
@@ -874,6 +888,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: cf4139a5-367b-4349-ac58-7b0185c59259
     m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f279e105-c185-4aa2-9952-10dca5d04941
+    m_ActionName: Player/Throw[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1089,7 +1107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566719009850507726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.4, z: -4.715483}
+  m_LocalPosition: {x: 0.375, y: 1.4, z: -4.715483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1566719008809778938}
