@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,24 +41,23 @@ public class PlayerController : LivingObject
     private float hitTime;
     public AnimationCurve hitForce;
 
+    [Header("Suck")]
+    public Transform suckPosition;
+
     [Header("Camera")]
     public CinemachineVirtualCamera tPSCam;
     public float rotationPower;
     public float aimValue;
 
-    [Header("FX")]
-    [SerializeField] private GameObject smokeParticle;
-    [SerializeField] private GameObject grassParticle;
-    [SerializeField] private GameObject jumpFx;
-    [SerializeField] private GameObject DashFx;
+    #region Actions
+    public delegate void PlayerActions();
 
-    [SerializeField] private Transform smokeSpawnPoint;
-    [SerializeField] private Transform grassSpawnPoint;
+    public PlayerActions OnDash;
+    public PlayerActions OnJump;
+    public PlayerActions OnSuck;
 
-    [Space]
-    [SerializeField] private AK.Wwise.Event onStepSFX;
-    [SerializeField] private AK.Wwise.Event onDashSFX;
-    [SerializeField] private AK.Wwise.Event onJumpSFX;
+    #endregion
+    
 
     //public Animator animator;
     private PlayerInput input;
@@ -120,10 +120,20 @@ public class PlayerController : LivingObject
             isDashing = true;
             dashTime = Time.time + dashDuration;
             dashDir = transform.forward;
-            PoolManager.Instantiate(DashFx, transform.position, transform.rotation);
             animator.SetTrigger("Roll");
+            
+            OnDash?.Invoke();
+        }
+    }
 
-            onDashSFX.Post(gameObject);
+    public void Suck(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            Debug.Log("Suck");
+            OnSuck?.Invoke();
+            StartCoroutine(DisableInputTemporary(1));
+            animator.SetTrigger("Suck");
         }
     } 
 
@@ -228,12 +238,7 @@ public class PlayerController : LivingObject
 
             Debug.Log("is Jumping");
 
-            if (jumpFx != null)
-            {
-                Instantiate(jumpFx, transform.position, Quaternion.identity);
-            }
-
-            onJumpSFX.Post(gameObject);
+            OnJump?.Invoke();
         }
 
         #endregion
@@ -302,15 +307,16 @@ public class PlayerController : LivingObject
         controller.Move(velocity);
     }
 
-    public void Step()
-    {
-        Instantiate(smokeParticle, smokeSpawnPoint.position, Quaternion.identity);
-        Instantiate(grassParticle, grassSpawnPoint.position, Quaternion.identity);
-
-        onStepSFX.Post(gameObject);
-    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, 0.25f);
+    }
+
+    private IEnumerator DisableInputTemporary(float time)
+    {
+        DisableInput();
+        yield return new WaitForSeconds(time);
+        EnableInput();
     }
 }

@@ -73,6 +73,8 @@ MonoBehaviour:
     KeyIcon: {fileID: 21300000, guid: 6bbb50aee87ab174dbe105f6ce508a4c, type: 3}
   - KeyName: <Keyboard>/leftShift
     KeyIcon: {fileID: 21300000, guid: 23f63c35670150f4ea115f539f37189b, type: 3}
+  - KeyName: <Keyboard>/escape
+    KeyIcon: {fileID: 21300000, guid: 726aba120f5b99646a8d7a23aadb0502, type: 3}
   - KeyName: <Pointer>/delta
     KeyIcon: {fileID: 21300000, guid: 8b8aa3648b0786a4eb0568fc0a72e5e4, type: 3}
   - KeyName: <Mouse>/leftButton
@@ -95,3 +97,5 @@ MonoBehaviour:
     KeyIcon: {fileID: 21300000, guid: 4bc817fa24c73bd44ae71cb71f1211da, type: 3}
   - KeyName: <Gamepad>/buttonNorth
     KeyIcon: {fileID: 21300000, guid: 1811b848b487c1a46bc10050029df2b7, type: 3}
+  - KeyName: <Gamepad>/start
+    KeyIcon: {fileID: 21300000, guid: 912fba9fa0ad03140aa3158161d8010e, type: 3}

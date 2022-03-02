@@ -28,10 +28,38 @@ public class Obscacle : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Player")
         {
-            isPlayerInside = true;
+            //isPlayerInside = true;
             player = other.GetComponent<PlayerController>();
             Debug.Log("PlayerEnter");
+            player.OnDash += OnDash;
         }
+    }
+
+    private void OnDash()
+    {
+        //Get playerClosest point
+        float distA = Vector3.Distance(player.transform.position,pointA.position);
+        float distB = Vector3.Distance(player.transform.position,pointB.position);
+
+        if (distA >= distB)
+        {
+            endPos = pointA.position;
+        } else
+        {
+            endPos = pointB.position;
+        }
+
+        //Disable input
+        player.DisableInput();
+    
+        obstacleColider.enabled = false;
+        isPassingObstacle = true;
+        PassTime = Time.time + passDuration;
+
+        //Visual
+        player.transform.LookAt(transform.position);
+        visual.DOShakeScale(0.5f,0.5f);
+        fx.Play();
     }
     private void Update() {
 
@@ -94,6 +122,7 @@ public class Obscacle : MonoBehaviour
         if(other.tag == "Player")
         {
             isPlayerInside = false;
+            player.OnDash -= OnDash;
             player = null;
             Debug.Log("PlayerExit");
         }

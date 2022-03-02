@@ -68,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Suck",
+                    "type": "Button",
+                    "id": "44ee394b-ed15-4356-adda-888050517d2a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -354,6 +362,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "462f0585-e025-4371-aad0-b15ca57bf2f3",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Suck",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6337b48d-f57b-4017-b48e-0024ab2cae87",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Suck",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
