@@ -261,9 +261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0.5, y: 0, z: 0}
+  ShoulderOffset: {x: 0.75, y: 0, z: 0}
   VerticalArmLength: 0.4
-  CameraSide: 1
+  CameraSide: 0.75
   CameraDistance: 4.75
   CameraCollisionFilter:
     serializedVersion: 2
@@ -782,7 +782,19 @@ MonoBehaviour:
     m_ActionId: 1d435462-6d19-4d34-a7b4-ce4343535da3
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1566719009391129380}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Aim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a65414d1-b747-45aa-9ad6-111d6502c177
     m_ActionName: Player/Aim[/Keyboard/shift]
   - m_PersistentCalls:
@@ -1110,7 +1122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1566719009850507720}
   - component: {fileID: 1566719009850507727}
-  - component: {fileID: 1527215190}
   m_Layer: 0
   m_Name: TPS Cam
   m_TagString: Untagged
@@ -1126,7 +1137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566719009850507726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.4, z: -4.75}
+  m_LocalPosition: {x: 0.375, y: 1.4, z: -4.715483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1566719008809778938}
@@ -1168,36 +1179,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1566719008809778938}
---- !u!114 &1527215190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566719009850507726}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_CollideAgainst:
-    serializedVersion: 2
-    m_Bits: 1
-  m_IgnoreTag: 
-  m_TransparentLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  m_MinimumDistanceFromTarget: 0.05
-  m_AvoidObstacles: 1
-  m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 0
-  m_CameraRadius: 0.1
-  m_Strategy: 0
-  m_MaximumEffort: 4
-  m_SmoothingTime: 0.15
-  m_Damping: 1.03
-  m_DampingWhenOccluded: 0
-  m_OptimalTargetDistance: 0
 --- !u!95 &1566719008738073820
 Animator:
   serializedVersion: 3
@@ -1581,14 +1562,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
---- !u!4 &1311853567026845552 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
-  m_PrefabInstance: {fileID: 1566719008245002395}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1837314110636068298 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
+  m_PrefabInstance: {fileID: 1566719008245002395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1311853567026845552 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
   m_PrefabInstance: {fileID: 1566719008245002395}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1262616781507115523 stripped
