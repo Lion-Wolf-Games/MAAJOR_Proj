@@ -55,6 +55,9 @@ public class PlayerController : LivingObject
     public PlayerActions OnDash;
     public PlayerActions OnJump;
     public PlayerActions OnSuck;
+    public PlayerActions OnStartAim;
+    public PlayerActions OnStopAim;
+    public PlayerActions OnThrow;
 
     #endregion
     
@@ -144,11 +147,22 @@ public class PlayerController : LivingObject
             DOTween.To(() => 0.75f, x => tPSCam.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraSide = x, 1f, 0.25f);
 
             isAiming = true;
+            OnStartAim?.Invoke();
         }
         else if (context.canceled)
         {
             DOTween.To(() => 1f, x => tPSCam.GetCinemachineComponent<Cinemachine3rdPersonFollow>().CameraSide = x, 0.75f, 0.25f);
             isAiming = false;
+            OnStopAim?.Invoke();
+        }
+    }
+
+    public void Throw(InputAction.CallbackContext context)
+    {
+        if(context.performed && isAiming)
+        {
+            OnThrow.Invoke();
+            animator.SetTrigger("Throw");
         }
     }
 

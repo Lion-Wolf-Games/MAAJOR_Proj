@@ -32,7 +32,14 @@ public class EnemiesFlaque : MonoBehaviour
         PoolManager.Instance.Spawn(deathFx,true,transform.position,transform.rotation);
         //Destroy
         gameObject.SetActive(false);
+        DebugRespawn();
         player.OnSuck -= OnSuck;
+    }
+
+    private async void DebugRespawn()
+    {
+        await System.Threading.Tasks.Task.Delay(2500);
+        gameObject.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other) {
@@ -43,7 +50,7 @@ public class EnemiesFlaque : MonoBehaviour
         }
     }
 
-    private void OnDestroy() {
+    private void OnDisable() {
         if (player!=null)
         {
             player.OnSuck -= OnSuck;
