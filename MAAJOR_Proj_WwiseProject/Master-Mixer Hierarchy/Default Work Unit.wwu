@@ -40,38 +40,106 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="AMB" ID="{EA815503-149B-4B5A-BA20-803B78EB61A2}">
-							<ObjectLists/>
-						</Bus>
-						<Bus Name="ENV" ID="{AD1987E5-5C68-4E34-A957-9B2922B474B8}">
-							<ObjectLists/>
-						</Bus>
-						<Bus Name="PIM" ID="{72BA5848-86F3-4061-9496-F9D22A5EFFE0}">
-							<ChildrenList>
-								<Bus Name="PIM_FOL" ID="{025B24B2-6866-459F-B65A-9E8AAD3F8526}">
-									<ObjectLists/>
-								</Bus>
-							</ChildrenList>
-							<ObjectLists/>
-						</Bus>
-						<Bus Name="NME" ID="{7D19E491-7FB2-4020-B9F1-CDE1FC7A8C03}">
-							<ObjectLists/>
-						</Bus>
-						<Bus Name="MIDENA" ID="{BB796B28-B234-4F71-99B6-8506F8964DC6}">
-							<ChildrenList>
-								<Bus Name="MIDENA_FOL" ID="{1203E306-615B-4913-B36B-0F7E5C4E1DAD}">
-									<ObjectLists/>
-								</Bus>
-							</ChildrenList>
-							<ObjectLists/>
-						</Bus>
 						<Bus Name="MUSIC" ID="{30FB7A14-DB23-4B96-8D76-C562857DEBBB}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{61C6B8FB-A39A-43FD-8E2C-538042E91408}" ShortID="115581037">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SET_MusicVolume" ID="{28880C23-0EFD-4207-9284-CF555390807A}" WorkUnitID="{4C681E0A-2F49-48D6-AAC7-B7093D1756AB}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{C9DF2FFA-C57A-492C-B6A2-C000AC1DA570}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
 							<ObjectLists/>
 						</Bus>
-						<Bus Name="PROPS" ID="{FE0EEB47-5F82-4A80-82DB-C5A437F5B58D}">
-							<ObjectLists/>
-						</Bus>
-						<Bus Name="UI" ID="{A66EC077-6DE8-4A2F-A399-996E6355F860}">
+						<Bus Name="SFX" ID="{5C12A94E-55C2-4D00-868A-21CB604BAA5E}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{4FDF8C8D-2973-4B6D-BD60-B4DD9561F6F3}" ShortID="336524934">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SET_SoundsVolume" ID="{68629289-C554-4681-8AC6-CD2FFB798296}" WorkUnitID="{4C681E0A-2F49-48D6-AAC7-B7093D1756AB}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{5D68CB05-00F1-43F3-A222-648528E636E4}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="PIM" ID="{72BA5848-86F3-4061-9496-F9D22A5EFFE0}">
+									<ChildrenList>
+										<Bus Name="PIM_FOL" ID="{025B24B2-6866-459F-B65A-9E8AAD3F8526}">
+											<ObjectLists/>
+										</Bus>
+									</ChildrenList>
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="MIDENA" ID="{BB796B28-B234-4F71-99B6-8506F8964DC6}">
+									<ChildrenList>
+										<Bus Name="MIDENA_FOL" ID="{1203E306-615B-4913-B36B-0F7E5C4E1DAD}">
+											<ObjectLists/>
+										</Bus>
+									</ChildrenList>
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="AMB" ID="{EA815503-149B-4B5A-BA20-803B78EB61A2}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="ENV" ID="{AD1987E5-5C68-4E34-A957-9B2922B474B8}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="NME" ID="{7D19E491-7FB2-4020-B9F1-CDE1FC7A8C03}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="UI" ID="{A66EC077-6DE8-4A2F-A399-996E6355F860}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="PROPS" ID="{FE0EEB47-5F82-4A80-82DB-C5A437F5B58D}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>

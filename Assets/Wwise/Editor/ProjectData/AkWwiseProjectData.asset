@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 8d2698fb08256b4893ba5438f8e87ff6
     GuidInternal: 
-    m_lastTime: -8585571192934916198
+    m_lastTime: -8585571303974968442
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fbf3588fdb41bd49897c85e19de4d51e
     GuidInternal: 
-    m_lastTime: -8585553912817436716
+    m_lastTime: -8585546973043548564
     List:
     - name: AMB
       guid: 035581ea9b145a4bba20803b78eb61a2
@@ -53,10 +53,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: AMB
         ObjectType: 2
         guid: 035581ea9b145a4bba20803b78eb61a2
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\AMB
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\AMB
     - name: ENV
       guid: e58719ad685c344ea9579b2922b474b8
       id: 529726550
@@ -70,10 +73,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: ENV
         ObjectType: 2
         guid: e58719ad685c344ea9579b2922b474b8
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\ENV
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\ENV
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -101,10 +107,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: MIDENA
         ObjectType: 2
         guid: 286b79bb34b2714f99b68506f8964dc6
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MIDENA
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\MIDENA
     - name: MIDENA_FOL
       guid: 06e303125b611349b36b0f7e5c4e1dad
       id: 2662486595
@@ -118,13 +127,16 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: MIDENA
         ObjectType: 2
         guid: 286b79bb34b2714f99b68506f8964dc6
       - ElementName: MIDENA_FOL
         ObjectType: 2
         guid: 06e303125b611349b36b0f7e5c4e1dad
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MIDENA\MIDENA_FOL
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\MIDENA\MIDENA_FOL
     - name: MUSIC
       guid: 147afb3023db964b8d76c562857debbb
       id: 3991942870
@@ -155,10 +167,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: NME
         ObjectType: 2
         guid: 91e4197db27f2040b9f1cde1fc7a8c03
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\NME
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\NME
     - name: PIM
       guid: 4858ba72f38661409496f9d22a5effe0
       id: 1115118801
@@ -172,10 +187,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: PIM
         ObjectType: 2
         guid: 4858ba72f38661409496f9d22a5effe0
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PIM
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\PIM
     - name: PIM_FOL
       guid: b2245b0266689f45b65a9e8aad3f8526
       id: 43049847
@@ -189,13 +207,16 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: PIM
         ObjectType: 2
         guid: 4858ba72f38661409496f9d22a5effe0
       - ElementName: PIM_FOL
         ObjectType: 2
         guid: b2245b0266689f45b65a9e8aad3f8526
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PIM\PIM_FOL
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\PIM\PIM_FOL
     - name: PROPS
       guid: 47eb0efe825f804a82dbc5a437f5b58d
       id: 968010305
@@ -209,10 +230,30 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: PROPS
         ObjectType: 2
         guid: 47eb0efe825f804a82dbc5a437f5b58d
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\PROPS
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\PROPS
+    - name: SFX
+      guid: 4ea9125cc255004d868a21cb604baa5e
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
     - name: UI
       guid: 77c06ea6e86d2f4aa399996e6355f860
       id: 1551306167
@@ -226,10 +267,13 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
       - ElementName: UI
         ObjectType: 2
         guid: 77c06ea6e86d2f4aa399996e6355f860
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\UI
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -242,8 +286,50 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a91c831e1c440041a72a7be24c8ac7de
     GuidInternal: 
-    m_lastTime: -8585558361908168776
+    m_lastTime: -8585546995376335368
     List:
+    - name: FOREST_Bank
+      guid: f96f3d7e8bf2b046b6600f9e0040df35
+      id: 3943603743
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a91c831e1c440041a72a7be24c8ac7de
+      - ElementName: FOREST_Bank
+        ObjectType: 7
+        guid: f96f3d7e8bf2b046b6600f9e0040df35
+      Path: SoundBanks\Default Work Unit\FOREST_Bank
+    - name: MIDENA_Bank
+      guid: 144a46adbcbde040a459e6f29dd0a49e
+      id: 2129499522
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a91c831e1c440041a72a7be24c8ac7de
+      - ElementName: MIDENA_Bank
+        ObjectType: 7
+        guid: 144a46adbcbde040a459e6f29dd0a49e
+      Path: SoundBanks\Default Work Unit\MIDENA_Bank
+    - name: NME_Bank
+      guid: d10068375ab2094bbca91af86fe38ac1
+      id: 3133177584
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a91c831e1c440041a72a7be24c8ac7de
+      - ElementName: NME_Bank
+        ObjectType: 7
+        guid: d10068375ab2094bbca91af86fe38ac1
+      Path: SoundBanks\Default Work Unit\NME_Bank
     - name: PIM_Bank
       guid: a78cbacfc6b9bb4394c5fefb8df91318
       id: 860471550
@@ -270,7 +356,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c8a5b76bfd504b49a6762764bda6d51d
     GuidInternal: 
-    m_lastTime: -8585554037093914897
+    m_lastTime: -8585546994850007832
     List:
     - name: AMB
       guid: 50acd9e1b911c14fa5b00b99ce19cea1
@@ -286,6 +372,112 @@ MonoBehaviour:
         ObjectType: 4
         guid: 50acd9e1b911c14fa5b00b99ce19cea1
       Path: Events\Default Work Unit\AMB
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_Forest
+      guid: 14e1e3829d902c4095a5410a14f0ae5d
+      id: 1006024461
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 50acd9e1b911c14fa5b00b99ce19cea1
+      - ElementName: AMB_Forest
+        ObjectType: 4
+        guid: 14e1e3829d902c4095a5410a14f0ae5d
+      Path: Events\Default Work Unit\AMB\AMB_Forest
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_Forest_PlayAll
+      guid: e81199637b9d674e9702131d97026e34
+      id: 4083828315
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 50acd9e1b911c14fa5b00b99ce19cea1
+      - ElementName: AMB_Forest
+        ObjectType: 4
+        guid: 14e1e3829d902c4095a5410a14f0ae5d
+      - ElementName: AMB_Forest_PlayAll
+        ObjectType: 3
+        guid: e81199637b9d674e9702131d97026e34
+      Path: Events\Default Work Unit\AMB\AMB_Forest\AMB_Forest_PlayAll
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_Forest_StopAll
+      guid: cb3047c73ba0b04f9be0fa1ce21b542d
+      id: 48772705
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 50acd9e1b911c14fa5b00b99ce19cea1
+      - ElementName: AMB_Forest
+        ObjectType: 4
+        guid: 14e1e3829d902c4095a5410a14f0ae5d
+      - ElementName: AMB_Forest_StopAll
+        ObjectType: 3
+        guid: cb3047c73ba0b04f9be0fa1ce21b542d
+      Path: Events\Default Work Unit\AMB\AMB_Forest\AMB_Forest_StopAll
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: AMB_PlayWinds
+      guid: e62c804f4696604092a7e76b5813610e
+      id: 243566237
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 50acd9e1b911c14fa5b00b99ce19cea1
+      - ElementName: AMB_PlayWinds
+        ObjectType: 3
+        guid: e62c804f4696604092a7e76b5813610e
+      Path: Events\Default Work Unit\AMB\AMB_PlayWinds
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: AMB_StopWinds
+      guid: 6e56d2876be31c4485ff2a71e805d0f4
+      id: 767433695
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: AMB
+        ObjectType: 4
+        guid: 50acd9e1b911c14fa5b00b99ce19cea1
+      - ElementName: AMB_StopWinds
+        ObjectType: 3
+        guid: 6e56d2876be31c4485ff2a71e805d0f4
+      Path: Events\Default Work Unit\AMB\AMB_StopWinds
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -329,6 +521,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Forest
+      guid: 799af5f3bdb8fb46b2a4fc270f217ef1
+      id: 491961918
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 0d098e7cbcbece4787b8d1d218490d47
+      - ElementName: Forest
+        ObjectType: 4
+        guid: 799af5f3bdb8fb46b2a4fc270f217ef1
+      Path: Events\Default Work Unit\MUSIC\Forest
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MIDENA
       guid: 759082d42dbb654b9eb0a552963d4645
       id: 489596525
@@ -346,6 +558,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MUSIC
+      guid: 0d098e7cbcbece4787b8d1d218490d47
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 0d098e7cbcbece4787b8d1d218490d47
+      Path: Events\Default Work Unit\MUSIC
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MUSIC_PlayTest
+      guid: 5dc5e390058cd74c973a80c930424355
+      id: 1509368919
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 0d098e7cbcbece4787b8d1d218490d47
+      - ElementName: Forest
+        ObjectType: 4
+        guid: 799af5f3bdb8fb46b2a4fc270f217ef1
+      - ElementName: MUSIC_PlayTest
+        ObjectType: 3
+        guid: 5dc5e390058cd74c973a80c930424355
+      Path: Events\Default Work Unit\MUSIC\Forest\MUSIC_PlayTest
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: NME
       guid: 539050c2413c4642bb01e2b2e55c71b7
       id: 578529263
@@ -470,8 +722,8 @@ MonoBehaviour:
         guid: 8e7db2d5c0c285469f42428a57a31783
       Path: Events\Default Work Unit\PIM\FOL\PIM_Land
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: PIM_Throw
       guid: b93db13405c6274ba102bd7550a84b1d
       id: 95706836
@@ -493,8 +745,8 @@ MonoBehaviour:
         guid: b93db13405c6274ba102bd7550a84b1d
       Path: Events\Default Work Unit\PIM\FOL\PIM_Throw
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: PROPS
       guid: 75508009f91fba40a7a4258edb132175
       id: 968010305
@@ -541,7 +793,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0a1e684c492fd648aac7b7093d1756ab
     GuidInternal: 
-    m_lastTime: -8585553912817818626
+    m_lastTime: -8585547005775759990
     List:
     - name: SET_MainVolume
       guid: 09754e944be68b4bab1f803633feb484
@@ -557,6 +809,34 @@ MonoBehaviour:
         ObjectType: 13
         guid: 09754e944be68b4bab1f803633feb484
       Path: Game Parameters\Default Work Unit\SET_MainVolume
+    - name: SET_MusicVolume
+      guid: 230c8828fd0e07429284cf555390807a
+      id: 2030828805
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0a1e684c492fd648aac7b7093d1756ab
+      - ElementName: SET_MusicVolume
+        ObjectType: 13
+        guid: 230c8828fd0e07429284cf555390807a
+      Path: Game Parameters\Default Work Unit\SET_MusicVolume
+    - name: SET_SoundsVolume
+      guid: 8992626854c581468ac6cd2ffb798296
+      id: 2380448900
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0a1e684c492fd648aac7b7093d1756ab
+      - ElementName: SET_SoundsVolume
+        ObjectType: 13
+        guid: 8992626854c581468ac6cd2ffb798296
+      Path: Game Parameters\Default Work Unit\SET_SoundsVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -569,7 +849,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 9d38a78685f1ed408d28e1abcd25557e
     GuidInternal: 
-    m_lastTime: -8585558361908168776
+    m_lastTime: -8585565019332576653
     List:
     - name: New_State_Group
       guid: da53548254d4924fa9fdc0b4083e09a9
@@ -617,7 +897,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b6dbd5f68ea3184ca68e266f77b9d9eb
     GuidInternal: 
-    m_lastTime: -8585558361908158775
+    m_lastTime: -8585559885207795977
     List:
     - name: PIM_Footsteps_Material
       guid: 848fb2d4063253468625359f3f3def73
@@ -681,10 +961,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 954262407010ae4382596bd8e765ea66
     GuidInternal: 
-    m_lastTime: -8585571192934926199
+    m_lastTime: -8585571303976168830
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 03000000050000000600000007000000090000001d00000027000000ac000000ad000000ae000000450100004601000089070000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

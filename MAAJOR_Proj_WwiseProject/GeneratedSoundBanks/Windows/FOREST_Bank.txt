@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	48772705	AMB_Forest_StopAll			\Default Work Unit\AMB\AMB_Forest\AMB_Forest_StopAll	
+	1509368919	MUSIC_PlayTest			\Default Work Unit\MUSIC\Forest\MUSIC_PlayTest	
+	4083828315	AMB_Forest_PlayAll			\Default Work Unit\AMB\AMB_Forest\AMB_Forest_PlayAll	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	47254031	Birds_02	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Birds_02_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\Birds\Birds_02		56201
+	71648984	Light Wind_04	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Light Wind_04_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\LightWinds\Light Wind_04		69146
+	142177758	StrongWind_05	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\StrongWind_05_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\StrongWind\StrongWind_05		114359
+	212448483	Light Wind_03	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Light Wind_03_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\LightWinds\Light Wind_03		130273
+	324242578	StrongWind_04	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\StrongWind_04_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\StrongWind\StrongWind_04		74236
+	401372416	Birds_04	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Birds_04_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\Birds\Birds_04		109179
+	519611115	Light Wind_02	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Light Wind_02_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\LightWinds\Light Wind_02		153288
+	665143888	Light Wind_01	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Light Wind_01_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\LightWinds\Light Wind_01		107380
+	685125644	StrongWind_01	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\StrongWind_01_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\StrongWind\StrongWind_01		33421
+	728891528	StrongWind_02	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\StrongWind_02_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\StrongWind\StrongWind_02		47442
+	749334755	Birds_05	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Birds_05_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\Birds\Birds_05		55839
+	751150625	Birds_01	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Birds_01_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\Birds\Birds_01		63439
+	836426864	Birds_03	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Birds_03_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\Birds\Birds_03		48742
+	936439649	StrongWind_03	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\StrongWind_03_3F75BDB9.wem		\Actor-Mixer Hierarchy\AMB\AMB\AMB_Forest\StrongWind\StrongWind_03		100418
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	91434346	Trad_Japanese_PlaceHolder	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Trad_Japanese_PlaceHolder_9EDFC787.wem	91434346.wem	\Actor-Mixer Hierarchy\MUS\MUS\MUS_Test\Trad_Japanese_PlaceHolder	
+

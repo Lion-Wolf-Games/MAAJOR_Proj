@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5A64F7EE-8A35-4005-90CB-6644AB2C2077}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="MUS" ID="{5A64F7EE-8A35-4005-90CB-6644AB2C2077}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="MUS" ID="{8C5C6263-B176-4C23-A2AA-B4C743EFF004}" ShortID="786066193">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="MUSIC" ID="{30FB7A14-DB23-4B96-8D76-C562857DEBBB}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="MUS_Test" ID="{F18B77C4-21BC-41AD-9320-3FEAADF05A60}" ShortID="767750287">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Trad_Japanese_PlaceHolder" ID="{AB2D0798-9198-4123-A03A-4FCA97C4620F}" ShortID="687307979">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PreFetchLength" Type="int16">
+											<ValueList>
+												<Value>200</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Trad_Japanese_PlaceHolder" ID="{908E60F8-D8B7-43E0-930F-311721019E84}">
+											<Language>SFX</Language>
+											<AudioFile>Trad_Japanese_PlaceHolder.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="91434346"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Trad_Japanese_PlaceHolder" ID="{908E60F8-D8B7-43E0-930F-311721019E84}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

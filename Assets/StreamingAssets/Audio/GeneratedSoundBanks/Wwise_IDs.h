@@ -13,9 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMB_FOREST_PLAYALL = 4083828315U;
+        static const AkUniqueID AMB_FOREST_STOPALL = 48772705U;
+        static const AkUniqueID MUSIC_PLAYTEST = 1509368919U;
         static const AkUniqueID PIM_DASH = 2296463320U;
         static const AkUniqueID PIM_FOOTSTEP = 3358588958U;
         static const AkUniqueID PIM_JUMP = 2539778304U;
+        static const AkUniqueID PIM_LAND = 3967295931U;
+        static const AkUniqueID PIM_THROW = 95706836U;
     } // namespace EVENTS
 
     namespace STATES
@@ -47,9 +52,19 @@ namespace AK
 
     } // namespace SWITCHES
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID SET_MAINVOLUME = 3006228107U;
+        static const AkUniqueID SET_MUSICVOLUME = 2030828805U;
+        static const AkUniqueID SET_SOUNDSVOLUME = 2380448900U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID FOREST_BANK = 3943603743U;
+        static const AkUniqueID MIDENA_BANK = 2129499522U;
+        static const AkUniqueID NME_BANK = 3133177584U;
         static const AkUniqueID PIM_BANK = 860471550U;
     } // namespace BANKS
 
@@ -65,6 +80,7 @@ namespace AK
         static const AkUniqueID PIM = 1115118801U;
         static const AkUniqueID PIM_FOL = 43049847U;
         static const AkUniqueID PROPS = 968010305U;
+        static const AkUniqueID SFX = 393239870U;
         static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
 
