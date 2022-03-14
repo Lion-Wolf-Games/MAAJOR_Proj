@@ -11,28 +11,36 @@ public class Enemies : MonoBehaviour
     private NavMeshAgent navAgent;
     [SerializeField] private Animator anim;
     
-    [Space]
+    [Space] [Header("Chase")]
     [SerializeField] private GameObject _target;
     [SerializeField] private float detectionRange;
     [SerializeField] private float timeBeforeLostTarget;
 
-    [Space]
+    [Space] [Header("Atttack")]
     [SerializeField] private float attackRange;
     [SerializeField] private float attackDuration;
     [SerializeField] private LayerMask hostileLayer;
     [SerializeField] private int damage;
 
-    [Space]
+    [Space] [Header("Wander")]
     [SerializeField] private float wanderRange;
     [SerializeField] private float timeBetweenWander;
     [SerializeField] private Vector3 spawnPosition;
 
+    [Space] [Header("Panic")]
+    [SerializeField] private float panicRange;
+    [SerializeField] private float timeBetweenDirChange;
+    [SerializeField] private GameObject sfxPanic;
+
+
     private Vector3 wanderPos;
     private float wanderTime;
     private float attackTime;
+    private float panicTime;
+    private float panicDuration;
     private Vector3 lastTargetPos;
 
-    public enum FSM_Enemies { Idle, Wander, Chasing, Attacking, TargetLost, Hit}
+    public enum FSM_Enemies { Idle, Wander, Chasing, Attacking, TargetLost, Hit, Panic}
     [SerializeField] private FSM_Enemies fsm;
     private FSM_Enemies fsmOld;
 
@@ -47,6 +55,7 @@ public class Enemies : MonoBehaviour
 
         spawnPosition = transform.position;
         wanderPos = spawnPosition;
+        sfxPanic.SetActive(false);
     }
 
     private void Update()
@@ -93,6 +102,9 @@ public class Enemies : MonoBehaviour
                     navAgent.SetDestination(lastTargetPos);
                     break;
                 case FSM_Enemies.Hit:
+                    break;
+                case FSM_Enemies.Panic:
+                    sfxPanic.SetActive(true);
                     break;
                 default:
                     break;
@@ -163,6 +175,30 @@ public class Enemies : MonoBehaviour
                 break;
             case FSM_Enemies.Hit:
                 break;
+            case FSM_Enemies.Panic:
+
+                //Choose Random Dir if timer ended
+                if (panicTime <= Time.time)
+                {
+                    //Go to random Dir
+                    Vector3 dir = Random.onUnitSphere;
+                    dir.y = 0;
+
+                    navAgent.SetDestination(transform.position + dir * panicRange);
+
+                    //startTimer
+                    panicTime = Time.time + timeBetweenDirChange;
+                    
+                }
+                
+                //If panic over go back to idle
+                if (Time.time >= panicDuration)
+                {
+                    fsm = FSM_Enemies.Idle;
+                    sfxPanic.SetActive(false);
+                }
+                
+                break;
             default:
                 break;
         }
@@ -190,6 +226,12 @@ public class Enemies : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void Panic(float time)
+    {
+        panicDuration = Time.time + time;
+        fsm = FSM_Enemies.Panic;
     }
 
     private void OnDrawGizmos()

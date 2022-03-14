@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Potion : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public abstract class Potion : ScriptableObject {
+    [SerializeField] protected UseType useType;
+    [SerializeField] public float effectRange;
+    [SerializeField] protected float useTime;
+    [SerializeField] protected float useDuration;
+    [SerializeField] public float launchRange;
+    [SerializeField] protected float cooldown;
+
+    [Header("Fx")]
+    [SerializeField] public GameObject spawnFx;
+    [SerializeField] public GameObject trailFx;
+    [SerializeField] public Material liquidMat;
+
+
+    public abstract void OnExplosion(Transform target);
+}
+
+public enum UseType
+{
+    Throw,
+    Consomable
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PotionThrow : MonoBehaviour
 {
     [SerializeField] private PlayerController player;
+    [SerializeField] private Potion selectedPotion;
     private Transform cam;
     [SerializeField] private float maxDistance;
     [SerializeField] private float heigthLaunch = 2f;
@@ -14,6 +15,7 @@ public class PotionThrow : MonoBehaviour
     [Header("Visual")]
     [SerializeField] private int visualresolution = 30;
     [SerializeField] private LineRenderer lineVisual;
+    [SerializeField] private GameObject RangeVisual;
     private float gravity;
     public GameObject aimTarget;
     [SerializeField] private GameObject potionPrefab;
@@ -45,6 +47,7 @@ public class PotionThrow : MonoBehaviour
         DrawPath();
     }
 
+    #region LaunchCalculation
     LaunchData CalculateLauchData()
     {
         Vector3 endPos = aimTarget.transform.position;
@@ -81,6 +84,7 @@ public class PotionThrow : MonoBehaviour
             lineVisual.SetPosition(i,drawPoint);
         }
     }
+    #endregion
 
     private void Launch()
     {
@@ -89,6 +93,8 @@ public class PotionThrow : MonoBehaviour
 
         potionRb.velocity = CalculateLauchData().inotialVelocity;
         potionRb.angularVelocity = go.transform.forward * 10f;
+
+        go.GetComponent<PotionBehavior>().SetUpPotion(selectedPotion);
     }
 
     private void StartAim()
@@ -103,6 +109,13 @@ public class PotionThrow : MonoBehaviour
         aimTarget.SetActive(false);
         player.OnThrow -= Launch;
         lineVisual.enabled = false;
+    }
+
+    public void SetPotion(Potion newPotion)
+    {
+        selectedPotion = newPotion;
+        maxDistance = selectedPotion.launchRange;
+        RangeVisual.transform.localScale = Vector3.one * selectedPotion.effectRange * 2f;
     }
 
     private void OnDisable() {
