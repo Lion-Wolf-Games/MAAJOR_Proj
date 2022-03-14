@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e392b5d49b96d784e90ba228f516e007, type: 3}
+  m_Name: 23331068-C661-4F75-B2F5-F866E43C63C3
+  m_EditorClassIdentifier: 
+  objectName: SET_SoundsVolume
+  id: 2380448900
+  guid: 23331068-C661-4F75-B2F5-F866E43C63C3

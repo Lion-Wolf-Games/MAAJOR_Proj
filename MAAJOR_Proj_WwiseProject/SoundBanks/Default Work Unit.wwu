@@ -10,6 +10,24 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="MIDENA_Bank" ID="{AD464A14-BDBC-40E0-A459-E6F29DD0A49E}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="NME_Bank" ID="{376800D1-B25A-4B09-BCA9-1AF86FE38AC1}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="FOREST_Bank" ID="{7E3D6FF9-F28B-46B0-B660-0F9E0040DF35}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AMB_Forest" ID="{82E3E114-909D-402C-95A5-410A14F0AE5D}" WorkUnitID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Forest" ID="{F3F59A79-B8BD-46FB-B2A4-FC270F217EF1}" WorkUnitID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

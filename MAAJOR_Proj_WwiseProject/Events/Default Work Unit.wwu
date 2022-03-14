@@ -3,7 +3,115 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="AMB" ID="{E1D9AC50-11B9-4FC1-A5B0-0B99CE19CEA1}" ShortID="525041750"/>
+				<Folder Name="AMB" ID="{E1D9AC50-11B9-4FC1-A5B0-0B99CE19CEA1}" ShortID="525041750">
+					<ChildrenList>
+						<Folder Name="AMB_Forest" ID="{82E3E114-909D-402C-95A5-410A14F0AE5D}" ShortID="754403528">
+							<ChildrenList>
+								<Event Name="AMB_Forest_PlayAll" ID="{639911E8-9D7B-4E67-9702-131D97026E34}">
+									<ChildrenList>
+										<Action Name="" ID="{2CDAA804-0269-4A0F-B6DD-C58B334C002F}" ShortID="508415488">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Birds" ID="{D0050A3D-3885-45FB-BDAD-DFD9A7760EDB}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{91EF769F-02ED-44B3-B259-B42E285B5E9B}" ShortID="579366096">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LightWinds" ID="{8CBC4535-6A05-4BD3-AEE5-D0D4153A3EEC}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{43C3D4C0-D89F-4019-AAC5-CD4FA4722889}" ShortID="41366665">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="StrongWind" ID="{652191F8-82FF-4CA0-ADD8-B6648337C39A}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="AMB_Forest_StopAll" ID="{C74730CB-A03B-4FB0-9BE0-FA1CE21B542D}">
+									<ChildrenList>
+										<Action Name="" ID="{1AAE20AF-6D1D-4895-8890-64EED46FC613}" ShortID="352312568">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Birds" ID="{D0050A3D-3885-45FB-BDAD-DFD9A7760EDB}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{70486E24-CA04-4CAF-B619-266654DD28D0}" ShortID="222416984">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="LightWinds" ID="{8CBC4535-6A05-4BD3-AEE5-D0D4153A3EEC}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{792731D0-6EC3-45EB-BE17-3CE4D90824D0}" ShortID="680530733">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="StrongWind" ID="{652191F8-82FF-4CA0-ADD8-B6648337C39A}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Event Name="AMB_PlayWinds" ID="{4F802CE6-9646-4060-92A7-E76B5813610E}">
+							<ChildrenList>
+								<Action Name="" ID="{9251F016-E7D3-4287-A521-DBE0395D754C}" ShortID="398039642">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LightWinds" ID="{8CBC4535-6A05-4BD3-AEE5-D0D4153A3EEC}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7708DDD9-7452-4B62-9D3B-5DD355288823}" ShortID="565811619">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StrongWind" ID="{652191F8-82FF-4CA0-ADD8-B6648337C39A}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="AMB_StopWinds" ID="{87D2566E-E36B-441C-85FF-2A71E805D0F4}">
+							<ChildrenList>
+								<Action Name="" ID="{FEAE8223-E023-482F-A407-F51486AB57FD}" ShortID="325777783">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LightWinds" ID="{8CBC4535-6A05-4BD3-AEE5-D0D4153A3EEC}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2BF519C3-3DF7-42F0-9C15-80A934038844}" ShortID="97327583">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StrongWind" ID="{652191F8-82FF-4CA0-ADD8-B6648337C39A}" WorkUnitID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="PIM" ID="{12D1D987-C986-427A-B4A9-FA699B1D4C98}" ShortID="612945838">
 					<ChildrenList>
 						<Folder Name="FOL" ID="{BB02B259-CEFB-4F1C-905E-C92C01499871}" ShortID="859794976">
@@ -55,6 +163,25 @@
 				</Folder>
 				<Folder Name="PROPS" ID="{09805075-1FF9-40BA-A7A4-258EDB132175}" ShortID="308137775"/>
 				<Folder Name="UI" ID="{F153EE70-DB81-4EF7-A3B8-CE3F000914D4}" ShortID="801802818"/>
+				<Folder Name="MUSIC" ID="{7C8E090D-BEBC-47CE-87B8-D1D218490D47}" ShortID="81295749">
+					<ChildrenList>
+						<Folder Name="Forest" ID="{F3F59A79-B8BD-46FB-B2A4-FC270F217EF1}" ShortID="342947937">
+							<ChildrenList>
+								<Event Name="MUSIC_PlayTest" ID="{90E3C55D-8C05-4CD7-973A-80C930424355}">
+									<ChildrenList>
+										<Action Name="" ID="{9BDF06CA-E411-4C69-9B3E-0B445A6B6510}" ShortID="844022837">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Trad_Japanese_PlaceHolder" ID="{AB2D0798-9198-4123-A03A-4FCA97C4620F}" WorkUnitID="{5A64F7EE-8A35-4005-90CB-6644AB2C2077}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
