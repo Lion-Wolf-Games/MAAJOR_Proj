@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 1566719008809778932}
   - component: {fileID: 1566719008809778939}
   - component: {fileID: 1566719008809778933}
+  - component: {fileID: 527699800}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -378,6 +379,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Damping: 0
+--- !u!114 &527699800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566719008809778937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: -754.66614, y: 423.40036, z: 578.7024}
 --- !u!1 &1566719008923741320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1109,7 @@ MonoBehaviour:
   player: {fileID: 1566719009391129380}
   selectedPotion: {fileID: 11400000, guid: 76218380acc6b9c419a513533c0ccb2d, type: 2}
   maxDistance: 20
-  heigthLaunch: 2
+  heigthLaunch: 1
   launnchPos: {fileID: 4028626051348630083}
   colliderLayer:
     serializedVersion: 2
@@ -1273,6 +1291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566719009850507720}
   - component: {fileID: 1566719009850507727}
+  - component: {fileID: 467753980}
   m_Layer: 0
   m_Name: TPS Cam
   m_TagString: Untagged
@@ -1330,6 +1349,18 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1566719008809778938}
+--- !u!114 &467753980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566719009850507726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493e042582c3c974e98c45eba0ed7114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1566719008738073820
 Animator:
   serializedVersion: 3
@@ -1922,14 +1953,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
   m_PrefabInstance: {fileID: 1566719008245002395}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1311853567026845552 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
-  m_PrefabInstance: {fileID: 1566719008245002395}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1262616781507115523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 305028607164943000, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
+  m_PrefabInstance: {fileID: 1566719008245002395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1311853567026845552 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
   m_PrefabInstance: {fileID: 1566719008245002395}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1566719009269462419
