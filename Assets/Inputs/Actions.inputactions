@@ -55,7 +55,7 @@
                 },
                 {
                     "name": "Throw",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "f279e105-c185-4aa2-9952-10dca5d04941",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -264,18 +264,7 @@
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Throw",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5f41c3d6-917b-4c1f-8750-edd115d22cc3",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -321,6 +310,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Suck",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f41c3d6-917b-4c1f-8750-edd115d22cc3",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Damie\Documents\Iloi\M1\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Damie\Documents\Iloi\M1\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Damie\Documents\Iloi\M1\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Damie\Documents\Iloi\M1\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -16,7 +16,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="860471550" Language="SFX">
+		<SoundBank Id="860471550" Language="SFX" Hash="324817711">
 			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
 			<ShortName>PIM_Bank</ShortName>
 			<Path>PIM_Bank.bnk</Path>
@@ -115,7 +115,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2920209046">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3071609151">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -125,17 +125,17 @@
 				<GameParameter Id="3006228107" Name="SET_MainVolume" ObjectPath="\Game Parameters\Default Work Unit\SET_MainVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2129499522" Language="SFX">
+		<SoundBank Id="2129499522" Language="SFX" Hash="972332406">
 			<ObjectPath>\SoundBanks\Default Work Unit\MIDENA_Bank</ObjectPath>
 			<ShortName>MIDENA_Bank</ShortName>
 			<Path>MIDENA_Bank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3133177584" Language="SFX">
+		<SoundBank Id="3133177584" Language="SFX" Hash="1173407882">
 			<ObjectPath>\SoundBanks\Default Work Unit\NME_Bank</ObjectPath>
 			<ShortName>NME_Bank</ShortName>
 			<Path>NME_Bank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3943603743" Language="SFX" Hash="811764856">
+		<SoundBank Id="3943603743" Language="SFX" Hash="1492668735">
 			<ObjectPath>\SoundBanks\Default Work Unit\FOREST_Bank</ObjectPath>
 			<ShortName>FOREST_Bank</ShortName>
 			<Path>FOREST_Bank.bnk</Path>

@@ -11,6 +11,7 @@ public class PotionThrow : MonoBehaviour
     [SerializeField] private float heigthLaunch = 2f;
     [SerializeField] private Transform launnchPos;
     [SerializeField] private LayerMask colliderLayer;
+    private float lanchTime;
 
     [Header("Visual")]
     [SerializeField] private int visualresolution = 30;
@@ -87,14 +88,19 @@ public class PotionThrow : MonoBehaviour
     #endregion
 
     private void Launch()
-    {
-        var go = PoolManager.Instance.Spawn(potionPrefab,true,launnchPos.position,transform.rotation);
-        Rigidbody potionRb = go.GetComponent<Rigidbody>();
+    {   
+        if (lanchTime <= Time.time)
+        {
+            var go = PoolManager.Instance.Spawn(potionPrefab,true,launnchPos.position,transform.rotation);
+            Rigidbody potionRb = go.GetComponent<Rigidbody>();
 
-        potionRb.velocity = CalculateLauchData().inotialVelocity;
-        potionRb.angularVelocity = go.transform.forward * 10f;
+            potionRb.velocity = CalculateLauchData().inotialVelocity;
+            potionRb.angularVelocity = go.transform.forward * 10f;
 
-        go.GetComponent<PotionBehavior>().SetUpPotion(selectedPotion);
+            go.GetComponent<PotionBehavior>().SetUpPotion(selectedPotion);
+            
+            lanchTime = Time.time + selectedPotion.cooldown;
+        }
     }
 
     private void StartAim()

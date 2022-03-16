@@ -8,10 +8,15 @@
 		<ExternalSourcesOutputRoot>C:\Users\Damie\Documents\Iloi\M1\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
+	<StreamedFiles>
+		<File Id="91434346" Language="SFX">
+			<ShortName>Trad_Japanese_PlaceHolder.wav</ShortName>
+			<Path>SFX\Trad_Japanese_PlaceHolder_9EDFC787.wem</Path>
+		</File>
+	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="860471550" Language="SFX" Hash="2950916172">
+		<SoundBank Id="860471550" Language="SFX" Hash="324817711">
 			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
 			<ShortName>PIM_Bank</ShortName>
 			<Path>PIM_Bank.bnk</Path>
@@ -98,6 +103,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3967295931" Name="PIM_Land" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Land" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="95706836" Name="PIM_Throw" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Throw" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<SwitchGroups>
 				<SwitchGroup Id="1570286487" Name="PIM_Footsteps_Material" ObjectPath="\Switches\Default Work Unit\PIM_Footsteps_Material" GUID="{D4B28F84-3206-4653-8625-359F3F3DEF73}">
@@ -108,10 +115,101 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1738693260">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2428113521">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="2030828805" Name="SET_MusicVolume" ObjectPath="\Game Parameters\Default Work Unit\SET_MusicVolume"/>
+				<GameParameter Id="2380448900" Name="SET_SoundsVolume" ObjectPath="\Game Parameters\Default Work Unit\SET_SoundsVolume"/>
+				<GameParameter Id="3006228107" Name="SET_MainVolume" ObjectPath="\Game Parameters\Default Work Unit\SET_MainVolume"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="2129499522" Language="SFX" Hash="972332406">
+			<ObjectPath>\SoundBanks\Default Work Unit\MIDENA_Bank</ObjectPath>
+			<ShortName>MIDENA_Bank</ShortName>
+			<Path>MIDENA_Bank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3133177584" Language="SFX" Hash="1173407882">
+			<ObjectPath>\SoundBanks\Default Work Unit\NME_Bank</ObjectPath>
+			<ShortName>NME_Bank</ShortName>
+			<Path>NME_Bank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3943603743" Language="SFX" Hash="1492668735">
+			<ObjectPath>\SoundBanks\Default Work Unit\FOREST_Bank</ObjectPath>
+			<ShortName>FOREST_Bank</ShortName>
+			<Path>FOREST_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4083828315" Name="AMB_Forest_PlayAll" ObjectPath="\Events\Default Work Unit\AMB\AMB_Forest\AMB_Forest_PlayAll" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="47254031" Language="SFX">
+							<ShortName>Birds_02.wav</ShortName>
+							<Path>SFX\Birds_02_3F75BDB9.wem</Path>
+						</File>
+						<File Id="71648984" Language="SFX">
+							<ShortName>Light Wind_04.wav</ShortName>
+							<Path>SFX\Light Wind_04_3F75BDB9.wem</Path>
+						</File>
+						<File Id="142177758" Language="SFX">
+							<ShortName>StrongWind_05.wav</ShortName>
+							<Path>SFX\StrongWind_05_3F75BDB9.wem</Path>
+						</File>
+						<File Id="212448483" Language="SFX">
+							<ShortName>Light Wind_03.wav</ShortName>
+							<Path>SFX\Light Wind_03_3F75BDB9.wem</Path>
+						</File>
+						<File Id="324242578" Language="SFX">
+							<ShortName>StrongWind_04.wav</ShortName>
+							<Path>SFX\StrongWind_04_3F75BDB9.wem</Path>
+						</File>
+						<File Id="401372416" Language="SFX">
+							<ShortName>Birds_04.wav</ShortName>
+							<Path>SFX\Birds_04_3F75BDB9.wem</Path>
+						</File>
+						<File Id="519611115" Language="SFX">
+							<ShortName>Light Wind_02.wav</ShortName>
+							<Path>SFX\Light Wind_02_3F75BDB9.wem</Path>
+						</File>
+						<File Id="665143888" Language="SFX">
+							<ShortName>Light Wind_01.wav</ShortName>
+							<Path>SFX\Light Wind_01_3F75BDB9.wem</Path>
+						</File>
+						<File Id="685125644" Language="SFX">
+							<ShortName>StrongWind_01.wav</ShortName>
+							<Path>SFX\StrongWind_01_3F75BDB9.wem</Path>
+						</File>
+						<File Id="728891528" Language="SFX">
+							<ShortName>StrongWind_02.wav</ShortName>
+							<Path>SFX\StrongWind_02_3F75BDB9.wem</Path>
+						</File>
+						<File Id="749334755" Language="SFX">
+							<ShortName>Birds_05.wav</ShortName>
+							<Path>SFX\Birds_05_3F75BDB9.wem</Path>
+						</File>
+						<File Id="751150625" Language="SFX">
+							<ShortName>Birds_01.wav</ShortName>
+							<Path>SFX\Birds_01_3F75BDB9.wem</Path>
+						</File>
+						<File Id="836426864" Language="SFX">
+							<ShortName>Birds_03.wav</ShortName>
+							<Path>SFX\Birds_03_3F75BDB9.wem</Path>
+						</File>
+						<File Id="936439649" Language="SFX">
+							<ShortName>StrongWind_03.wav</ShortName>
+							<Path>SFX\StrongWind_03_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="48772705" Name="AMB_Forest_StopAll" ObjectPath="\Events\Default Work Unit\AMB\AMB_Forest\AMB_Forest_StopAll" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1509368919" Name="MUSIC_PlayTest" ObjectPath="\Events\Default Work Unit\MUSIC\Forest\MUSIC_PlayTest" DurationType="Infinite">
+					<ReferencedStreamedFiles>
+						<File Id="91434346" Language="SFX">
+							<ShortName>Trad_Japanese_PlaceHolder.wav</ShortName>
+							<Path>SFX\Trad_Japanese_PlaceHolder_9EDFC787.wem</Path>
+						</File>
+					</ReferencedStreamedFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

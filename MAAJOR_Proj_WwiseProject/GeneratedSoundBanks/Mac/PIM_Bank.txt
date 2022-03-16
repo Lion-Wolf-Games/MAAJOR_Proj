@@ -1,7 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
+	95706836	PIM_Throw			\Default Work Unit\PIM\FOL\PIM_Throw	
 	2296463320	PIM_Dash			\Default Work Unit\PIM\FOL\PIM_Dash	
 	2539778304	PIM_Jump			\Default Work Unit\PIM\FOL\PIM_Jump	
 	3358588958	PIM_Footstep			\Default Work Unit\PIM\FOL\PIM_Footstep	
+	3967295931	PIM_Land			\Default Work Unit\PIM\FOL\PIM_Land	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1570286487	PIM_Footsteps_Material			\Default Work Unit\PIM_Footsteps_Material	

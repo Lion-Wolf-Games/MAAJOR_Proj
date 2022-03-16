@@ -27,6 +27,9 @@ public class PlayerController : LivingObject
 
     [Header("Throw")]
     public bool isAiming;
+    [SerializeField] private bool hasThrow ;
+    private bool throwInput;
+    private float trhowValue; 
 
     [Header("Dash")]
     public float dashDuration;
@@ -159,10 +162,18 @@ public class PlayerController : LivingObject
 
     public void Throw(InputAction.CallbackContext context)
     {
-        if(context.performed && isAiming)
+        //trhowValue = context.ReadValue<float>();
+        //Debug.Log(trhowValue);
+
+        if (context.started && isAiming)
         {
+            Debug.Log("Start");
             OnThrow.Invoke();
             animator.SetTrigger("Throw");
+        }
+        else if(context.canceled)
+        {
+            Debug.Log ("Stop");
         }
     }
 
@@ -224,6 +235,7 @@ public class PlayerController : LivingObject
         animator.SetFloat("MoveSpeed", _moveInput.magnitude);
         transform.rotation = Quaternion.Lerp(transform.rotation, turnPoint.rotation, turnSpeed * Time.deltaTime);
 
+        
 
     }
 
@@ -284,6 +296,18 @@ public class PlayerController : LivingObject
         controller.Move(Vector3.up * _verticalSpeed * Time.deltaTime);
         controller.Move(speed * Time.deltaTime * transform.forward);
         turnPoint.LookAt(new Vector3(_move.x, 0, _move.z) + turnPoint.position);
+
+        if(trhowValue > 0.5f && !hasThrow && isAiming)
+        {
+            OnThrow.Invoke();
+            animator.SetTrigger("Throw");
+            hasThrow = true;
+        }
+
+        if(trhowValue < 0.2 && hasThrow)
+        {
+            hasThrow = false;
+        }
     }
 
     private void OnGamePlay()
