@@ -17,7 +17,7 @@ MonoBehaviour:
   useTime: 0
   useDuration: 0
   launchRange: 10
-  cooldown: 0
+  cooldown: 5
   spawnFx: {fileID: 7102394456590244652, guid: de969d661a1d7ae42948e667604d47c6, type: 3}
   trailFx: {fileID: 0}
   liquidMat: {fileID: 2100000, guid: 46473283f8a28f241ae79d5f44696216, type: 2}

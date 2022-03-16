@@ -9,7 +9,7 @@ public abstract class Potion : ScriptableObject {
     [SerializeField] protected float useTime;
     [SerializeField] protected float useDuration;
     [SerializeField] public float launchRange;
-    [SerializeField] protected float cooldown;
+    [SerializeField] public float cooldown;
 
     [Header("Fx")]
     [SerializeField] public GameObject spawnFx;

@@ -16,6 +16,7 @@ public class PlayerFx : MonoBehaviour
     [SerializeField] private AK.Wwise.Event onStepSFX;
     [SerializeField] private AK.Wwise.Event onDashSFX;
     [SerializeField] private AK.Wwise.Event onJumpSFX;
+    [SerializeField] private AK.Wwise.Event onThrowSFX;
 
     private PlayerController player;
 
@@ -23,6 +24,7 @@ public class PlayerFx : MonoBehaviour
         player = GetComponent<PlayerController>();
         player.OnDash += OnDashFx;
         player.OnJump += OnJumpFx;
+        player.OnThrow += onThrowFX;
     }
 
     private void OnDashFx()
@@ -49,5 +51,10 @@ public class PlayerFx : MonoBehaviour
         Instantiate(grassParticle, grassSpawnPoint.position, Quaternion.identity);
 
         onStepSFX.Post(gameObject);
+    }
+
+    private void onThrowFX()
+    {
+        onThrowSFX.Post(gameObject);
     }
 }
