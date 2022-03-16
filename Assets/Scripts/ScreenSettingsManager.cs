@@ -8,10 +8,14 @@ public class ScreenSettingsManager : MonoBehaviour
 {
     public TMP_Dropdown resolutionDropdown;
     private int resolutionIndex;
+    public TMP_Dropdown qualityDropdown;
     private int qualityIndex;
     private bool isFullScreen;
     public Toggle fullScreenToggle;
     Resolution[] resolutions;
+
+    public Toggle vSyncToggle;
+    private bool isVSync;
 
     void Start()
     {
@@ -37,7 +41,21 @@ public class ScreenSettingsManager : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
+        qualityDropdown.value = QualitySettings.GetQualityLevel();
+        qualityDropdown.RefreshShownValue();
+
         fullScreenToggle.isOn = Screen.fullScreen;
+
+        
+
+        if (QualitySettings.vSyncCount != 0)
+        {
+            vSyncToggle.isOn = true;
+        }
+        else
+        {
+            vSyncToggle.isOn = false;
+        }
     }
 
     public void ChangeResolutionIndex(int index)
@@ -48,6 +66,11 @@ public class ScreenSettingsManager : MonoBehaviour
     public void ChangeQualityIndex(int index)
     {
         qualityIndex = index;
+    }
+
+    public void ChangeVsync(bool isOn)
+    {
+        isVSync = isOn;
     }
 
     public void SetScreenSettings()
@@ -63,6 +86,15 @@ public class ScreenSettingsManager : MonoBehaviour
         if (QualitySettings.GetQualityLevel() != qualityIndex)
         {
             QualitySettings.SetQualityLevel(qualityIndex);
+        }
+
+        if (isVSync)
+        {
+            QualitySettings.vSyncCount = 1;
+        }
+        else
+        {
+            QualitySettings.vSyncCount = 0;
         }
 
         Debug.Log("Applying resolution: " + resolution.width + "x" + resolution.height);
