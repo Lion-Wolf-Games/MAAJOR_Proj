@@ -14,6 +14,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<ActorMixer Name="MUS_Test" ID="{F18B77C4-21BC-41AD-9320-3FEAADF05A60}" ShortID="767750287">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>

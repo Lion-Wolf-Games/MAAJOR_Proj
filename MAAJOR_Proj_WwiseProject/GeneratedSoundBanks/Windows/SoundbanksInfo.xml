@@ -16,7 +16,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="860471550" Language="SFX">
+		<SoundBank Id="860471550" Language="SFX" Hash="1608435989">
 			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
 			<ShortName>PIM_Bank</ShortName>
 			<Path>PIM_Bank.bnk</Path>
@@ -29,7 +29,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3358588958" Name="PIM_Footstep" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Footstep" DurationType="OneShot" DurationMin="0." DurationMax="1.426916">
+				<Event Id="3358588958" Name="PIM_Footstep" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Footstep" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="71630185" Language="SFX">
 							<ShortName>Pim_Footstep_Grass_09.wav</ShortName>
@@ -95,7 +95,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2539778304" Name="PIM_Jump" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Jump" DurationType="OneShot" DurationMin="1.297823" DurationMax="1.297823">
+				<Event Id="2539778304" Name="PIM_Jump" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Jump" DurationType="OneShot" DurationMin="1.203937" DurationMax="1.203937">
 					<IncludedMemoryFiles>
 						<File Id="540778946" Language="SFX">
 							<ShortName>Pim_Jump_1.wav</ShortName>
@@ -104,7 +104,14 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3967295931" Name="PIM_Land" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Land" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="95706836" Name="PIM_Throw" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Throw" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="95706836" Name="PIM_Throw" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Throw" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="381932551" Language="SFX">
+							<ShortName>Swoosh_Swipe-Thick_02.wav</ShortName>
+							<Path>SFX\Swoosh_Swipe-Thick_02_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 			<SwitchGroups>
 				<SwitchGroup Id="1570286487" Name="PIM_Footsteps_Material" ObjectPath="\Switches\Default Work Unit\PIM_Footsteps_Material" GUID="{D4B28F84-3206-4653-8625-359F3F3DEF73}">
@@ -115,7 +122,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2920209046">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3071609151">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -135,7 +142,7 @@
 			<ShortName>NME_Bank</ShortName>
 			<Path>NME_Bank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3943603743" Language="SFX" Hash="811764856">
+		<SoundBank Id="3943603743" Language="SFX" Hash="2153741388">
 			<ObjectPath>\SoundBanks\Default Work Unit\FOREST_Bank</ObjectPath>
 			<ShortName>FOREST_Bank</ShortName>
 			<Path>FOREST_Bank.bnk</Path>

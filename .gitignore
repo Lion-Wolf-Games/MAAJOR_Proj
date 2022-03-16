@@ -6,6 +6,7 @@
 Assets/AssetStoreTools*
 
 MAAJOR_Proj_WwiseProject/.cache/
+*.prof
 
 # Visual Studio cache directory
 .vs/

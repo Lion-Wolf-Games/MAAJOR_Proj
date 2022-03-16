@@ -149,7 +149,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="PIM_Throw" ID="{34B13DB9-C605-4B27-A102-BD7550A84B1D}"/>
+								<Event Name="PIM_Throw" ID="{34B13DB9-C605-4B27-A102-BD7550A84B1D}">
+									<ChildrenList>
+										<Action Name="" ID="{7B1FEA19-9ED4-4079-87F5-7933722B5D6D}" ShortID="137394607">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Throw" ID="{DC210C77-25B3-46FA-BEF6-DDC1AEEB9D1C}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="PIM_Land" ID="{D5B27D8E-C2C0-4685-9F42-428A57A31783}"/>
 							</ChildrenList>
 						</Folder>

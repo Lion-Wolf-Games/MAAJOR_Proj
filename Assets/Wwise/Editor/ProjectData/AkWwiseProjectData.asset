@@ -356,7 +356,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c8a5b76bfd504b49a6762764bda6d51d
     GuidInternal: 
-    m_lastTime: -8585546994850007832
+    m_lastTime: -8585542789805830602
     List:
     - name: AMB
       guid: 50acd9e1b911c14fa5b00b99ce19cea1
@@ -596,8 +596,8 @@ MonoBehaviour:
         guid: 5dc5e390058cd74c973a80c930424355
       Path: Events\Default Work Unit\MUSIC\Forest\MUSIC_PlayTest
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: NME
       guid: 539050c2413c4642bb01e2b2e55c71b7
       id: 578529263
@@ -699,8 +699,8 @@ MonoBehaviour:
         guid: bd888b54342a92428b4d7c262ba4e320
       Path: Events\Default Work Unit\PIM\FOL\PIM_Jump
       maxAttenuation: 0
-      maxDuration: 1.297823
-      minDuration: 1.297823
+      maxDuration: 1.203937
+      minDuration: 1.203937
     - name: PIM_Land
       guid: 8e7db2d5c0c285469f42428a57a31783
       id: 3967295931
@@ -745,8 +745,8 @@ MonoBehaviour:
         guid: b93db13405c6274ba102bd7550a84b1d
       Path: Events\Default Work Unit\PIM\FOL\PIM_Throw
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1
+      minDuration: 1
     - name: PROPS
       guid: 75508009f91fba40a7a4258edb132175
       id: 968010305
@@ -964,7 +964,7 @@ MonoBehaviour:
     m_lastTime: -8585571303976168830
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 03000000050000000600000007000000090000001d00000027000000ac000000ad000000ae000000450100004601000089070000
+  ExpandedWaapiItemIds: 03000000050000000600000007000000090000000b0000000c0000001d000000270000002a000000ac000000ad000000ae000000450100004601000089070000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

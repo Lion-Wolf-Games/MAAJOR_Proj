@@ -27,6 +27,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<SwitchContainer Name="PIM_Footsteps" ID="{306CE3B7-0B8A-4357-9DB3-888399CBCBA9}" ShortID="393074806">
+									<PropertyList>
+										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
@@ -355,6 +358,7 @@
 								</SwitchContainer>
 								<RandomSequenceContainer Name="PIM_Dash" ID="{B5102762-57F2-4EAD-A474-75B5A7538A74}" ShortID="790151568">
 									<PropertyList>
+										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>18</Value>
@@ -411,11 +415,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="PIM_Jump" ID="{64BC0B7D-63EB-49EB-8AF1-46467679B42A}" ShortID="411139993">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>50</Value>
-											</ValueList>
-										</Property>
+										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -427,6 +427,28 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Pim_Jump_1" ID="{FDFF0DD8-CF4D-4FE6-899A-ADEDB4DF53EE}" ShortID="582437628">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>30</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>50</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>130</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
@@ -447,6 +469,50 @@
 											<ObjectLists/>
 											<ActiveSourceList>
 												<ActiveSource Name="Pim_Jump_1" ID="{FA4D895F-0025-4504-AF0E-CFCDDB5E25E4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PIM_Throw" ID="{DC210C77-25B3-46FA-BEF6-DDC1AEEB9D1C}" ShortID="226165957">
+									<PropertyList>
+										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Swoosh_Swipe-Thick_02" ID="{65D9DF18-6606-4480-AD87-CA0321AD7B14}" ShortID="76174629">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Swoosh_Swipe-Thick_02" ID="{BE367FD6-5975-496E-B876-017FAF6483A9}">
+													<Language>SFX</Language>
+													<AudioFile>Swoosh_Swipe-Thick_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="381932551"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Swoosh_Swipe-Thick_02" ID="{BE367FD6-5975-496E-B876-017FAF6483A9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
