@@ -731,6 +731,7 @@ MonoBehaviour:
   speed: 0
   maxSpeed: 6
   isAiming: 0
+  hasThrow: 0
   dashDuration: 1
   dashCurve:
     serializedVersion: 2
@@ -1040,15 +1041,19 @@ MonoBehaviour:
   onStepSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a4d383ec36384e24db13f3ed1b12b2bc, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 51b3ed797ccf8fc46800a6bd6dc19b9c, type: 2}
   onDashSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0100a260feefd714e89e9a4e2a279047, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: cbad4733edb14714aa82d09ab9de2f32, type: 2}
   onJumpSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f0b61374f52fe354cb1a458e2321f37b, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 15306011e7ebdca4f80bd43e7d29ee90, type: 2}
+  onThrowSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 13aa8dc122786d3488a82636d63c5379, type: 2}
 --- !u!114 &1922009542
 MonoBehaviour:
   m_ObjectHideFlags: 0

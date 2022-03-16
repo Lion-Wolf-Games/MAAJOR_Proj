@@ -11,6 +11,9 @@ public class PauseMenu : MonoBehaviour
     {
         GameManager.Instance.OnPause += PauseGame;
         pauseCanvas.SetActive(false);
+        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void PauseGame()
@@ -18,6 +21,9 @@ public class PauseMenu : MonoBehaviour
         //ShowPanel
         pauseCanvas.SetActive(true);
         Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         //PlayOpen Animation
     }
 
@@ -28,6 +34,9 @@ public class PauseMenu : MonoBehaviour
         pauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         GameManager.Instance.ChangeGameState(GameState.Playing);
+        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void QuitGame()
