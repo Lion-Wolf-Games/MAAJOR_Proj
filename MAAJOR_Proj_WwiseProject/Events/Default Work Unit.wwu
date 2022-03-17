@@ -136,6 +136,13 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
+										<Action Name="" ID="{5C4283D1-D0C9-4520-9AEE-6BB3C0117846}" ShortID="606286472">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Dash" ID="{348C8A17-EF1A-4553-A858-17784D0876D4}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="PIM_Jump" ID="{548B88BD-2A34-4292-8B4D-7C262BA4E320}">
@@ -144,6 +151,13 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="PIM_Jump" ID="{64BC0B7D-63EB-49EB-8AF1-46467679B42A}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{CEE459F8-6904-4868-AFED-03318F78A400}" ShortID="564977119">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Jump" ID="{44F9EB2E-50FD-4FD3-A860-FBD97A4CE308}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -158,14 +172,68 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
+										<Action Name="" ID="{45027EF7-A004-411C-A218-AF7823BA5D83}" ShortID="145128426">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Throw" ID="{52DB890E-16DF-4967-AD2E-BEA2DA7CCD07}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="PIM_Land" ID="{D5B27D8E-C2C0-4685-9F42-428A57A31783}"/>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="VO" ID="{A5653F84-690B-473D-A9DA-395FF5B070B5}" ShortID="822320261">
+							<ChildrenList>
+								<Event Name="PIM_VO_Hit" ID="{380D423A-C3EC-4342-9F0F-CF14B5F4CA8B}">
+									<ChildrenList>
+										<Action Name="" ID="{8303A2F8-6F18-4250-AC8E-E1CB9AD9FD68}" ShortID="121137191">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Hit" ID="{234F6B06-4CE7-4845-AC75-4C1481C7D21D}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PIM_VO_Jump" ID="{8A99A6F6-4015-42E3-A7FD-B3FD8A64F7B4}"/>
+								<Event Name="PIM_VO_KO" ID="{3C89C423-86F8-43CA-AF36-1C2214A41B27}"/>
+								<Event Name="PIM_VO_Throw" ID="{6CD90A84-9AFE-44C8-B32E-DA48FCDE600D}"/>
+								<Event Name="PIM_VO_Dash" ID="{3CB50856-EF35-4646-8B66-26EBAF08B135}">
+									<ChildrenList>
+										<Action Name="" ID="{3F6EF029-353F-49C8-A2F4-D8C7CA5C344C}" ShortID="993517674">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Dash" ID="{348C8A17-EF1A-4553-A858-17784D0876D4}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="MIDENA" ID="{D4829075-BB2D-4B65-9EB0-A552963D4645}" ShortID="692102280"/>
+				<Folder Name="MIDENA" ID="{D4829075-BB2D-4B65-9EB0-A552963D4645}" ShortID="692102280">
+					<ChildrenList>
+						<Folder Name="VO" ID="{10236050-1A50-44E4-880E-402E7FB34D74}" ShortID="1062760253">
+							<ChildrenList>
+								<Event Name="MIDENA_VO_ATK" ID="{37DD2B5F-4FCA-4C7E-9867-8EDDBF552349}">
+									<ChildrenList>
+										<Action Name="" ID="{70B0BB42-E1A7-4FB5-83F0-7B5C84E188E8}" ShortID="799318275">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MIDENA_Atk" ID="{BF03C34F-9081-4B2D-90EB-68B778E9062C}" WorkUnitID="{3C053649-6A68-44C6-A7A8-A29D9450E08D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="NME" ID="{C2509053-3C41-4246-BB01-E2B2E55C71B7}" ShortID="16433316">
 					<ChildrenList>
 						<Folder Name="FOL" ID="{7B3F175B-632B-4428-810A-767D30D43D99}" ShortID="441569997"/>

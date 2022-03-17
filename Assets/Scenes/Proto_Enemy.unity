@@ -11813,6 +11813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 770601759}
   - component: {fileID: 770601760}
+  - component: {fileID: 770601761}
   m_Layer: 0
   m_Name: Midena
   m_TagString: Untagged
@@ -11860,7 +11861,31 @@ MonoBehaviour:
   onAttack:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: a0fa35ff6293fd94ab59a9b70649aabe, type: 2}
+--- !u!114 &770601761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770601758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1371d6dc6253cbe4f8d0102ed26ddad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a669faddd08461640b8603f582d7f6e4, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!43 &782031474
 Mesh:
   m_ObjectHideFlags: 0

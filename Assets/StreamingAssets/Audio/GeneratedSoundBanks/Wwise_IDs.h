@@ -15,12 +15,18 @@ namespace AK
     {
         static const AkUniqueID AMB_FOREST_PLAYALL = 4083828315U;
         static const AkUniqueID AMB_FOREST_STOPALL = 48772705U;
+        static const AkUniqueID MIDENA_VO_ATK = 4255064110U;
         static const AkUniqueID MUSIC_PLAYTEST = 1509368919U;
         static const AkUniqueID PIM_DASH = 2296463320U;
         static const AkUniqueID PIM_FOOTSTEP = 3358588958U;
         static const AkUniqueID PIM_JUMP = 2539778304U;
         static const AkUniqueID PIM_LAND = 3967295931U;
         static const AkUniqueID PIM_THROW = 95706836U;
+        static const AkUniqueID PIM_VO_DASH = 934112640U;
+        static const AkUniqueID PIM_VO_HIT = 3901280379U;
+        static const AkUniqueID PIM_VO_JUMP = 1756296120U;
+        static const AkUniqueID PIM_VO_KO = 155056730U;
+        static const AkUniqueID PIM_VO_THROW = 670951740U;
     } // namespace EVENTS
 
     namespace STATES

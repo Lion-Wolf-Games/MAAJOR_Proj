@@ -894,10 +894,6 @@ MonoBehaviour:
     m_ActionId: 9eb1151d-8818-4d82-bbf4-d3174cfbba78
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1d435462-6d19-4d34-a7b4-ce4343535da3
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1566719009391129380}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
@@ -1072,6 +1068,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 13aa8dc122786d3488a82636d63c5379, type: 2}
+  onHitSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e8dd214f6b0bf384b9a6e9ca9a15b091, type: 2}
 --- !u!114 &1922009542
 MonoBehaviour:
   m_ObjectHideFlags: 0

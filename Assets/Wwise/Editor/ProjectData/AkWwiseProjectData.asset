@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 8d2698fb08256b4893ba5438f8e87ff6
     GuidInternal: 
-    m_lastTime: -8585571192934916198
+    m_lastTime: -8585571303974968442
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fbf3588fdb41bd49897c85e19de4d51e
     GuidInternal: 
-    m_lastTime: -8585543752726859516
+    m_lastTime: -8585546973043548564
     List:
     - name: AMB
       guid: 035581ea9b145a4bba20803b78eb61a2
@@ -286,7 +286,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a91c831e1c440041a72a7be24c8ac7de
     GuidInternal: 
-    m_lastTime: -8585543752724068910
+    m_lastTime: -8585546995376335368
     List:
     - name: FOREST_Bank
       guid: f96f3d7e8bf2b046b6600f9e0040df35
@@ -356,7 +356,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c8a5b76bfd504b49a6762764bda6d51d
     GuidInternal: 
-    m_lastTime: -8585541851350433642
+    m_lastTime: -8585540889916536642
     List:
     - name: AMB
       guid: 50acd9e1b911c14fa5b00b99ce19cea1
@@ -558,6 +558,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: MIDENA_VO_ATK
+      guid: 5f2bdd37ca4f7e4c98678eddbf552349
+      id: 4255064110
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: MIDENA
+        ObjectType: 4
+        guid: 759082d42dbb654b9eb0a552963d4645
+      - ElementName: VO
+        ObjectType: 4
+        guid: 50602310501ae444880e402e7fb34d74
+      - ElementName: MIDENA_VO_ATK
+        ObjectType: 3
+        guid: 5f2bdd37ca4f7e4c98678eddbf552349
+      Path: Events\Default Work Unit\MIDENA\VO\MIDENA_VO_ATK
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MUSIC
       guid: 0d098e7cbcbece4787b8d1d218490d47
       id: 3991942870
@@ -653,8 +676,8 @@ MonoBehaviour:
         guid: b24223ec3134b84badfbf6d0061b0d57
       Path: Events\Default Work Unit\PIM\FOL\PIM_Dash
       maxAttenuation: 0
-      maxDuration: 1.075494
-      minDuration: 0.929805
+      maxDuration: 1.148118
+      minDuration: 1.116463
     - name: PIM_Footstep
       guid: f5d92282ecf21440b55afbde86795409
       id: 3358588958
@@ -699,7 +722,7 @@ MonoBehaviour:
         guid: bd888b54342a92428b4d7c262ba4e320
       Path: Events\Default Work Unit\PIM\FOL\PIM_Jump
       maxAttenuation: 0
-      maxDuration: 1.203937
+      maxDuration: 1.224762
       minDuration: 1.203937
     - name: PIM_Land
       guid: 8e7db2d5c0c285469f42428a57a31783
@@ -745,8 +768,123 @@ MonoBehaviour:
         guid: b93db13405c6274ba102bd7550a84b1d
       Path: Events\Default Work Unit\PIM\FOL\PIM_Throw
       maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
+      maxDuration: 1.601723
+      minDuration: 1.399819
+    - name: PIM_VO_Dash
+      guid: 5608b53c35ef46468b6626ebaf08b135
+      id: 934112640
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PIM
+        ObjectType: 4
+        guid: 87d9d11286c97a42b4a9fa699b1d4c98
+      - ElementName: VO
+        ObjectType: 4
+        guid: 843f65a50b693d47a9da395ff5b070b5
+      - ElementName: PIM_VO_Dash
+        ObjectType: 3
+        guid: 5608b53c35ef46468b6626ebaf08b135
+      Path: Events\Default Work Unit\PIM\VO\PIM_VO_Dash
+      maxAttenuation: 0
+      maxDuration: 1.148118
+      minDuration: 1.116463
+    - name: PIM_VO_Hit
+      guid: 3a420d38ecc342439f0fcf14b5f4ca8b
+      id: 3901280379
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PIM
+        ObjectType: 4
+        guid: 87d9d11286c97a42b4a9fa699b1d4c98
+      - ElementName: VO
+        ObjectType: 4
+        guid: 843f65a50b693d47a9da395ff5b070b5
+      - ElementName: PIM_VO_Hit
+        ObjectType: 3
+        guid: 3a420d38ecc342439f0fcf14b5f4ca8b
+      Path: Events\Default Work Unit\PIM\VO\PIM_VO_Hit
+      maxAttenuation: 0
+      maxDuration: 1.257143
+      minDuration: 1.20839
+    - name: PIM_VO_Jump
+      guid: f6a6998a1540e342a7fdb3fd8a64f7b4
+      id: 1756296120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PIM
+        ObjectType: 4
+        guid: 87d9d11286c97a42b4a9fa699b1d4c98
+      - ElementName: VO
+        ObjectType: 4
+        guid: 843f65a50b693d47a9da395ff5b070b5
+      - ElementName: PIM_VO_Jump
+        ObjectType: 3
+        guid: f6a6998a1540e342a7fdb3fd8a64f7b4
+      Path: Events\Default Work Unit\PIM\VO\PIM_VO_Jump
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: PIM_VO_KO
+      guid: 23c4893cf886ca43af361c2214a41b27
+      id: 155056730
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PIM
+        ObjectType: 4
+        guid: 87d9d11286c97a42b4a9fa699b1d4c98
+      - ElementName: VO
+        ObjectType: 4
+        guid: 843f65a50b693d47a9da395ff5b070b5
+      - ElementName: PIM_VO_KO
+        ObjectType: 3
+        guid: 23c4893cf886ca43af361c2214a41b27
+      Path: Events\Default Work Unit\PIM\VO\PIM_VO_KO
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: PIM_VO_Throw
+      guid: 840ad96cfe9ac844b32eda48fcde600d
+      id: 670951740
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PIM
+        ObjectType: 4
+        guid: 87d9d11286c97a42b4a9fa699b1d4c98
+      - ElementName: VO
+        ObjectType: 4
+        guid: 843f65a50b693d47a9da395ff5b070b5
+      - ElementName: PIM_VO_Throw
+        ObjectType: 3
+        guid: 840ad96cfe9ac844b32eda48fcde600d
+      Path: Events\Default Work Unit\PIM\VO\PIM_VO_Throw
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: PROPS
       guid: 75508009f91fba40a7a4258edb132175
       id: 968010305
@@ -781,6 +919,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: VO
+      guid: 843f65a50b693d47a9da395ff5b070b5
+      id: 1534528548
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PIM
+        ObjectType: 4
+        guid: 87d9d11286c97a42b4a9fa699b1d4c98
+      - ElementName: VO
+        ObjectType: 4
+        guid: 843f65a50b693d47a9da395ff5b070b5
+      Path: Events\Default Work Unit\PIM\VO
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: VO
+      guid: 50602310501ae444880e402e7fb34d74
+      id: 1534528548
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: MIDENA
+        ObjectType: 4
+        guid: 759082d42dbb654b9eb0a552963d4645
+      - ElementName: VO
+        ObjectType: 4
+        guid: 50602310501ae444880e402e7fb34d74
+      Path: Events\Default Work Unit\MIDENA\VO
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -793,7 +971,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0a1e684c492fd648aac7b7093d1756ab
     GuidInternal: 
-    m_lastTime: -8585543752727122494
+    m_lastTime: -8585547005775759990
     List:
     - name: SET_MainVolume
       guid: 09754e944be68b4bab1f803633feb484
@@ -849,7 +1027,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 9d38a78685f1ed408d28e1abcd25557e
     GuidInternal: 
-    m_lastTime: -8585558361908168776
+    m_lastTime: -8585565019332576653
     List:
     - name: New_State_Group
       guid: da53548254d4924fa9fdc0b4083e09a9
@@ -897,7 +1075,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b6dbd5f68ea3184ca68e266f77b9d9eb
     GuidInternal: 
-    m_lastTime: -8585558361908158775
+    m_lastTime: -8585559885207795977
     List:
     - name: PIM_Footsteps_Material
       guid: 848fb2d4063253468625359f3f3def73
@@ -961,10 +1139,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 954262407010ae4382596bd8e765ea66
     GuidInternal: 
-    m_lastTime: -8585571192934926199
+    m_lastTime: -8585571303976168830
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000900000028000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

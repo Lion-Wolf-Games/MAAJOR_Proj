@@ -262,7 +262,7 @@ public class PlayerController : LivingObject
 
             animator.SetTrigger("isJumping");
 
-            Debug.Log("is Jumping");
+            //Debug.Log("is Jumping");
 
             OnJump?.Invoke();
         }

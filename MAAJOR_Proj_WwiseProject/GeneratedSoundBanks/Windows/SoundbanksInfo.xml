@@ -16,16 +16,28 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="860471550" Language="SFX" Hash="1608435989">
+		<SoundBank Id="860471550" Language="SFX" Hash="3172310513">
 			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
 			<ShortName>PIM_Bank</ShortName>
 			<Path>PIM_Bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2296463320" Name="PIM_Dash" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Dash" DurationType="OneShot" DurationMin="0.929805" DurationMax="1.075494">
+				<Event Id="2296463320" Name="PIM_Dash" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Dash" DurationType="OneShot" DurationMin="1.116463" DurationMax="1.148118">
 					<IncludedMemoryFiles>
+						<File Id="81804178" Language="SFX">
+							<ShortName>VO_Pim_Dash-002.wav</ShortName>
+							<Path>SFX\VO_Pim_Dash-002_3F75BDB9.wem</Path>
+						</File>
 						<File Id="130207513" Language="SFX">
 							<ShortName>Swoosh_Swipe-Smooth_04.wav</ShortName>
 							<Path>SFX\Swoosh_Swipe-Smooth_04_3F75BDB9.wem</Path>
+						</File>
+						<File Id="639492041" Language="SFX">
+							<ShortName>VO_Pim_Dash-001.wav</ShortName>
+							<Path>SFX\VO_Pim_Dash-001_3F75BDB9.wem</Path>
+						</File>
+						<File Id="980856257" Language="SFX">
+							<ShortName>VO_Pim_Dash-003.wav</ShortName>
+							<Path>SFX\VO_Pim_Dash-003_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -95,23 +107,78 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2539778304" Name="PIM_Jump" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Jump" DurationType="OneShot" DurationMin="1.203937" DurationMax="1.203937">
+				<Event Id="2539778304" Name="PIM_Jump" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Jump" DurationType="OneShot" DurationMin="1.203937" DurationMax="1.224762">
 					<IncludedMemoryFiles>
+						<File Id="94192415" Language="SFX">
+							<ShortName>VO_Pim_Jump-001.wav</ShortName>
+							<Path>SFX\VO_Pim_Jump-001_3F75BDB9.wem</Path>
+						</File>
+						<File Id="516629010" Language="SFX">
+							<ShortName>VO_Pim_Jump-003.wav</ShortName>
+							<Path>SFX\VO_Pim_Jump-003_3F75BDB9.wem</Path>
+						</File>
 						<File Id="540778946" Language="SFX">
 							<ShortName>Pim_Jump_1.wav</ShortName>
 							<Path>SFX\Pim_Jump_1_3F75BDB9.wem</Path>
 						</File>
+						<File Id="786528649" Language="SFX">
+							<ShortName>VO_Pim_Jump-002.wav</ShortName>
+							<Path>SFX\VO_Pim_Jump-002_3F75BDB9.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3967295931" Name="PIM_Land" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Land" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="95706836" Name="PIM_Throw" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Throw" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="95706836" Name="PIM_Throw" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Throw" DurationType="OneShot" DurationMin="1.399819" DurationMax="1.601723">
 					<IncludedMemoryFiles>
+						<File Id="155808365" Language="SFX">
+							<ShortName>VO_Pim_Throw-002.wav</ShortName>
+							<Path>SFX\VO_Pim_Throw-002_3F75BDB9.wem</Path>
+						</File>
+						<File Id="214687581" Language="SFX">
+							<ShortName>VO_Pim_Throw-001.wav</ShortName>
+							<Path>SFX\VO_Pim_Throw-001_3F75BDB9.wem</Path>
+						</File>
 						<File Id="381932551" Language="SFX">
 							<ShortName>Swoosh_Swipe-Thick_02.wav</ShortName>
 							<Path>SFX\Swoosh_Swipe-Thick_02_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="934112640" Name="PIM_VO_Dash" ObjectPath="\Events\Default Work Unit\PIM\VO\PIM_VO_Dash" DurationType="OneShot" DurationMin="1.116463" DurationMax="1.148118">
+					<IncludedMemoryFiles>
+						<File Id="81804178" Language="SFX">
+							<ShortName>VO_Pim_Dash-002.wav</ShortName>
+							<Path>SFX\VO_Pim_Dash-002_3F75BDB9.wem</Path>
+						</File>
+						<File Id="639492041" Language="SFX">
+							<ShortName>VO_Pim_Dash-001.wav</ShortName>
+							<Path>SFX\VO_Pim_Dash-001_3F75BDB9.wem</Path>
+						</File>
+						<File Id="980856257" Language="SFX">
+							<ShortName>VO_Pim_Dash-003.wav</ShortName>
+							<Path>SFX\VO_Pim_Dash-003_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3901280379" Name="PIM_VO_Hit" ObjectPath="\Events\Default Work Unit\PIM\VO\PIM_VO_Hit" DurationType="OneShot" DurationMin="1.20839" DurationMax="1.257143">
+					<IncludedMemoryFiles>
+						<File Id="509486384" Language="SFX">
+							<ShortName>VO_Pim_Hit-003.wav</ShortName>
+							<Path>SFX\VO_Pim_Hit-003_3F75BDB9.wem</Path>
+						</File>
+						<File Id="584395041" Language="SFX">
+							<ShortName>VO_Pim_Hit-002.wav</ShortName>
+							<Path>SFX\VO_Pim_Hit-002_3F75BDB9.wem</Path>
+						</File>
+						<File Id="750922707" Language="SFX">
+							<ShortName>VO_Pim_Hit-001.wav</ShortName>
+							<Path>SFX\VO_Pim_Hit-001_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1756296120" Name="PIM_VO_Jump" ObjectPath="\Events\Default Work Unit\PIM\VO\PIM_VO_Jump" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="155056730" Name="PIM_VO_KO" ObjectPath="\Events\Default Work Unit\PIM\VO\PIM_VO_KO" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="670951740" Name="PIM_VO_Throw" ObjectPath="\Events\Default Work Unit\PIM\VO\PIM_VO_Throw" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<SwitchGroups>
 				<SwitchGroup Id="1570286487" Name="PIM_Footsteps_Material" ObjectPath="\Switches\Default Work Unit\PIM_Footsteps_Material" GUID="{D4B28F84-3206-4653-8625-359F3F3DEF73}">
@@ -132,17 +199,35 @@
 				<GameParameter Id="3006228107" Name="SET_MainVolume" ObjectPath="\Game Parameters\Default Work Unit\SET_MainVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2129499522" Language="SFX">
+		<SoundBank Id="2129499522" Language="SFX" Hash="2921511785">
 			<ObjectPath>\SoundBanks\Default Work Unit\MIDENA_Bank</ObjectPath>
 			<ShortName>MIDENA_Bank</ShortName>
 			<Path>MIDENA_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4255064110" Name="MIDENA_VO_ATK" ObjectPath="\Events\Default Work Unit\MIDENA\VO\MIDENA_VO_ATK" DurationType="OneShot" DurationMin="1.259002" DurationMax="1.351247">
+					<IncludedMemoryFiles>
+						<File Id="171626939" Language="SFX">
+							<ShortName>SFX_Midena_Atk_03-003.wav</ShortName>
+							<Path>SFX\SFX_Midena_Atk_03-003_3F75BDB9.wem</Path>
+						</File>
+						<File Id="349513922" Language="SFX">
+							<ShortName>SFX_Midena_Atk_03-002.wav</ShortName>
+							<Path>SFX\SFX_Midena_Atk_03-002_3F75BDB9.wem</Path>
+						</File>
+						<File Id="522158923" Language="SFX">
+							<ShortName>SFX_Midena_Atk_03-001.wav</ShortName>
+							<Path>SFX\SFX_Midena_Atk_03-001_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="3133177584" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\NME_Bank</ObjectPath>
 			<ShortName>NME_Bank</ShortName>
 			<Path>NME_Bank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3943603743" Language="SFX" Hash="2153741388">
+		<SoundBank Id="3943603743" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\FOREST_Bank</ObjectPath>
 			<ShortName>FOREST_Bank</ShortName>
 			<Path>FOREST_Bank.bnk</Path>

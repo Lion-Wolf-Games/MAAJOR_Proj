@@ -17,6 +17,11 @@ public class ScreenSettingsManager : MonoBehaviour
     public Toggle vSyncToggle;
     private bool isVSync;
 
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     void Start()
     {
         SettingsManager.Instance.OnApply += SetScreenSettings;
