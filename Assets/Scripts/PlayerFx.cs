@@ -17,6 +17,7 @@ public class PlayerFx : MonoBehaviour
     [SerializeField] private AK.Wwise.Event onDashSFX;
     [SerializeField] private AK.Wwise.Event onJumpSFX;
     [SerializeField] private AK.Wwise.Event onThrowSFX;
+    [SerializeField] private AK.Wwise.Event onHitSFX;
 
     private PlayerController player;
 
@@ -25,6 +26,7 @@ public class PlayerFx : MonoBehaviour
         player.OnDash += OnDashFx;
         player.OnJump += OnJumpFx;
         player.OnThrow += onThrowFX;
+        player.OnHit += onHitFX;
     }
 
     private void OnDashFx()
@@ -56,5 +58,10 @@ public class PlayerFx : MonoBehaviour
     private void onThrowFX()
     {
         onThrowSFX.Post(gameObject);
+    }
+
+    private void onHitFX(int _)
+    {
+        onHitSFX.Post(gameObject);
     }
 }

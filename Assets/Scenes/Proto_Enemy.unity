@@ -5075,23 +5075,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 27224821d20f6164295cd48305a9f42c, type: 3}
   m_PrefabInstance: {fileID: 1097979922}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &467753977 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1566719009850507726, guid: 607eab8664c6c99409cb796b17ff703f, type: 3}
-  m_PrefabInstance: {fileID: 501085901}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &467753980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467753977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 493e042582c3c974e98c45eba0ed7114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &501085901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5103,10 +5086,6 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1332952985}
-    - target: {fileID: 4144535823003958466, guid: 607eab8664c6c99409cb796b17ff703f, type: 3}
-      propertyPath: heigthLaunch
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5763604688520699904, guid: 607eab8664c6c99409cb796b17ff703f, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5157,28 +5136,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 607eab8664c6c99409cb796b17ff703f, type: 3}
---- !u!1 &527699795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1566719008809778937, guid: 607eab8664c6c99409cb796b17ff703f, type: 3}
-  m_PrefabInstance: {fileID: 501085901}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &527699800
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527699795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
-  m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
-  m_FrequencyGain: 1
-  mNoiseOffsets: {x: -754.66614, y: 423.40036, z: 578.7024}
 --- !u!1 &527849826
 GameObject:
   m_ObjectHideFlags: 0
