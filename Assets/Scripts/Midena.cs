@@ -12,6 +12,7 @@ public class Midena : MonoBehaviour
     [SerializeField] private LayerMask hostileLayer;
     [SerializeField] private int damage;
     [SerializeField] private float travelSpeed;
+    [SerializeField] private Animator anim;
 
     private Vector3 startPos;
     private float attackTime;
@@ -32,7 +33,7 @@ public class Midena : MonoBehaviour
             switch (state)
             {
                 case MidenaSate.Attack:
-                transform.DOShakeRotation(0.1f);
+                
                 Destroy(_target);
 
                 onAttack.Post(gameObject);
@@ -75,6 +76,10 @@ public class Midena : MonoBehaviour
             state = MidenaSate.Move;
             transform.DOMove(_target.transform.position,travelSpeed).OnComplete(() => {state = MidenaSate.Attack;});
             transform.LookAt(_target.transform);
+
+            
+            anim.SetTrigger("Attack");
+            anim.SetInteger("AttackType",Random.Range(0,6));
         }
     }
 

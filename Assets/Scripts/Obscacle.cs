@@ -31,11 +31,12 @@ public class Obscacle : MonoBehaviour
             //isPlayerInside = true;
             player = other.GetComponent<PlayerController>();
             Debug.Log("PlayerEnter");
-            player.OnDash += OnDash;
+            //player.OnDash += OnDash;
+            isPlayerInside = true;
         }
     }
 
-    private void OnDash()
+    private void GoInBush()
     {
         //Get playerClosest point
         float distA = Vector3.Distance(player.transform.position,pointA.position);
@@ -67,29 +68,7 @@ public class Obscacle : MonoBehaviour
 
         if(player.isDashing)
         {
-            //Get playerClosest point
-            float distA = Vector3.Distance(player.transform.position,pointA.position);
-            float distB = Vector3.Distance(player.transform.position,pointB.position);
-
-            if (distA >= distB)
-            {
-                endPos = pointA.position;
-            } else
-            {
-                endPos = pointB.position;
-            }
-
-            //Disable input
-            player.DisableInput();
-        
-            obstacleColider.enabled = false;
-            isPassingObstacle = true;
-            PassTime = Time.time + passDuration;
-
-            //Visual
-            player.transform.LookAt(transform.position);
-            visual.DOShakeScale(0.5f,0.5f);
-            fx.Play();
+            GoInBush();
         }
 
     }
@@ -122,9 +101,10 @@ public class Obscacle : MonoBehaviour
         if(other.tag == "Player")
         {
             isPlayerInside = false;
-            player.OnDash -= OnDash;
+            // player.OnDash -= OnDash;
             player = null;
             Debug.Log("PlayerExit");
+            isPlayerInside = false;
         }
     }
 }

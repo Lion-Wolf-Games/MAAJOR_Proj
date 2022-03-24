@@ -48,6 +48,7 @@ public class PlayerFx : MonoBehaviour
         if (jumpFx != null)
             {
                 Instantiate(jumpFx, transform.position, Quaternion.identity);
+                //PoolManager.Instance.Spawn(jumpFx,true,transform.position,Quaternion.identity);
             }
 
         onJumpSFX.Post(gameObject);
