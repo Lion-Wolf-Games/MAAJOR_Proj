@@ -181,7 +181,24 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="PIM_Land" ID="{D5B27D8E-C2C0-4685-9F42-428A57A31783}"/>
+								<Event Name="PIM_Landing" ID="{C06D9A20-D960-4C7A-BAD7-FD456972B432}">
+									<ChildrenList>
+										<Action Name="" ID="{25660C19-3DA4-446F-80A9-A2CBF0D40586}" ShortID="780470037">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Footsteps" ID="{306CE3B7-0B8A-4357-9DB3-888399CBCBA9}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{65E642AF-14B2-42C8-9657-E9875D1407C6}" ShortID="501632035">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_Landing" ID="{79350799-648E-4DB6-AC58-EB059DC6969C}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="VO" ID="{A5653F84-690B-473D-A9DA-395FF5B070B5}" ShortID="822320261">
@@ -206,6 +223,17 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="PIM_Dash" ID="{348C8A17-EF1A-4553-A858-17784D0876D4}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="PIM_VO_Effort" ID="{04F62F1A-4EA4-4192-9455-693335CD0EBA}">
+									<ChildrenList>
+										<Action Name="" ID="{1B5A9BF6-0810-489D-8B8A-F4378BD587F7}" ShortID="95469999">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PIM_VO_Effort" ID="{D492C656-3AD6-482C-B68E-E9B0BDDCC04A}" WorkUnitID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -239,7 +267,80 @@
 						<Folder Name="FOL" ID="{7B3F175B-632B-4428-810A-767D30D43D99}" ShortID="441569997"/>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="PROPS" ID="{09805075-1FF9-40BA-A7A4-258EDB132175}" ShortID="308137775"/>
+				<Folder Name="PROPS" ID="{09805075-1FF9-40BA-A7A4-258EDB132175}" ShortID="308137775">
+					<ChildrenList>
+						<Folder Name="Potion" ID="{ADE603D8-B185-4391-B6FC-BB1639296E1A}" ShortID="661021707">
+							<ChildrenList>
+								<Folder Name="Elements" ID="{BFF0142B-BAAB-419A-8C39-CBB91D33F625}" ShortID="590107424">
+									<ChildrenList>
+										<Event Name="Potion_WindBreak" ID="{121B17B8-08A6-481E-BCFC-0E2070B574EB}">
+											<ChildrenList>
+												<Action Name="" ID="{404DA14A-4E7E-46C7-92FA-413606674A6C}" ShortID="106675483">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Potion_Break" ID="{72D02CB2-FF51-4836-8CBC-51A9D4876AB5}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+												<Action Name="" ID="{3AF3E7C2-3036-49A2-893A-1BC759784B40}" ShortID="564298881">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Potion_WInd_Blow" ID="{0B333F99-AE09-4E55-A9D1-27FE91D7AEE9}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Potion_RockBreak" ID="{AB863BB1-6BA8-4CBF-B921-E24CE05C4346}">
+											<ChildrenList>
+												<Action Name="" ID="{D3D6DDA3-300E-46C7-975B-64CB6525D1BD}" ShortID="102951649">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Potion_Break" ID="{72D02CB2-FF51-4836-8CBC-51A9D4876AB5}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Potion_FireBreak" ID="{6981B2BB-D21E-400B-A2D4-95E9197D11D6}">
+											<ChildrenList>
+												<Action Name="" ID="{B7F9435C-EDCB-4465-8C43-4AB5CF1C5CF7}" ShortID="338550371">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Potion_Break" ID="{72D02CB2-FF51-4836-8CBC-51A9D4876AB5}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Potion_IceBreak" ID="{18F2A7DE-A3B5-4AFF-BEA0-668A01FBC08F}">
+											<ChildrenList>
+												<Action Name="" ID="{2FBDA3B0-9EBE-4C78-929B-48AB3AE6EEEE}" ShortID="386036250">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Potion_Break" ID="{72D02CB2-FF51-4836-8CBC-51A9D4876AB5}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Event Name="Potion_Break" ID="{DF9559D4-6570-4893-89B9-393989F8BB48}">
+									<ChildrenList>
+										<Action Name="" ID="{B5134FF5-7A01-4AD2-863F-964DAC0042F0}" ShortID="223388466">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Potion_Break" ID="{72D02CB2-FF51-4836-8CBC-51A9D4876AB5}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="UI" ID="{F153EE70-DB81-4EF7-A3B8-CE3F000914D4}" ShortID="801802818"/>
 				<Folder Name="MUSIC" ID="{7C8E090D-BEBC-47CE-87B8-D1D218490D47}" ShortID="81295749">
 					<ChildrenList>

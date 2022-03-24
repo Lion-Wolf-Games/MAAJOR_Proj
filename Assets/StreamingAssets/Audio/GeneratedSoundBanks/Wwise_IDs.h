@@ -20,13 +20,19 @@ namespace AK
         static const AkUniqueID PIM_DASH = 2296463320U;
         static const AkUniqueID PIM_FOOTSTEP = 3358588958U;
         static const AkUniqueID PIM_JUMP = 2539778304U;
-        static const AkUniqueID PIM_LAND = 3967295931U;
+        static const AkUniqueID PIM_LANDING = 99461157U;
         static const AkUniqueID PIM_THROW = 95706836U;
         static const AkUniqueID PIM_VO_DASH = 934112640U;
+        static const AkUniqueID PIM_VO_EFFORT = 2624335526U;
         static const AkUniqueID PIM_VO_HIT = 3901280379U;
         static const AkUniqueID PIM_VO_JUMP = 1756296120U;
         static const AkUniqueID PIM_VO_KO = 155056730U;
         static const AkUniqueID PIM_VO_THROW = 670951740U;
+        static const AkUniqueID POTION_BREAK = 3126542488U;
+        static const AkUniqueID POTION_FIREBREAK = 1401518020U;
+        static const AkUniqueID POTION_ICEBREAK = 196278613U;
+        static const AkUniqueID POTION_ROCKBREAK = 1210783441U;
+        static const AkUniqueID POTION_WINDBREAK = 3866080526U;
     } // namespace EVENTS
 
     namespace STATES
@@ -85,6 +91,7 @@ namespace AK
         static const AkUniqueID NME = 578529263U;
         static const AkUniqueID PIM = 1115118801U;
         static const AkUniqueID PIM_FOL = 43049847U;
+        static const AkUniqueID POTIONS = 304095579U;
         static const AkUniqueID PROPS = 968010305U;
         static const AkUniqueID SFX = 393239870U;
         static const AkUniqueID UI = 1551306167U;

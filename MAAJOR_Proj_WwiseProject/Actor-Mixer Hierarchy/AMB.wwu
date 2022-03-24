@@ -6,7 +6,7 @@
 				<ActorMixer Name="AMB" ID="{8C1E3093-EF4E-4945-AE41-A8B899BBFA98}" ShortID="49185844">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+							<ObjectRef Name="MUS_AMB_Conversion Settings" ID="{284CCE97-74AE-4A26-90C5-480429C75CC7}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="AMB" ID="{EA815503-149B-4B5A-BA20-803B78EB61A2}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>

@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
+  m_AmplitudeGain: 1
   m_FrequencyGain: 1
   mNoiseOffsets: {x: -754.66614, y: 423.40036, z: 578.7024}
 --- !u!1 &1566719008923741320
@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 2244631782099816620}
   - component: {fileID: 1922009542}
   - component: {fileID: 4144535823003958466}
+  - component: {fileID: 2574313690388964390}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1049,6 +1050,7 @@ MonoBehaviour:
   smokeParticle: {fileID: 3501014057941490324, guid: a692bf99cfb10f24dbfc1c16917ef1a8, type: 3}
   grassParticle: {fileID: 3936216733315156393, guid: b547f9be8bf6368498e6b6ddb2873a27, type: 3}
   jumpFx: {fileID: 8242363146913805139, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
+  landingFx: {fileID: 3550260776827586359, guid: d4ee876581c9f11418322a451d9abecd, type: 3}
   dashFx: {fileID: 5572883630181288644, guid: 350eb1182d7e81544a999cdf8b900c0f, type: 3}
   smokeSpawnPoint: {fileID: 435831301}
   grassSpawnPoint: {fileID: 505271650}
@@ -1064,6 +1066,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 15306011e7ebdca4f80bd43e7d29ee90, type: 2}
+  onLandingSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 46530575d7fe51a42a0fdbc80bac1e5b, type: 2}
   onThrowSFX:
     idInternal: 0
     valueGuidInternal: 
@@ -1072,6 +1078,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: e8dd214f6b0bf384b9a6e9ca9a15b091, type: 2}
+  onSuckSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6873a35d833c09246bbd079b9a0b8695, type: 2}
 --- !u!114 &1922009542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,6 +1129,22 @@ MonoBehaviour:
   RangeVisual: {fileID: 1921070164}
   aimTarget: {fileID: 8196136215860025986}
   potionPrefab: {fileID: 8743244967301466290, guid: a94d4ae9dc3de6b4aa0cbc7fec6b7098, type: 3}
+--- !u!54 &2574313690388964390
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566719009391129384}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1566719009494421175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,14 +1979,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
   m_PrefabInstance: {fileID: 1566719008245002395}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1262616781507115523 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 305028607164943000, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
-  m_PrefabInstance: {fileID: 1566719008245002395}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1311853567026845552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
+  m_PrefabInstance: {fileID: 1566719008245002395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1262616781507115523 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 305028607164943000, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
   m_PrefabInstance: {fileID: 1566719008245002395}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1566719009269462419

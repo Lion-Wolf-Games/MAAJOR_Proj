@@ -57,6 +57,7 @@ public class PlayerController : LivingObject
 
     public PlayerActions OnDash;
     public PlayerActions OnJump;
+    public PlayerActions OnLanding;
     public PlayerActions OnSuck;
     public PlayerActions OnStartAim;
     public PlayerActions OnStopAim;
@@ -253,6 +254,8 @@ public class PlayerController : LivingObject
         else if (_verticalSpeed != -3)
         {
             _verticalSpeed = -3;
+
+            OnLanding?.Invoke();
         }
 
         if (_jumpInput && _isGrounded)

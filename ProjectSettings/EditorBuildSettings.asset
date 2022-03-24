@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Proto_Enemy.unity
     guid: fc347dc06496412498432db9ad3d21a7
   - enabled: 0
-    path: Assets/Scenes/Proto_Cam.unity
+    path: Assets/Scenes/Proto_Cam_old.unity
     guid: 75805dccd9b1a234c97d18ed323426cf
   m_configObjects: {}

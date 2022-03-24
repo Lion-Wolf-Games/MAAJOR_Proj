@@ -6,6 +6,7 @@
 				<SoundBank Name="PIM_Bank" ID="{CFBA8CA7-B9C6-43BB-94C5-FEFB8DF91318}">
 					<ObjectInclusionList>
 						<ObjectRef Name="PIM" ID="{12D1D987-C986-427A-B4A9-FA699B1D4C98}" WorkUnitID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Potion" ID="{ADE603D8-B185-4391-B6FC-BB1639296E1A}" WorkUnitID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

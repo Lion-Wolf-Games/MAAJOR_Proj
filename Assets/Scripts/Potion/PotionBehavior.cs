@@ -39,6 +39,7 @@ public class PotionBehavior : MonoBehaviour
             Destroy(potionTrailParent.GetChild(i).gameObject);
         }
 
+        potionType.onCollisionSfx.Post(gameObject);
         CinemachineCamshake.Instance.ShakeCam(1,0.2f);
 
         gameObject.SetActive(false);

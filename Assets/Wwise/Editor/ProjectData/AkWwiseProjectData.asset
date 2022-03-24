@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fbf3588fdb41bd49897c85e19de4d51e
     GuidInternal: 
-    m_lastTime: -8585546973043548564
+    m_lastTime: -8585536807141817782
     List:
     - name: AMB
       guid: 035581ea9b145a4bba20803b78eb61a2
@@ -217,6 +217,29 @@ MonoBehaviour:
         ObjectType: 2
         guid: b2245b0266689f45b65a9e8aad3f8526
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\PIM\PIM_FOL
+    - name: POTIONS
+      guid: 11303fe2c8f7a14b949895f687f57a02
+      id: 304095579
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
+      - ElementName: PROPS
+        ObjectType: 2
+        guid: 47eb0efe825f804a82dbc5a437f5b58d
+      - ElementName: POTIONS
+        ObjectType: 2
+        guid: 11303fe2c8f7a14b949895f687f57a02
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\PROPS\POTIONS
     - name: PROPS
       guid: 47eb0efe825f804a82dbc5a437f5b58d
       id: 968010305
@@ -286,7 +309,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a91c831e1c440041a72a7be24c8ac7de
     GuidInternal: 
-    m_lastTime: -8585546995376335368
+    m_lastTime: -8585537578583563099
     List:
     - name: FOREST_Bank
       guid: f96f3d7e8bf2b046b6600f9e0040df35
@@ -356,7 +379,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c8a5b76bfd504b49a6762764bda6d51d
     GuidInternal: 
-    m_lastTime: -8585540889916536642
+    m_lastTime: -8585537572556532358
     List:
     - name: AMB
       guid: 50acd9e1b911c14fa5b00b99ce19cea1
@@ -481,6 +504,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Elements
+      guid: 2b14f0bfabba9a418c39cbb91d33f625
+      id: 4196236882
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PROPS
+        ObjectType: 4
+        guid: 75508009f91fba40a7a4258edb132175
+      - ElementName: Potion
+        ObjectType: 4
+        guid: d803e6ad85b19143b6fcbb1639296e1a
+      - ElementName: Elements
+        ObjectType: 4
+        guid: 2b14f0bfabba9a418c39cbb91d33f625
+      Path: Events\Default Work Unit\PROPS\Potion\Elements
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: FOL
       guid: 59b202bbfbce1c4f905ec92c01499871
       id: 1083137552
@@ -579,8 +625,8 @@ MonoBehaviour:
         guid: 5f2bdd37ca4f7e4c98678eddbf552349
       Path: Events\Default Work Unit\MIDENA\VO\MIDENA_VO_ATK
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.351247
+      minDuration: 1.259002
     - name: MUSIC
       guid: 0d098e7cbcbece4787b8d1d218490d47
       id: 3991942870
@@ -698,7 +744,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: f5d92282ecf21440b55afbde86795409
       Path: Events\Default Work Unit\PIM\FOL\PIM_Footstep
-      maxAttenuation: 0
+      maxAttenuation: 90
       maxDuration: -1
       minDuration: -1
     - name: PIM_Jump
@@ -724,9 +770,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.224762
       minDuration: 1.203937
-    - name: PIM_Land
-      guid: 8e7db2d5c0c285469f42428a57a31783
-      id: 3967295931
+    - name: PIM_Landing
+      guid: 209a6dc060d97a4cbad7fd456972b432
+      id: 99461157
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -740,13 +786,13 @@ MonoBehaviour:
       - ElementName: FOL
         ObjectType: 4
         guid: 59b202bbfbce1c4f905ec92c01499871
-      - ElementName: PIM_Land
+      - ElementName: PIM_Landing
         ObjectType: 3
-        guid: 8e7db2d5c0c285469f42428a57a31783
-      Path: Events\Default Work Unit\PIM\FOL\PIM_Land
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+        guid: 209a6dc060d97a4cbad7fd456972b432
+      Path: Events\Default Work Unit\PIM\FOL\PIM_Landing
+      maxAttenuation: 90
+      maxDuration: -1
+      minDuration: -1
     - name: PIM_Throw
       guid: b93db13405c6274ba102bd7550a84b1d
       id: 95706836
@@ -793,6 +839,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.148118
       minDuration: 1.116463
+    - name: PIM_VO_Effort
+      guid: 1a2ff604a44e92419455693335cd0eba
+      id: 2624335526
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PIM
+        ObjectType: 4
+        guid: 87d9d11286c97a42b4a9fa699b1d4c98
+      - ElementName: VO
+        ObjectType: 4
+        guid: 843f65a50b693d47a9da395ff5b070b5
+      - ElementName: PIM_VO_Effort
+        ObjectType: 3
+        guid: 1a2ff604a44e92419455693335cd0eba
+      Path: Events\Default Work Unit\PIM\VO\PIM_VO_Effort
+      maxAttenuation: 0
+      maxDuration: 1.809932
+      minDuration: 1.809932
     - name: PIM_VO_Hit
       guid: 3a420d38ecc342439f0fcf14b5f4ca8b
       id: 3901280379
@@ -885,6 +954,75 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Potion
+      guid: d803e6ad85b19143b6fcbb1639296e1a
+      id: 4272075576
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PROPS
+        ObjectType: 4
+        guid: 75508009f91fba40a7a4258edb132175
+      - ElementName: Potion
+        ObjectType: 4
+        guid: d803e6ad85b19143b6fcbb1639296e1a
+      Path: Events\Default Work Unit\PROPS\Potion
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Potion_Break
+      guid: d45995df7065934889b9393989f8bb48
+      id: 3126542488
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PROPS
+        ObjectType: 4
+        guid: 75508009f91fba40a7a4258edb132175
+      - ElementName: Potion
+        ObjectType: 4
+        guid: d803e6ad85b19143b6fcbb1639296e1a
+      - ElementName: Potion_Break
+        ObjectType: 3
+        guid: d45995df7065934889b9393989f8bb48
+      Path: Events\Default Work Unit\PROPS\Potion\Potion_Break
+      maxAttenuation: 90
+      maxDuration: 1.797953
+      minDuration: 1.59902
+    - name: Potion_WindBreak
+      guid: b8171b12a6081e48bcfc0e2070b574eb
+      id: 3866080526
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PROPS
+        ObjectType: 4
+        guid: 75508009f91fba40a7a4258edb132175
+      - ElementName: Potion
+        ObjectType: 4
+        guid: d803e6ad85b19143b6fcbb1639296e1a
+      - ElementName: Elements
+        ObjectType: 4
+        guid: 2b14f0bfabba9a418c39cbb91d33f625
+      - ElementName: Potion_WindBreak
+        ObjectType: 3
+        guid: b8171b12a6081e48bcfc0e2070b574eb
+      Path: Events\Default Work Unit\PROPS\Potion\Elements\Potion_WindBreak
+      maxAttenuation: 90
+      maxDuration: 2.001451
+      minDuration: 1.827165
     - name: PROPS
       guid: 75508009f91fba40a7a4258edb132175
       id: 968010305
@@ -920,26 +1058,6 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: VO
-      guid: 843f65a50b693d47a9da395ff5b070b5
-      id: 1534528548
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: c8a5b76bfd504b49a6762764bda6d51d
-      - ElementName: PIM
-        ObjectType: 4
-        guid: 87d9d11286c97a42b4a9fa699b1d4c98
-      - ElementName: VO
-        ObjectType: 4
-        guid: 843f65a50b693d47a9da395ff5b070b5
-      Path: Events\Default Work Unit\PIM\VO
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: VO
       guid: 50602310501ae444880e402e7fb34d74
       id: 1534528548
       PathAndIcons:
@@ -956,6 +1074,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 50602310501ae444880e402e7fb34d74
       Path: Events\Default Work Unit\MIDENA\VO
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: VO
+      guid: 843f65a50b693d47a9da395ff5b070b5
+      id: 1534528548
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: PIM
+        ObjectType: 4
+        guid: 87d9d11286c97a42b4a9fa699b1d4c98
+      - ElementName: VO
+        ObjectType: 4
+        guid: 843f65a50b693d47a9da395ff5b070b5
+      Path: Events\Default Work Unit\PIM\VO
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1142,7 +1280,7 @@ MonoBehaviour:
     m_lastTime: -8585571303976168830
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000900000028000000
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000b0000000c00000011000000120000002200000023000000260000002700000028000000290000002a0000002c00000032000000390000003a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

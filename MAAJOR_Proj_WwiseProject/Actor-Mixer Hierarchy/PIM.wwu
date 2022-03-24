@@ -4,6 +4,11 @@
 		<WorkUnit Name="PIM" ID="{9BBEBCC3-56AA-4F04-915C-EDDBB3D4472E}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="PIM" ID="{EB70A39C-70FA-4AD1-A134-E8D69CD0BFA2}" ShortID="62921696">
+					<PropertyList>
+						<Property Name="3DPosition" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="0"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
@@ -16,8 +21,12 @@
 						<ActorMixer Name="PIM_FOL" ID="{C8EE77AD-7969-4B3D-8564-3A4C6DB1918D}" ShortID="455794271">
 							<PropertyList>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="PropsSfxAttenuation" ID="{8E6FDD4F-4D37-4279-86D0-02D647AEE17B}" WorkUnitID="{710FE2BA-BC84-4FE0-B0A8-9BEE7C7560B4}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
 								</Reference>
@@ -28,6 +37,19 @@
 							<ChildrenList>
 								<SwitchContainer Name="PIM_Footsteps" ID="{306CE3B7-0B8A-4357-9DB3-888399CBCBA9}" ShortID="393074806">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{860714C3-9376-4425-862C-AC6826735FA1}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="202"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -58,6 +80,19 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="PIM_Footsteps_Grass" ID="{F419FAD7-FBE8-48F5-89FF-FC09ED8B674C}" ShortID="412011777">
 											<PropertyList>
+												<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{3A61B844-2277-45F2-9DD2-74FB31F6EDB5}">
+																<PropertyList>
+																	<Property Name="Max" Type="Real64" Value="101"/>
+																	<Property Name="Min" Type="Real64" Value="-101"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-12</Value>
@@ -74,6 +109,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Pim_Footstep_Grass_01" ID="{18E7A82C-9E69-4B1C-BEA0-A60C8231A245}" ShortID="50446811">
+													<PropertyList>
+														<Property Name="OverrideConversion" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
@@ -163,167 +201,6 @@
 													<ObjectLists/>
 													<ActiveSourceList>
 														<ActiveSource Name="Pim_Footstep_Grass_04" ID="{616FE627-84E7-4B0B-B838-7EFD8BC42F73}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Pim_Footstep_Grass_05" ID="{E8DFEA09-90A6-40FC-8F85-068979249106}" ShortID="176860308">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Pim_Footstep_Grass_05" ID="{0E6034D3-724C-492A-BABC-58A2C1049BE2}">
-															<Language>SFX</Language>
-															<AudioFile>Pim_Footstep_Grass_05.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="214378350"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="Pim_Footstep_Grass_05" ID="{0E6034D3-724C-492A-BABC-58A2C1049BE2}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Pim_Footstep_Grass_06" ID="{F9ACF6D6-2138-41C3-83D1-B4D9E8D4D1D0}" ShortID="429478659">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Pim_Footstep_Grass_06" ID="{EBAFE92C-08B5-4F88-9BF4-8B9463DE364A}">
-															<Language>SFX</Language>
-															<AudioFile>Pim_Footstep_Grass_06.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="1037516660"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="Pim_Footstep_Grass_06" ID="{EBAFE92C-08B5-4F88-9BF4-8B9463DE364A}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Pim_Footstep_Grass_07" ID="{A4ECF17E-A0FF-464A-8940-7C751206B8A0}" ShortID="536698201">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Pim_Footstep_Grass_07" ID="{C87AC92B-8479-45D0-B729-1FA2870FF953}">
-															<Language>SFX</Language>
-															<AudioFile>Pim_Footstep_Grass_07.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="554523483"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="Pim_Footstep_Grass_07" ID="{C87AC92B-8479-45D0-B729-1FA2870FF953}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Pim_Footstep_Grass_08" ID="{56066DC8-FA3B-411A-B1BA-51EB4B24BA2C}" ShortID="1028712518">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Pim_Footstep_Grass_08" ID="{C860AA85-2CBF-4846-8565-3D0F411DAB39}">
-															<Language>SFX</Language>
-															<AudioFile>Pim_Footstep_Grass_08.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="195653497"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="Pim_Footstep_Grass_08" ID="{C860AA85-2CBF-4846-8565-3D0F411DAB39}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Pim_Footstep_Grass_09" ID="{EBCD8A7E-4030-40C8-86CD-7FFA1052EA39}" ShortID="852136056">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Pim_Footstep_Grass_09" ID="{CEFE2220-EFCB-446E-9781-BA9C76464FC6}">
-															<Language>SFX</Language>
-															<AudioFile>Pim_Footstep_Grass_09.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="71630185"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="Pim_Footstep_Grass_09" ID="{CEFE2220-EFCB-446E-9781-BA9C76464FC6}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Pim_Footstep_Grass_10" ID="{8CA5DF25-4FC9-4884-BC7E-40A6006A0779}" ShortID="385720680">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Pim_Footstep_Grass_10" ID="{C3D97B00-7906-47DC-8D29-C0BC52B07EC9}">
-															<Language>SFX</Language>
-															<AudioFile>Pim_Footstep_Grass_10.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="1050756203"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="Pim_Footstep_Grass_10" ID="{C3D97B00-7906-47DC-8D29-C0BC52B07EC9}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Pim_Footstep_Grass_11" ID="{1A5948F6-483D-4909-8DF2-D1739BBD8054}" ShortID="964244793">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Pim_Footstep_Grass_11" ID="{799A9410-A512-4154-9C5F-CF85C2797CBF}">
-															<Language>SFX</Language>
-															<AudioFile>Pim_Footstep_Grass_11.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="88168832"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="Pim_Footstep_Grass_11" ID="{799A9410-A512-4154-9C5F-CF85C2797CBF}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -518,6 +395,54 @@
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PIM_Landing" ID="{79350799-648E-4DB6-AC58-EB059DC6969C}" ShortID="462015686">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="FOL_Pim_Landing" ID="{D6D57DC0-32C4-4D84-B126-420C8B9B3EB0}" ShortID="447919301">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FOL_Pim_Landing" ID="{DD062F6D-59DC-4053-9C57-BA5FDB7CF243}">
+													<Language>SFX</Language>
+													<AudioFile>FOL_Pim_Landing.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="854851898"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="FOL_Pim_Landing" ID="{DD062F6D-59DC-4053-9C57-BA5FDB7CF243}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
@@ -631,6 +556,11 @@
 								<RandomSequenceContainer Name="PIM_Jump" ID="{44F9EB2E-50FD-4FD3-A860-FBD97A4CE308}" ShortID="850987962">
 									<PropertyList>
 										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -760,6 +690,11 @@
 								<RandomSequenceContainer Name="PIM_Throw" ID="{52DB890E-16DF-4967-AD2E-BEA2DA7CCD07}" ShortID="1066838212">
 									<PropertyList>
 										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 									</PropertyList>
 									<ReferenceList>
@@ -773,6 +708,11 @@
 									<ChildrenList>
 										<Sound Name="VO_Pim_Throw-001" ID="{84A72B17-909C-4E5D-938A-AA3228C3FD45}" ShortID="438476511">
 											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
 														<Value>-3</Value>
@@ -909,10 +849,56 @@
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PIM_VO_Effort" ID="{D492C656-3AD6-482C-B68E-E9B0BDDCC04A}" ShortID="622477328">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="VO_Pim_Effort" ID="{41EC9F51-6F52-4279-872C-140943D87F1A}" ShortID="1007565349">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Pim_Effort" ID="{6EF4997E-2FDE-4142-AE2C-7CC92F35A700}">
+													<Language>SFX</Language>
+													<AudioFile>VO_Pim_Effort.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="123341531"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Pim_Effort" ID="{6EF4997E-2FDE-4142-AE2C-7CC92F35A700}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
 					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{C4E11465-5209-48BD-A641-3084BED4923E}"/>
+					</PositioningInfo>
 					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>

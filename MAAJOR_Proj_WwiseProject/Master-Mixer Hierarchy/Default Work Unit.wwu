@@ -109,6 +109,10 @@
 							</PropertyList>
 							<ChildrenList>
 								<Bus Name="PIM" ID="{72BA5848-86F3-4061-9496-F9D22A5EFFE0}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
 										<Bus Name="PIM_FOL" ID="{025B24B2-6866-459F-B65A-9E8AAD3F8526}">
 											<ObjectLists/>
@@ -131,12 +135,20 @@
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="NME" ID="{7D19E491-7FB2-4020-B9F1-CDE1FC7A8C03}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="UI" ID="{A66EC077-6DE8-4A2F-A399-996E6355F860}">
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="PROPS" ID="{FE0EEB47-5F82-4A80-82DB-C5A437F5B58D}">
+									<ChildrenList>
+										<Bus Name="POTIONS" ID="{E23F3011-F7C8-4BA1-9498-95F687F57A02}">
+											<ObjectLists/>
+										</Bus>
+									</ChildrenList>
 									<ObjectLists/>
 								</Bus>
 							</ChildrenList>

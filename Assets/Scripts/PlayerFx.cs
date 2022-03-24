@@ -7,6 +7,7 @@ public class PlayerFx : MonoBehaviour
     [SerializeField] private GameObject smokeParticle;
     [SerializeField] private GameObject grassParticle;
     [SerializeField] private GameObject jumpFx;
+    [SerializeField] private GameObject landingFx;
     [SerializeField] private GameObject dashFx;
 
     [SerializeField] private Transform smokeSpawnPoint;
@@ -16,8 +17,10 @@ public class PlayerFx : MonoBehaviour
     [SerializeField] private AK.Wwise.Event onStepSFX;
     [SerializeField] private AK.Wwise.Event onDashSFX;
     [SerializeField] private AK.Wwise.Event onJumpSFX;
+    [SerializeField] private AK.Wwise.Event onLandingSFX;
     [SerializeField] private AK.Wwise.Event onThrowSFX;
     [SerializeField] private AK.Wwise.Event onHitSFX;
+    [SerializeField] private AK.Wwise.Event onSuckSFX;
 
     private PlayerController player;
 
@@ -27,6 +30,9 @@ public class PlayerFx : MonoBehaviour
         player.OnJump += OnJumpFx;
         player.OnThrow += onThrowFX;
         player.OnHit += onHitFX;
+        player.OnLanding += OnLandingFx;
+        player.OnSuck += OnSuckFx;
+
     }
 
     private void OnDashFx()
@@ -47,12 +53,24 @@ public class PlayerFx : MonoBehaviour
         onJumpSFX.Post(gameObject);
     }
 
+    private void OnLandingFx()
+    {
+        PoolManager.Instantiate(landingFx, transform.position, Quaternion.identity);
+
+        onLandingSFX.Post(gameObject);
+    }
+
     public void Step()
     {
         Instantiate(smokeParticle, smokeSpawnPoint.position, Quaternion.identity);
         Instantiate(grassParticle, grassSpawnPoint.position, Quaternion.identity);
 
         onStepSFX.Post(gameObject);
+    }
+
+    private void OnSuckFx()
+    {
+        onSuckSFX.Post(gameObject);
     }
 
     private void onThrowFX()
