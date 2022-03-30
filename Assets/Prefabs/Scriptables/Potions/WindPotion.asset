@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b79c2328961134793be26dfaa70890, type: 3}
+  m_Name: WindPotion
+  m_EditorClassIdentifier: 
+  useType: 0
+  effectRange: 5
+  useTime: 0
+  useDuration: 0
+  launchRange: 10
+  cooldown: 5
+  spawnFx: {fileID: 7102394456590244652, guid: de969d661a1d7ae42948e667604d47c6, type: 3}
+  trailFx: {fileID: 0}
+  liquidMat: {fileID: 2100000, guid: 46473283f8a28f241ae79d5f44696216, type: 2}
+  onCollisionSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 701a47cdc4dba234390cdd7992ddc015, type: 2}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  pushDistance: 10

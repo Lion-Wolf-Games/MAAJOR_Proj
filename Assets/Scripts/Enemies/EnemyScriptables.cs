@@ -17,5 +17,19 @@ public class EnemyScriptables : ScriptableObject {
     [SerializeField] private float timeBetweenWander;
     [Space]
     [SerializeField] private GameObject model;
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
     
+    public float GetTurningSpeed()
+    {
+        return turnSpeed;
+    }
+
+    public float GetPuddleSpeed()
+    {
+        return puddleSpeed;
+    }
 }

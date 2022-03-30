@@ -13,8 +13,13 @@ public class EarthPotion : Potion
     {
         Physics.Raycast(target.position,Vector3.down,out RaycastHit hit,float.MaxValue,layer);
 
+        float yAngle = Random.Range(-360,360f);
+        Quaternion angle = Quaternion.Euler(0,yAngle,0);
 
-        GameObject wall = PoolManager.Instance.Spawn(wallTospawn,true,hit.point,Quaternion.identity);
+        GameObject wall = PoolManager.Instance.Spawn(wallTospawn,true,hit.point,angle);
+
+
+
         
         wall.GetComponent<EarthWall>().Spawn(timeActive);
 

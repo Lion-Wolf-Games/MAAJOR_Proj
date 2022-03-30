@@ -3,44 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemies : MonoBehaviour
+public class Enemies : FightingObject
 {
     public int hp = 3;
 
-    private Rigidbody rb;
-    private NavMeshAgent navAgent;
     [SerializeField] private Animator anim;
-    
-    [Space] [Header("Chase")]
-    [SerializeField] private GameObject _target;
-    [SerializeField] private float detectionRange;
-    [SerializeField] private float timeBeforeLostTarget;
+    [SerializeField] private EnemyScriptables enemyType;
+    [SerializeField] private GameObject enemyModel;
+    [SerializeField] private GameObject puddleModel;
 
-    [Space] [Header("Atttack")]
-    [SerializeField] private float attackRange;
-    [SerializeField] private float attackDuration;
-    [SerializeField] private LayerMask hostileLayer;
-    [SerializeField] private int damage;
 
     [Space] [Header("Wander")]
     [SerializeField] private float wanderRange;
     [SerializeField] private float timeBetweenWander;
     [SerializeField] private Vector3 spawnPosition;
+    private float wanderTime;
 
     [Space] [Header("Panic")]
     [SerializeField] private float panicRange;
     [SerializeField] private float timeBetweenDirChange;
     [SerializeField] private GameObject sfxPanic;
-
-
-    private Vector3 wanderPos;
-    private float wanderTime;
-    private float attackTime;
     private float panicTime;
     private float panicDuration;
+
+
+    private Rigidbody rb;
+    private NavMeshAgent navAgent;
+    private Vector3 wanderPos;
     private Vector3 lastTargetPos;
 
-    public enum FSM_Enemies { Idle, Wander, Chasing, Attacking, TargetLost, Hit, Panic}
+    public enum FSM_Enemies { Idle, Wander, Chasing, Attacking, TargetLost, Hit, Panic, Flee,Puddle}
     [SerializeField] private FSM_Enemies fsm;
     private FSM_Enemies fsmOld;
 
@@ -56,10 +48,20 @@ public class Enemies : MonoBehaviour
         spawnPosition = transform.position;
         wanderPos = spawnPosition;
         sfxPanic.SetActive(false);
+
+
+        enemyModel.SetActive(true);
+        puddleModel.SetActive(false);
+
+        navAgent.speed = enemyType.GetSpeed();
+        navAgent.angularSpeed = enemyType.GetTurningSpeed();
     }
 
     private void Update()
     {
+        
+        float stoppingRange = 0.2f;
+
         if (fsm != fsmOld)
         {
             fsmOld = fsm;
@@ -69,8 +71,9 @@ public class Enemies : MonoBehaviour
                 case FSM_Enemies.Idle:
                     wanderTime = Time.time + timeBetweenWander;
 
-                    if(anim != null)
+                    if(anim != null){
                         anim.SetBool("IsMoving", false);
+                    }
                     navAgent.SetDestination(transform.position);
                     break;
                 case FSM_Enemies.Wander:
@@ -83,6 +86,8 @@ public class Enemies : MonoBehaviour
                     if (anim != null)
                         anim.SetBool("IsMoving", true);
                     break;
+
+                    
                 case FSM_Enemies.Attacking:
                     navAgent.SetDestination(transform.position);
                     attackTime = Time.time + attackDuration;
@@ -105,6 +110,13 @@ public class Enemies : MonoBehaviour
                     break;
                 case FSM_Enemies.Panic:
                     sfxPanic.SetActive(true);
+                    break;
+                case FSM_Enemies.Puddle:
+                    enemyModel.SetActive(false);
+                    puddleModel.SetActive(true);
+
+                    navAgent.speed = enemyType.GetPuddleSpeed();
+                    navAgent.SetDestination(spawnPosition);
                     break;
                 default:
                     break;
@@ -129,7 +141,6 @@ public class Enemies : MonoBehaviour
 
                 CheckForTarget();
 
-                float stoppingRange = 0.2f;
                 if (navAgent.remainingDistance <= stoppingRange)
                 {
                     fsm = FSM_Enemies.Idle;
@@ -199,6 +210,18 @@ public class Enemies : MonoBehaviour
                 }
                 
                 break;
+            case FSM_Enemies.Puddle:
+                if (navAgent.remainingDistance <= stoppingRange)
+                {
+                    
+                    enemyModel.SetActive(true);
+                    puddleModel.SetActive(false);
+
+                    navAgent.speed = enemyType.GetSpeed();
+
+                    fsm = FSM_Enemies.Idle;
+                }
+                break;
             default:
                 break;
         }
@@ -216,7 +239,7 @@ public class Enemies : MonoBehaviour
         }
     }
 
-    void Damage(Vector3 origin)
+    public void Damage(Vector3 origin)
     {
         hp--;
         Vector3 dir = transform.position - origin;
@@ -224,7 +247,7 @@ public class Enemies : MonoBehaviour
 
         if (hp <= 0)
         {
-            Destroy(gameObject);
+            fsm = FSM_Enemies.Puddle;
         }
     }
 
@@ -232,6 +255,20 @@ public class Enemies : MonoBehaviour
     {
         panicDuration = Time.time + time;
         fsm = FSM_Enemies.Panic;
+    }
+
+    public void StopMovement()
+    {
+        navAgent.speed = 0;
+        navAgent.angularSpeed = 0;
+        navAgent.SetDestination(transform.position);
+    }
+
+    public void ResumeMovement()
+    {
+        navAgent.speed = enemyType.GetSpeed();
+        navAgent.angularSpeed = enemyType.GetTurningSpeed();
+
     }
 
     private void OnDrawGizmos()

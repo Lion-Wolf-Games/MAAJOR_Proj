@@ -30,7 +30,7 @@ public class EarthWall : MonoBehaviour
         {
             isWallUp = false;
             transform.DOShakePosition(0.2f,0.5f);
-            transform.DOScaleY(0f,0.5f).OnComplete( () => {gameObject.SetActive(false);});
+            transform.DOMoveY(transform.position.y - 5f,0.5f).OnComplete( () => {gameObject.SetActive(false);});
         }
     }
 
