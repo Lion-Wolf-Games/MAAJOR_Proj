@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 1
+  m_AmplitudeGain: 0
   m_FrequencyGain: 1
   mNoiseOffsets: {x: -754.66614, y: 423.40036, z: 578.7024}
 --- !u!1 &1566719008923741320
@@ -1064,9 +1064,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d310c65839464cc47bc1e43d04fff072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smokeParticle: {fileID: 3501014057941490324, guid: a692bf99cfb10f24dbfc1c16917ef1a8, type: 3}
+  smokeParticle: {fileID: 8127323042310729850, guid: 243759a34152bc748a487e3a26385661, type: 3}
   grassParticle: {fileID: 3936216733315156393, guid: b547f9be8bf6368498e6b6ddb2873a27, type: 3}
-  jumpFx: {fileID: 8242363146913805139, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
+  jumpFx: {fileID: 7790835075555362990, guid: ab66e1130052e424094dc8927772b843, type: 3}
   landingFx: {fileID: 3550260776827586359, guid: d4ee876581c9f11418322a451d9abecd, type: 3}
   dashFx: {fileID: 5572883630181288644, guid: 350eb1182d7e81544a999cdf8b900c0f, type: 3}
   smokeSpawnPoint: {fileID: 435831301}
@@ -1141,6 +1141,7 @@ MonoBehaviour:
   colliderLayer:
     serializedVersion: 2
     m_Bits: 1143
+  anims: {fileID: 1566719008738073820}
   visualresolution: 30
   lineVisual: {fileID: 5003773898566050986}
   RangeVisual: {fileID: 1921070164}
