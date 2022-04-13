@@ -16,6 +16,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	489596525	MIDENA			\Default Work Unit\Master Audio Bus\SFX\MIDENA	
 	529726550	ENV			\Default Work Unit\Master Audio Bus\SFX\ENV	
 	578529263	NME			\Default Work Unit\Master Audio Bus\SFX\NME	
+	862987397	MIDENA_VO			\Default Work Unit\Master Audio Bus\SFX\MIDENA\MIDENA_VO	
 	968010305	PROPS			\Default Work Unit\Master Audio Bus\SFX\PROPS	
 	1115118801	PIM			\Default Work Unit\Master Audio Bus\SFX\PIM	
 	1117531639	AMB			\Default Work Unit\Master Audio Bus\SFX\AMB	
@@ -23,6 +24,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	2662486595	MIDENA_FOL			\Default Work Unit\Master Audio Bus\SFX\MIDENA\MIDENA_FOL	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\MUSIC	
+	4118844521	PIM_VO			\Default Work Unit\Master Audio Bus\SFX\PIM\PIM_VO	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

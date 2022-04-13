@@ -117,12 +117,18 @@
 										<Bus Name="PIM_FOL" ID="{025B24B2-6866-459F-B65A-9E8AAD3F8526}">
 											<ObjectLists/>
 										</Bus>
+										<Bus Name="PIM_VO" ID="{0C6CB85C-F645-493B-9F14-4F566F5C16BE}">
+											<ObjectLists/>
+										</Bus>
 									</ChildrenList>
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="MIDENA" ID="{BB796B28-B234-4F71-99B6-8506F8964DC6}">
 									<ChildrenList>
 										<Bus Name="MIDENA_FOL" ID="{1203E306-615B-4913-B36B-0F7E5C4E1DAD}">
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="MIDENA_VO" ID="{1E5D771E-8C2A-473C-8B93-66EA48F2CD74}">
 											<ObjectLists/>
 										</Bus>
 									</ChildrenList>

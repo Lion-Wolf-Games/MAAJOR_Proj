@@ -341,7 +341,43 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="UI" ID="{F153EE70-DB81-4EF7-A3B8-CE3F000914D4}" ShortID="801802818"/>
+				<Folder Name="UI" ID="{F153EE70-DB81-4EF7-A3B8-CE3F000914D4}" ShortID="801802818">
+					<ChildrenList>
+						<Event Name="Menu_Navigation" ID="{80600C1D-C716-4848-93A6-0E96D903D60E}">
+							<ChildrenList>
+								<Action Name="" ID="{3B31509C-95DA-4BBD-A780-614A4D4B6429}" ShortID="1008603653">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Menu_navigation_CursorMoveUp" ID="{09F1CF1A-FE04-48AD-89D9-360A985AC7CB}" WorkUnitID="{69BA8216-4A83-427B-8238-092676532B8B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Menu_Open" ID="{A4084D97-7B60-41EE-8590-4B33DF788358}">
+							<ChildrenList>
+								<Action Name="" ID="{B6C3BC45-0396-4E24-A8B9-A1D57F55A91A}" ShortID="834110079">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Menu_navigation_MenuOpen" ID="{00A53881-2D97-483B-8095-2200AD35CF41}" WorkUnitID="{69BA8216-4A83-427B-8238-092676532B8B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Menu_Close" ID="{D7B0ABB5-298F-4F09-BF46-B94E38CBB80A}">
+							<ChildrenList>
+								<Action Name="" ID="{AF5D17EA-B577-455F-AA79-BCA8578A9545}" ShortID="1027921969">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Menu_navigation_MenuClose" ID="{1A90C769-1EBC-4FED-B07D-CF42C625FF3A}" WorkUnitID="{69BA8216-4A83-427B-8238-092676532B8B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="MUSIC" ID="{7C8E090D-BEBC-47CE-87B8-D1D218490D47}" ShortID="81295749">
 					<ChildrenList>
 						<Folder Name="Forest" ID="{F3F59A79-B8BD-46FB-B2A4-FC270F217EF1}" ShortID="342947937">

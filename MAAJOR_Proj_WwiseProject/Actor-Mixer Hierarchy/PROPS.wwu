@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{46795534-FEC9-4959-83E3-49A233A8B557}" SchemaVersion="103">
 	<AudioObjects>
 		<WorkUnit Name="PROPS" ID="{46795534-FEC9-4959-83E3-49A233A8B557}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="16"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<ActorMixer Name="PROPS" ID="{9D852A58-79E2-4EBA-B145-D3D80D2F97A2}" ShortID="399990598">
 					<PropertyList>

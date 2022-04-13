@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}" SchemaVersion="103">
 	<AudioObjects>
 		<WorkUnit Name="AMB" ID="{EBE36F92-33CF-4C1C-990C-9B5221FF7448}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<ActorMixer Name="AMB" ID="{8C1E3093-EF4E-4945-AE41-A8B899BBFA98}" ShortID="49185844">
 					<ReferenceList>
