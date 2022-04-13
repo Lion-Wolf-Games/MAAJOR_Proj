@@ -673,6 +673,7 @@ GameObject:
   - component: {fileID: 1922009542}
   - component: {fileID: 4144535823003958466}
   - component: {fileID: 2574313690388964390}
+  - component: {fileID: 8205052288101743276}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1030,6 +1031,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 44ee394b-ed15-4356-adda-888050517d2a
     m_ActionName: Player/Suck[/Keyboard/q,/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1566719009391129380}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SwitchPotion
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bb20f252-7cf4-40ad-94f2-160e3f1f1bd1
+    m_ActionName: Player/Switch[/Mouse/scroll/y,/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1145,6 +1162,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8205052288101743276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566719009391129384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4cd029007159849b99bea80f52a26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControl: {fileID: 1566719009391129380}
+  potionlist:
+  - {fileID: 11400000, guid: 76218380acc6b9c419a513533c0ccb2d, type: 2}
+  - {fileID: 11400000, guid: 2e2eb93ac1ea4924eae83e98dfbf2b5b, type: 2}
+  - {fileID: 11400000, guid: 20bf3fe96d13ce24aae3c9fa5f0c193d, type: 2}
+  - {fileID: 11400000, guid: ba92d254ae511da4da75ce3b6b96d7d2, type: 2}
+  currentpotion: 0
 --- !u!1 &1566719009494421175
 GameObject:
   m_ObjectHideFlags: 0

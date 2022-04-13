@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PotionThrow : MonoBehaviour
     [SerializeField] private float heigthLaunch = 2f;
     [SerializeField] private Transform launnchPos;
     [SerializeField] private LayerMask colliderLayer;
+    [SerializeField] private Animator anims;
     private float lanchTime;
 
     [Header("Visual")]
@@ -21,12 +23,19 @@ public class PotionThrow : MonoBehaviour
     public GameObject aimTarget;
     [SerializeField] private GameObject potionPrefab;
 
+    private Dictionary<Potion,float> cooldowns;
+    public Action<float> OnThrowPotion; 
+    
+
     private void Start() {
         aimTarget.SetActive(false);
         player.OnStartAim += StartAim;
         player.OnStopAim += StopAim;
         cam  = Camera.main.transform;
         gravity = Physics.gravity.y;
+
+        cooldowns = new Dictionary<Potion, float>();
+        SetPotion(selectedPotion);
     }
 
     private void Update() {
@@ -56,9 +65,9 @@ public class PotionThrow : MonoBehaviour
 
         float displacementY = endPos.y - startPos.y;
         float h = displacementY + heigthLaunch;
+
         if(h < 0)
-        {
-            
+        {    
             h +=  - h ;
         }
 
@@ -89,7 +98,7 @@ public class PotionThrow : MonoBehaviour
 
     private void Launch()
     {   
-        if (lanchTime <= Time.time)
+        if (cooldowns[selectedPotion] <= Time.time)
         {
             var go = PoolManager.Instance.Spawn(potionPrefab,true,launnchPos.position,transform.rotation);
             Rigidbody potionRb = go.GetComponent<Rigidbody>();
@@ -99,7 +108,10 @@ public class PotionThrow : MonoBehaviour
 
             go.GetComponent<PotionBehavior>().SetUpPotion(selectedPotion);
             
-            lanchTime = Time.time + selectedPotion.cooldown;
+            cooldowns[selectedPotion] = Time.time + selectedPotion.cooldown;
+            
+            OnThrowPotion?.Invoke(selectedPotion.cooldown);
+            anims.SetTrigger("Throw");
         }
     }
 
@@ -122,6 +134,12 @@ public class PotionThrow : MonoBehaviour
         selectedPotion = newPotion;
         maxDistance = selectedPotion.launchRange;
         RangeVisual.transform.localScale = Vector3.one * selectedPotion.effectRange * 2f;
+        Debug.Log(selectedPotion.name + " selected");
+
+        if(!cooldowns.ContainsKey(selectedPotion))
+        {
+            cooldowns.Add(selectedPotion,0);
+        }
     }
 
     private void OnDisable() {
