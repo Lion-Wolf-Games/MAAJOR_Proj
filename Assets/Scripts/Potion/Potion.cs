@@ -11,6 +11,8 @@ public abstract class Potion : ScriptableObject {
     [SerializeField] public float launchRange;
     [SerializeField] public float cooldown;
 
+    [SerializeField] public Sprite Icon;
+
     [Header("Fx")]
     [SerializeField] public GameObject spawnFx;
     [SerializeField] public GameObject trailFx;

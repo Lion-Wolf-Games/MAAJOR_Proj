@@ -28,11 +28,12 @@ public class PlayerFx : MonoBehaviour
         player = GetComponent<PlayerController>();
         player.OnDash += OnDashFx;
         player.OnJump += OnJumpFx;
-        player.OnThrow += onThrowFX;
+        //player.OnThrow += onThrowFX;
         player.OnHit += onHitFX;
         player.OnLanding += OnLandingFx;
         player.OnSuck += OnSuckFx;
-
+        PotionThrow potionThrow = GetComponent<PotionThrow>();
+        potionThrow.OnThrowPotion += onThrowFX;
     }
 
     private void OnDashFx()
@@ -74,7 +75,7 @@ public class PlayerFx : MonoBehaviour
         onSuckSFX.Post(gameObject);
     }
 
-    private void onThrowFX()
+    private void onThrowFX(float _)
     {
         onThrowSFX.Post(gameObject);
     }

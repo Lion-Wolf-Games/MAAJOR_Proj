@@ -62,6 +62,7 @@ public class PlayerController : LivingObject
     public PlayerActions OnStartAim;
     public PlayerActions OnStopAim;
     public PlayerActions OnThrow;
+    public PlayerActions NextPotion,PrevPotion;
 
     #endregion
     
@@ -178,12 +179,32 @@ public class PlayerController : LivingObject
         {
             Debug.Log("Start");
             OnThrow.Invoke();
-            animator.SetTrigger("Throw");
+            //animator.SetTrigger("Throw");
         }
         else if(context.canceled)
         {
             Debug.Log ("Stop");
         }
+    }
+
+    public void SwitchPotion(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            float value = context.ReadValue<float>();
+
+            Debug.Log(value);
+
+            if(value >0)
+            {
+                NextPotion?.Invoke();
+            }
+            else if(value <0)
+            {
+                PrevPotion?.Invoke();
+            }
+        }
+
     }
 
     #endregion
