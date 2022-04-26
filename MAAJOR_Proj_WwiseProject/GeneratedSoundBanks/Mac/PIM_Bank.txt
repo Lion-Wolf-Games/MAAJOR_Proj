@@ -2,10 +2,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	95706836	PIM_Throw			\Default Work Unit\PIM\FOL\PIM_Throw	
 	99461157	PIM_Landing			\Default Work Unit\PIM\FOL\PIM_Landing	
 	155056730	PIM_VO_KO			\Default Work Unit\PIM\VO\PIM_VO_KO	
+	196278613	Potion_IceBreak			\Default Work Unit\PROPS\Potion\Elements\Potion_IceBreak	
+	626954121	Menu_Close			\Default Work Unit\UI\Menu_Close	
 	670951740	PIM_VO_Throw			\Default Work Unit\PIM\VO\PIM_VO_Throw	
 	934112640	PIM_VO_Dash			\Default Work Unit\PIM\VO\PIM_VO_Dash	
+	1210783441	Potion_RockBreak			\Default Work Unit\PROPS\Potion\Elements\Potion_RockBreak	
+	1287511387	Menu_Open			\Default Work Unit\UI\Menu_Open	
+	1401518020	Potion_FireBreak			\Default Work Unit\PROPS\Potion\Elements\Potion_FireBreak	
 	1756296120	PIM_VO_Jump			\Default Work Unit\PIM\VO\PIM_VO_Jump	
 	2296463320	PIM_Dash			\Default Work Unit\PIM\FOL\PIM_Dash	
+	2471227561	Menu_Navigation			\Default Work Unit\UI\Menu_Navigation	
 	2539778304	PIM_Jump			\Default Work Unit\PIM\FOL\PIM_Jump	
 	2624335526	PIM_VO_Effort			\Default Work Unit\PIM\VO\PIM_VO_Effort	
 	3126542488	Potion_Break			\Default Work Unit\PROPS\Potion\Potion_Break	
@@ -23,6 +29,7 @@ Switch	ID	Name	Switch Group			Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	81804178	VO_Pim_Dash-002	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Dash-002_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Dash\VO_Pim_Dash-002		1470
 	94192415	VO_Pim_Jump-001	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Jump-001_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Jump\VO_Pim_Jump-001		2136
+	119479498	UI_Menu_navigation_MenuOpen	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\UI_Menu_navigation_MenuOpen_FB011085.wem		\Actor-Mixer Hierarchy\UI\UI\UI_Menu\UI_Menu_Navigation\UI_Menu_navigation_MenuOpen		4779
 	123341531	VO_Pim_Effort	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Effort_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_VO_Effort\VO_Pim_Effort		5020
 	130207513	Swoosh_Swipe-Smooth_04	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\Swoosh_Swipe-Smooth_04_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_FOL\PIM_Dash\Swoosh_Swipe-Smooth_04		2653
 	155808365	VO_Pim_Throw-002	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Throw-002_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Throw\VO_Pim_Throw-002		4065
@@ -33,6 +40,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	337125983	Pim_Footstep_Grass_02	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\Pim_Footstep_Grass_02_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_FOL\PIM_Footsteps\PIM_Footsteps_Grass\Pim_Footstep_Grass_02		2219
 	381932551	Swoosh_Swipe-Thick_02	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\Swoosh_Swipe-Thick_02_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_FOL\PIM_Throw\Swoosh_Swipe-Thick_02		2345
 	440898314	Pim_Footstep_Grass_01	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\Pim_Footstep_Grass_01_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_FOL\PIM_Footsteps\PIM_Footsteps_Grass\Pim_Footstep_Grass_01		2260
+	505557125	UI_Menu_navigation_CursorMoveUp	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\UI_Menu_navigation_CursorMoveUp_FB011085.wem		\Actor-Mixer Hierarchy\UI\UI\UI_Menu\UI_Menu_Navigation\UI_Menu_navigation_CursorMoveUp		1387
 	509486384	VO_Pim_Hit-003	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Hit-003_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Hit\VO_Pim_Hit-003		1855
 	516629010	VO_Pim_Jump-003	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Jump-003_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Jump\VO_Pim_Jump-003		2207
 	540778946	Pim_Jump_1	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\Pim_Jump_1_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_FOL\PIM_Jump\Pim_Jump_1		1772
@@ -40,6 +48,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	584395041	VO_Pim_Hit-002	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Hit-002_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Hit\VO_Pim_Hit-002		2073
 	639492041	VO_Pim_Dash-001	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Dash-001_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Dash\VO_Pim_Dash-001		1542
 	750922707	VO_Pim_Hit-001	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Hit-001_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Hit\VO_Pim_Hit-001		2056
+	767921052	UI_Menu_navigation_MenuClose	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\UI_Menu_navigation_MenuClose_FB011085.wem		\Actor-Mixer Hierarchy\UI\UI\UI_Menu\UI_Menu_Navigation\UI_Menu_navigation_MenuClose		4076
 	786528649	VO_Pim_Jump-002	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\VO_Pim_Jump-002_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Jump\VO_Pim_Jump-002		1924
 	831872434	Pim_Footstep_Grass_03	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\Pim_Footstep_Grass_03_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_FOL\PIM_Footsteps\PIM_Footsteps_Grass\Pim_Footstep_Grass_03		2694
 	854851898	FOL_Pim_Landing	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Mac\SFX\FOL_Pim_Landing_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_FOL\PIM_Landing\FOL_Pim_Landing		1585

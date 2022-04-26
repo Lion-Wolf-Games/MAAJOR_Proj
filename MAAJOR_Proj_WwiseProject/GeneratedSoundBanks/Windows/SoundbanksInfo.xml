@@ -16,11 +16,35 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="860471550" Language="SFX" Hash="724845186">
+		<SoundBank Id="860471550" Language="SFX" Hash="2508668534">
 			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
 			<ShortName>PIM_Bank</ShortName>
 			<Path>PIM_Bank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="626954121" Name="Menu_Close" ObjectPath="\Events\Default Work Unit\UI\Menu_Close" DurationType="OneShot" DurationMin="1.912245" DurationMax="1.912245">
+					<IncludedMemoryFiles>
+						<File Id="767921052" Language="SFX">
+							<ShortName>UI_Menu_navigation_MenuClose.wav</ShortName>
+							<Path>SFX\UI_Menu_navigation_MenuClose_FB011085.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2471227561" Name="Menu_Navigation" ObjectPath="\Events\Default Work Unit\UI\Menu_Navigation" DurationType="OneShot" DurationMin="1.052656" DurationMax="1.116539">
+					<IncludedMemoryFiles>
+						<File Id="505557125" Language="SFX">
+							<ShortName>UI_Menu_navigation_CursorMoveUp.wav</ShortName>
+							<Path>SFX\UI_Menu_navigation_CursorMoveUp_FB011085.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1287511387" Name="Menu_Open" ObjectPath="\Events\Default Work Unit\UI\Menu_Open" DurationType="OneShot" DurationMin="2.058821" DurationMax="2.058821">
+					<IncludedMemoryFiles>
+						<File Id="119479498" Language="SFX">
+							<ShortName>UI_Menu_navigation_MenuOpen.wav</ShortName>
+							<Path>SFX\UI_Menu_navigation_MenuOpen_FB011085.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2296463320" Name="PIM_Dash" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Dash" DurationType="OneShot" DurationMin="1.116463" DurationMax="1.148118">
 					<IncludedMemoryFiles>
 						<File Id="81804178" Language="SFX">
@@ -41,7 +65,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3358588958" Name="PIM_Footstep" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Footstep" MaxAttenuation="90." DurationType="Infinite">
+				<Event Id="3358588958" Name="PIM_Footstep" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Footstep" MaxAttenuation="80." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="298924077" Language="SFX">
 							<ShortName>Pim_Footstep_Grass_04.wav</ShortName>
@@ -92,7 +116,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="99461157" Name="PIM_Landing" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Landing" MaxAttenuation="90." DurationType="Infinite">
+				<Event Id="99461157" Name="PIM_Landing" ObjectPath="\Events\Default Work Unit\PIM\FOL\PIM_Landing" MaxAttenuation="80." DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="298924077" Language="SFX">
 							<ShortName>Pim_Footstep_Grass_04.wav</ShortName>
@@ -175,7 +199,7 @@
 				<Event Id="1756296120" Name="PIM_VO_Jump" ObjectPath="\Events\Default Work Unit\PIM\VO\PIM_VO_Jump" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="155056730" Name="PIM_VO_KO" ObjectPath="\Events\Default Work Unit\PIM\VO\PIM_VO_KO" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="670951740" Name="PIM_VO_Throw" ObjectPath="\Events\Default Work Unit\PIM\VO\PIM_VO_Throw" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3126542488" Name="Potion_Break" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Potion_Break" MaxAttenuation="90." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
+				<Event Id="3126542488" Name="Potion_Break" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Potion_Break" MaxAttenuation="80." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
 					<IncludedMemoryFiles>
 						<File Id="308374126" Language="SFX">
 							<ShortName>verre_casse.wav</ShortName>
@@ -183,7 +207,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1401518020" Name="Potion_FireBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_FireBreak" MaxAttenuation="90." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
+				<Event Id="1401518020" Name="Potion_FireBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_FireBreak" MaxAttenuation="80." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
 					<IncludedMemoryFiles>
 						<File Id="308374126" Language="SFX">
 							<ShortName>verre_casse.wav</ShortName>
@@ -191,7 +215,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="196278613" Name="Potion_IceBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_IceBreak" MaxAttenuation="90." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
+				<Event Id="196278613" Name="Potion_IceBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_IceBreak" MaxAttenuation="80." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
 					<IncludedMemoryFiles>
 						<File Id="308374126" Language="SFX">
 							<ShortName>verre_casse.wav</ShortName>
@@ -199,7 +223,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1210783441" Name="Potion_RockBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_RockBreak" MaxAttenuation="90." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
+				<Event Id="1210783441" Name="Potion_RockBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_RockBreak" MaxAttenuation="80." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
 					<IncludedMemoryFiles>
 						<File Id="308374126" Language="SFX">
 							<ShortName>verre_casse.wav</ShortName>
@@ -207,7 +231,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3866080526" Name="Potion_WindBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_WindBreak" MaxAttenuation="90." DurationType="OneShot" DurationMin="1.827165" DurationMax="2.001451">
+				<Event Id="3866080526" Name="Potion_WindBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_WindBreak" MaxAttenuation="80." DurationType="OneShot" DurationMin="1.827165" DurationMax="2.001451">
 					<IncludedMemoryFiles>
 						<File Id="308374126" Language="SFX">
 							<ShortName>verre_casse.wav</ShortName>
@@ -237,7 +261,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4074690199">
+		<SoundBank Id="1355168291" Language="SFX" Hash="610033255">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -252,7 +276,7 @@
 			<ShortName>MIDENA_Bank</ShortName>
 			<Path>MIDENA_Bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4255064110" Name="MIDENA_VO_ATK" ObjectPath="\Events\Default Work Unit\MIDENA\VO\MIDENA_VO_ATK" DurationType="OneShot" DurationMin="1.259002" DurationMax="1.351247">
+				<Event Id="4255064110" Name="MIDENA_VO_ATK" ObjectPath="\Events\Default Work Unit\MIDENA\VO\MIDENA_VO_ATK" MaxAttenuation="80." DurationType="OneShot" DurationMin="1.259002" DurationMax="1.351247">
 					<IncludedMemoryFiles>
 						<File Id="171626939" Language="SFX">
 							<ShortName>SFX_Midena_Atk_03-003.wav</ShortName>

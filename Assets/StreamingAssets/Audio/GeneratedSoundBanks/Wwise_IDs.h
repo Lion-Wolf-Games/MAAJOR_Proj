@@ -15,6 +15,9 @@ namespace AK
     {
         static const AkUniqueID AMB_FOREST_PLAYALL = 4083828315U;
         static const AkUniqueID AMB_FOREST_STOPALL = 48772705U;
+        static const AkUniqueID MENU_CLOSE = 626954121U;
+        static const AkUniqueID MENU_NAVIGATION = 2471227561U;
+        static const AkUniqueID MENU_OPEN = 1287511387U;
         static const AkUniqueID MIDENA_VO_ATK = 4255064110U;
         static const AkUniqueID MUSIC_PLAYTEST = 1509368919U;
         static const AkUniqueID PIM_DASH = 2296463320U;
@@ -87,10 +90,12 @@ namespace AK
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MIDENA = 489596525U;
         static const AkUniqueID MIDENA_FOL = 2662486595U;
+        static const AkUniqueID MIDENA_VO = 862987397U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID NME = 578529263U;
         static const AkUniqueID PIM = 1115118801U;
         static const AkUniqueID PIM_FOL = 43049847U;
+        static const AkUniqueID PIM_VO = 4118844521U;
         static const AkUniqueID POTIONS = 304095579U;
         static const AkUniqueID PROPS = 968010305U;
         static const AkUniqueID SFX = 393239870U;

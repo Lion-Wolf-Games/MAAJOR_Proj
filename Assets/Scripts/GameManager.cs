@@ -26,26 +26,26 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-public void ChangeGameState(GameState newState)
-{
-    if(newState == Instance.currentGameState) return;
-
-    currentGameState = newState;
-
-    switch (currentGameState)
+    public void ChangeGameState(GameState newState)
     {
-        case GameState.Playing:
-        Instance.OnPlay?.Invoke();
-        break;
-        case GameState.Paused:
-        Instance.OnPause?.Invoke();
-        break;
-        default:
-        break;
-    }
+        if(newState == Instance.currentGameState) return;
 
-    OnGameStateChanged?.Invoke(currentGameState);
-}
+        currentGameState = newState;
+
+        switch (currentGameState)
+        {
+            case GameState.Playing:
+            Instance.OnPlay?.Invoke();
+            break;
+            case GameState.Paused:
+            Instance.OnPause?.Invoke();
+            break;
+            default:
+            break;
+        }
+
+        OnGameStateChanged?.Invoke(currentGameState);
+    }
 
 #region LevelManagement
     public static void StaticLoadLevel(int index)

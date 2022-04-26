@@ -75,8 +75,16 @@ public class SoundSettingsManager : MonoBehaviour
 
     public void CancelSoundSettings()
     {
-        SetMaster(PlayerPrefs.GetFloat("MasterVolume"));
-        SetMusic(PlayerPrefs.GetFloat("MusicVolume"));
-        SetSFX(PlayerPrefs.GetFloat("SfxVolume"));
-    } 
+        float masterV = PlayerPrefs.GetFloat("MasterVolume", 100);
+        float musicV = PlayerPrefs.GetFloat("MusicVolume", 100);
+        float sfxV = PlayerPrefs.GetFloat("SfxVolume", 100);
+
+        SetMaster(masterV);
+        SetMusic(musicV);
+        SetSFX(sfxV);
+
+        _masterSlider.SetValueWithoutNotify(masterV);
+        _musicSlider.SetValueWithoutNotify(musicV);
+        _sfxSlider.SetValueWithoutNotify(sfxV);
+    }
 }

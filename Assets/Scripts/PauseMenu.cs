@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         GameManager.Instance.OnPause += PauseGame;
+        GameManager.Instance.OnPlay += ResumeGame;
         pauseCanvas.SetActive(false);
         
         Cursor.lockState = CursorLockMode.Locked;
@@ -31,6 +32,16 @@ public class PauseMenu : MonoBehaviour
     {
         //Play Closing animation
         //Hide Panel
+
+        /*Transform[] subMenus = pauseCanvas.GetComponentsInChildren<Transform>();
+
+        foreach (Transform menu in subMenus)
+        {
+            menu.gameObject.SetActive(false);
+        }
+
+        subMenus[0].gameObject.SetActive(true);*/
+
         pauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         GameManager.Instance.ChangeGameState(GameState.Playing);

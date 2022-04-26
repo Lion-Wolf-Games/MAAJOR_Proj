@@ -2,9 +2,19 @@
 <WwiseDocument Type="WorkUnit" ID="{3C053649-6A68-44C6-A7A8-A29D9450E08D}" SchemaVersion="103">
 	<AudioObjects>
 		<WorkUnit Name="MIDENA" ID="{3C053649-6A68-44C6-A7A8-A29D9450E08D}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<ActorMixer Name="MIDENA" ID="{0F5FA8E3-C77B-41F7-9B4C-49A32C9AC9ED}" ShortID="570011456">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="PropsSfxAttenuation" ID="{8E6FDD4F-4D37-4279-86D0-02D647AEE17B}" WorkUnitID="{710FE2BA-BC84-4FE0-B0A8-9BEE7C7560B4}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
 						</Reference>
@@ -28,12 +38,15 @@
 							<ObjectLists/>
 						</ActorMixer>
 						<ActorMixer Name="MIDENA_VO" ID="{DD0AB5BB-20BF-47BE-8F1C-9F109EA9D0D7}" ShortID="495224076">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+									<ObjectRef Name="MIDENA_VO" ID="{1E5D771E-8C2A-473C-8B93-66EA48F2CD74}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>

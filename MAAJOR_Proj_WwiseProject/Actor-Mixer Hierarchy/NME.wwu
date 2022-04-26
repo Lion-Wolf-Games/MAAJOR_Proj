@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{32A4E988-5353-47DC-931D-2B9586AEDBCE}" SchemaVersion="103">
 	<AudioObjects>
 		<WorkUnit Name="NME" ID="{32A4E988-5353-47DC-931D-2B9586AEDBCE}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<ActorMixer Name="NME" ID="{FDD16BDB-F034-4C08-8C71-99E25AE88711}" ShortID="417320572">
 					<ReferenceList>

@@ -109,10 +109,18 @@ public class PlayerController : LivingObject
 
     public void OnPause(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.started)
         {
-            GameManager.Instance.ChangeGameState(GameState.Paused);
-            input.SwitchCurrentActionMap("UI");
+            if (Time.timeScale == 1)
+            {
+                GameManager.Instance.ChangeGameState(GameState.Paused);
+                input.SwitchCurrentActionMap("UI");
+            }
+            else
+            {
+                GameManager.Instance.ChangeGameState(GameState.Playing);
+                input.SwitchCurrentActionMap("Player");
+            }
         }
 
     }

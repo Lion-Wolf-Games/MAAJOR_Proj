@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="PIM" ID="{12D1D987-C986-427A-B4A9-FA699B1D4C98}" WorkUnitID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Potion" ID="{ADE603D8-B185-4391-B6FC-BB1639296E1A}" WorkUnitID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{F153EE70-DB81-4EF7-A3B8-CE3F000914D4}" WorkUnitID="{6BB7A5C8-50FD-494B-A676-2764BDA6D51D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -5,7 +5,12 @@
 			<ChildrenList>
 				<Attenuation Name="PropsSfxAttenuation" ID="{8E6FDD4F-4D37-4279-86D0-02D647AEE17B}" ShortID="1007632291">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="90"/>
+						<Property Name="ConeUse" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RadiusMax" Type="Real64" Value="80"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -21,7 +26,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>90</XPos>
+											<XPos>80</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -36,7 +41,7 @@
 							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
 						</VolumeWetUserUsage>
 						<LowPassFilterUsage>
-							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+							<CurveUsageInfo Platform="Linked" CurveToUse="None">
 								<Curve Name="LowPassFilter" ID="{717F5393-8C16-4E16-82B3-C1F19AB6EE9D}">
 									<PropertyList>
 										<Property Name="Flags" Type="int32" Value="65537"/>
@@ -49,7 +54,7 @@
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>90</XPos>
+											<XPos>80</XPos>
 											<YPos>76</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -73,7 +78,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>90</XPos>
+											<XPos>80</XPos>
 											<YPos>0</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -94,7 +99,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>90</XPos>
+											<XPos>80</XPos>
 											<YPos>0</YPos>
 											<Flags>37</Flags>
 										</Point>
