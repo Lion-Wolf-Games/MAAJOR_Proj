@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,8 @@ public class Enemies : FightingObject
     private float panicTime;
     private float panicDuration;
 
-
+    [Space] [Header("Fx")]
+    [SerializeField] private GameObject puddleFx;
     private Rigidbody rb;
     private NavMeshAgent navAgent;
     private Vector3 wanderPos;
@@ -35,6 +37,8 @@ public class Enemies : FightingObject
     public enum FSM_Enemies { Idle, Wander, Chasing, Attacking, TargetLost, Hit, Panic, Flee,Puddle}
     [SerializeField] private FSM_Enemies fsm;
     private FSM_Enemies fsmOld;
+
+    public Action<GameObject> OnKill;
 
     // Start is called before the first frame update
     void Start()
@@ -48,13 +52,18 @@ public class Enemies : FightingObject
         spawnPosition = transform.position;
         wanderPos = spawnPosition;
         sfxPanic.SetActive(false);
-
-
+        
+        if(enemyType != null)
+        {
+            SetUpEnemies(enemyType);
+        }
+        
         enemyModel.SetActive(true);
         puddleModel.SetActive(false);
 
         navAgent.speed = enemyType.GetSpeed();
         navAgent.angularSpeed = enemyType.GetTurningSpeed();
+
     }
 
     private void Update()
@@ -116,7 +125,11 @@ public class Enemies : FightingObject
                     puddleModel.SetActive(true);
 
                     navAgent.speed = enemyType.GetPuddleSpeed();
+                    navAgent.angularSpeed = enemyType.GetTurningSpeed();
+
                     navAgent.SetDestination(spawnPosition);
+
+                    PoolManager.Instance.Spawn(puddleFx,true,transform.position,Quaternion.identity);
                     break;
                 default:
                     break;
@@ -131,7 +144,7 @@ public class Enemies : FightingObject
 
                 if (Time.time >= wanderTime)
                 {
-                    wanderPos = new Vector3(Random.Range(-wanderRange, wanderRange), 0, Random.Range(-wanderRange, wanderRange)) + spawnPosition;
+                    wanderPos = new Vector3(UnityEngine.Random.Range(-wanderRange, wanderRange), 0, UnityEngine.Random.Range(-wanderRange, wanderRange)) + spawnPosition;
                     navAgent.SetDestination(wanderPos);
                     fsm = FSM_Enemies.Wander;
                 }
@@ -192,7 +205,7 @@ public class Enemies : FightingObject
                 if (panicTime <= Time.time)
                 {
                     //Go to random Dir
-                    Vector3 dir = Random.onUnitSphere;
+                    Vector3 dir = UnityEngine.Random.onUnitSphere;
                     dir.y = 0;
 
                     navAgent.SetDestination(transform.position + dir * panicRange);
@@ -211,7 +224,7 @@ public class Enemies : FightingObject
                 
                 break;
             case FSM_Enemies.Puddle:
-                if (navAgent.remainingDistance <= stoppingRange)
+                if (Vector3.Distance(transform.position,spawnPosition) <= stoppingRange)
                 {
                     
                     enemyModel.SetActive(true);
@@ -262,6 +275,7 @@ public class Enemies : FightingObject
         navAgent.speed = 0;
         navAgent.angularSpeed = 0;
         navAgent.SetDestination(transform.position);
+        DG.Tweening.DOTween.Kill(transform);
     }
 
     public void ResumeMovement()
@@ -269,6 +283,32 @@ public class Enemies : FightingObject
         navAgent.speed = enemyType.GetSpeed();
         navAgent.angularSpeed = enemyType.GetTurningSpeed();
 
+    }
+
+    public void kill()
+    {
+        gameObject.SetActive(false);
+        OnKill?.Invoke(gameObject);
+    }
+
+    public void SetUpEnemies(EnemyScriptables scriptable)
+    {
+        enemyType = scriptable;
+
+        if (enemyModel != null)
+        {
+            Destroy(enemyModel);
+        }
+
+        enemyModel = Instantiate(enemyType.GetModel(),transform);
+
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.TryGetComponent<IDamagable>(out IDamagable player))
+        {
+            player.ChangeHealth(-damage,transform.position);
+        }
     }
 
     private void OnDrawGizmos()

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PotionThrow : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PotionThrow : MonoBehaviour
     [SerializeField] private int visualresolution = 30;
     [SerializeField] private LineRenderer lineVisual;
     [SerializeField] private GameObject RangeVisual;
+    [SerializeField] private Material visualMaterial;
     private float gravity;
     public GameObject aimTarget;
     [SerializeField] private GameObject potionPrefab;
@@ -36,6 +38,7 @@ public class PotionThrow : MonoBehaviour
 
         cooldowns = new Dictionary<Potion, float>();
         SetPotion(selectedPotion);
+        
     }
 
     private void Update() {
@@ -133,11 +136,15 @@ public class PotionThrow : MonoBehaviour
     {
         selectedPotion = newPotion;
         maxDistance = selectedPotion.launchRange;
-        RangeVisual.transform.localScale = Vector3.one * selectedPotion.effectRange * 2f;
+
+        RangeVisual.transform.DOScale( Vector3.one * selectedPotion.effectRange * 2f, 0.1f);
+
         Debug.Log(selectedPotion.name + " selected");
 
+        visualMaterial.DOColor(selectedPotion.launchPreviewColor,"_Emission",0.2f);
+
         if(!cooldowns.ContainsKey(selectedPotion))
-        {
+        { 
             cooldowns.Add(selectedPotion,0);
         }
     }

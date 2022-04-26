@@ -79,7 +79,6 @@ public class Midena : FightingObject
         transform.LookAt(_target.transform);
         
         _target.GetComponent<Enemies>().StopMovement();
-        DOTween.Kill(_target);
         
         anim.SetTrigger("Attack");
         anim.SetInteger("AttackType",Random.Range(1 ,6));
