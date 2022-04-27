@@ -46,7 +46,9 @@ public class PlayerController : LivingObject
 
     [Header("Suck")]
     public Transform suckPosition;
-
+    [SerializeField] private float suckRange;
+    [SerializeField] private LayerMask enemyLayer;
+ 
     [Header("Camera")]
     public CinemachineVirtualCamera tPSCam;
     public float rotationPower;
@@ -148,6 +150,16 @@ public class PlayerController : LivingObject
         {
             Debug.Log("Suck");
             OnSuck?.Invoke();
+
+            Collider[] cols = Physics.OverlapSphere(transform.position, suckRange,enemyLayer);
+
+            Debug.Log(cols);
+
+            foreach (var col in cols)
+            {
+                col.BroadcastMessage("OnSuck",this,SendMessageOptions.DontRequireReceiver);
+            }
+
             StartCoroutine(DisableInputTemporary(1));
             animator.SetTrigger("Suck");
         }

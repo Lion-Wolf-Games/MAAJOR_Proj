@@ -5,21 +5,23 @@ using DG.Tweening;
 
 public class EnemiesFlaque : MonoBehaviour
 {
-    private PlayerController player;
-    [SerializeField]private GameObject suckFx;
-    [SerializeField]private GameObject deathFx;
+    //private PlayerController player;
+    [SerializeField] private GameObject suckFx;
+    [SerializeField] private GameObject deathFx;
 
+    [SerializeField] private Enemies enemie;
 
+   
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player")
-        {
-            player = other.GetComponent<PlayerController>();
-            player.OnSuck += OnSuck;
-        }
-    }
+    // private void OnTriggerEnter(Collider other) {
+    //     if (other.tag == "Player")
+    //     {
+    //         player = other.GetComponent<PlayerController>();
+    //         player.OnSuck += OnSuck;
+    //     }
+    // }
 
-    private void OnSuck()
+    private void OnSuck(PlayerController player)
     {
         //Spawn Fx
         GameObject fxgo =  PoolManager.Instance.Spawn(suckFx,true,transform.position,transform.rotation);
@@ -31,9 +33,18 @@ public class EnemiesFlaque : MonoBehaviour
         //Spawn DeathFx
         PoolManager.Instance.Spawn(deathFx,true,transform.position,transform.rotation);
         //Destroy
-        gameObject.SetActive(false);
-        DebugRespawn();
-        player.OnSuck -= OnSuck;
+        
+        if(enemie != null)
+        {
+            enemie.kill();
+        }
+        else
+        {
+            gameObject.SetActive(false);
+            DebugRespawn();
+        }
+
+        //player.OnSuck -= OnSuck;
     }
 
     private async void DebugRespawn()
@@ -42,18 +53,18 @@ public class EnemiesFlaque : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    private void OnTriggerExit(Collider other) {
+    // private void OnTriggerExit(Collider other) {
 
-        if (other.tag == "Player")
-        {
-            player.OnSuck -= OnSuck;
-        }
-    }
+    //     if (other.tag == "Player")
+    //     {
+    //         player.OnSuck -= OnSuck;
+    //     }
+    // }
 
-    private void OnDisable() {
-        if (player!=null)
-        {
-            player.OnSuck -= OnSuck;
-        }
-    }
+    // private void OnDisable() {
+    //     if (player!=null)
+    //     {
+    //         player.OnSuck -= OnSuck;
+    //     }
+    // }
 }

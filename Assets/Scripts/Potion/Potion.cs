@@ -17,9 +17,8 @@ public abstract class Potion : ScriptableObject {
     [SerializeField] public GameObject spawnFx;
     [SerializeField] public GameObject trailFx;
     [SerializeField] public Material liquidMat;
+    [SerializeField] public Color launchPreviewColor;
     [SerializeField] public AK.Wwise.Event onCollisionSfx;
-
-
 
     public abstract void OnExplosion(Transform target);
 }

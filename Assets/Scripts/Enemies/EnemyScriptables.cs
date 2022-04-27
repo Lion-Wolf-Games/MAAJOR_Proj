@@ -32,4 +32,9 @@ public class EnemyScriptables : ScriptableObject {
     {
         return puddleSpeed;
     }
+
+    public GameObject GetModel()
+    {
+        return model;
+    }
 }

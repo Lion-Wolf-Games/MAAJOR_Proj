@@ -22,6 +22,7 @@ MonoBehaviour:
   spawnFx: {fileID: 6649054028638981966, guid: 17749527f24a38e4a8518725a42d1df3, type: 3}
   trailFx: {fileID: 5509305661840162670, guid: 93493751bafa07b4ebec5bc245d5d2b4, type: 3}
   liquidMat: {fileID: 2100000, guid: 74e2cd7883e0cfd40839a3552d0ab74c, type: 2}
+  launchPreviewColor: {r: 1, g: 0.37061155, b: 0, a: 1}
   onCollisionSfx:
     idInternal: 0
     valueGuidInternal: 
