@@ -804,6 +804,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   suckPosition: {fileID: 4028626051348630083}
+  suckRange: 6
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
   tPSCam: {fileID: 1566719009850507727}
   rotationPower: 0.75
   aimValue: 0
@@ -1157,6 +1161,7 @@ MonoBehaviour:
   visualresolution: 30
   lineVisual: {fileID: 5003773898566050986}
   RangeVisual: {fileID: 1921070164}
+  visualMaterial: {fileID: 2100000, guid: 877920b2ea2fff94cbddb71d07c637d4, type: 2}
   aimTarget: {fileID: 8196136215860025986}
   potionPrefab: {fileID: 8743244967301466290, guid: a94d4ae9dc3de6b4aa0cbc7fec6b7098, type: 3}
 --- !u!54 &2574313690388964390

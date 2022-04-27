@@ -8,7 +8,8 @@ public class DisableTimer : MonoBehaviour
     private bool isOn;
 
     private float disableTime;
-    private void Start() {
+    
+    private void OnEnable() {
         disableTime = Time.time+ timeActive;
         isOn = true;
     }

@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70285b0956bd474cbdd3f6ad43b091a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suckFx: {fileID: 6282157555769982597, guid: 091f872941e4b7d4593eaad36b1573e1, type: 3}
+  suckFx: {fileID: 945846004697533808, guid: 262ec466fc8a6634db1ba7eaf71a825a, type: 3}
   deathFx: {fileID: 1127158512636336115, guid: d01619a869322d04db2463bfc529b9c1, type: 3}
   enemie: {fileID: 0}
 --- !u!54 &3449362444147946883

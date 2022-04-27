@@ -39,7 +39,7 @@ public class PlayerFx : MonoBehaviour
     private void OnDashFx()
     {
 
-        PoolManager.Instantiate(dashFx,transform.position,transform.rotation);
+        PoolManager.Instance.Spawn(dashFx, true,transform.position,transform.rotation);
 
         onDashSFX.Post(gameObject);
     }
@@ -48,7 +48,7 @@ public class PlayerFx : MonoBehaviour
     {
         if (jumpFx != null)
             {
-                Instantiate(jumpFx, transform.position, Quaternion.identity);
+                PoolManager.Instance.Spawn(jumpFx, true, transform.position, Quaternion.identity);
                 //PoolManager.Instance.Spawn(jumpFx,true,transform.position,Quaternion.identity);
             }
 
@@ -57,15 +57,19 @@ public class PlayerFx : MonoBehaviour
 
     private void OnLandingFx()
     {
-        PoolManager.Instantiate(landingFx, transform.position, Quaternion.identity);
+        PoolManager.Instance.Spawn(landingFx,true, transform.position, Quaternion.identity);
 
         onLandingSFX.Post(gameObject);
     }
 
     public void Step()
     {
-        Instantiate(smokeParticle, smokeSpawnPoint.position, Quaternion.identity);
-        Instantiate(grassParticle, grassSpawnPoint.position, Quaternion.identity);
+
+        if(PoolManager.Instance != null)
+        {
+            PoolManager.Instance.Spawn(smokeParticle,true, smokeSpawnPoint.position, Quaternion.identity);
+            PoolManager.Instance.Spawn(grassParticle, true, grassSpawnPoint.position, Quaternion.identity);
+        }
 
         onStepSFX.Post(gameObject);
     }
