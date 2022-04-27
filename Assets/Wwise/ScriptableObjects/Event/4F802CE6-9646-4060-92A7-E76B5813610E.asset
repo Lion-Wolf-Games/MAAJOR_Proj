@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc82ce17df74c344ba54b9278e2d7991, type: 3}
+  m_Name: 4F802CE6-9646-4060-92A7-E76B5813610E
+  m_EditorClassIdentifier: 
+  objectName: AMB_PlayWinds
+  id: 243566237
+  guid: 4F802CE6-9646-4060-92A7-E76B5813610E

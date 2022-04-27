@@ -16,6 +16,78 @@
 							<ObjectRef Name="NME" ID="{7D19E491-7FB2-4020-B9F1-CDE1FC7A8C03}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="NME_FLQ" ID="{A550EAA7-B908-4528-9E4B-4AE5795B5492}" ShortID="664909087">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<ActorMixer Name="FLQ_FOL" ID="{49CD6EAC-1823-4F99-B99E-C2B8DCD7F221}" ShortID="1005770974">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</ActorMixer>
+								<ActorMixer Name="FLQ_VO" ID="{32006A2F-D8BC-4058-8442-7FCDCBA743D7}" ShortID="130422914">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NME" ID="{7D19E491-7FB2-4020-B9F1-CDE1FC7A8C03}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</ActorMixer>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
+						<ActorMixer Name="NME_DOG" ID="{A9B829D3-AA20-4CEB-81C8-88EB3E224B19}" ShortID="167067446">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<ActorMixer Name="DOG_FOL" ID="{B214A93C-4641-4AB2-AB30-0EEAE60E613D}" ShortID="30167711">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</ActorMixer>
+								<ActorMixer Name="DOG_VO" ID="{B45FA475-CD4F-430B-8A7F-28709785EAB7}" ShortID="736937873">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</ActorMixer>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
+					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>

@@ -133,6 +133,102 @@
 											</ChildrenList>
 											<ObjectLists/>
 										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Potion_Fire" ID="{150D2708-3BF4-4231-B12B-B0A0B7C96D45}" ShortID="18440089">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.05</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Fire_Tornado_v2" ID="{39E16719-5F91-4E0C-8016-C8DD01B738A3}" ShortID="495122087">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Fire_Tornado_v2" ID="{5BB6647F-CB3C-4B2F-8EEA-2127ED51CE02}">
+															<Language>SFX</Language>
+															<AudioFile>Fire_Tornado_v2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="366825609"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Fire_Tornado_v2" ID="{5BB6647F-CB3C-4B2F-8EEA-2127ED51CE02}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Potion_Rock" ID="{6E065883-B265-4B37-87ED-C2A825AA2357}" ShortID="18320112">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Potion_Rock_Sfx" ID="{337A609A-1BCB-4BA8-9EA5-A1ECDADD88B6}" ShortID="677673015">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Potion_Rock_Sfx" ID="{BEB7D07B-1EEA-4F6B-987D-20D5F8DC8E93}">
+															<Language>SFX</Language>
+															<AudioFile>Potion_Rock_Sfx.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="847580315"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Potion_Rock_Sfx" ID="{BEB7D07B-1EEA-4F6B-987D-20D5F8DC8E93}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<ObjectLists/>
 								</ActorMixer>

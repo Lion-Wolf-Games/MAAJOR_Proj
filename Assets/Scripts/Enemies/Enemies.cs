@@ -36,6 +36,14 @@ public class Enemies : FightingObject
     [SerializeField] private FSM_Enemies fsm;
     private FSM_Enemies fsmOld;
 
+    #region ActionsDelegate
+    public delegate void EnemyAction();
+
+    public EnemyAction OnPlayerDetected;
+    public EnemyAction OnAttack;
+    public EnemyAction OnHit;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {

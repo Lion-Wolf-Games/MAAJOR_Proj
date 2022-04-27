@@ -300,6 +300,13 @@
 														</Reference>
 													</ReferenceList>
 												</Action>
+												<Action Name="" ID="{DC213659-50B9-4B84-A194-76C238C3CB1F}" ShortID="181532641">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Potion_Rock" ID="{6E065883-B265-4B37-87ED-C2A825AA2357}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
 											</ChildrenList>
 										</Event>
 										<Event Name="Potion_FireBreak" ID="{6981B2BB-D21E-400B-A2D4-95E9197D11D6}">
@@ -308,6 +315,13 @@
 													<ReferenceList>
 														<Reference Name="Target">
 															<ObjectRef Name="Potion_Break" ID="{72D02CB2-FF51-4836-8CBC-51A9D4876AB5}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+												<Action Name="" ID="{86E2FFA5-E580-4F6A-BCA8-74F5BC2D9004}" ShortID="379995880">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Potion_Fire" ID="{150D2708-3BF4-4231-B12B-B0A0B7C96D45}" WorkUnitID="{46795534-FEC9-4959-83E3-49A233A8B557}"/>
 														</Reference>
 													</ReferenceList>
 												</Action>

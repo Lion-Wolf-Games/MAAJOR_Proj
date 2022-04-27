@@ -920,7 +920,19 @@ MonoBehaviour:
     m_ActionId: 0f101a84-b6a9-4eea-8930-c26d39867472
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1566719009391129380}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 5650645c-b177-4ba8-accf-c252da451899
     m_ActionName: UI/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
@@ -1074,31 +1086,31 @@ MonoBehaviour:
   onStepSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 51b3ed797ccf8fc46800a6bd6dc19b9c, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 0a36c44245141e44fb7b5a88eb4ebfe7, type: 2}
   onDashSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: cbad4733edb14714aa82d09ab9de2f32, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: ea6868d645d0f5749aac6f63957971b2, type: 2}
   onJumpSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 15306011e7ebdca4f80bd43e7d29ee90, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: fa54870b324e5c64183a78110cfb9277, type: 2}
   onLandingSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 46530575d7fe51a42a0fdbc80bac1e5b, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: fb6c6c9649af8dd4189a6c30897b000a, type: 2}
   onThrowSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 13aa8dc122786d3488a82636d63c5379, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 3b1aae4d5333dfe468e638320c3bb7c8, type: 2}
   onHitSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e8dd214f6b0bf384b9a6e9ca9a15b091, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 233dcaabac5a1b54a8d18d11bd3b8de6, type: 2}
   onSuckSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6873a35d833c09246bbd079b9a0b8695, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a5d37f9e9ebfe38489598f01eb4dfa1f, type: 2}
 --- !u!114 &1922009542
 MonoBehaviour:
   m_ObjectHideFlags: 0
