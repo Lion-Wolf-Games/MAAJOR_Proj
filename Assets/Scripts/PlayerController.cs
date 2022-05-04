@@ -209,11 +209,11 @@ public class PlayerController : LivingObject
 
             if(value >0)
             {
-                NextPotion?.Invoke();
+                PrevPotion?.Invoke();
             }
             else if(value <0)
             {
-                PrevPotion?.Invoke();
+                NextPotion?.Invoke();
             }
         }
 
