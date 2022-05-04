@@ -17,7 +17,7 @@ MonoBehaviour:
   useTime: 0
   useDuration: 0
   launchRange: 10
-  cooldown: 0.5
+  cooldown: 0.001
   Icon: {fileID: 21300000, guid: 38cc090975f51c64dad0f7313992a707, type: 3}
   spawnFx: {fileID: 0}
   trailFx: {fileID: 0}

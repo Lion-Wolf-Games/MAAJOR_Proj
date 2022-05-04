@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class PotionThrow : MonoBehaviour
 {
@@ -11,9 +12,10 @@ public class PotionThrow : MonoBehaviour
     private Transform cam;
     [SerializeField] private float maxDistance;
     [SerializeField] private float heigthLaunch = 2f;
-    [SerializeField] private Transform launnchPos;
+    [SerializeField] private Transform launchPos;
     [SerializeField] private LayerMask colliderLayer;
     [SerializeField] private Animator anims;
+    [SerializeField] private float aimSpeed = 1f; 
     private float lanchTime;
 
     [Header("Visual")]
@@ -27,6 +29,8 @@ public class PotionThrow : MonoBehaviour
 
     private Dictionary<Potion,float> cooldowns;
     public Action<float> OnThrowPotion; 
+
+    private Vector3 aimPos;
     
 
     private void Start() {
@@ -43,28 +47,41 @@ public class PotionThrow : MonoBehaviour
 
     private void Update() {
         
-        if(!player.isAiming) return;
+        if(!player.isAiming)
+        {
+            aimTarget.transform.position = Vector3.Lerp(aimTarget.transform.position,transform.position,Time.deltaTime * aimSpeed);
+            return;
+        }
 
-        RaycastHit hitinfo;
+        //RaycastHit hitinfo;
+
+        // if(Physics.Raycast(launnchPos.position,cam.forward,out hitinfo,maxDistance,colliderLayer))
+        // {
+        //     aimTarget.transform.position = hitinfo.point;
+        // }
+        // else
+        // {
+        //     aimTarget.transform.position = launnchPos.position + cam.forward * maxDistance;
+        // }
+
+        aimTarget.transform.position = Vector3.Lerp(aimTarget.transform.position,transform.position + aimPos,Time.deltaTime * aimSpeed);
         
 
-        if(Physics.Raycast(cam.position,cam.forward,out hitinfo,maxDistance,colliderLayer))
-        {
-            aimTarget.transform.position = hitinfo.point;
-        }
-        else
-        {
-            aimTarget.transform.position = cam.position + cam.forward * maxDistance;
-        }
-
         DrawPath();
+    }
+
+    public void MoveAimTarget(InputAction.CallbackContext value)
+    {
+        Vector2 input = value.ReadValue<Vector2>();
+        aimPos = (Vector3.forward * input.y + Vector3.right * input.x) * selectedPotion.launchRange;
+        
     }
 
     #region LaunchCalculation
     LaunchData CalculateLauchData()
     {
         Vector3 endPos = aimTarget.transform.position;
-        Vector3 startPos = launnchPos.transform.position;
+        Vector3 startPos = launchPos.transform.position;
 
         float displacementY = endPos.y - startPos.y;
         float h = displacementY + heigthLaunch;
@@ -92,7 +109,7 @@ public class PotionThrow : MonoBehaviour
         {
             float simulationTime = i / (float) visualresolution * launchData.timeToTarget;
             Vector3 displacement = launchData.inotialVelocity * simulationTime + Vector3.up * gravity * simulationTime * simulationTime /2f;
-            Vector3 drawPoint = launnchPos.position + displacement;
+            Vector3 drawPoint = launchPos.position + displacement;
 
             lineVisual.SetPosition(i,drawPoint);
         }
@@ -103,7 +120,7 @@ public class PotionThrow : MonoBehaviour
     {   
         if (cooldowns[selectedPotion] <= Time.time)
         {
-            var go = PoolManager.Instance.Spawn(potionPrefab,true,launnchPos.position,transform.rotation);
+            var go = PoolManager.Instance.Spawn(potionPrefab,true,launchPos.position,transform.rotation);
             Rigidbody potionRb = go.GetComponent<Rigidbody>();
 
             potionRb.velocity = CalculateLauchData().inotialVelocity;

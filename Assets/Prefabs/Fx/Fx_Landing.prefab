@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1274686734281874426, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4604439655503551668, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -17,7 +21,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8242363146913805139, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
       propertyPath: m_Name
-      value: Fx_Jump
+      value: Fx_Landing
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242363146913805149, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242363146913805149, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
+      propertyPath: autoRandomSeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8242363146913805150, guid: eb2ae810b3b0d144983691e454b7d0b1, type: 3}
       propertyPath: m_RootOrder

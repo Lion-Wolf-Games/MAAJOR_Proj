@@ -123,6 +123,7 @@ MonoBehaviour:
   leader: {fileID: 0}
   timeToGather: 0
   puddleFx: {fileID: 1127158512636336115, guid: d01619a869322d04db2463bfc529b9c1, type: 3}
+  RespawnFx: {fileID: 1990194505234868443, guid: 40b43421e3c6eb54c9088d61a050e1eb, type: 3}
   fsm: 0
 --- !u!195 &3874449808315589371
 NavMeshAgent:

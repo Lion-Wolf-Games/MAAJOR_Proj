@@ -173,18 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreenManager: {fileID: 932168593709066483}
   currentGameState: 0
-  MasterVolume:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 080ed8c0f0abd0c45bc1cc063f27c709, type: 2}
-  MusicVolume:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1b439d18e68aab24dbf68ef01975cb31, type: 2}
-  SFXVolume:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d916ba3eb4b56a74bb1793ccab5fab71, type: 2}
 --- !u!114 &932168593709066483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,8 +219,8 @@ RectTransform:
   m_Father: {fileID: 932168593289202097}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.591, y: 0}
+  m_AnchorMax: {x: 0.591, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -292,7 +280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &932168593754424710
 RectTransform:
   m_ObjectHideFlags: 0
@@ -618,7 +606,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.591, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

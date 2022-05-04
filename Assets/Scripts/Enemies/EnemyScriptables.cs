@@ -15,6 +15,7 @@ public class EnemyScriptables : ScriptableObject {
     [SerializeField] private int attackDamage;
     [SerializeField] private float wanderRange;
     [SerializeField] private float timeBetweenWander;
+    [SerializeField] private float respawnTime;
     [Space]
     [SerializeField] private GameObject model;
 
@@ -36,5 +37,10 @@ public class EnemyScriptables : ScriptableObject {
     public GameObject GetModel()
     {
         return model;
+    }
+
+    public float GetRespawnTime()
+    {
+        return respawnTime;
     }
 }

@@ -15,7 +15,11 @@ public class FirePotion : Potion
 
         foreach (Collider enemieCol in enemiesCols)
         {
-            enemieCol.GetComponent<Enemies>().Panic(useDuration);
+            //enemieCol.GetComponent<Enemies>().Panic(useDuration);
+            if(enemieCol.TryGetComponent<Enemies>(out Enemies enemy))
+            {
+                enemy.Panic(useDuration);
+            }
 
         }
 

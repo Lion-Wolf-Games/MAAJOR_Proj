@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Threading.Tasks;
+using DG.Tweening;
 
 public class Enemies : FightingObject
 {
@@ -38,6 +39,7 @@ public class Enemies : FightingObject
 
     [Space] [Header("Fx")]
     [SerializeField] private GameObject puddleFx;
+    [SerializeField] private GameObject RespawnFx;
     private Rigidbody rb;
     private NavMeshAgent navAgent;
     private Vector3 wanderPos;
@@ -259,9 +261,19 @@ public class Enemies : FightingObject
             case FSM_Enemies.Puddle:
                 if (Vector3.Distance(transform.position,spawnPosition) <= stoppingRange)
                 {
-                    
+                    StartCoroutine(TemporaryStopMovement(enemyType.GetRespawnTime()));
+
                     enemyModel.SetActive(true);
                     puddleModel.SetActive(false);
+
+                    //Respawn animation
+                    enemyModel.transform.localScale = new Vector3(1,0,1);
+                    enemyModel.transform.DOScaleY(1,enemyType.GetRespawnTime());
+
+                    if(RespawnFx != null)
+                    {
+                        PoolManager.Instance.Spawn(RespawnFx,true,transform.position,Quaternion.identity);
+                    }
 
                     navAgent.speed = enemyType.GetSpeed();
 
@@ -327,6 +339,14 @@ public class Enemies : FightingObject
     }
 
     public void Kill()
+    public IEnumerator TemporaryStopMovement(float time)
+    {
+        StopMovement();
+        yield return new WaitForSeconds(time);
+        ResumeMovement();
+    }
+
+    public void kill()
     {
         gameObject.SetActive(false);
         OnKill?.Invoke(gameObject);

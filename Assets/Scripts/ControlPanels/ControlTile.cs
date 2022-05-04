@@ -11,6 +11,7 @@ public class ControlTile : MonoBehaviour
     [SerializeField] private TextMeshProUGUI actionName;
     [SerializeField] private TextMeshProUGUI keyPath;
     [SerializeField] private ControlSkin skin;
+    private string keyPathString;
 
     public void SetUpTile(string name,string key)
     {

@@ -90,21 +90,37 @@ public class UiControlDisplay : MonoBehaviour
             
             string tileName ="Control Tile " + inputName + " " + group;
 
+
+            Debug.Log(action.name);
+
             if (action.bindings[f].isComposite)
             {
                 //Create CompositeTile
                 var go = CreateTile(compositeTilePrefab,tileName,group);
 
                 //Get and set Controls info
-                string keyU = action.bindings[f + 1].path;
-                string keyD = action.bindings[f + 2].path;
-                string keyL = action.bindings[f + 3].path;
-                string keyR = action.bindings[f + 4].path;
+                List<string> keysPaths = new List<string>();
 
-                go.GetComponent<CompositeControlTile>().SetUpTile(inputName,keyU,keyD,keyL,keyR);
+                // string keyU = action.bindings[f + 1].path;
+                // string keyD = action.bindings[f + 2].path;
+                // string keyL = action.bindings[f + 3].path;
+                // string keyR = action.bindings[f + 4].path;
+
+                int ID = 1;
+                Debug.Log(action.bindings[f+1].name);
+                Debug.Log(action.bindings[f + 1].isPartOfComposite);
+
+                while(action.bindings[f+ID].isPartOfComposite)
+                {
+                    keysPaths.Add(action.bindings[f+ID].path);
+                    ID++;
+                    if( f + ID >= action.bindings.Count) break;
+                }
+
+                go.GetComponent<CompositeControlTile>().SetUpTile(inputName,keysPaths);
                 go.SetActive(false);
                 //increment f to skip Tiles
-                f += 4;
+                f += ID - 1;
                 continue;
             }
             else
