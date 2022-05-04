@@ -698,9 +698,8 @@ Transform:
   - {fileID: 505271650}
   - {fileID: 1347497424}
   - {fileID: 4028626051348630083}
-  - {fileID: 1039145973469281322}
   m_Father: {fileID: 5763604688520699904}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1566719009391129381
 CapsuleCollider:
@@ -1153,11 +1152,12 @@ MonoBehaviour:
   selectedPotion: {fileID: 11400000, guid: 76218380acc6b9c419a513533c0ccb2d, type: 2}
   maxDistance: 20
   heigthLaunch: 1
-  launnchPos: {fileID: 4028626051348630083}
+  launchPos: {fileID: 0}
   colliderLayer:
     serializedVersion: 2
     m_Bits: 1143
   anims: {fileID: 1566719008738073820}
+  aimSpeed: 1
   visualresolution: 30
   lineVisual: {fileID: 5003773898566050986}
   RangeVisual: {fileID: 1921070164}
@@ -1535,6 +1535,7 @@ Transform:
   - {fileID: 1566719009374224600}
   - {fileID: 1566719009066024863}
   - {fileID: 1566719008636742881}
+  - {fileID: 1039145973469281322}
   - {fileID: 1566719009391129385}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1595,8 +1596,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1921070165}
-  m_Father: {fileID: 1566719009391129385}
-  m_RootOrder: 6
+  m_Father: {fileID: 5763604688520699904}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6908904626654647379
 MeshFilter:

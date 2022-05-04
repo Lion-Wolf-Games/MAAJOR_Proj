@@ -54,11 +54,11 @@ public class PotionSwitchUI : MonoBehaviour
     {
         if(state)
         {
-            NextPotion();
+            PrevPotion();
         }
         else
         {
-            PrevPotion();
+            NextPotion();
         }
     }
 

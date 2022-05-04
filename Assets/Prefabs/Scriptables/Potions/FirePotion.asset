@@ -16,8 +16,8 @@ MonoBehaviour:
   effectRange: 10
   useTime: 0
   useDuration: 5
-  launchRange: 20
-  cooldown: 12
+  launchRange: 10
+  cooldown: 1
   Icon: {fileID: 21300000, guid: 295bd1ffc856d8a48b4618fce87be2c6, type: 3}
   spawnFx: {fileID: 6649054028638981966, guid: 17749527f24a38e4a8518725a42d1df3, type: 3}
   trailFx: {fileID: 5509305661840162670, guid: 93493751bafa07b4ebec5bc245d5d2b4, type: 3}

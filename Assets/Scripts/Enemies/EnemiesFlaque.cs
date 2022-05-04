@@ -28,7 +28,7 @@ public class EnemiesFlaque : MonoBehaviour
         //Set Fx to go to pim
         float travelDuration = Random.Range(0.9f,1.1f);
 
-        fxgo.transform.DOJump(player.suckPosition.position,5,1,travelDuration)
+        fxgo.transform.DOJump(player.suckPosition.position,2.5f,1,travelDuration)
             .SetEase(Ease.InOutCubic);
         //Spawn DeathFx
         PoolManager.Instance.Spawn(deathFx,true,transform.position,transform.rotation);

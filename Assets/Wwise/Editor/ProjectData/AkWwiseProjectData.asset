@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 8d2698fb08256b4893ba5438f8e87ff6
     GuidInternal: 
-    m_lastTime: -8585571303974968442
+    m_lastTime: -8585571192934916198
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fbf3588fdb41bd49897c85e19de4d51e
     GuidInternal: 
-    m_lastTime: -8585518658345595575
+    m_lastTime: -8585505561342345417
     List:
     - name: AMB
       guid: 035581ea9b145a4bba20803b78eb61a2
@@ -60,6 +60,58 @@ MonoBehaviour:
         ObjectType: 2
         guid: 035581ea9b145a4bba20803b78eb61a2
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\AMB
+    - name: DOG_FOL
+      guid: 0e0bcce557061c4886a9666c892165b0
+      id: 3795798275
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
+      - ElementName: NME
+        ObjectType: 2
+        guid: 91e4197db27f2040b9f1cde1fc7a8c03
+      - ElementName: NME_DOG
+        ObjectType: 2
+        guid: daa1e0c1c3ab49419fc91aa2f9a072fc
+      - ElementName: DOG_FOL
+        ObjectType: 2
+        guid: 0e0bcce557061c4886a9666c892165b0
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\NME\NME_DOG\DOG_FOL
+    - name: DOG_VO
+      guid: 59d6713fcd36ba45b505373fb74918f6
+      id: 1987500357
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
+      - ElementName: NME
+        ObjectType: 2
+        guid: 91e4197db27f2040b9f1cde1fc7a8c03
+      - ElementName: NME_DOG
+        ObjectType: 2
+        guid: daa1e0c1c3ab49419fc91aa2f9a072fc
+      - ElementName: DOG_VO
+        ObjectType: 2
+        guid: 59d6713fcd36ba45b505373fb74918f6
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\NME\NME_DOG\DOG_VO
     - name: ENV
       guid: e58719ad685c344ea9579b2922b474b8
       id: 529726550
@@ -80,6 +132,58 @@ MonoBehaviour:
         ObjectType: 2
         guid: e58719ad685c344ea9579b2922b474b8
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\ENV
+    - name: FLQ_FOL
+      guid: 0c5c903fb66ff644a7312604ade26e7c
+      id: 16577882
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
+      - ElementName: NME
+        ObjectType: 2
+        guid: 91e4197db27f2040b9f1cde1fc7a8c03
+      - ElementName: NME_FLQ
+        ObjectType: 2
+        guid: 0de742bc231f6e44984229177533c887
+      - ElementName: FLQ_FOL
+        ObjectType: 2
+        guid: 0c5c903fb66ff644a7312604ade26e7c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\NME\NME_FLQ\FLQ_FOL
+    - name: FLQ_VO
+      guid: 09a00bd5467af74a85839b42bd1373db
+      id: 1966270818
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
+      - ElementName: NME
+        ObjectType: 2
+        guid: 91e4197db27f2040b9f1cde1fc7a8c03
+      - ElementName: NME_FLQ
+        ObjectType: 2
+        guid: 0de742bc231f6e44984229177533c887
+      - ElementName: FLQ_VO
+        ObjectType: 2
+        guid: 09a00bd5467af74a85839b42bd1373db
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\NME\NME_FLQ\FLQ_VO
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -197,6 +301,52 @@ MonoBehaviour:
         ObjectType: 2
         guid: 91e4197db27f2040b9f1cde1fc7a8c03
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\NME
+    - name: NME_DOG
+      guid: daa1e0c1c3ab49419fc91aa2f9a072fc
+      id: 1738360492
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
+      - ElementName: NME
+        ObjectType: 2
+        guid: 91e4197db27f2040b9f1cde1fc7a8c03
+      - ElementName: NME_DOG
+        ObjectType: 2
+        guid: daa1e0c1c3ab49419fc91aa2f9a072fc
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\NME\NME_DOG
+    - name: NME_FLQ
+      guid: 0de742bc231f6e44984229177533c887
+      id: 1687630229
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fbf3588fdb41bd49897c85e19de4d51e
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 4ea9125cc255004d868a21cb604baa5e
+      - ElementName: NME
+        ObjectType: 2
+        guid: 91e4197db27f2040b9f1cde1fc7a8c03
+      - ElementName: NME_FLQ
+        ObjectType: 2
+        guid: 0de742bc231f6e44984229177533c887
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\NME\NME_FLQ
     - name: PIM
       guid: 4858ba72f38661409496f9d22a5effe0
       id: 1115118801
@@ -355,7 +505,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a91c831e1c440041a72a7be24c8ac7de
     GuidInternal: 
-    m_lastTime: -8585519425014202085
+    m_lastTime: -8585506605083340966
     List:
     - name: FOREST_Bank
       guid: f96f3d7e8bf2b046b6600f9e0040df35
@@ -425,7 +575,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c8a5b76bfd504b49a6762764bda6d51d
     GuidInternal: 
-    m_lastTime: -8585507437493820649
+    m_lastTime: -8585505561342405430
     List:
     - name: AMB
       guid: 50acd9e1b911c14fa5b00b99ce19cea1
@@ -1293,7 +1443,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0a1e684c492fd648aac7b7093d1756ab
     GuidInternal: 
-    m_lastTime: -8585547005775759990
+    m_lastTime: -8585543752727122494
     List:
     - name: SET_MainVolume
       guid: 09754e944be68b4bab1f803633feb484
@@ -1349,7 +1499,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 9d38a78685f1ed408d28e1abcd25557e
     GuidInternal: 
-    m_lastTime: -8585565019332576653
+    m_lastTime: -8585558361908168776
     List:
     - name: New_State_Group
       guid: da53548254d4924fa9fdc0b4083e09a9
@@ -1397,7 +1547,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b6dbd5f68ea3184ca68e266f77b9d9eb
     GuidInternal: 
-    m_lastTime: -8585559885207795977
+    m_lastTime: -8585558361908158775
     List:
     - name: PIM_Footsteps_Material
       guid: 848fb2d4063253468625359f3f3def73
@@ -1461,10 +1611,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 954262407010ae4382596bd8e765ea66
     GuidInternal: 
-    m_lastTime: -8585571303976168830
+    m_lastTime: -8585571192934926199
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 050000000600000007000000080000000a0000000b00000011000000120000001300000026000000280000002c0000002f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

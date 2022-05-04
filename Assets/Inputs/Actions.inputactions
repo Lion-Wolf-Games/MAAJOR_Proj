@@ -76,6 +76,22 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "OpenConsole",
+                    "type": "Button",
+                    "id": "b2d6225f-cf3d-4e1d-a4a9-a2c8f170aece",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Enter",
+                    "type": "Button",
+                    "id": "825ddf03-606a-4dc3-9fba-83b7aab8dcb1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -183,7 +199,7 @@
                     "id": "8c8e490b-c610-4785-884f-f04217b23ca4",
                     "path": "<Pointer>/delta",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "ScaleVector2(x=0.05,y=0.05)",
                     "groups": "Keyboard&Mouse",
                     "action": "Look",
                     "isComposite": false,
@@ -375,6 +391,28 @@
                     "action": "Switch",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "970fa173-a8f7-4fbc-91a0-cd3ca49f2828",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenConsole",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9201b3b7-8979-4d52-8794-49ca4e84a979",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

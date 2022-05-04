@@ -43,6 +43,21 @@ public class WindPotion : Potion
         {
             PoolManager.Instance.Spawn(spawnFx,true,target.position,Quaternion.identity);
         }
+
+        //Get Platform in Range
+        Collider[] platforms = Physics.OverlapSphere(target.position,effectRange);
+
+        foreach(Collider col in platforms)
+        {
+            if (col.TryGetComponent<PushableStone>(out PushableStone stone))
+            {
+                stone.Push(target.position);
+            }
+            else
+            {
+                continue;
+            }
+        }
     }
 
 }

@@ -90,6 +90,7 @@ public class UiControlDisplay : MonoBehaviour
             
             string tileName ="Control Tile " + inputName + " " + group;
 
+
             if (action.bindings[f].isComposite)
             {
                 //Create CompositeTile

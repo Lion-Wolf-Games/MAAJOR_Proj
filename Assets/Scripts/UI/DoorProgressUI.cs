@@ -11,6 +11,7 @@ public class DoorProgressUI : MonoBehaviour
 
     [SerializeField] private Image fillImage;
     [SerializeField] private TextMeshProUGUI percentageText;
+    [SerializeField] private TextMeshProUGUI percentageText2;
 
     private void Start() {
         targetDoor.UpdadeUI += UpdadeUI;
@@ -22,5 +23,6 @@ public class DoorProgressUI : MonoBehaviour
         fillImage.DOFillAmount(1-value,0.2f);
 
         percentageText.text = ((1-value) * 100).ToString() + "%";
+        percentageText2.text = ((1-value) * 100).ToString() + "%";
     }
 }

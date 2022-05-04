@@ -21,4 +21,5 @@ MonoBehaviour:
   attackDamage: 0
   wanderRange: 0
   timeBetweenWander: 0
+  respawnTime: 3
   model: {fileID: 6813813170194991712, guid: 4f32ca4750cbe734895287c978d9a48e, type: 3}

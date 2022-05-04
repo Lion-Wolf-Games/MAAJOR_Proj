@@ -151,7 +151,7 @@ public class PlayerController : LivingObject
             Debug.Log("Suck");
             OnSuck?.Invoke();
 
-            Collider[] cols = Physics.OverlapSphere(transform.position, suckRange,enemyLayer);
+            Collider[] cols = Physics.OverlapSphere(transform.position, suckRange/*,enemyLayer*/);
 
             Debug.Log(cols);
 
@@ -224,6 +224,11 @@ public class PlayerController : LivingObject
     private void Update()
     {
         #region Follow Transform Rotation
+
+        // if(_look.magnitude > 1)
+        // {
+        //     _look.Normalize();
+        // }
 
         //Rotate the Follow Target transform based on the input
         followTransform.transform.rotation *= Quaternion.AngleAxis(_look.x * rotationPower, Vector3.up);
