@@ -287,7 +287,7 @@ public class PlayerController : LivingObject
         #region Jump
         if (!_isGrounded)
         {
-            _verticalSpeed -= 9.81f * Time.deltaTime;
+            _verticalSpeed -= 12f * Time.deltaTime;
 
             _jumpInput = false;
 
@@ -362,6 +362,7 @@ public class PlayerController : LivingObject
     protected override void Hit(int damage,Vector3 origin)
     {
         base.Hit(damage,origin);
+        OnHit?.Invoke(0);
         hitTime = Time.time + hitRecoilDuration;
         if(origin == transform.position)
         {

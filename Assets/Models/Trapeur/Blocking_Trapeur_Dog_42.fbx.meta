@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 72d1d4cf99d1dfc41b14f84490f756bf
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 4301222933904893472
+    second: Course_04
+  - first:
+      74: -1217322159811518735
+    second: Walk_Dogo
+  - first:
+      74: 2407098067506512862
+    second: metarig_dogo|Course_03
+  - first:
+      74: -5084986852692399992
+    second: metarig_dogo|Course_04
+  - first:
+      74: -5366850486842990051
+    second: metarig_dogo|Course_Dogo
+  - first:
+      74: 2311705733285335697
+    second: dogo_rig|Course_03
+  - first:
+      74: -1446630149374439479
+    second: dogo_rig|Course_04
+  - first:
+      74: -3152448875315513596
+    second: dogo_rig|Course_Dogo
+  - first:
+      74: 3965212969905703796
+    second: dogo_rig|Morsure_Dogo
+  - first:
+      74: -189685622493902806
+    second: dogo_rig|Respiration_Dogo_01
+  - first:
+      74: 4844766115700802807
+    second: dogo_rig|Sit_Idle_Dogo
+  - first:
+      74: -7148918757094182678
+    second: dogo_rig|Stand_Idle_Dogo
+  - first:
+      74: 3959432158580953473
+    second: dogo_rig|Walk_Dogo
+  - first:
+      74: -6650959490433178539
+    second: Socle|Course_03
+  - first:
+      74: -5534083557550587406
+    second: Socle|Course_Dogo
+  - first:
+      74: -5267952449475011057
+    second: Socle|Walk_Dogo
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.9
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.009
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

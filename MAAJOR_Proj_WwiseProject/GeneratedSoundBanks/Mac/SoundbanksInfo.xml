@@ -16,7 +16,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="860471550" Language="SFX" Hash="3576037238">
+		<SoundBank Id="860471550" Language="SFX" Hash="560428412">
 			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
 			<ShortName>PIM_Bank</ShortName>
 			<Path>PIM_Bank.bnk</Path>
@@ -213,6 +213,10 @@
 							<ShortName>verre_casse.wav</ShortName>
 							<Path>SFX\verre_casse_FB011085.wem</Path>
 						</File>
+						<File Id="366825609" Language="SFX">
+							<ShortName>Fire_Tornado_v2.wav</ShortName>
+							<Path>SFX\Fire_Tornado_v2_FB011085.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="196278613" Name="Potion_IceBreak" ObjectPath="\Events\Default Work Unit\PROPS\Potion\Elements\Potion_IceBreak" MaxAttenuation="80." DurationType="OneShot" DurationMin="1.59902" DurationMax="1.797953">
@@ -228,6 +232,10 @@
 						<File Id="308374126" Language="SFX">
 							<ShortName>verre_casse.wav</ShortName>
 							<Path>SFX\verre_casse_FB011085.wem</Path>
+						</File>
+						<File Id="847580315" Language="SFX">
+							<ShortName>Potion_Rock_Sfx.wav</ShortName>
+							<Path>SFX\Potion_Rock_Sfx_FB011085.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -261,7 +269,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1262974217">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3267653258">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -271,7 +279,7 @@
 				<GameParameter Id="3006228107" Name="SET_MainVolume" ObjectPath="\Game Parameters\Default Work Unit\SET_MainVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2129499522" Language="SFX" Hash="2937512015">
+		<SoundBank Id="2129499522" Language="SFX" Hash="3682651404">
 			<ObjectPath>\SoundBanks\Default Work Unit\MIDENA_Bank</ObjectPath>
 			<ShortName>MIDENA_Bank</ShortName>
 			<Path>MIDENA_Bank.bnk</Path>

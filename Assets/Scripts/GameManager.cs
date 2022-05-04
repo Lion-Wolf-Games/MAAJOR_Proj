@@ -15,6 +15,13 @@ public class GameManager : MonoBehaviour
 
     public GameState currentGameState;
 
+
+    // will be moved to another script soon(tm)
+    [Space] [Header("Sound parameters loader")]
+    public AK.Wwise.RTPC MasterVolume;
+    public AK.Wwise.RTPC MusicVolume;
+    public AK.Wwise.RTPC SFXVolume;
+
     private void Awake() {
 
         if (Instance != null)
@@ -24,6 +31,22 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(this);
+    }
+
+    private void Start()
+    {
+        float masterV = PlayerPrefs.GetFloat("MasterVolume", 100);
+        float musicV = PlayerPrefs.GetFloat("MusicVolume", 100);
+        float sfxV = PlayerPrefs.GetFloat("SfxVolume", 100);
+
+        SetVolume(masterV, MasterVolume);
+        SetVolume(musicV, MusicVolume);
+        SetVolume(sfxV, SFXVolume);
+    }
+
+    private void SetVolume(float value, AK.Wwise.RTPC rtpc)
+    {
+        rtpc.SetGlobalValue(value);
     }
 
     public void ChangeGameState(GameState newState)

@@ -8,7 +8,13 @@
 			</PropertyList>
 			<ChildrenList>
 				<ActorMixer Name="NME" ID="{FDD16BDB-F034-4C08-8C71-99E25AE88711}" ShortID="417320572">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="PropsSfxAttenuation" ID="{8E6FDD4F-4D37-4279-86D0-02D647AEE17B}" WorkUnitID="{710FE2BA-BC84-4FE0-B0A8-9BEE7C7560B4}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
 						</Reference>
@@ -71,6 +77,70 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="DOG_Hit" ID="{9940D32E-7AFA-422F-BF74-4166BAB9B02C}" ShortID="248339302">
+											<PropertyList>
+												<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Trapeur_Hit-001" ID="{737BE867-620D-44D8-B413-1049AC68E437}" ShortID="392089484">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Trapeur_Hit-001" ID="{D923997E-D006-4DE4-BC99-9FE1C89E3EF9}">
+															<Language>SFX</Language>
+															<AudioFile>Trapeur_Hit-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="190074169"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Trapeur_Hit-001" ID="{D923997E-D006-4DE4-BC99-9FE1C89E3EF9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Trapeur_Hit-002" ID="{22639FC8-0E7C-4851-A5C0-2CE1D1CEE08C}" ShortID="768292961">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Trapeur_Hit-002" ID="{41107AE2-578A-44FC-8637-7C58CAEE5582}">
+															<Language>SFX</Language>
+															<AudioFile>Trapeur_Hit-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="828146198"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Trapeur_Hit-002" ID="{41107AE2-578A-44FC-8637-7C58CAEE5582}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+									</ChildrenList>
 									<ObjectLists/>
 								</ActorMixer>
 								<ActorMixer Name="DOG_VO" ID="{B45FA475-CD4F-430B-8A7F-28709785EAB7}" ShortID="736937873">
@@ -82,6 +152,123 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="DOG_Bark" ID="{46A403AB-5CF6-4A6F-AEEE-279AB963E1C5}" ShortID="911621123">
+											<PropertyList>
+												<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="NME" ID="{7D19E491-7FB2-4020-B9F1-CDE1FC7A8C03}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Trapeur_Bark-001" ID="{CD919E23-43F3-4AF0-93DC-EC3B6FA05779}" ShortID="808694843">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Trapeur_Bark-001" ID="{D860F52E-47AD-41AA-8940-453EBD8C5D8F}">
+															<Language>SFX</Language>
+															<AudioFile>Trapeur_Bark-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="40350270"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Trapeur_Bark-001" ID="{D860F52E-47AD-41AA-8940-453EBD8C5D8F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Trapeur_Bark-002" ID="{E89473B7-8884-47C9-8388-222CD8A21878}" ShortID="573919994">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Trapeur_Bark-002" ID="{DF7EC9D2-8709-4B28-A3C9-52C638D81CAF}">
+															<Language>SFX</Language>
+															<AudioFile>Trapeur_Bark-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="146283628"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Trapeur_Bark-002" ID="{DF7EC9D2-8709-4B28-A3C9-52C638D81CAF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Trapeur_Bark-003" ID="{8F1992C6-BE40-48F0-9749-1BB70B4460AB}" ShortID="455268648">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Trapeur_Bark-003" ID="{A9C15EE9-F271-4F45-8257-A00BBD2D452F}">
+															<Language>SFX</Language>
+															<AudioFile>Trapeur_Bark-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="509467963"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Trapeur_Bark-003" ID="{A9C15EE9-F271-4F45-8257-A00BBD2D452F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Trapeur_Bark-004" ID="{716A5B50-5AFC-4BC5-B3D7-D78BAA7D8A06}" ShortID="997416240">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{791C5C19-23EA-4264-8B46-39D7D35BB6FD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F58F3FB-41DB-49BD-897C-85E19DE4D51E}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Trapeur_Bark-004" ID="{5A794117-CAC3-4133-AEA8-2E1FB2535F86}">
+															<Language>SFX</Language>
+															<AudioFile>Trapeur_Bark-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="855223281"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Trapeur_Bark-004" ID="{5A794117-CAC3-4133-AEA8-2E1FB2535F86}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+									</ChildrenList>
 									<ObjectLists/>
 								</ActorMixer>
 							</ChildrenList>

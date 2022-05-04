@@ -36,7 +36,7 @@ public class EnemiesFlaque : MonoBehaviour
         
         if(enemie != null)
         {
-            enemie.kill();
+            enemie.Kill();
         }
         else
         {

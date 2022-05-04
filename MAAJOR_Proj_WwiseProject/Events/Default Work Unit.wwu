@@ -264,7 +264,36 @@
 				</Folder>
 				<Folder Name="NME" ID="{C2509053-3C41-4246-BB01-E2B2E55C71B7}" ShortID="16433316">
 					<ChildrenList>
-						<Folder Name="FOL" ID="{7B3F175B-632B-4428-810A-767D30D43D99}" ShortID="441569997"/>
+						<Folder Name="FOL" ID="{7B3F175B-632B-4428-810A-767D30D43D99}" ShortID="441569997">
+							<ChildrenList>
+								<Event Name="DOG_Hit" ID="{4AEA155C-D82E-4ED0-B52F-344373D924D7}">
+									<ChildrenList>
+										<Action Name="" ID="{7DC5DD03-B331-4E4A-9B7F-1AB6D70D3DE3}" ShortID="326188398">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="DOG_Hit" ID="{9940D32E-7AFA-422F-BF74-4166BAB9B02C}" WorkUnitID="{32A4E988-5353-47DC-931D-2B9586AEDBCE}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="VO" ID="{BB51D74F-03D1-4CC7-956C-450194C50319}" ShortID="324715232">
+							<ChildrenList>
+								<Event Name="DOG_Bark" ID="{A7735E5E-F5D8-4752-9754-59EB4016FB35}">
+									<ChildrenList>
+										<Action Name="" ID="{9ACEE28B-8C76-4CBB-A5ED-6690A135DA5F}" ShortID="825579784">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="DOG_Bark" ID="{46A403AB-5CF6-4A6F-AEEE-279AB963E1C5}" WorkUnitID="{32A4E988-5353-47DC-931D-2B9586AEDBCE}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="PROPS" ID="{09805075-1FF9-40BA-A7A4-258EDB132175}" ShortID="308137775">

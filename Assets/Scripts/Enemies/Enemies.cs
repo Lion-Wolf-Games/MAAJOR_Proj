@@ -1,8 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Threading.Tasks;
 
 public class Enemies : FightingObject
 {
@@ -12,13 +12,17 @@ public class Enemies : FightingObject
     [SerializeField] private EnemyScriptables enemyType;
     [SerializeField] private GameObject enemyModel;
     [SerializeField] private GameObject puddleModel;
-
+    [SerializeField] private float losingTargetTime;
 
     [Space] [Header("Wander")]
     [SerializeField] private float wanderRange;
     [SerializeField] private float timeBetweenWander;
     [SerializeField] private Vector3 spawnPosition;
     private float wanderTime;
+
+    [Space] [Header("Turn when detect")]
+    [SerializeField] private float turnDelay;
+    private float turnVelocity;
 
     [Space] [Header("Panic")]
     [SerializeField] private float panicRange;
@@ -27,6 +31,11 @@ public class Enemies : FightingObject
     private float panicTime;
     private float panicDuration;
 
+    [Space] [Header("Gather")]
+    [SerializeField] private Transform[] gatheringPos;
+    [SerializeField] private Enemies leader;
+    [SerializeField] private float timeToGather;
+
     [Space] [Header("Fx")]
     [SerializeField] private GameObject puddleFx;
     private Rigidbody rb;
@@ -34,11 +43,11 @@ public class Enemies : FightingObject
     private Vector3 wanderPos;
     private Vector3 lastTargetPos;
 
-    public enum FSM_Enemies { Idle, Wander, Chasing, Attacking, TargetLost, Hit, Panic, Flee,Puddle}
-    [SerializeField] private FSM_Enemies fsm;
+    public enum FSM_Enemies { Idle, Wander, TargetAcquired, Chasing, Patroling, Attacking, TargetLost, Hit, Panic, Flee,Puddle}
+    [SerializeField] public FSM_Enemies fsm;
     private FSM_Enemies fsmOld;
 
-    public Action<GameObject> OnKill;
+    public System.Action<GameObject> OnKill;
 
     #region ActionsDelegate
     public delegate void EnemyAction();
@@ -71,7 +80,6 @@ public class Enemies : FightingObject
 
         navAgent.speed = enemyType.GetSpeed();
         navAgent.angularSpeed = enemyType.GetTurningSpeed();
-
     }
 
     private void Update()
@@ -86,7 +94,7 @@ public class Enemies : FightingObject
             switch (fsm)
             {
                 case FSM_Enemies.Idle:
-                    wanderTime = Time.time + timeBetweenWander;
+                    wanderTime = Time.time + Random.Range(0f, 15f);
 
                     if(anim != null){
                         anim.SetBool("IsMoving", false);
@@ -95,15 +103,25 @@ public class Enemies : FightingObject
                     break;
                 case FSM_Enemies.Wander:
 
+                    navAgent.speed = enemyType.GetSpeed() / 3;
+
                     if (anim != null)
                         anim.SetBool("IsMoving",true);
                     break;
-                case FSM_Enemies.Chasing:
+                case FSM_Enemies.TargetAcquired:
 
+                    StartCoroutine(TurnToTargetAndChangeState(0.75f, FSM_Enemies.Chasing));
+
+                    break;
+                case FSM_Enemies.Chasing:
                     if (anim != null)
                         anim.SetBool("IsMoving", true);
                     break;
 
+                case FSM_Enemies.Patroling:
+                    navAgent.speed = enemyType.GetSpeed() / 3;
+                    navAgent.SetDestination(_target.transform.position);
+                    break;
                     
                 case FSM_Enemies.Attacking:
                     navAgent.SetDestination(transform.position);
@@ -112,6 +130,7 @@ public class Enemies : FightingObject
                     if (_target.TryGetComponent<IDamagable>(out IDamagable IdTarget))
                     {
                         IdTarget.ChangeHealth(-damage,transform.position);
+                        OnAttack?.Invoke();
                     }
 
                     if (anim != null)
@@ -168,22 +187,28 @@ public class Enemies : FightingObject
                 }
 
                 break;
+            case FSM_Enemies.TargetAcquired:
+
+                break;
             case FSM_Enemies.Chasing:
 
                 navAgent.SetDestination(_target.transform.position);
 
-                if (Vector3.SqrMagnitude(transform.position - _target.transform.position) < attackRange)
+                if (Vector3.SqrMagnitude(transform.position - _target.transform.position) < attackRange && _target.GetComponent<IDamagable>() != null)
                 {
                     fsm = FSM_Enemies.Attacking;
                 }
 
-                if (Vector3.Distance(transform.position,_target.transform.position) > detectionRange + 2)
+                if (Vector3.Distance(transform.position,_target.transform.position) > detectionRange + 3)
                 {
                     lastTargetPos = _target.transform.position;
-                    _target = null;
+                    _target = null;                 
                     fsm = FSM_Enemies.TargetLost;
                 }
 
+                break;
+            case FSM_Enemies.Patroling:
+                CheckForTarget();
                 break;
             case FSM_Enemies.TargetLost:
 
@@ -256,8 +281,16 @@ public class Enemies : FightingObject
         {
             Collider[] cols = Physics.OverlapSphere(transform.position, detectionRange, hostileLayer);
             _target = cols[0].gameObject;
-            fsm = FSM_Enemies.Chasing;
+            fsm = FSM_Enemies.TargetAcquired;
+
+            OnPlayerDetected?.Invoke();
         }
+        //else if (_target != null)
+        //{
+        //    fsm = FSM_Enemies.TargetAcquired;
+
+        //    OnPlayerDetected?.Invoke();
+        //}
     }
 
     public void Damage(Vector3 origin)
@@ -293,10 +326,11 @@ public class Enemies : FightingObject
 
     }
 
-    public void kill()
+    public void Kill()
     {
         gameObject.SetActive(false);
         OnKill?.Invoke(gameObject);
+        OnHit?.Invoke();
     }
 
     public void SetUpEnemies(EnemyScriptables scriptable)
@@ -312,12 +346,58 @@ public class Enemies : FightingObject
 
     }
 
-    private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.TryGetComponent<IDamagable>(out IDamagable player))
+    private IEnumerator TurnTowardTarget(float duration)
+    {
+        StopMovement();
+
+        float endTime = Time.time + duration;
+        if (_target != null)
         {
-            player.ChangeHealth(-damage,transform.position);
+            while (Time.time < endTime)
+            {
+                yield return new WaitForFixedUpdate();
+
+                Vector3 lookAtTarget = new Vector3(_target.transform.position.x, transform.position.y, _target.transform.position.z);
+
+                Vector3 targetDir = lookAtTarget - transform.position;
+                float rotationToTarget = Mathf.Atan2(targetDir.x, targetDir.z) * Mathf.Rad2Deg;
+                transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationToTarget, ref turnVelocity, turnDelay);
+            }
+        }
+
+        ResumeMovement();
+    }
+
+    public IEnumerator TurnToTargetAndChangeState(float duration, FSM_Enemies stateAfterTurn)
+    {
+        yield return TurnTowardTarget(duration);
+
+        fsm = stateAfterTurn;
+    }
+
+    //Set target to current target for other enemies in detection range
+    private void Gather()
+    {
+        if (Physics.CheckSphere(transform.position, detectionRange, 1 << 9))
+        {
+            Collider[] cols = Physics.OverlapSphere(transform.position, detectionRange, 1 << 9);
+
+            for (int i = 0; i < cols.Length; i++)
+            {
+                Enemies enemy = cols[i].GetComponent<Enemies>();
+
+                enemy.SetTarget(_target);
+            }
         }
     }
+
+    //private void OnCollisionEnter(Collision other) {
+    //    if(other.gameObject.TryGetComponent<IDamagable>(out IDamagable player))
+    //    {
+    //        player.ChangeHealth(-damage,transform.position);
+    //        OnAttack?.Invoke();
+    //    }
+    //}
 
     private void OnDrawGizmos()
     {

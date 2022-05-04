@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2488400822	DOG_Bark			\Default Work Unit\NME\VO\DOG_Bark	
+	3692867023	DOG_Hit			\Default Work Unit\NME\FOL\DOG_Hit	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	40350270	Trapeur_Bark-001	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Trapeur_Bark-001_FB011085.wem		\Actor-Mixer Hierarchy\NME\NME\NME_DOG\DOG_VO\DOG_Bark\Trapeur_Bark-001		4648
+	146283628	Trapeur_Bark-002	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Trapeur_Bark-002_FB011085.wem		\Actor-Mixer Hierarchy\NME\NME\NME_DOG\DOG_VO\DOG_Bark\Trapeur_Bark-002		6025
+	190074169	Trapeur_Hit-001	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Trapeur_Hit-001_FB011085.wem		\Actor-Mixer Hierarchy\NME\NME\NME_DOG\DOG_FOL\DOG_Hit\Trapeur_Hit-001		5397
+	509467963	Trapeur_Bark-003	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Trapeur_Bark-003_FB011085.wem		\Actor-Mixer Hierarchy\NME\NME\NME_DOG\DOG_VO\DOG_Bark\Trapeur_Bark-003		4642
+	828146198	Trapeur_Hit-002	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Trapeur_Hit-002_FB011085.wem		\Actor-Mixer Hierarchy\NME\NME\NME_DOG\DOG_FOL\DOG_Hit\Trapeur_Hit-002		5252
+	855223281	Trapeur_Bark-004	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Trapeur_Bark-004_FB011085.wem		\Actor-Mixer Hierarchy\NME\NME\NME_DOG\DOG_VO\DOG_Bark\Trapeur_Bark-004		4808
+

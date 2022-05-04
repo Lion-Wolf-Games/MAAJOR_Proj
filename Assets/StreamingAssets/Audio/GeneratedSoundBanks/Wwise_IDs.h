@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID AMB_FOREST_PLAYALL = 4083828315U;
         static const AkUniqueID AMB_FOREST_STOPALL = 48772705U;
+        static const AkUniqueID DOG_BARK = 2488400822U;
+        static const AkUniqueID DOG_HIT = 3692867023U;
         static const AkUniqueID MENU_CLOSE = 626954121U;
         static const AkUniqueID MENU_NAVIGATION = 2471227561U;
         static const AkUniqueID MENU_OPEN = 1287511387U;
@@ -86,13 +88,19 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMB = 1117531639U;
+        static const AkUniqueID DOG_FOL = 3795798275U;
+        static const AkUniqueID DOG_VO = 1987500357U;
         static const AkUniqueID ENV = 529726550U;
+        static const AkUniqueID FLQ_FOL = 16577882U;
+        static const AkUniqueID FLQ_VO = 1966270818U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MIDENA = 489596525U;
         static const AkUniqueID MIDENA_FOL = 2662486595U;
         static const AkUniqueID MIDENA_VO = 862987397U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID NME = 578529263U;
+        static const AkUniqueID NME_DOG = 1738360492U;
+        static const AkUniqueID NME_FLQ = 1687630229U;
         static const AkUniqueID PIM = 1115118801U;
         static const AkUniqueID PIM_FOL = 43049847U;
         static const AkUniqueID PIM_VO = 4118844521U;

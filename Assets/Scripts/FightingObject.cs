@@ -17,4 +17,9 @@ public class FightingObject : MonoBehaviour {
 
     
     protected float attackTime;
+
+    public void SetTarget(GameObject target)
+    {
+        _target = target;
+    }
 }

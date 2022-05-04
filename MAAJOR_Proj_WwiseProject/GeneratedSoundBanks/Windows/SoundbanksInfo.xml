@@ -16,7 +16,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="860471550" Language="SFX" Hash="1898207121">
+		<SoundBank Id="860471550" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
 			<ShortName>PIM_Bank</ShortName>
 			<Path>PIM_Bank.bnk</Path>
@@ -269,7 +269,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="610033255">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1339868256">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -302,10 +302,44 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3133177584" Language="SFX">
+		<SoundBank Id="3133177584" Language="SFX" Hash="783162275">
 			<ObjectPath>\SoundBanks\Default Work Unit\NME_Bank</ObjectPath>
 			<ShortName>NME_Bank</ShortName>
 			<Path>NME_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2488400822" Name="DOG_Bark" ObjectPath="\Events\Default Work Unit\NME\VO\DOG_Bark" MaxAttenuation="80." DurationType="OneShot" DurationMin="0.647302" DurationMax="1.804354">
+					<IncludedMemoryFiles>
+						<File Id="40350270" Language="SFX">
+							<ShortName>Trapeur_Bark-001.wav</ShortName>
+							<Path>SFX\Trapeur_Bark-001_FB011085.wem</Path>
+						</File>
+						<File Id="146283628" Language="SFX">
+							<ShortName>Trapeur_Bark-002.wav</ShortName>
+							<Path>SFX\Trapeur_Bark-002_FB011085.wem</Path>
+						</File>
+						<File Id="509467963" Language="SFX">
+							<ShortName>Trapeur_Bark-003.wav</ShortName>
+							<Path>SFX\Trapeur_Bark-003_FB011085.wem</Path>
+						</File>
+						<File Id="855223281" Language="SFX">
+							<ShortName>Trapeur_Bark-004.wav</ShortName>
+							<Path>SFX\Trapeur_Bark-004_FB011085.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3692867023" Name="DOG_Hit" ObjectPath="\Events\Default Work Unit\NME\FOL\DOG_Hit" MaxAttenuation="80." DurationType="OneShot" DurationMin="1.67678" DurationMax="1.696326">
+					<IncludedMemoryFiles>
+						<File Id="190074169" Language="SFX">
+							<ShortName>Trapeur_Hit-001.wav</ShortName>
+							<Path>SFX\Trapeur_Hit-001_FB011085.wem</Path>
+						</File>
+						<File Id="828146198" Language="SFX">
+							<ShortName>Trapeur_Hit-002.wav</ShortName>
+							<Path>SFX\Trapeur_Hit-002_FB011085.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="3943603743" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\FOREST_Bank</ObjectPath>
