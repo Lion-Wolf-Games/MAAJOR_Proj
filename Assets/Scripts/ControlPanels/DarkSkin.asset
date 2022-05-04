@@ -81,6 +81,8 @@ MonoBehaviour:
     KeyIcon: {fileID: 21300000, guid: 49260db6a38f8734295cbbc89e05e285, type: 3}
   - KeyName: <Mouse>/rightButton
     KeyIcon: {fileID: 21300000, guid: cedac693e409a4240819c5cc212f02df, type: 3}
+  - KeyName: <Mouse>/scroll/y
+    KeyIcon: {fileID: 21300000, guid: 7652cfcf3f895f3418ed0d004cfbe13e, type: 3}
   - KeyName: <Gamepad>/leftStick
     KeyIcon: {fileID: 21300000, guid: bbd0768f5c16a4743b48d1e9f287eb20, type: 3}
   - KeyName: <Gamepad>/rightStick
@@ -89,6 +91,10 @@ MonoBehaviour:
     KeyIcon: {fileID: 21300000, guid: 8eaa4bf568d14c846bb9d6c1bedc61e7, type: 3}
   - KeyName: <Gamepad>/leftTrigger
     KeyIcon: {fileID: 21300000, guid: eb1a7f919c51d844c9fc00e80414a5b1, type: 3}
+  - KeyName: <Gamepad>/rightShoulder
+    KeyIcon: {fileID: 21300000, guid: 2f1600a0c433e5e46aa08ffa53670e2b, type: 3}
+  - KeyName: <Gamepad>/leftShoulder
+    KeyIcon: {fileID: 21300000, guid: b876656261d3d494cb5401b3131ff581, type: 3}
   - KeyName: <Gamepad>/buttonWest
     KeyIcon: {fileID: 21300000, guid: 781e4b965b1be884e846390e4296a148, type: 3}
   - KeyName: <Gamepad>/buttonEast
