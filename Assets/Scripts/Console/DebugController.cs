@@ -35,7 +35,7 @@ public class DebugController : MonoBehaviour
 
             foreach (var en in enemies)
             {
-                en.kill();
+                en.Kill();
             }
         });
 

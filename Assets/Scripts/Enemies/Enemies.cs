@@ -338,7 +338,6 @@ public class Enemies : FightingObject
 
     }
 
-    public void Kill()
     public IEnumerator TemporaryStopMovement(float time)
     {
         StopMovement();
@@ -346,7 +345,7 @@ public class Enemies : FightingObject
         ResumeMovement();
     }
 
-    public void kill()
+    public void Kill()
     {
         gameObject.SetActive(false);
         OnKill?.Invoke(gameObject);

@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 95398e9ee95da454188e1406afd42ad7, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 995807520}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -239,9 +239,93 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 291930d2-9252-41a7-97fe-954612cc24b6
+    m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/SwitchProControllerHID/leftStick,/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9eb1151d-8818-4d82-bbf4-d3174cfbba78
+    m_ActionName: Player/Aim[/XInputControllerWindows/rightStick,/SwitchProControllerHID/rightStick,/SwitchProControllerHID/rightStick,/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 775a4097-29ee-4ce3-87fb-0256cf1b847f
+    m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth,/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 58f45c3f-7cfc-4af2-8928-52f91aa1168b
+    m_ActionName: Player/Dash[/Keyboard/leftShift,/XInputControllerWindows/buttonWest,/SwitchProControllerHID/buttonWest,/SwitchProControllerHID/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cf4139a5-367b-4349-ac58-7b0185c59259
+    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start,/SwitchProControllerHID/start,/SwitchProControllerHID/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a65414d1-b747-45aa-9ad6-111d6502c177
+    m_ActionName: Player/AimMode[/XInputControllerWindows/leftTrigger,/SwitchProControllerHID/leftTrigger,/SwitchProControllerHID/leftTrigger,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f279e105-c185-4aa2-9952-10dca5d04941
+    m_ActionName: Player/Throw[/Mouse/leftButton,/XInputControllerWindows/rightTrigger,/SwitchProControllerHID/rightTrigger,/SwitchProControllerHID/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 44ee394b-ed15-4356-adda-888050517d2a
+    m_ActionName: Player/Suck[/Keyboard/q,/XInputControllerWindows/buttonNorth,/SwitchProControllerHID/buttonNorth,/SwitchProControllerHID/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bb20f252-7cf4-40ad-94f2-160e3f1f1bd1
+    m_ActionName: Player/SwitchPotion[/Mouse/scroll/y,/XInputControllerWindows/leftShoulder,/SwitchProControllerHID/leftShoulder,/SwitchProControllerHID/leftShoulder,/XInputControllerWindows/rightShoulder,/SwitchProControllerHID/rightShoulder,/SwitchProControllerHID/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b2d6225f-cf3d-4e1d-a4a9-a2c8f170aece
+    m_ActionName: Player/OpenConsole[/Keyboard/backquote]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 825ddf03-606a-4dc3-9fba-83b7aab8dcb1
+    m_ActionName: Player/Enter[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 324f833e-9e9b-44d9-8617-28613fd3a0a3
+    m_ActionName: UI/Navigate[/XInputControllerWindows/leftStick/up,/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/leftStick/up,/XInputControllerWindows/rightStick/up,/SwitchProControllerHID/rightStick/up,/SwitchProControllerHID/rightStick/up,/XInputControllerWindows/leftStick/down,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/leftStick/down,/XInputControllerWindows/rightStick/down,/SwitchProControllerHID/rightStick/down,/SwitchProControllerHID/rightStick/down,/XInputControllerWindows/leftStick/left,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/leftStick/left,/XInputControllerWindows/rightStick/left,/SwitchProControllerHID/rightStick/left,/SwitchProControllerHID/rightStick/left,/XInputControllerWindows/leftStick/right,/SwitchProControllerHID/leftStick/right,/SwitchProControllerHID/leftStick/right,/XInputControllerWindows/rightStick/right,/SwitchProControllerHID/rightStick/right,/SwitchProControllerHID/rightStick/right,/XInputControllerWindows/dpad,/SwitchProControllerHID/dpad,/SwitchProControllerHID/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f101a84-b6a9-4eea-8930-c26d39867472
+    m_ActionName: UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth,/SwitchProControllerHID/buttonEast,/SwitchProControllerHID/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5650645c-b177-4ba8-accf-c252da451899
+    m_ActionName: UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast,/SwitchProControllerHID/buttonSouth,/SwitchProControllerHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b3fe2e3f-0efe-4e7a-8893-b9226ac235f3
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: abfddad3-aac5-43b8-a6a7-d62360cf1367
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d78eb60d-b3cd-47c3-bce3-efdf21d4f5bf
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97cb53c9-9cce-41e2-9adf-f44173468ea1
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 500fdbe7-3e31-4669-9507-2e994d518f3a
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f80e89c3-c7c8-4bae-a073-7c47e8f10050
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b4690141-9839-4962-ba85-7770e2f2ee2b
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
