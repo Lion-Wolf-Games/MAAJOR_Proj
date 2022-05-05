@@ -82,6 +82,8 @@ public class Enemies : FightingObject
 
         navAgent.speed = enemyType.GetSpeed();
         navAgent.angularSpeed = enemyType.GetTurningSpeed();
+
+        canAttack = true;
     }
 
     private void Update()
@@ -129,7 +131,7 @@ public class Enemies : FightingObject
                     navAgent.SetDestination(transform.position);
                     attackTime = Time.time + attackDuration;
 
-                    if (_target.TryGetComponent<IDamagable>(out IDamagable IdTarget))
+                    if (_target.TryGetComponent<IDamagable>(out IDamagable IdTarget) && canAttack)
                     {
                         IdTarget.ChangeHealth(-damage,transform.position);
                         OnAttack?.Invoke();
@@ -201,7 +203,7 @@ public class Enemies : FightingObject
                     fsm = FSM_Enemies.Attacking;
                 }
 
-                if (Vector3.Distance(transform.position,_target.transform.position) > detectionRange + 3)
+                if (Vector3.Distance(transform.position,_target.transform.position) > detectionRange + 4)
                 {
                     lastTargetPos = _target.transform.position;
                     _target = null;                 
@@ -287,9 +289,10 @@ public class Enemies : FightingObject
         
     }
 
+    //Check for Player in detectionRange
     void CheckForTarget()
     {
-        if (Physics.CheckSphere(transform.position, detectionRange, hostileLayer))
+        if (Physics.CheckSphere(transform.position, detectionRange, hostileLayer) && canAttack)
         {
             Collider[] cols = Physics.OverlapSphere(transform.position, detectionRange, hostileLayer);
             _target = cols[0].gameObject;
@@ -325,6 +328,7 @@ public class Enemies : FightingObject
 
     public void StopMovement()
     {
+        canAttack = false;
         navAgent.speed = 0;
         navAgent.angularSpeed = 0;
         navAgent.SetDestination(transform.position);
@@ -333,12 +337,12 @@ public class Enemies : FightingObject
 
     public void ResumeMovement()
     {
+        canAttack = true;
         navAgent.speed = enemyType.GetSpeed();
         navAgent.angularSpeed = enemyType.GetTurningSpeed();
 
     }
 
-    public void Kill()
     public IEnumerator TemporaryStopMovement(float time)
     {
         StopMovement();
@@ -346,7 +350,7 @@ public class Enemies : FightingObject
         ResumeMovement();
     }
 
-    public void kill()
+    public void Kill()
     {
         gameObject.SetActive(false);
         OnKill?.Invoke(gameObject);
@@ -396,20 +400,20 @@ public class Enemies : FightingObject
     }
 
     //Set target to current target for other enemies in detection range
-    private void Gather()
-    {
-        if (Physics.CheckSphere(transform.position, detectionRange, 1 << 9))
-        {
-            Collider[] cols = Physics.OverlapSphere(transform.position, detectionRange, 1 << 9);
+    //private void Gather()
+    //{
+    //    if (Physics.CheckSphere(transform.position, detectionRange, 1 << 9))
+    //    {
+    //        Collider[] cols = Physics.OverlapSphere(transform.position, detectionRange, 1 << 9);
 
-            for (int i = 0; i < cols.Length; i++)
-            {
-                Enemies enemy = cols[i].GetComponent<Enemies>();
+    //        for (int i = 0; i < cols.Length; i++)
+    //        {
+    //            Enemies enemy = cols[i].GetComponent<Enemies>();
 
-                enemy.SetTarget(_target);
-            }
-        }
-    }
+    //            enemy.SetTarget(_target);
+    //        }
+    //    }
+    //}
 
     //private void OnCollisionEnter(Collision other) {
     //    if(other.gameObject.TryGetComponent<IDamagable>(out IDamagable player))

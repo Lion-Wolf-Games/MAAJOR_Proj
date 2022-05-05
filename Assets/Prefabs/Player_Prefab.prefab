@@ -360,7 +360,7 @@ MonoBehaviour:
   ShoulderOffset: {x: 0.75, y: 0, z: 0}
   VerticalArmLength: 0.4
   CameraSide: 0.75
-  CameraDistance: 4.75
+  CameraDistance: 7.5
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 65
@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 1566719009151269440}
   - component: {fileID: 1566719009151269443}
   - component: {fileID: 1566719009151269441}
+  - component: {fileID: 1814954369}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -588,6 +589,23 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
+--- !u!114 &1814954369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566719009151269447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1566719009374224606
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566719009374224600}
   - component: {fileID: 1566719009374224607}
+  - component: {fileID: 1774195056}
   m_Layer: 0
   m_Name: TopDown Cam
   m_TagString: Untagged
@@ -639,7 +658,7 @@ MonoBehaviour:
   m_Priority: 9
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1566719009391129385}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 50
     OrthographicSize: 5
@@ -655,6 +674,18 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1566719009151269440}
+--- !u!114 &1774195056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566719009374224606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493e042582c3c974e98c45eba0ed7114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1566719009391129384
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,8 +758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b534f4cdd0fd16f4d9fbe1b0e0ef2a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
-  _maxHealth: 100
+  _health: 3
+  _maxHealth: 3
   _healthBar: {fileID: 0}
   _canGetHit: 1
   _invincibilityTime: 0
@@ -808,7 +839,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   tPSCam: {fileID: 1566719009850507727}
-  rotationPower: 0.75
+  rotationPower: 3
   aimValue: 0
 --- !u!114 &1566719009391129382
 MonoBehaviour:
@@ -896,6 +927,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4144535823003958466}
+        m_TargetAssemblyTypeName: PotionThrow, Assembly-CSharp
+        m_MethodName: MoveAimTarget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9eb1151d-8818-4d82-bbf4-d3174cfbba78
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
@@ -923,19 +966,7 @@ MonoBehaviour:
     m_ActionId: 0f101a84-b6a9-4eea-8930-c26d39867472
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1566719009391129380}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnPause
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 5650645c-b177-4ba8-accf-c252da451899
     m_ActionName: UI/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
@@ -1062,8 +1093,40 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: bb20f252-7cf4-40ad-94f2-160e3f1f1bd1
     m_ActionName: Player/Switch[/Mouse/scroll/y,/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DebugController, Assembly-CSharp
+        m_MethodName: ToggleConsole
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b2d6225f-cf3d-4e1d-a4a9-a2c8f170aece
+    m_ActionName: Player/OpenConsole[/Keyboard/backquote]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DebugController, Assembly-CSharp
+        m_MethodName: OnReturn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 825ddf03-606a-4dc3-9fba-83b7aab8dcb1
+    m_ActionName: Player/Enter[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -1151,13 +1214,13 @@ MonoBehaviour:
   player: {fileID: 1566719009391129380}
   selectedPotion: {fileID: 11400000, guid: 76218380acc6b9c419a513533c0ccb2d, type: 2}
   maxDistance: 20
-  heigthLaunch: 1
-  launchPos: {fileID: 0}
+  heigthLaunch: 2
+  launchPos: {fileID: 4028626051348630083}
   colliderLayer:
     serializedVersion: 2
     m_Bits: 1143
   anims: {fileID: 1566719008738073820}
-  aimSpeed: 1
+  aimSpeed: 5
   visualresolution: 30
   lineVisual: {fileID: 5003773898566050986}
   RangeVisual: {fileID: 1921070164}
@@ -1197,7 +1260,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76218380acc6b9c419a513533c0ccb2d, type: 2}
   - {fileID: 11400000, guid: 2e2eb93ac1ea4924eae83e98dfbf2b5b, type: 2}
   - {fileID: 11400000, guid: 20bf3fe96d13ce24aae3c9fa5f0c193d, type: 2}
-  - {fileID: 11400000, guid: ba92d254ae511da4da75ce3b6b96d7d2, type: 2}
+  - {fileID: 11400000, guid: c3efcefb6bce84942b62b98d64e0e556, type: 2}
   currentpotion: 0
 --- !u!1 &1566719009494421175
 GameObject:
@@ -1378,7 +1441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1566719009850507720
 Transform:
   m_ObjectHideFlags: 0
@@ -1387,7 +1450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566719009850507726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.375, y: 1.4, z: -4.75}
+  m_LocalPosition: {x: 0.375, y: 1.4, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1566719008809778938}

@@ -173,6 +173,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreenManager: {fileID: 932168593709066483}
   currentGameState: 0
+  MasterVolume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 080ed8c0f0abd0c45bc1cc063f27c709, type: 2}
+  MusicVolume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1b439d18e68aab24dbf68ef01975cb31, type: 2}
+  SFXVolume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d916ba3eb4b56a74bb1793ccab5fab71, type: 2}
 --- !u!114 &932168593709066483
 MonoBehaviour:
   m_ObjectHideFlags: 0

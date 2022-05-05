@@ -6,7 +6,47 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: Idle
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Beige.001
+    second: {fileID: 2100000, guid: fd013b867f774ca468fc33176edb9610, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brun.001
+    second: {fileID: 2100000, guid: 6bb4b99c35ff9844a8692dfd518a387e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Noir.001
+    second: {fileID: 2100000, guid: d74e8dde36f566e4ab6012a84afa307f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Or.001
+    second: {fileID: 2100000, guid: 26dc7a94019603343a1272c99aecdcfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange.001
+    second: {fileID: 2100000, guid: 5d8ff6164bc9bfc4984c71fe65e3c620, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rose.001
+    second: {fileID: 2100000, guid: 96fceadb914dc5f4592e0d1ac543a1c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sac.001
+    second: {fileID: 2100000, guid: 4a4eb1d82c0e6bb43bec00a17be95fbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.001
+    second: {fileID: 2100000, guid: b4ec44b2f3a2599418026c53bec8824c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

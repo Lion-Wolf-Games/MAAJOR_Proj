@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class HealthBar : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class HealthBar : MonoBehaviour
     public HealthBarTypes healthBarType;
 
     [SerializeField] private GameObject _healthPannel;
-
+    [SerializeField] private int currentValue;
 
     [Header("Fill")]
     [SerializeField] private Slider _healthBar;
@@ -24,11 +25,17 @@ public class HealthBar : MonoBehaviour
     [Header("Sprites")]
     [SerializeField] private Image healthImage;
     [SerializeField] private Sprite[] healthSprites;
+
+    [Header("Portrait")]
+    [SerializeField] private Image portraitImage;
+    [SerializeField] private Sprite[] portraitSprites;
     
     public bool _isWorldSpace;
 
     public void SetMax(int maxValue)
     {
+        currentValue = maxValue;
+
         switch (healthBarType)
         {
             case HealthBarTypes.Fill:
@@ -53,6 +60,14 @@ public class HealthBar : MonoBehaviour
 
     public void UpdateValue(int value)
     {
+        if (value < currentValue && portraitImage != null)
+        {
+            StartCoroutine(SpriteTimedChange());
+            portraitImage.transform.DOShakePosition(0.5f, 10);
+        }
+
+        currentValue = value;
+
         if (_isWorldSpace)
         {
             _healthPannel.SetActive(true);
@@ -78,7 +93,14 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    private void Update()
+    IEnumerator SpriteTimedChange()
+    {
+        portraitImage.sprite = portraitSprites[1];
+        yield return new WaitForSeconds(0.5f);
+        portraitImage.sprite = portraitSprites[0];
+    }
+
+    private void LateUpdate()
     {
         if (_isWorldSpace)
         {

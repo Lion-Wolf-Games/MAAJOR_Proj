@@ -14,6 +14,7 @@ public class FightingObject : MonoBehaviour {
     [SerializeField] protected float attackDuration;
     [SerializeField] protected LayerMask hostileLayer;
     [SerializeField] protected int damage;
+    [SerializeField] protected bool canAttack;
 
     
     protected float attackTime;

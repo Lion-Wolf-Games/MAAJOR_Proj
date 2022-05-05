@@ -54,7 +54,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="wocYms0oQUujKN00ppJZGA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="0QBoN1qyCUu8qRr4b+OKwQ=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="GuVJ90ORY0uL+MflahD5CAEnclr/////WoChU62x6kKKpofckhVSFQEnclr/////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="WoChU62x6kKKpofckhVSFQEnQDX/////GuVJ90ORY0uL+MflahD5CAEnQDX/////"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
@@ -64,7 +64,7 @@
 				<Property Name="Mixing Desk\LastSession" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFilterVersion" Type="int32" Value="1"/>
 				<Property Name="MonitoringManager\GameObjectFilter\GameObjectFiltersEnable" Type="bool" Value="True"/>
-				<Property Name="MonitoringManager\GameObjectFilter\x64_GameObjectFilters" Type="string" Value="AAAAAAEAAAAEAAAAAAAAAAAAAoTdAQAAsUclXf9/AAADAAAAAAAAAAAADoTdAQAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBCbi90BAADQ6XmY3QEAAAAAAAAAAAAAYOF5mN0BAACxRyVd/38AAP7/////////AAAOhN0BAACgdMCG3QEAAA=="/>
+				<Property Name="MonitoringManager\GameObjectFilter\x64_GameObjectFilters" Type="string" Value="AAAAAAEAAAAEAAAAAAAAAAAACdkQAgAAsUclXf9/AAADAAAAAAAAAAAAGtkQAgAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwNqe4BACAAAAZPPlEAIAAAAAAAAAAAAAwG3z5RACAACxRyVd/38AAP7/////////AAAa2RACAAAQwZ7gEAIAAA=="/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_12_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{5DD7A0CF-131A-4F10-9E52-8587C8CA5722}"/>

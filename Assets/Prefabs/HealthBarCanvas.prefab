@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3528931330327919708}
   - component: {fileID: 9122904872683314459}
   m_Layer: 5
-  m_Name: Pic
+  m_Name: Portrait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7013714964141748685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,4 +351,8 @@ MonoBehaviour:
   - {fileID: 3500997313987152029, guid: 9a758294c4792cf4abce05e501bfa772, type: 3}
   - {fileID: 3577878950362655151, guid: 9a758294c4792cf4abce05e501bfa772, type: 3}
   - {fileID: -2288376404085616193, guid: 9a758294c4792cf4abce05e501bfa772, type: 3}
+  portraitImage: {fileID: 9122904872683314459}
+  portraitSprites:
+  - {fileID: 21300000, guid: 7526f4bc49ad52842a778ca52d441e0a, type: 3}
+  - {fileID: 21300000, guid: 303f132e66bd6844b85329de03961276, type: 3}
   _isWorldSpace: 0
