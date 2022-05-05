@@ -21,6 +21,7 @@ public class PotionSwitchUI : MonoBehaviour
         InitializeUI();
         potionSwitch.UpdateUI += SwitchPotion;
         potionThrow.OnThrowPotion += OnThrow;
+        potionThrow.OnThrowPotionInCd += OnThrowInCd;
     }
 
     private void InitializeUI()
@@ -38,6 +39,11 @@ public class PotionSwitchUI : MonoBehaviour
         slots[0].GetChild(0).DOPunchScale(Vector3.one * 0.2f,0.2f).OnComplete(() => {isanimating = false;});
         
         SetCooldown(cd);
+    }
+
+    private void OnThrowInCd()
+    {
+        slots[0].GetChild(0).DOShakePosition(0.1f,10).OnComplete(() => {slots[0].GetChild(0).position = slots[0].position;});
     }
 
     private void SetCooldown(float cooldown)

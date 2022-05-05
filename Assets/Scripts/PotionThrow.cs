@@ -29,6 +29,7 @@ public class PotionThrow : MonoBehaviour
 
     private Dictionary<Potion,float> cooldowns;
     public Action<float> OnThrowPotion; 
+    public Action OnThrowPotionInCd; 
 
     private Vector3 aimPos;
     
@@ -132,6 +133,10 @@ public class PotionThrow : MonoBehaviour
             
             OnThrowPotion?.Invoke(selectedPotion.cooldown);
             anims.SetTrigger("Throw");
+        }
+        else
+        {
+            OnThrowPotionInCd?.Invoke();
         }
     }
 

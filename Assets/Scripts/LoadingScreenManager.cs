@@ -31,6 +31,7 @@ public class LoadingScreenManager : MonoBehaviour
 
         Time.timeScale = 1f;
         _loadingScreenCanvas.SetActive(false);
+        GameManager.Instance.ChangeGameState(GameState.Playing);
 
     }
 }

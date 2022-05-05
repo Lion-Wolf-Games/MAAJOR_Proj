@@ -76,6 +76,14 @@ public class PlayerController : LivingObject
     {
         input = GetComponent<PlayerInput>();
         GameManager.Instance.OnPlay += OnGamePlay;
+        OnKill += (x) => {StartCoroutine("RestartLevel");};
+        input.SwitchCurrentActionMap("Player");
+    }
+
+    IEnumerator RestartLevel()
+    {
+        yield return new WaitForSeconds(1f);
+        GameManager.StaticLoadLevel(1);
     }
 
     #region Inputs
