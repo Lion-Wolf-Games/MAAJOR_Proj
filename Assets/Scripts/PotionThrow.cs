@@ -32,6 +32,8 @@ public class PotionThrow : MonoBehaviour
     public Action OnThrowPotionInCd; 
 
     private Vector3 aimPos;
+
+    [SerializeField] private AK.Wwise.Event potionInCd;
     
 
     private void Start() {
@@ -109,7 +111,7 @@ public class PotionThrow : MonoBehaviour
         for (int i = 0; i < visualresolution; i++)
         {
             float simulationTime = i / (float) visualresolution * launchData.timeToTarget;
-            Vector3 displacement = launchData.inotialVelocity * simulationTime + Vector3.up * gravity * simulationTime * simulationTime /2f;
+            Vector3 displacement = launchData.initialVelocity * simulationTime + Vector3.up * gravity * simulationTime * simulationTime /2f;
             Vector3 drawPoint = launchPos.position + displacement;
 
             lineVisual.SetPosition(i,drawPoint);
@@ -124,7 +126,7 @@ public class PotionThrow : MonoBehaviour
             var go = PoolManager.Instance.Spawn(potionPrefab,true,launchPos.position,transform.rotation);
             Rigidbody potionRb = go.GetComponent<Rigidbody>();
 
-            potionRb.velocity = CalculateLauchData().inotialVelocity;
+            potionRb.velocity = CalculateLauchData().initialVelocity;
             potionRb.angularVelocity = go.transform.forward * 10f;
 
             go.GetComponent<PotionBehavior>().SetUpPotion(selectedPotion);
@@ -137,6 +139,8 @@ public class PotionThrow : MonoBehaviour
         else
         {
             OnThrowPotionInCd?.Invoke();
+
+            //potionInCd.Post(gameObject);
         }
     }
 
@@ -178,12 +182,12 @@ public class PotionThrow : MonoBehaviour
 
     struct LaunchData
     {
-        public readonly Vector3 inotialVelocity;
+        public readonly Vector3 initialVelocity;
         public readonly float timeToTarget;
 
         public LaunchData(Vector3 initialVelocity, float timeToTarget)
         {
-            this.inotialVelocity = initialVelocity;
+            this.initialVelocity = initialVelocity;
             this.timeToTarget = timeToTarget;
         }
     }

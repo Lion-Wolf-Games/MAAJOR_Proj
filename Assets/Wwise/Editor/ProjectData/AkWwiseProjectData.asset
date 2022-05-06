@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 8d2698fb08256b4893ba5438f8e87ff6
     GuidInternal: 
-    m_lastTime: -8585571192934916198
+    m_lastTime: -8585571303974968442
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fbf3588fdb41bd49897c85e19de4d51e
     GuidInternal: 
-    m_lastTime: -8585499094668902909
+    m_lastTime: -8585504599008011868
     List:
     - name: AMB
       guid: 035581ea9b145a4bba20803b78eb61a2
@@ -505,7 +505,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a91c831e1c440041a72a7be24c8ac7de
     GuidInternal: 
-    m_lastTime: -8585499094668682861
+    m_lastTime: -8585503736094052422
     List:
     - name: FOREST_Bank
       guid: f96f3d7e8bf2b046b6600f9e0040df35
@@ -575,7 +575,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c8a5b76bfd504b49a6762764bda6d51d
     GuidInternal: 
-    m_lastTime: -8585499094669072936
+    m_lastTime: -8585498688256575233
     List:
     - name: AMB
       guid: 50acd9e1b911c14fa5b00b99ce19cea1
@@ -829,6 +829,49 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: HUD
+      guid: 172b534078cb5946b2dfbdd517f2d7f5
+      id: 646625284
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: UI
+        ObjectType: 4
+        guid: 70ee53f181dbf74ea3b8ce3f000914d4
+      - ElementName: HUD
+        ObjectType: 4
+        guid: 172b534078cb5946b2dfbdd517f2d7f5
+      Path: Events\Default Work Unit\UI\HUD
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: HUD_PotionInCD
+      guid: d353060b5326144999543a1767a5f9fa
+      id: 391726786
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c8a5b76bfd504b49a6762764bda6d51d
+      - ElementName: UI
+        ObjectType: 4
+        guid: 70ee53f181dbf74ea3b8ce3f000914d4
+      - ElementName: HUD
+        ObjectType: 4
+        guid: 172b534078cb5946b2dfbdd517f2d7f5
+      - ElementName: HUD_PotionInCD
+        ObjectType: 3
+        guid: d353060b5326144999543a1767a5f9fa
+      Path: Events\Default Work Unit\UI\HUD\HUD_PotionInCD
+      maxAttenuation: 0
+      maxDuration: 0.20263
+      minDuration: 0.20263
     - name: Menu_Close
       guid: b5abb0d78f29094fbf46b94e38cbb80a
       id: 626954121
@@ -1509,7 +1552,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0a1e684c492fd648aac7b7093d1756ab
     GuidInternal: 
-    m_lastTime: -8585543752727122494
+    m_lastTime: -8585547005775759990
     List:
     - name: SET_MainVolume
       guid: 09754e944be68b4bab1f803633feb484
@@ -1565,7 +1608,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 9d38a78685f1ed408d28e1abcd25557e
     GuidInternal: 
-    m_lastTime: -8585558361908168776
+    m_lastTime: -8585565019332576653
     List:
     - name: New_State_Group
       guid: da53548254d4924fa9fdc0b4083e09a9
@@ -1613,7 +1656,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b6dbd5f68ea3184ca68e266f77b9d9eb
     GuidInternal: 
-    m_lastTime: -8585558361908158775
+    m_lastTime: -8585559885207795977
     List:
     - name: PIM_Footsteps_Material
       guid: 848fb2d4063253468625359f3f3def73
@@ -1677,10 +1720,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 954262407010ae4382596bd8e765ea66
     GuidInternal: 
-    m_lastTime: -8585571192934926199
+    m_lastTime: -8585571303976168830
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d0000002200000027000000290000002b0000002d0000002f000000350000003c0000003d00000043000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

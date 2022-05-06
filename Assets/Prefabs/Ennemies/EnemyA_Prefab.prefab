@@ -106,6 +106,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   damage: 1
+  canAttack: 0
   hp: 1
   anim: {fileID: 0}
   enemyType: {fileID: 11400000, guid: 2db4a3913cf459341b94281122c90b57, type: 2}

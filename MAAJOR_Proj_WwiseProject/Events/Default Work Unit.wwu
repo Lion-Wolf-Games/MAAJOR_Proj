@@ -419,6 +419,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="HUD" ID="{40532B17-CB78-4659-B2DF-BDD517F2D7F5}" ShortID="924904417">
+							<ChildrenList>
+								<Event Name="HUD_PotionInCD" ID="{0B0653D3-2653-4914-9954-3A1767A5F9FA}">
+									<ChildrenList>
+										<Action Name="" ID="{33E70652-109F-4D2C-92AF-8D3680DAA6F4}" ShortID="987299319">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="UI_HUD_PotionInCD" ID="{C1E6B9A1-3BCC-4A37-ABB5-6D7470DE01EB}" WorkUnitID="{69BA8216-4A83-427B-8238-092676532B8B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MUSIC" ID="{7C8E090D-BEBC-47CE-87B8-D1D218490D47}" ShortID="81295749">

@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	99461157	PIM_Landing			\Default Work Unit\PIM\FOL\PIM_Landing	
 	155056730	PIM_VO_KO			\Default Work Unit\PIM\VO\PIM_VO_KO	
 	196278613	Potion_IceBreak			\Default Work Unit\PROPS\Potion\Elements\Potion_IceBreak	
+	391726786	HUD_PotionInCD			\Default Work Unit\UI\HUD\HUD_PotionInCD	
 	626954121	Menu_Close			\Default Work Unit\UI\Menu_Close	
 	670951740	PIM_VO_Throw			\Default Work Unit\PIM\VO\PIM_VO_Throw	
 	934112640	PIM_VO_Dash			\Default Work Unit\PIM\VO\PIM_VO_Dash	
@@ -31,6 +32,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	94192415	VO_Pim_Jump-001	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\VO_Pim_Jump-001_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Jump\VO_Pim_Jump-001		2136
 	119479498	UI_Menu_navigation_MenuOpen	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\UI_Menu_navigation_MenuOpen_FB011085.wem		\Actor-Mixer Hierarchy\UI\UI\UI_Menu\UI_Menu_Navigation\UI_Menu_navigation_MenuOpen		4779
 	123341531	VO_Pim_Effort	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\VO_Pim_Effort_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_VO_Effort\VO_Pim_Effort		5020
+	125374419	UI_HUD_PotionInCD	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\sound_FB011085.wem		\Actor-Mixer Hierarchy\UI\UI\UI_HUD\UI_HUD_PotionInCD		2321
 	130207513	Swoosh_Swipe-Smooth_04	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\Swoosh_Swipe-Smooth_04_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_FOL\PIM_Dash\Swoosh_Swipe-Smooth_04		2653
 	155808365	VO_Pim_Throw-002	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\VO_Pim_Throw-002_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Throw\VO_Pim_Throw-002		4065
 	214687581	VO_Pim_Throw-001	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\VO_Pim_Throw-001_FB011085.wem		\Actor-Mixer Hierarchy\PIM\PIM\PIM_VO\PIM_Throw\VO_Pim_Throw-001		3301

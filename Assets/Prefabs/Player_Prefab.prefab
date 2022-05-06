@@ -60,6 +60,59 @@ Transform:
   m_Father: {fileID: 1566719009391129385}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &871977683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 871977685}
+  - component: {fileID: 871977684}
+  m_Layer: 0
+  m_Name: CM TargetGroup1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &871977685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871977683}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5763604688520699904}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &871977684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871977683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5eb80d8e62d9d145bb50fb783c0f731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionMode: 0
+  m_RotationMode: 1
+  m_UpdateMethod: 2
+  m_Targets:
+  - target: {fileID: 1566719009391129385}
+    weight: 1
+    radius: 1
+  - target: {fileID: 1039145973469281322}
+    weight: 1
+    radius: 1
 --- !u!1 &1347497423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1280,10 @@ MonoBehaviour:
   visualMaterial: {fileID: 2100000, guid: 877920b2ea2fff94cbddb71d07c637d4, type: 2}
   aimTarget: {fileID: 8196136215860025986}
   potionPrefab: {fileID: 8743244967301466290, guid: a94d4ae9dc3de6b4aa0cbc7fec6b7098, type: 3}
+  potionInCd:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 223caf48cd0561e488f6b282c9f7924b, type: 2}
 --- !u!54 &2574313690388964390
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1600,6 +1657,7 @@ Transform:
   - {fileID: 1566719008636742881}
   - {fileID: 1039145973469281322}
   - {fileID: 1566719009391129385}
+  - {fileID: 871977685}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

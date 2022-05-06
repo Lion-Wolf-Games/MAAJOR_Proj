@@ -16,11 +16,19 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="860471550" Language="SFX">
+		<SoundBank Id="860471550" Language="SFX" Hash="1460790491">
 			<ObjectPath>\SoundBanks\Default Work Unit\PIM_Bank</ObjectPath>
 			<ShortName>PIM_Bank</ShortName>
 			<Path>PIM_Bank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="391726786" Name="HUD_PotionInCD" ObjectPath="\Events\Default Work Unit\UI\HUD\HUD_PotionInCD" DurationType="OneShot" DurationMin="0.20263" DurationMax="0.20263">
+					<IncludedMemoryFiles>
+						<File Id="125374419" Language="SFX">
+							<ShortName>sound.wav</ShortName>
+							<Path>SFX\sound_FB011085.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="626954121" Name="Menu_Close" ObjectPath="\Events\Default Work Unit\UI\Menu_Close" DurationType="OneShot" DurationMin="1.912245" DurationMax="1.912245">
 					<IncludedMemoryFiles>
 						<File Id="767921052" Language="SFX">
@@ -302,7 +310,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3133177584" Language="SFX" Hash="783162275">
+		<SoundBank Id="3133177584" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\NME_Bank</ObjectPath>
 			<ShortName>NME_Bank</ShortName>
 			<Path>NME_Bank.bnk</Path>

@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID AMB_FOREST_STOPALL = 48772705U;
         static const AkUniqueID DOG_BARK = 2488400822U;
         static const AkUniqueID DOG_HIT = 3692867023U;
+        static const AkUniqueID HUD_POTIONINCD = 391726786U;
         static const AkUniqueID MENU_CLOSE = 626954121U;
         static const AkUniqueID MENU_NAVIGATION = 2471227561U;
         static const AkUniqueID MENU_OPEN = 1287511387U;
