@@ -7,12 +7,12 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NewLayer02HDRP
-  m_DiffuseTexture: {fileID: 2800000, guid: ba86a4af9e5be094690b5afc214215bd, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: 5ddef0977dde72343992a79d27da33fe, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: 4e1d764fa7e47f34eae88e37253c2542, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 1, y: 1.59}
   m_TileOffset: {x: 1, y: 1}
-  m_Specular: {r: 0.879, g: 0.84191036, b: 0.610905, a: 1}
+  m_Specular: {r: 0.6865433, g: 0.7169812, b: 0.69830716, a: 1}
   m_Metallic: 0.056
   m_Smoothness: 0
   m_NormalScale: 1

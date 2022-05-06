@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 7131291980753296805, guid: b43160c78a2d0a04ba25fdbada243b69, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control:
@@ -28,8 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control0:
-        m_Texture: {fileID: -1785099152398206397, guid: ad3eccd2634a3024895edda95805fb25,
-          type: 2}
+        m_Texture: {fileID: 7131291980753296805, guid: b43160c78a2d0a04ba25fdbada243b69, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control1:
@@ -161,8 +160,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SplatMap:
-        m_Texture: {fileID: -3973170717174270421, guid: 9ffdee09e9c0fa14282beaf12403978d,
-          type: 2}
+        m_Texture: {fileID: -3973170717174270421, guid: 9ffdee09e9c0fa14282beaf12403978d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureA:
@@ -190,7 +188,7 @@ Material:
     - _DstBlend: 0
     - _FadeAmplitude: 28
     - _FadeDistance: 16
-    - _FadeDistanceEnd: 1000
+    - _FadeDistanceEnd: 2000
     - _FadeDistanceStart: 500
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -200,6 +198,7 @@ Material:
     - _GrassShading: 0.044
     - _GrassThinness: 0.85
     - _GrassThinnessIntersection: 0.3
+    - _LightIntensity: 1
     - _Metallic: 0
     - _Metallic0: 0
     - _Metallic1: 0
@@ -212,9 +211,9 @@ Material:
     - _MinimumNumberStacks: 2
     - _Mode: 0
     - _NoisePower: 5
-    - _NumberOfStacks: 17
+    - _NumberOfStacks: 11.09
     - _OcclusionStrength: 1
-    - _OffsetValue: 10
+    - _OffsetValue: 3.1
     - _Parallax: 0.02
     - _PrioA: 1
     - _PrioB: 1
@@ -241,8 +240,8 @@ Material:
     - _UseRT: 1
     - _UseShadowCast: 1
     - _UseVR: 0
-    - _WindForce: 0.1
-    - _WindMovement: 0.4
+    - _WindForce: 77.49
+    - _WindMovement: 0.05
     - _ZWrite: 1
     - __NumberOfStacks: 17
     m_Colors:
@@ -266,3 +265,4 @@ Material:
     - _Splat5_STn: {r: 1, g: 1, b: 0, a: 1}
     - _Splat6_STn: {r: 1, g: 1, b: 0, a: 1}
     - _Splat7_STn: {r: 1, g: 1, b: 0, a: 1}
+  m_BuildTextureStacks: []

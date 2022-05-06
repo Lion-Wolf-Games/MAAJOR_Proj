@@ -28,8 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control0:
-        m_Texture: {fileID: -3823662097116110742, guid: e35e982e73e6a824f93353bfc3d9d977,
-          type: 2}
+        m_Texture: {fileID: 7131291980753296805, guid: b43160c78a2d0a04ba25fdbada243b69, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control1:
@@ -145,7 +144,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 1}
     - _Splat4:
-        m_Texture: {fileID: 2800000, guid: 3e9984bb4a8fe7140a3a2380897d51b6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9eb8f1ba60975784ea9768fee3955c08, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Splat5:
@@ -161,8 +160,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SplatMap:
-        m_Texture: {fileID: -3973170717174270421, guid: 9ffdee09e9c0fa14282beaf12403978d,
-          type: 2}
+        m_Texture: {fileID: -3973170717174270421, guid: 9ffdee09e9c0fa14282beaf12403978d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureA:
@@ -215,7 +213,7 @@ Material:
     - _NoisePower: 4
     - _NumberOfStacks: 17
     - _OcclusionStrength: 1
-    - _OffsetValue: 8
+    - _OffsetValue: 2.33
     - _Parallax: 0.02
     - _PrioA: 1
     - _PrioB: 1
@@ -223,9 +221,9 @@ Material:
     - _PrioD: 1
     - _PrioGround: 1
     - _RTEffect: 1
-    - _RimMax: 0.591
-    - _RimMin: 0.11
-    - _RimPower: 3.15
+    - _RimMax: 1
+    - _RimMin: 1
+    - _RimPower: 8
     - _ShadowFuziness: 1
     - _ShadowMax: 0
     - _SmoothnessTextureChannel: 0
@@ -242,8 +240,8 @@ Material:
     - _UseRT: 1
     - _UseShadowCast: 1
     - _UseVR: 0
-    - _WindForce: 0.3
-    - _WindMovement: 0.2
+    - _WindForce: 0.1
+    - _WindMovement: 0.1
     - _ZWrite: 1
     - __NumberOfStacks: 17
     m_Colors:
@@ -259,11 +257,12 @@ Material:
     - _Specular1: {r: 1, g: 1, b: 1, a: 1}
     - _Specular2: {r: 1, g: 1, b: 1, a: 1}
     - _Specular3: {r: 1, g: 1, b: 1, a: 1}
-    - _Specular4: {r: 0.8536898, g: 0.9622642, b: 0.8306337, a: 1}
+    - _Specular4: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 0}
     - _Specular5: {r: 1, g: 1, b: 1, a: 1}
     - _Specular6: {r: 1, g: 1, b: 1, a: 1}
     - _Specular7: {r: 1, g: 1, b: 1, a: 1}
-    - _Splat4_STn: {r: 1, g: 1, b: 3, a: 4.98}
+    - _Splat4_STn: {r: 0, g: 0, b: 2, a: 2}
     - _Splat5_STn: {r: 1, g: 1, b: 0, a: 1}
     - _Splat6_STn: {r: 1, g: 1, b: 0, a: 1}
     - _Splat7_STn: {r: 1, g: 1, b: 0, a: 1}
+  m_BuildTextureStacks: []
