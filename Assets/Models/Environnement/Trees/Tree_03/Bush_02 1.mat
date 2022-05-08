@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bush_02 1
+  m_Shader: {fileID: -6465566751694194690, guid: 46bb26f27c956c24d90fb6390d03e22a, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_d6ae8ad79ebf4d7f923ced601a467de9:
+        m_Texture: {fileID: 2800000, guid: 4be6536fe863f3648a444ded9f3509ca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_c434d1c0ab2649f3ae921eaf94dcbe90_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 14a539cb05d0aa8408efbe8526703ca8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_d225abb3302b44a193a0fe0431ea0e4f: 1
+    - Vector1_708621eeebbf4dce89671e57bd4008e0: 5
+    - Vector1_8a15c0861d2a44fb82481d3369f2d43f: 0.639
+    - Vector1_941d8683e46d4d359e2055b149f34069: 1.02
+    - Vector1_d39a399727994e8eb03f3f3ab6b6bb97: 0.73
+    - Vector1_dbe25c40acef43ce84e7a730d6b3be17: 0.94
+    - Vector1_e9f2fcf2966842e78f18e4653b1df8c6: 0
+    m_Colors:
+    - Color_7ccd1d9a153544ac8eec56b9b54e1760: {r: 0.23585112, g: 0.3207547, b: 0.12860449, a: 0}
+    - Color_bfdc683fb78644419cdb9037791cfabb: {r: 0, g: 0, b: 0, a: 0}
+    - Color_e1149811c33b4602a08e7e1dedce6c72: {r: 0.23713954, g: 0.6886792, b: 0.2920565, a: 0}
+    - Vector2_200e7b859a2041d4b207efcffa5c4018: {r: 0.01, g: 0.01, b: 0, a: 0}
+  m_BuildTextureStacks: []
