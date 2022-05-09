@@ -22,7 +22,29 @@ MonoBehaviour:
     m_Value: {x: 0.9988385, y: 1, z: 0.92627555, w: 0.1471791}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.39247757}
+    m_Value: {x: 1, y: 1, z: 1, w: 0.2865454}
+--- !u!114 &-4102181414415452406
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e021b4c809a781e468c2988c016ebbea, type: 3}
+  m_Name: ColorLookup
+  m_EditorClassIdentifier: 
+  active: 0
+  m_AdvancedMode: 0
+  texture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 8c0cdd4f39befe14b87bf44dad8b96bc, type: 3}
+  contribution:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,6 +63,8 @@ MonoBehaviour:
   - {fileID: 185282189946394530}
   - {fileID: 3824489446083874103}
   - {fileID: -5816328312298392794}
+  - {fileID: -4102181414415452406}
+  - {fileID: 7686337892834187665}
 --- !u!114 &185282189946394530
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -139,7 +163,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.6488271, z: 0.86926025, w: 0.09321349}
+    m_Value: {x: 1, y: 0.76043767, z: 0.9524327, w: 0.09321349}
   midtones:
     m_OverrideState: 0
     m_Value: {x: 0.9071609, y: 1, z: 0.9621772, w: 0}
@@ -162,6 +186,44 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
     min: 0
+--- !u!114 &7686337892834187665
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  postExposure:
+    m_OverrideState: 1
+    m_Value: 0.3
+  contrast:
+    m_OverrideState: 1
+    m_Value: 8.11
+    min: -100
+    max: 100
+  colorFilter:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  hueShift:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -180
+    max: 180
+  saturation:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -100
+    max: 100
 --- !u!114 &8987808922738982098
 MonoBehaviour:
   m_ObjectHideFlags: 3
