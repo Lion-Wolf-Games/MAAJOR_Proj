@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class EnemiesFlaque : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class EnemiesFlaque : MonoBehaviour
 
     [SerializeField] private Enemies enemie;
 
-   
+    [SerializeField] private float suckTime;
+    [SerializeField] private float suckDuration = 2f;
+    [SerializeField] private bool isInRange;
+    [SerializeField] private Image suckTimerImage;
 
     // private void OnTriggerEnter(Collider other) {
     //     if (other.tag == "Player")
@@ -20,6 +24,37 @@ public class EnemiesFlaque : MonoBehaviour
     //         player.OnSuck += OnSuck;
     //     }
     // }
+
+    private void Start() {
+        suckTimerImage.gameObject.SetActive(true);
+    }
+
+    private void Update() {
+
+        if(isInRange)
+        {
+            suckTime += Time.deltaTime;
+            if(suckTime >= suckDuration)
+            {
+                isInRange = false;
+                OnSuck(FindObjectOfType<PlayerController>());
+            }
+        }
+        else
+        {
+            if (suckTime > 0)
+            {
+                suckTime -= Time.deltaTime;
+
+                if(suckTime <= 0)
+                {
+                    suckTimerImage.gameObject.SetActive(false);
+                }
+            }
+        }
+
+        suckTimerImage.fillAmount = (suckDuration - suckTime)/suckDuration;
+    }
 
     private void OnSuck(PlayerController player)
     {
@@ -53,13 +88,32 @@ public class EnemiesFlaque : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    // private void OnTriggerExit(Collider other) {
 
-    //     if (other.tag == "Player")
-    //     {
-    //         player.OnSuck -= OnSuck;
-    //     }
-    // }
+    public void InRange(bool state)
+    {
+        isInRange = state;
+
+        if (isInRange)
+        {
+            suckTimerImage.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag == "SuckRange")
+        {
+            isInRange = true;
+            suckTimerImage.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+
+        if (other.tag == "SuckRange")
+        {
+            isInRange = false;
+        }
+    }
 
     // private void OnDisable() {
     //     if (player!=null)

@@ -887,6 +887,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   suckPosition: {fileID: 4028626051348630083}
+  suckSpeedFactor: 0.5
   suckRange: 6
   enemyLayer:
     serializedVersion: 2
@@ -1205,31 +1206,31 @@ MonoBehaviour:
   onStepSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0a36c44245141e44fb7b5a88eb4ebfe7, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 9130417a597c1374db810e4d402dd14e, type: 2}
   onDashSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ea6868d645d0f5749aac6f63957971b2, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 4a22bd82ed75dea4abdb1e58edd62ce7, type: 2}
   onJumpSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fa54870b324e5c64183a78110cfb9277, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f02dd4e29cb91ab4588860c3b2958748, type: 2}
   onLandingSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fb6c6c9649af8dd4189a6c30897b000a, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: de3f53a0a72a4b945ab1d3477e0452c8, type: 2}
   onThrowSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3b1aae4d5333dfe468e638320c3bb7c8, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f7bb58060b6a44b4ba26fd4f215bf57e, type: 2}
   onHitSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 233dcaabac5a1b54a8d18d11bd3b8de6, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a8e4d8f79cb223b4aab0c8339c6202e8, type: 2}
   onSuckSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a5d37f9e9ebfe38489598f01eb4dfa1f, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: de3d02c283efc864392a8586fd48c59d, type: 2}
 --- !u!114 &1922009542
 MonoBehaviour:
   m_ObjectHideFlags: 0
