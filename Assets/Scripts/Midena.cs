@@ -10,16 +10,25 @@ public class Midena : FightingObject
     [SerializeField] private Animator anim;
 
     private Vector3 startPos;
+    [SerializeField] private SphereCollider detectionTrigger;
+    [SerializeField] private float focusTime = 1f;
+    [SerializeField] private bool isFocusing;
+    private float focusTimer;
+    bool isAttacking;
 
+    [SerializeField] private Transform visual;
+
+    [SerializeField] private List<Enemies> enemiesInRange;
 
     [SerializeField] private AK.Wwise.Event onAttack;
 
     private void Start() {
         startPos = transform.position;
+        enemiesInRange = new List<Enemies>();
     }
 
     private void Update() {
-        
+
         if (oldState != state)
         {
             oldState = state;
@@ -39,7 +48,7 @@ public class Midena : FightingObject
                 break;
             }
         }
-        
+
         switch (state)
         {
             case MidenaSate.Attack:
@@ -50,51 +59,142 @@ public class Midena : FightingObject
             }
             break;
             case MidenaSate.Idle:
-            CheckForTarget();
             break;
             case MidenaSate.Move:
             break;
             default:
             break;
         }
-    }
 
-    void CheckForTarget()
-    {
-        if (Physics.CheckSphere(transform.position, detectionRange, hostileLayer))
+        if(isFocusing && !isAttacking)
         {
-            Collider[] cols = Physics.OverlapSphere(transform.position, detectionRange, hostileLayer);
-            _target = cols[0].gameObject;
-            state = MidenaSate.Move;
-            
-            AttackTarget();
+            focusTimer += Time.deltaTime;
+            if(focusTimer >= focusTime)
+            {
+                isFocusing = false;
+                focusTimer = 0;
+
+                // GameObject enemy = GetClosestEnemy(visual.position);
+                // AttackTarget(enemy);
+                StartCoroutine(Attacking());
+                isAttacking = true;
+
+            }
         }
     }
 
-    void AttackTarget()
+    private GameObject GetClosestEnemy(Vector3 pos)
     {
-        Vector3 dir = (_target.transform.position - transform.position) * 0.8f ;
+        float minDist = float.MaxValue;
+        GameObject closest = null;
 
-        transform.DOMove(transform.position + dir,travelSpeed).OnComplete(() => {state = MidenaSate.Attack;});
-        transform.LookAt(_target.transform);
-        
-        _target.GetComponent<Enemies>().StopMovement();
-        
+        for (int i = 0; i < enemiesInRange.Count; i++)
+        {
+            float dist = Vector3.Distance(enemiesInRange[i].transform.position,pos);
+
+            if(dist < minDist)
+            {
+                minDist = dist;
+                closest = enemiesInRange[i].gameObject;
+            }
+        }
+
+        return closest;
+    }
+
+    void AttackTarget(GameObject target)
+    {
+        Vector3 dir = (target.transform.position - transform.position) * 0.8f ;
+
+        visual.DOMove(transform.position + dir,travelSpeed).OnComplete(() => {Attack();});
+        visual.LookAt(target.transform );
+
+        //_target.GetComponent<Enemies>().StopMovement();
+
         anim.SetTrigger("Attack");
         anim.SetInteger("AttackType",Random.Range(1 ,6));
     }
 
     public void Attack()
     {
-        if(_target != null)
+        // if(_target != null)
+        // {
+        //     _target.GetComponent<Enemies>().Damage(transform.position);
+        //     _target = null;
+        // }
+
+        //Get all enemies in range
+        Collider[] cols = Physics.OverlapSphere(visual.position,attackRange,hostileLayer);
+
+        //Damage all enemies
+        foreach(var col in cols)
         {
-            _target.GetComponent<Enemies>().Damage(transform.position);
-            _target = null;
+            if(col.TryGetComponent<Enemies>(out Enemies enm))
+            {
+                enm.Damage(visual.position);
+
+                //Remove them from list to not damage them twice
+                if(enemiesInRange.Contains(enm))
+                {
+                    enemiesInRange.Remove(enm);
+                }
+            }
         }
+
+    }
+
+    private IEnumerator Attacking()
+    {
+        while(enemiesInRange.Count > 0)
+        {
+            GameObject closest = GetClosestEnemy(visual.position);
+            AttackTarget(closest);
+            yield return new WaitForSeconds(attackDuration);
+        }
+
+        isAttacking = false;
+
+        visual.DOMove(transform.position,travelSpeed);
+        visual.LookAt(transform);
     }
 
     private void OnDrawGizmos() {
-        Gizmos.DrawWireSphere(transform.position,detectionRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(visual.position + visual.forward,attackRange);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.TryGetComponent<Enemies>(out Enemies en))
+        {
+            enemiesInRange.Add(en);
+            if(!isFocusing)
+            {
+                isFocusing = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(other.TryGetComponent<Enemies>(out Enemies en))
+        {
+            if(enemiesInRange.Contains(en))
+            {
+                enemiesInRange.Remove(en);
+
+                if (isFocusing && enemiesInRange.Count == 0)
+                {
+                    isFocusing = false;
+                    focusTimer = 0;
+                }
+            }
+        }
+    }
+
+    private void OnValidate() {
+        if(detectionTrigger != null)
+        {
+            detectionTrigger.radius = detectionRange;
+        }
     }
 
 }

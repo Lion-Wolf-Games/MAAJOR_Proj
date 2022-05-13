@@ -348,14 +348,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   damage: 0
+  canAttack: 0
   state: 0
   oldState: 0
   travelSpeed: 0.2
   anim: {fileID: 1632725976830512970}
+  detectionTrigger: {fileID: 0}
+  focusTime: 1
+  isFocusing: 0
+  visual: {fileID: 4632153928244712752}
+  enemiesInRange: []
   onAttack:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 273499efe65ff48499f886cac7844edf, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &5170710757668574943
 MonoBehaviour:
   m_ObjectHideFlags: 0
