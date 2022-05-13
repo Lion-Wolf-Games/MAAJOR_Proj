@@ -14,16 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabList: []
   prefabData:
-  - prefab: {fileID: 2764552721371663147, guid: 7908bb875e092f4488e947488cac38ed,
-      type: 3}
+  - prefab: {fileID: 2764552721371663147, guid: 7908bb875e092f4488e947488cac38ed, type: 3}
     selected: 1
   - prefab: {fileID: 1112569982101358, guid: 5ce583200b155db40b5f92847e1b28f8, type: 3}
     selected: 1
-  - prefab: {fileID: 4528476538716976782, guid: 214c3abb8203895458c9a8c791c7c14f,
-      type: 3}
+  - prefab: {fileID: 4528476538716976782, guid: 214c3abb8203895458c9a8c791c7c14f, type: 3}
     selected: 1
-  - prefab: {fileID: 6937149746527576752, guid: c855ca3dcac8e0b4484f14427f38f3f1,
-      type: 3}
+  - prefab: {fileID: 6937149746527576752, guid: c855ca3dcac8e0b4484f14427f38f3f1, type: 3}
     selected: 1
   paintType: 0
   brushSize: 8

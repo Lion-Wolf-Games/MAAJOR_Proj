@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: activeSave
   m_EditorClassIdentifier: 
   prefabList: []
-  prefabData: []
+  prefabData:
+  - prefab: {fileID: 6654698525680288520, guid: 6762a33bca417ca48b2664c163843305, type: 3}
+    selected: 1
   paintType: 0
-  brushSize: 1
+  brushSize: 2.72
   minBrushSize: 0.1
   maxBrushSize: 20
-  paintDeltaDistance: 0.4
+  paintDeltaDistance: 2
   maxPaintDeltaDistance: 3
   minPaintDeltaDistance: 0.1
-  prefabsPerStroke: 1
+  prefabsPerStroke: 2
   maxprefabsPerStroke: 20
   minprefabsPerStroke: 1
   spawnHeight: 10
@@ -29,35 +31,35 @@ MonoBehaviour:
   physicsIterations: 100
   checkLayer: 0
   checkTag: 0
-  checkSlope: 0
-  ignorePaintedPrefabs: 0
+  checkSlope: 1
+  ignorePaintedPrefabs: 1
   ignoreTriggers: 1
   chainPivotAxis: 0
   chainDirection: 0
-  requiredTagMask: 0
+  requiredTagMask: 7
   requiredLayerMask: 0
   minRequiredSlope: 0
-  maxRequiredSlope: 0
+  maxRequiredSlope: 60
   prefabOriginOffset: {x: 0, y: 0, z: 0}
   prefabRotationOffset: {x: 0, y: 0, z: 0}
-  draggingAction: 0
+  draggingAction: 1
   rotationAxis: 0
   rotationSensitivity: 10
-  parentingStyle: 0
+  parentingStyle: 1
   parent: {fileID: 0}
-  rotateToMatchSurface: 0
+  rotateToMatchSurface: 1
   rotateSurfaceDirection: 0
-  randomizeRotation: 0
+  randomizeRotation: 1
   minXRotation: 0
   maxXRotation: 0
   minYRotation: 0
   maxYRotation: 0
   minZRotation: 0
   maxZRotation: 0
-  scaleType: 0
-  scaleApplicationType: 0
+  scaleType: 1
+  scaleApplicationType: 1
   minScale: 1
-  maxScale: 1
+  maxScale: 1.2
   minXScale: 1
   maxXScale: 1
   minYScale: 1
@@ -65,7 +67,7 @@ MonoBehaviour:
   minZScale: 1
   maxZScale: 1
   parentList: []
-  eraseBrushSize: 1
+  eraseBrushSize: 3.41
   minEraseBrushSize: 0.1
   maxEraseBrushSize: 20
   eraseType: 0
@@ -77,7 +79,7 @@ MonoBehaviour:
   requiredLayerMaskForErase: 0
   minRequiredSlopeForErase: 0
   maxRequiredSlopeForErase: 0
-  eraseDetection: 0
+  eraseDetection: 1
   paintBrushHotKey: 112
   paintBrushHoldKey: 1
   removeBrushHotKey: 306
