@@ -353,10 +353,15 @@ MonoBehaviour:
   oldState: 0
   travelSpeed: 0.2
   anim: {fileID: 1632725976830512970}
+  detectionTrigger: {fileID: 0}
+  focusTime: 1
+  isFocusing: 0
+  visual: {fileID: 4632153928244712752}
+  enemiesInRange: []
   onAttack:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9a51be9b69fb4f348ab71db3ffdf8536, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &5170710757668574943
 MonoBehaviour:
   m_ObjectHideFlags: 0

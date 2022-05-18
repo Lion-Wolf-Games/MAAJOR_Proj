@@ -31,7 +31,8 @@ public class PotionThrow : MonoBehaviour
     public Action<float> OnThrowPotion; 
     public Action OnThrowPotionInCd; 
 
-    private Vector3 aimPos;
+    private Vector3 aimOffset;
+    private Vector3 aimInput;
 
     [SerializeField] private AK.Wwise.Event potionInCd;
     
@@ -67,8 +68,16 @@ public class PotionThrow : MonoBehaviour
         //     aimTarget.transform.position = launnchPos.position + cam.forward * maxDistance;
         // }
 
-        aimTarget.transform.position = Vector3.Lerp(aimTarget.transform.position,transform.position + aimPos,Time.deltaTime * aimSpeed);
-        
+        //aimTarget.transform.position = Vector3.Lerp(aimTarget.transform.position,aimPos,Time.deltaTime * aimSpeed);
+
+        aimOffset += aimInput * Time.deltaTime * aimSpeed;
+        if(aimOffset.magnitude > selectedPotion.launchRange)
+        {
+            aimOffset.Normalize();
+            aimOffset *= selectedPotion.launchRange;
+        }
+
+        aimTarget.transform.position = transform.position + aimOffset; 
 
         DrawPath();
     }
@@ -76,7 +85,8 @@ public class PotionThrow : MonoBehaviour
     public void MoveAimTarget(InputAction.CallbackContext value)
     {
         Vector2 input = value.ReadValue<Vector2>();
-        aimPos = (Vector3.forward * input.y + Vector3.right * input.x) * selectedPotion.launchRange;
+        aimInput = Vector3.forward * input.y + Vector3.right * input.x;
+        //aimPos = aimTarget.transform.position  + (Vector3.forward * input.y + Vector3.right * input.x);
         
     }
 

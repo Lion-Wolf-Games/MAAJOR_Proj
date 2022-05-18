@@ -36,5 +36,5 @@ Material:
     - Vector1_b3356da118a6449d8355fb95aa7bec25: 2.4
     - Vector1_c914ba8aac3b4f8f8c6a603cd8a8598c: 0
     m_Colors:
-    - _Emission: {r: 1, g: 0.96559095, b: 0, a: 1}
+    - _Emission: {r: 0.4009434, g: 1, b: 0.70175683, a: 1}
   m_BuildTextureStacks: []

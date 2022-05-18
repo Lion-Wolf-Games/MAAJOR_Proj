@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Priority: 9
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 871977685}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 50
     OrthographicSize: 5
@@ -828,9 +828,6 @@ MonoBehaviour:
   joystickDeadzone: 0.2
   _jumpInput: 0
   _isGrounded: 0
-  walkableLayers:
-    serializedVersion: 2
-    m_Bits: 192
   _move: {x: 0, y: 0, z: 0}
   turnSpeed: 10
   _jumpForce: 5
@@ -890,6 +887,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   suckPosition: {fileID: 4028626051348630083}
+  suckSpeedFactor: 0.5
   suckRange: 6
   enemyLayer:
     serializedVersion: 2
@@ -1208,31 +1206,31 @@ MonoBehaviour:
   onStepSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0f8d0a80ecb95254c94483ba5179acbb, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 9130417a597c1374db810e4d402dd14e, type: 2}
   onDashSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 63cf52b0eac537045944f04d3cdf41e1, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 4a22bd82ed75dea4abdb1e58edd62ce7, type: 2}
   onJumpSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 923c15a38601ce14f8dfb0d64b5844e4, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f02dd4e29cb91ab4588860c3b2958748, type: 2}
   onLandingSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 869a245ad655522489c57a52dce3b375, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: de3f53a0a72a4b945ab1d3477e0452c8, type: 2}
   onThrowSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 31e779acc6a267a4c9ff762b23442cfd, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f7bb58060b6a44b4ba26fd4f215bf57e, type: 2}
   onHitSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: eeda8d618fa47f64cb41bf90feceec7a, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a8e4d8f79cb223b4aab0c8339c6202e8, type: 2}
   onSuckSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a7d6f4cd598eca843925fce68a8656a8, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: de3d02c283efc864392a8586fd48c59d, type: 2}
 --- !u!114 &1922009542
 MonoBehaviour:
   m_ObjectHideFlags: 0

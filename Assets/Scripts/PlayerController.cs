@@ -25,6 +25,7 @@ public class PlayerController : LivingObject
     private float _verticalSpeed;
     public float speed;
     public float maxSpeed;
+    private float baseSpeed;
 
     [Header("Throw")]
     public bool isAiming;
@@ -47,8 +48,10 @@ public class PlayerController : LivingObject
 
     [Header("Suck")]
     public Transform suckPosition;
+    [SerializeField] private float suckSpeedFactor = 0.5f;
     [SerializeField] private float suckRange;
     [SerializeField] private LayerMask enemyLayer;
+    
  
     [Header("Camera")]
     public CinemachineVirtualCamera tPSCam;
@@ -62,9 +65,12 @@ public class PlayerController : LivingObject
     public PlayerActions OnJump;
     public PlayerActions OnLanding;
     public PlayerActions OnSuck;
+    public PlayerActions OnStartSuck;
+    public PlayerActions OnStopSuck;
     public PlayerActions OnStartAim;
     public PlayerActions OnStopAim;
     public PlayerActions OnThrow;
+
     public PlayerActions NextPotion,PrevPotion;
 
     #endregion
@@ -79,6 +85,8 @@ public class PlayerController : LivingObject
         GameManager.Instance.OnPlay += OnGamePlay;
         OnKill += (x) => {StartCoroutine("RestartLevel");};
         input.SwitchCurrentActionMap("Player");
+
+        baseSpeed = maxSpeed;
     }
 
     IEnumerator RestartLevel()
@@ -155,22 +163,38 @@ public class PlayerController : LivingObject
 
     public void Suck(InputAction.CallbackContext context)
     {
+        // if(context.performed)
+        // {
+        //     Debug.Log("Suck");
+        //     OnSuck?.Invoke();
+
+        //     Collider[] cols = Physics.OverlapSphere(transform.position, suckRange/*,enemyLayer*/);
+
+        //     Debug.Log(cols);
+
+        //     foreach (var col in cols)
+        //     {
+        //         col.BroadcastMessage("OnSuck",this,SendMessageOptions.DontRequireReceiver);
+        //     }
+
+        //     StartCoroutine(DisableInputTemporary(1));
+        //     animator.SetTrigger("Suck");
+        // }
+
+        //Start Suck
         if(context.performed)
         {
-            Debug.Log("Suck");
-            OnSuck?.Invoke();
+            //Slow pim Mouvement
+            maxSpeed = baseSpeed * suckSpeedFactor;
+            OnStartSuck?.Invoke();
+        }
 
-            Collider[] cols = Physics.OverlapSphere(transform.position, suckRange/*,enemyLayer*/);
-
-            Debug.Log(cols);
-
-            foreach (var col in cols)
-            {
-                col.BroadcastMessage("OnSuck",this,SendMessageOptions.DontRequireReceiver);
-            }
-
-            StartCoroutine(DisableInputTemporary(1));
-            animator.SetTrigger("Suck");
+        //Stop suck
+        if(context.canceled)
+        {
+            //Reset Pim Speed
+            maxSpeed = baseSpeed;
+            OnStopSuck?.Invoke();
         }
     } 
 

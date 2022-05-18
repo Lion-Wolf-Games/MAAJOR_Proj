@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Sign : MonoBehaviour
 {
+    [TextArea(5,10)]
     [SerializeField] string signText;
     [SerializeField] Sprite signImage;
     

@@ -164,15 +164,15 @@ MonoBehaviour:
   onAttackSfx:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 608b773e82e27f64c9ed1e5f9945e83b, type: 2}
+    WwiseObjectReference: {fileID: 0}
   onHitSfx:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 68b5a28b5d8a23a42b4375b71c9f8d07, type: 2}
+    WwiseObjectReference: {fileID: 0}
   onPlayerDetectedSfx:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 608b773e82e27f64c9ed1e5f9945e83b, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!54 &4352341738641803395
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -583,6 +583,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3449362444147946883, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3449362444147947006, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -633,7 +637,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3449362444147946881, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
-    - {fileID: 3449362444147946883, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
 --- !u!4 &8300750837022318139 stripped
 Transform:
