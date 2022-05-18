@@ -176,8 +176,19 @@ public class Enemies : FightingObject
                 if (Time.time >= wanderTime)
                 {
                     wanderPos = new Vector3(UnityEngine.Random.Range(-wanderRange, wanderRange), 0, UnityEngine.Random.Range(-wanderRange, wanderRange)) + spawnPosition;
+
+                    Vector3 wanderPosDir = wanderPos - transform.position;
+                    float dotProd = Vector3.Dot(transform.forward, wanderPosDir.normalized);
+
                     navAgent.SetDestination(wanderPos);
+
                     fsm = FSM_Enemies.Wander;
+
+                    if (dotProd <= 0)
+                    {
+                        StartCoroutine(TurnTowardTarget(0.5f, wanderPos));
+                        Debug.Log(dotProd);
+                    }
                 }
 
                 break;
@@ -300,12 +311,6 @@ public class Enemies : FightingObject
 
             OnPlayerDetected?.Invoke();
         }
-        //else if (_target != null)
-        //{
-        //    fsm = FSM_Enemies.TargetAcquired;
-
-        //    OnPlayerDetected?.Invoke();
-        //}
     }
 
     public void Damage(Vector3 origin)
@@ -370,7 +375,7 @@ public class Enemies : FightingObject
 
     }
 
-    private IEnumerator TurnTowardTarget(float duration)
+    private IEnumerator TurnTowardTarget(float duration, Vector3 targetPos)
     {
         StopMovement();
 
@@ -381,7 +386,7 @@ public class Enemies : FightingObject
             {
                 yield return new WaitForFixedUpdate();
 
-                Vector3 lookAtTarget = new Vector3(_target.transform.position.x, transform.position.y, _target.transform.position.z);
+                Vector3 lookAtTarget = new Vector3(targetPos.x, transform.position.y, targetPos.z);
 
                 Vector3 targetDir = lookAtTarget - transform.position;
                 float rotationToTarget = Mathf.Atan2(targetDir.x, targetDir.z) * Mathf.Rad2Deg;
@@ -394,7 +399,7 @@ public class Enemies : FightingObject
 
     public IEnumerator TurnToTargetAndChangeState(float duration, FSM_Enemies stateAfterTurn)
     {
-        yield return TurnTowardTarget(duration);
+        yield return TurnTowardTarget(duration, _target.transform.position);
 
         fsm = stateAfterTurn;
     }

@@ -18,6 +18,7 @@ public class PlayerController : LivingObject
     public float joystickDeadzone;
     public bool _jumpInput;
     public bool _isGrounded;
+    public LayerMask walkableLayers;
     public Vector3 _move;
     public float turnSpeed;
     public float _jumpForce;
@@ -267,7 +268,7 @@ public class PlayerController : LivingObject
 
         #region Ground Check
 
-        if (Physics.OverlapSphere(transform.position, 0.25f, 1 << 6).Length > 0 && _verticalSpeed < 1)
+        if (Physics.OverlapSphere(transform.position, 0.25f, walkableLayers).Length > 0 && _verticalSpeed < 1)
         {
             _isGrounded = true;
             animator.SetBool("isGrounded", true);

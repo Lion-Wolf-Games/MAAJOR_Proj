@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Priority: 9
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 871977685}
   m_Lens:
     FieldOfView: 50
     OrthographicSize: 5
@@ -828,6 +828,9 @@ MonoBehaviour:
   joystickDeadzone: 0.2
   _jumpInput: 0
   _isGrounded: 0
+  walkableLayers:
+    serializedVersion: 2
+    m_Bits: 192
   _move: {x: 0, y: 0, z: 0}
   turnSpeed: 10
   _jumpForce: 5
@@ -1205,31 +1208,31 @@ MonoBehaviour:
   onStepSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0a36c44245141e44fb7b5a88eb4ebfe7, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 0f8d0a80ecb95254c94483ba5179acbb, type: 2}
   onDashSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ea6868d645d0f5749aac6f63957971b2, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 63cf52b0eac537045944f04d3cdf41e1, type: 2}
   onJumpSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fa54870b324e5c64183a78110cfb9277, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 923c15a38601ce14f8dfb0d64b5844e4, type: 2}
   onLandingSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fb6c6c9649af8dd4189a6c30897b000a, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 869a245ad655522489c57a52dce3b375, type: 2}
   onThrowSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3b1aae4d5333dfe468e638320c3bb7c8, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 31e779acc6a267a4c9ff762b23442cfd, type: 2}
   onHitSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 233dcaabac5a1b54a8d18d11bd3b8de6, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: eeda8d618fa47f64cb41bf90feceec7a, type: 2}
   onSuckSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a5d37f9e9ebfe38489598f01eb4dfa1f, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a7d6f4cd598eca843925fce68a8656a8, type: 2}
 --- !u!114 &1922009542
 MonoBehaviour:
   m_ObjectHideFlags: 0

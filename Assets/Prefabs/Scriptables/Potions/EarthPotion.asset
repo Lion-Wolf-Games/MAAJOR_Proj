@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EarthPotion
   m_EditorClassIdentifier: 
   useType: 0
-  effectRange: 1
+  effectRange: 5
   useTime: 0
   useDuration: 0
   launchRange: 10
@@ -26,7 +26,7 @@ MonoBehaviour:
   onCollisionSfx:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: cab91c4869512f84aa762fb51d454412, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b40fe5646db360944976acaabb7b11ce, type: 2}
   wallTospawn: {fileID: 8447291994174976828, guid: 161d3a085e65c4c42bfaa9f36423c6cb, type: 3}
   timeActive: 5
   layer:

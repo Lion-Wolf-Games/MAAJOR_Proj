@@ -348,6 +348,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   damage: 0
+  canAttack: 0
   state: 0
   oldState: 0
   travelSpeed: 0.2
@@ -355,7 +356,7 @@ MonoBehaviour:
   onAttack:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 273499efe65ff48499f886cac7844edf, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 9a51be9b69fb4f348ab71db3ffdf8536, type: 2}
 --- !u!114 &5170710757668574943
 MonoBehaviour:
   m_ObjectHideFlags: 0

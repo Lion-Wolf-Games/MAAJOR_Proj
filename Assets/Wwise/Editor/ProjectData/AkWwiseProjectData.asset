@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fbf3588fdb41bd49897c85e19de4d51e
     GuidInternal: 
-    m_lastTime: -8585504599008011868
+    m_lastTime: -8585495179889578483
     List:
     - name: AMB
       guid: 035581ea9b145a4bba20803b78eb61a2
@@ -505,7 +505,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a91c831e1c440041a72a7be24c8ac7de
     GuidInternal: 
-    m_lastTime: -8585503736094052422
+    m_lastTime: -8585495179888581158
     List:
     - name: FOREST_Bank
       guid: f96f3d7e8bf2b046b6600f9e0040df35
@@ -575,7 +575,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c8a5b76bfd504b49a6762764bda6d51d
     GuidInternal: 
-    m_lastTime: -8585498688256575233
+    m_lastTime: -8585495179890405812
     List:
     - name: AMB
       guid: 50acd9e1b911c14fa5b00b99ce19cea1
@@ -1723,8 +1723,8 @@ MonoBehaviour:
     m_lastTime: -8585571303976168830
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d0000002200000027000000290000002b0000002d0000002f000000350000003c0000003d00000043000000
-  AutoSyncSelection: 0
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000b0000000c0000002100000026000000280000002e000000340000003c0000003d000000
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 
