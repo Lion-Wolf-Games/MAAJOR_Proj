@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.AI;
 
 public class Midena : FightingObject
 {
@@ -22,9 +23,12 @@ public class Midena : FightingObject
 
     [SerializeField] private AK.Wwise.Event onAttack;
 
+    private NavMeshAgent agent;
+
     private void Start() {
         startPos = transform.position;
         enemiesInRange = new List<Enemies>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update() {
@@ -80,6 +84,16 @@ public class Midena : FightingObject
                 isAttacking = true;
 
             }
+        }
+
+        if(agent != null)
+        {
+            float speedMag = agent.velocity.magnitude / agent.speed;
+            float movDirX = Vector3.Dot(transform.right,agent.velocity.normalized);
+            float movDirY = Vector3.Dot(transform.forward,agent.velocity.normalized);
+            anim.SetFloat("DirX",movDirX);
+            anim.SetFloat("DirY",movDirY);
+            anim.SetFloat("Speed",speedMag);
         }
     }
 
@@ -188,6 +202,22 @@ public class Midena : FightingObject
                 }
             }
         }
+    }
+
+    public void MoveToTarget(Transform target)
+    {
+        if (agent != null)
+        {
+            agent.SetDestination(target.position);
+        }
+
+        visual.forward = transform.forward;
+    }
+    
+    public void LookAtTarget(Transform target)
+    {
+        Vector3 looktarget = new Vector3(target.position.x,transform.position.y,target.position.z);
+        transform.DOLookAt(looktarget,0.5f).SetEase(Ease.InOutQuad);
     }
 
     private void OnValidate() {

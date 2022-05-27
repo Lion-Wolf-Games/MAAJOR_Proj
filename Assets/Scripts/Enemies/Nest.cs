@@ -11,8 +11,11 @@ public class Nest : MonoBehaviour
     [SerializeField] private GameObject destroyFX;
 
     public Action OnNestDestroy;
+    private SuckableObject suckableObject;
 
     private void Start() {
+
+        suckableObject = GetComponent<SuckableObject>();
 
         if(enemies == null || enemies.Count == 0)
         {
@@ -21,10 +24,12 @@ public class Nest : MonoBehaviour
 
         SpawnEnemies();   
 
-        foreach (var go in enemies)
-        {
-            go.GetComponent<Enemies>().OnKill += OnEnemyKilled;
-        }
+        // foreach (var go in enemies)
+        // {
+        //     go.GetComponent<Enemies>().OnKill += OnEnemyKilled;
+        // }
+
+        suckableObject.OnSucked += DestroyNest;
     }
 
     private void SpawnEnemies()
@@ -41,23 +46,27 @@ public class Nest : MonoBehaviour
     }
 
 
-    private void OnEnemyKilled(GameObject ennemyKilled)
+    // private void OnEnemyKilled(GameObject ennemyKilled)
+    // {
+    //     if(enemies.Contains(ennemyKilled))
+    //     {
+    //         ennemyKilled.GetComponent<Enemies>().OnKill -= OnEnemyKilled;
+
+    //         enemies.Remove(ennemyKilled);
+
+    //         if(enemies.Count == 0)
+    //         {
+    //             DestroyNest();
+    //         }
+    //     }
+    // }
+
+    private void DestroyNest()
     {
-        if(enemies.Contains(ennemyKilled))
-        {
-            ennemyKilled.GetComponent<Enemies>().OnKill -= OnEnemyKilled;
-
-            enemies.Remove(ennemyKilled);
-
-            if(enemies.Count == 0)
-            {
-                
-                Debug.Log("Destroy Nest");
-                OnNestDestroy?.Invoke();
-                PoolManager.Instance.Spawn(destroyFX,true,transform.position, Quaternion.identity);
-                gameObject.SetActive(false);
-            }
-        }
+        Debug.Log("Destroy Nest");
+        OnNestDestroy?.Invoke();
+        PoolManager.Instance.Spawn(destroyFX,true,transform.position, Quaternion.identity);
+        gameObject.SetActive(false);
     }
 
     private void OnDrawGizmos() {

@@ -769,10 +769,10 @@
                 {
                     "name": "",
                     "id": "9e92bb26-7e3b-4ec4-b06b-3c8f8e498ddc",
-                    "path": "*/{Submit}",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -781,6 +781,17 @@
                     "name": "",
                     "id": "d24d7cb8-dddb-4b8f-a9dc-c4da322ea924",
                     "path": "<SwitchProControllerHID>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc36ff90-1e36-4aee-a785-c604d78c354e",
+                    "path": "*/{Submit}",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",

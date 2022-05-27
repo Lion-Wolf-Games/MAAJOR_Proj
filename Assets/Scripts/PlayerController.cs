@@ -82,7 +82,7 @@ public class PlayerController : LivingObject
     private void Start() 
     {
         input = GetComponent<PlayerInput>();
-        GameManager.Instance.OnPlay += OnGamePlay;
+        GameManager.Instance.OnGameStateChanged += OnGameStateChanged;
         OnKill += (x) => {StartCoroutine("RestartLevel");};
         input.SwitchCurrentActionMap("Player");
 
@@ -392,9 +392,23 @@ public class PlayerController : LivingObject
         }
     }
 
-    private void OnGamePlay()
+    private void OnGameStateChanged(GameState state)
     {
-        input.SwitchCurrentActionMap("Player");
+        switch (state)
+        {
+            case GameState.Playing:
+            input.SwitchCurrentActionMap("Player");
+            break;
+            case GameState.InDialogue:
+            input.SwitchCurrentActionMap("UI");
+            break;
+            case GameState.Paused:
+            input.SwitchCurrentActionMap("UI");
+            break;
+            default:
+            break;
+        }
+
     }
 
     protected override void Hit(int damage,Vector3 origin)

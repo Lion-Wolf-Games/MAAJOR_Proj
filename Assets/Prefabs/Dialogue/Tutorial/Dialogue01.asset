@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace7dc0ce30e1e6478a7dff14c58062d, type: 3}
+  m_Name: Dialogue01
+  m_EditorClassIdentifier: 
+  stopInput: 1
+  readTime: 2
+  _dialogue:
+  - _speakerName: ???
+    _speakerPortrait: {fileID: 21300000, guid: b53c48a339e615f4ea9cae0ec4714572, type: 3}
+    _text: "Fais attention, je les sens\u2026 Ces cr\xE9atures ne sont plus loin\u2026
+      mais je peux au moins lib\xE9rer le passage gr\xE2ce \xE0 mes potions !\r\n"
+    _isQuestion: 0
+    _optionA: 
+    _optionB: 
+    _textSpeed: 0.01
+  - _speakerName: Pim
+    _speakerPortrait: {fileID: 21300000, guid: 7526f4bc49ad52842a778ca52d441e0a, type: 3}
+    _text: "Hmm.. Okay\u2026 Je vous suis madame, mais je ne suis pas un combattant,
+      moi\u2026"
+    _isQuestion: 0
+    _optionA: 
+    _optionB: 
+    _textSpeed: 0.01

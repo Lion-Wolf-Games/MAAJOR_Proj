@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -11,12 +12,16 @@ public class DialogueSystem : MonoBehaviour
     public TextMeshProUGUI _speakerNametext;
     public GameObject _speakerNamePanel;
 
+    public Image _speakerPortrait;
+    public GameObject _speakerPortraitPanel;
+
     public GameObject _optionPanel;
     public TextMeshProUGUI _optionAText;
     public TextMeshProUGUI _optionBText;
 
     public float _defaultTimeToChar = 0.1f; //Time between characters
     private float _timeToCharacter = 0.1f;
+    private float _readtime; //time text remaing on screen if set to auto
 
     public string _fullText;
     private string _currentText;
@@ -26,12 +31,14 @@ public class DialogueSystem : MonoBehaviour
     public AK.Wwise.Event OnWrite;
 
     public bool _isWriting = false;
+    private bool stopOnDialogue = true;
 
-    public delegate void OnDialogueEnd();
+    public delegate void OnDialogueEvent();
 
-    public OnDialogueEnd _onDialogueEnd;
-    public OnDialogueEnd _onDialogueOptionA;
-    public OnDialogueEnd _onDialogueOptionB;
+    public OnDialogueEvent _onDialogueStart;
+    public OnDialogueEvent _onDialogueEnd;
+    public OnDialogueEvent _onDialogueOptionA;
+    public OnDialogueEvent _onDialogueOptionB;
 
 
 
@@ -46,9 +53,16 @@ public class DialogueSystem : MonoBehaviour
 
     private void Start()
     {
+        _onDialogueStart += () => {GameManager.Instance.ChangeGameState(GameState.InDialogue);};
+        _onDialogueEnd += () => {GameManager.Instance.ChangeGameState(GameState.Playing);};
+
         if (_dialogueQueue.Count == 0)
         {
             _textPannel.SetActive(false);
+        }
+        else
+        {
+            StartDialogue();
         }
     }
 
@@ -56,16 +70,23 @@ public class DialogueSystem : MonoBehaviour
     {
         if (_dialogueQueue.Count != 0)
         {
+            _textPannel.SetActive(true);
+
+            if(stopOnDialogue)
+            {
+                _onDialogueStart?.Invoke();
+            }
+
             Tell(_dialogueQueue[0], _defaultTimeToChar);
-        }
-        else
-        {
-            _textPannel.SetActive(false);
+
         }
     }
 
     public void AddDialogueToQueue(DialogueSO dialogues)
     {
+        stopOnDialogue = dialogues.stopInput;
+        _readtime = dialogues.readTime;
+
         for (int i = 0; i < dialogues._dialogue.Length; i++)
         {
             AddDialogueToQueue(dialogues._dialogue[i]);
@@ -76,12 +97,9 @@ public class DialogueSystem : MonoBehaviour
     {
         _dialogueQueue.Add(dialogue);
 
-        if (!_textPannel.activeInHierarchy)
+        if(_dialogueQueue[0] == dialogue)
         {
-            //GameManager.Instance._eventInProgress = true;
-            _textPannel.SetActive(true);
-            Time.timeScale = 0;
-            Tell(_dialogueQueue[0], _defaultTimeToChar);
+            StartDialogue();
         }
     }
 
@@ -103,7 +121,15 @@ public class DialogueSystem : MonoBehaviour
         _defaultTimeToChar = time;
         //_audio.pitch = time * 10;
     }
+    public void SkipWriting(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            SkipWriting();
+        }
+    }
 
+    [ContextMenu("Skip writing")]
     public void SkipWriting() //Set time between char to 0 or skip to next dialogue in queue if not writing
     {
         if (_textPannel.activeInHierarchy)
@@ -144,8 +170,19 @@ public class DialogueSystem : MonoBehaviour
         _isWriting = true;
 
         _fullText = dialogue._text;
-        _timeToCharacter = timeToChar;
 
+        if(dialogue._textSpeed == -1)
+        {
+            _timeToCharacter = _defaultTimeToChar;
+        }
+        else
+        {
+            _timeToCharacter = dialogue._textSpeed;
+        }
+
+        //_timeToCharacter = timeToChar;
+
+        //SetName
         if (_speakerNamePanel != null)
         {
             if (dialogue._speakerName == string.Empty)
@@ -159,6 +196,20 @@ public class DialogueSystem : MonoBehaviour
             } 
         }
 
+        //SetPortrait
+        if(_speakerPortrait != null)
+        {
+            if(dialogue._speakerPortrait == null)
+            {
+                _speakerPortraitPanel.SetActive(false);
+            }
+            else
+            {
+                _speakerPortraitPanel.SetActive(true);
+                _speakerPortrait.sprite = dialogue._speakerPortrait;
+            }
+        }
+
         if (_optionPanel != null)
         {
             _optionPanel.SetActive(false);
@@ -167,6 +218,7 @@ public class DialogueSystem : MonoBehaviour
         StartCoroutine(DialogueWriter());
     }
 
+    [ContextMenu("Next Dialogue")]
     private void NextDialogueInQueue()
     {
         _dialogueQueue.Remove(_dialogueQueue[0]);
@@ -235,6 +287,12 @@ public class DialogueSystem : MonoBehaviour
             _optionPanel.SetActive(true);
         }
 
+        if(!stopOnDialogue)
+        {
+            yield return new WaitForSecondsRealtime(_readtime);
+            SkipWriting();
+        }
+
     }
 
     public void RespondA()
@@ -277,4 +335,5 @@ public class DialogueSystem : MonoBehaviour
     {
         AddDialogueToQueue(dialogue);
     }
+
 }

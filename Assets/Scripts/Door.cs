@@ -6,7 +6,8 @@ using DG.Tweening;
 public class Door : MonoBehaviour
 {
     [SerializeField] private List<Nest> linkedNest;
-    [SerializeField] private Transform doorVisual;
+    [SerializeField] private Transform doorVisualOn;
+    [SerializeField] private Transform doorVisualOff;
     [SerializeField] private float animationTime = 1f;
 
     [SerializeField] int nestRemain;
@@ -44,16 +45,21 @@ public class Door : MonoBehaviour
     [ContextMenu("Close")]
     public void CloseDoor()
     {
-        doorVisual.gameObject.SetActive(true);
-        doorVisual.DOShakePosition(animationTime,0.2f);
-        doorVisual.DOScaleY(1,animationTime).SetEase(Ease.OutCubic);
+        doorVisualOn.gameObject.SetActive(true);
+        doorVisualOff.gameObject.SetActive(false);
+        
+        // doorVisual.DOShakePosition(animationTime,0.2f);
+        // doorVisual.DOScaleY(1,animationTime).SetEase(Ease.OutCubic);
     }
 
     [ContextMenu("Open")]
     public void OpenDoor()
     {
-        doorVisual.DOShakePosition(animationTime,0.2f);
-        doorVisual.DOScaleY(0,animationTime).SetEase(Ease.InExpo).OnComplete(()=>{doorVisual.gameObject.SetActive(false);});
+        doorVisualOn.gameObject.SetActive(false);
+        doorVisualOff.gameObject.SetActive(true);
+
+        // doorVisual.DOShakePosition(animationTime,0.2f);
+        // doorVisual.DOScaleY(0,animationTime).SetEase(Ease.InExpo).OnComplete(()=>{doorVisual.gameObject.SetActive(false);});
     }
 
     private void OnDisable() {

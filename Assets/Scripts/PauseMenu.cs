@@ -28,7 +28,7 @@ public class PauseMenu : MonoBehaviour
     {
         //ShowPanel
         pauseCanvas.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -59,7 +59,7 @@ public class PauseMenu : MonoBehaviour
         subMenus[0].gameObject.SetActive(true);*/
 
         pauseCanvas.SetActive(false);
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
         GameManager.Instance.ChangeGameState(GameState.Playing);
         
         Cursor.lockState = CursorLockMode.Locked;

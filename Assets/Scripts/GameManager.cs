@@ -59,9 +59,14 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Playing:
             Instance.OnPlay?.Invoke();
+            Time.timeScale = 1;
             break;
             case GameState.Paused:
             Instance.OnPause?.Invoke();
+            Time.timeScale = 0;
+            break;
+            case GameState.InDialogue:
+            Time.timeScale = 1;
             break;
             default:
             break;
@@ -104,4 +109,5 @@ public enum GameState
 {
     Playing,
     Paused,
+    InDialogue
 }

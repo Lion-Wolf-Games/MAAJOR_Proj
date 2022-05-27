@@ -6,12 +6,15 @@ using DG.Tweening;
 public class PushableStone : MonoBehaviour
 {
     [SerializeField] private Vector3 pos1,pos2;
+
+    private Transform visual;
     //[SerializeField] private GameObject visual;
 
     private Vector3 nextPos;
     private bool isMoving;
 
     private void Start() {
+        visual = transform.GetChild(0);
         transform.position = pos1;
         nextPos = pos2;
     }
