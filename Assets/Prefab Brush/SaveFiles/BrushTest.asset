@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabList: []
   prefabData:
-  - prefab: {fileID: 6654698525680288520, guid: 6762a33bca417ca48b2664c163843305, type: 3}
+  - prefab: {fileID: 6654698525680288520, guid: 5c918b238a118df4fbd09261526727d8, type: 3}
     selected: 1
   paintType: 0
   brushSize: 2.72
@@ -79,7 +79,7 @@ MonoBehaviour:
   requiredLayerMaskForErase: 0
   minRequiredSlopeForErase: 0
   maxRequiredSlopeForErase: 0
-  eraseDetection: 0
+  eraseDetection: 1
   paintBrushHotKey: 112
   paintBrushHoldKey: 1
   removeBrushHotKey: 306
