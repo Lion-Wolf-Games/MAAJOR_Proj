@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Rendering;
 using DG.Tweening;
 
 public class Door : MonoBehaviour
 {
     [SerializeField] private List<Nest> linkedNest;
+    public UnityEvent OnDoorOpen; 
+    [Header("Visual")]
     [SerializeField] private Transform doorVisualOn;
     [SerializeField] private Transform doorVisualOff;
+    [SerializeField] private Volume volume;
     [SerializeField] private float animationTime = 1f;
 
     [SerializeField] int nestRemain;
@@ -57,6 +62,8 @@ public class Door : MonoBehaviour
     {
         doorVisualOn.gameObject.SetActive(false);
         doorVisualOff.gameObject.SetActive(true);
+
+        OnDoorOpen?.Invoke();
 
         // doorVisual.DOShakePosition(animationTime,0.2f);
         // doorVisual.DOScaleY(0,animationTime).SetEase(Ease.InExpo).OnComplete(()=>{doorVisual.gameObject.SetActive(false);});

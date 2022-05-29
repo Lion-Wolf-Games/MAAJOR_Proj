@@ -665,9 +665,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 3.68, y: 0, z: 0}
+    m_Position: {x: 2.2, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 14.77, y: 5.51, z: 0}
+    m_Scale: {x: 8.3, y: 3.76, z: 0}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -10279,7 +10279,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 4.92, y: 1, z: 1}
+    m_Scale: {x: 4.62, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -10358,7 +10358,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1.32
+      value: 0.69
       mode: 0
       spread: 0
       speed:
@@ -14443,7 +14443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541182433075188276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.900527, y: 2.08, z: -0.83}
+  m_LocalPosition: {x: -5.45, y: 2.08, z: 1.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1541182432638097809}
@@ -15084,7 +15084,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 3.68, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 9.94, y: 0, z: 0}
+    m_Scale: {x: 5.4, y: 0, z: 0}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
