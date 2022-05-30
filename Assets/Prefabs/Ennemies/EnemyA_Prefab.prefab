@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBeforeLostTarget: 0
   _target: {fileID: 0}
-  detectionRange: 2.2
+  detectionRange: 5
   attackRange: 2
   attackDuration: 1
   hostileLayer:
@@ -904,6 +904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anim_Trapeur
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6f1a7fe1af9c3dd4a82da4fbfa017cdf, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1677090084454300035, guid: 6f1a7fe1af9c3dd4a82da4fbfa017cdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -1.0559996
@@ -1218,6 +1222,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3874449808315589368}
     m_Modifications:
+    - target: {fileID: 1894079773886212393, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531006565834394815, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2760439683850410638, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.04
@@ -1281,6 +1293,10 @@ PrefabInstance:
     - target: {fileID: 3449362444147947006, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668108983541405349, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6588806508826909334, guid: f6ec7837c6fa92442bdd70e06892a8bd, type: 3}
       propertyPath: m_Materials.Array.data[0]

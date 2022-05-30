@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7456797076637751881}
+  - component: {fileID: 414664876171706992}
   m_Layer: 0
   m_Name: Tree_02_02
   m_TagString: Untagged
@@ -31,6 +32,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &414664876171706992
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665626616833007220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 6.4030523
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.7015262, z: 0}
 --- !u!1001 &6445065074455817814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,6 +105,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 425d026259dfcbe4ba81c09a33c46fd9, type: 2}
+    - target: {fileID: 108195415924584326, guid: b6c6a75e320e46943993753174170871, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b6c6a75e320e46943993753174170871, type: 3}
       propertyPath: m_Name
       value: Tree_02

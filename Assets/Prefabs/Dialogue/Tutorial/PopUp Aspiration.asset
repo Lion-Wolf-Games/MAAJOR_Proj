@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace7dc0ce30e1e6478a7dff14c58062d, type: 3}
+  m_Name: PopUp Aspiration
+  m_EditorClassIdentifier: 
+  stopInput: 0
+  readTime: 2
+  _dialogue:
+  - _speakerName: 
+    _speakerPortrait: {fileID: 0}
+    _text: "Appuyez sur X pour Aspirer les nids de trapeurs afin d\u2019augmenter
+      le pourcentage de compl\xE9tion du niveau."
+    _isQuestion: 0
+    _optionA: 
+    _optionB: 
+    _textSpeed: 0.01
+  - _speakerName: 
+    _speakerPortrait: {fileID: 0}
+    _text: "Quand la gourde atteint les 100%, le Trape qui bloque les Torii Gates
+      se dissipe et lib\xE8re le passage."
+    _isQuestion: 0
+    _optionA: 
+    _optionB: 
+    _textSpeed: 0.01

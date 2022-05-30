@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace7dc0ce30e1e6478a7dff14c58062d, type: 3}
+  m_Name: Dialogue07_MidenaQuest
+  m_EditorClassIdentifier: 
+  stopInput: 1
+  readTime: 2
+  _dialogue:
+  - _speakerName: Midena
+    _speakerPortrait: {fileID: 21300000, guid: b53c48a339e615f4ea9cae0ec4714572, type: 3}
+    _text: "J\u2019ai un mauvais pressentiment, dirigeons nous vers le village, le
+      plus proche, une menace plus grande nous attend\u2026"
+    _isQuestion: 0
+    _optionA: 
+    _optionB: 
+    _textSpeed: 0.01

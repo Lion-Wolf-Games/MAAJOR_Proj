@@ -43,9 +43,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.96180636
-  m_Height: 5.510153
+  m_Height: 11.29888
   m_Direction: 1
-  m_Center: {x: 0.14006178, y: 2.2550745, z: -0.13151017}
+  m_Center: {x: 0.1400618, y: 5.149438, z: -0.1315102}
 --- !u!1001 &7649847577534169548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,7 +111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8666437367178566607, guid: 90bc8e2cbeaf68848b2d58a9d8eabd0e, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90bc8e2cbeaf68848b2d58a9d8eabd0e, type: 3}
