@@ -91,7 +91,8 @@ public class PlayerController : LivingObject
 
     IEnumerator RestartLevel()
     {
-        yield return new WaitForSeconds(1f);
+        DisableInput();
+        yield return new WaitForSeconds(2f);
         GameManager.StaticLoadLevel(1);
     }
 
@@ -399,6 +400,13 @@ public class PlayerController : LivingObject
 
     protected override void Hit(int damage,Vector3 origin)
     {
+        animator.SetInteger("DeathID", UnityEngine.Random.Range(0, 2));
+
+        if (_health <= 0)
+        {
+            DisableInput();
+        }
+
         base.Hit(damage,origin);
         OnHit?.Invoke(0);
         hitTime = Time.time + hitRecoilDuration;

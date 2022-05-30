@@ -145,14 +145,12 @@ public class LivingObject : MonoBehaviour, IDamagable
 
     protected IEnumerator DeathCoroutine(float delay)
     {
-        yield return new WaitForSeconds(delay);
-
-        Destroy(gameObject);
-
         if (_deathFx != null)
         {
             PoolManager.Instance.Spawn(_deathFx, true, transform.position + Vector3.up * 0.5f, transform.rotation);
         }
+
+        yield return null;
     }
 
     public void SetInvulnerable(bool state)

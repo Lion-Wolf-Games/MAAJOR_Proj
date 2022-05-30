@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerFx : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class PlayerFx : MonoBehaviour
     [SerializeField] private AK.Wwise.Event onHitSFX;
     [SerializeField] private AK.Wwise.Event onSuckSFX;
 
+    [Space]
+    [SerializeField] private Color hitColor;
+    [SerializeField] private Material[] playerMaterials;
+
     private PlayerController player;
 
     private void Start() {
@@ -34,12 +39,19 @@ public class PlayerFx : MonoBehaviour
         player.OnStartSuck += OnSuckFx;
         PotionThrow potionThrow = GetComponent<PotionThrow>();
         potionThrow.OnThrowPotion += onThrowFX;
+
+        for (int i = 0; i < playerMaterials.Length; i++)
+        {
+            playerMaterials[i].EnableKeyword("_EMISSION");
+
+            playerMaterials[i].SetColor("_EmissionColor", Color.black);
+        }
     }
 
     private void OnDashFx()
     {
 
-        PoolManager.Instance.Spawn(dashFx, true,transform.position,transform.rotation);
+        PoolManager.Instance.Spawn(dashFx, true, transform.position, transform.rotation);
 
         onDashSFX.Post(gameObject);
     }
@@ -87,5 +99,13 @@ public class PlayerFx : MonoBehaviour
     private void onHitFX(int _)
     {
         onHitSFX.Post(gameObject);
+
+        for (int i = 0; i < playerMaterials.Length; i++)
+        {
+            Debug.Log("Changing emissive");
+
+            playerMaterials[i].SetColor("_EmissionColor", hitColor);
+            playerMaterials[i].DOColor(Color.black, "_EmissionColor", 0.5f);
+        }
     }
 }

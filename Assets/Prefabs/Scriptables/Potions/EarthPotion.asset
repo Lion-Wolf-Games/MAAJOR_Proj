@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EarthPotion
   m_EditorClassIdentifier: 
   useType: 0
-  effectRange: 5
+  effectRange: 4
   useTime: 0
   useDuration: 0
   launchRange: 10

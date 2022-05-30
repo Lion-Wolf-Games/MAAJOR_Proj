@@ -1444,6 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 8238263330496277974}
+  ResumeButton: {fileID: 8238263329864763142}
 --- !u!114 &8238263329232943362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8412,15 +8413,15 @@ MonoBehaviour:
   OnMenuOpen:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f798f8b8e495d3d41a31ad87f7a210d8, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6fbfe19fd64f15040a025c93c54d3ff4, type: 2}
   OnMenuClose:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d6263dde06faa6a468a154bf6a11e639, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 823b7e081f780d644abe30f258d03ba7, type: 2}
   OnNavigate:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7e84c1c8aac839c4083ae29d6d2b6d83, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: c26e6b650018c454eaa7e430f3400e41, type: 2}
 --- !u!114 &8238263330496277970
 MonoBehaviour:
   m_ObjectHideFlags: 0

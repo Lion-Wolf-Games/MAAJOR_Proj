@@ -83,6 +83,8 @@ public class Enemies : FightingObject
         navAgent.speed = enemyType.GetSpeed();
         navAgent.angularSpeed = enemyType.GetTurningSpeed();
 
+        anim = enemyModel.GetComponent<Animator>();
+
         canAttack = true;
     }
 
@@ -98,7 +100,7 @@ public class Enemies : FightingObject
             switch (fsm)
             {
                 case FSM_Enemies.Idle:
-                    wanderTime = Time.time + Random.Range(0f, 15f);
+                    wanderTime = Time.time + Random.Range(0f, 10f);
 
                     if(anim != null){
                         anim.SetBool("IsMoving", false);
@@ -119,12 +121,20 @@ public class Enemies : FightingObject
                     break;
                 case FSM_Enemies.Chasing:
                     if (anim != null)
+                    {
                         anim.SetBool("IsMoving", true);
+                    }
+
+                    navAgent.speed = enemyType.GetSpeed();
+
                     break;
 
                 case FSM_Enemies.Patroling:
                     navAgent.speed = enemyType.GetSpeed() / 3;
                     navAgent.SetDestination(_target.transform.position);
+
+                    anim.SetBool("IsMoving", true);
+
                     break;
                     
                 case FSM_Enemies.Attacking:
@@ -165,6 +175,18 @@ public class Enemies : FightingObject
                 default:
                     break;
             }
+
+            if (anim != null)
+            {
+                if (navAgent.speed == enemyType.GetSpeed())
+                {
+                    anim.SetBool("IsRunning", true);
+                }
+                else
+                {
+                    anim.SetBool("IsRunning", false);
+                }
+            }
         }
 
         switch (fsm)
@@ -184,11 +206,11 @@ public class Enemies : FightingObject
 
                     fsm = FSM_Enemies.Wander;
 
-                    if (dotProd <= 0)
+                    /*if (dotProd <= 0)
                     {
-                        StartCoroutine(TurnTowardTarget(0.5f, wanderPos));
+                        StartCoroutine(TurnTowardTarget(1f, wanderPos));
                         Debug.Log(dotProd);
-                    }
+                    }*/
                 }
 
                 break;
@@ -219,6 +241,11 @@ public class Enemies : FightingObject
                     lastTargetPos = _target.transform.position;
                     _target = null;                 
                     fsm = FSM_Enemies.TargetLost;
+                }
+
+                if (navAgent.isStopped)
+                {
+                    anim.SetBool("IsMoving", false);
                 }
 
                 break;
@@ -295,9 +322,7 @@ public class Enemies : FightingObject
                 break;
             default:
                 break;
-        }
-
-        
+        }        
     }
 
     //Check for Player in detectionRange
@@ -338,6 +363,8 @@ public class Enemies : FightingObject
         navAgent.angularSpeed = 0;
         navAgent.SetDestination(transform.position);
         DG.Tweening.DOTween.Kill(transform);
+
+        anim.SetBool("IsMoving", false);
     }
 
     public void ResumeMovement()
@@ -399,8 +426,9 @@ public class Enemies : FightingObject
 
     public IEnumerator TurnToTargetAndChangeState(float duration, FSM_Enemies stateAfterTurn)
     {
+        float currentSpeed = navAgent.speed;
         yield return TurnTowardTarget(duration, _target.transform.position);
-
+        navAgent.speed = currentSpeed;
         fsm = stateAfterTurn;
     }
 

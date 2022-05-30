@@ -1,0 +1,17 @@
+V 2.0.r1
+- (Credit to Glenneroo) Added assembly definitions.
+- (Credit to Glenneroo) Removed unused code.
+- (Credit to Glenneroo) Fixed "Not being able to build game" due to files being excluded.
+
+
+V 2.0.r0
+- Updated Colored Header Creator Window UI to be more approachable.
+- Updated how properties are saved on Header Game Objects (reinstall plugin if updating from 1.0.r0).
+- Added a way to change existing Headers using the Inspector.
+- Added Header presets. You can now save and load Headers to and from a Preset file.
+- Created Headers can now be saved in the scene without having to modify the scene to trigger a save.
+- Delete all Headers now delete Headers only and not the Header and its children too.
+- General optimization of drawing Headers.
+
+V 1.0.r0
+- Initial Release.

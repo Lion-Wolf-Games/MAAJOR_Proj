@@ -9,7 +9,7 @@ public class EarthWall : LivingObject
     [SerializeField] private GameObject destroyFx;
     [SerializeField] private GameObject spawnFx;
     private float destroyTime;
-    private bool isWallUp;
+    //private bool isWallUp;
 
     static EarthWall currentWall;
 
@@ -29,7 +29,7 @@ public class EarthWall : LivingObject
         //PoolManager.Instance.Spawn(spawnFx,true,transform.position,transform.rotation);
         transform.DOScaleY(1,spawnTime);
         transform.DOShakePosition(spawnTime,0.2f);
-        isWallUp = true;
+        //isWallUp = true;
 
         destroyTime = Time.time + time;
     }
@@ -46,7 +46,7 @@ public class EarthWall : LivingObject
 
     public void WallDown()
     {
-        isWallUp = false;
+        //isWallUp = false;
         transform.DOShakePosition(0.2f, 0.5f);
         transform.DOMoveY(transform.position.y - 5f, 0.5f).OnComplete(() => { gameObject.SetActive(false); });
     }

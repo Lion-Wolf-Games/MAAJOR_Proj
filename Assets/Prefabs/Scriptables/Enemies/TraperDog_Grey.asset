@@ -22,4 +22,4 @@ MonoBehaviour:
   wanderRange: 0
   timeBetweenWander: 0
   respawnTime: 3
-  model: {fileID: 6675734458041355210, guid: d417e9bbdc58af6469774f3376516e07, type: 3}
+  model: {fileID: 659618145604559385, guid: 4c41661980906b34aa4155c47ba8dac8, type: 3}
