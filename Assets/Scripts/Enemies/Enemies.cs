@@ -356,6 +356,19 @@ public class Enemies : FightingObject
         fsm = FSM_Enemies.Panic;
     }
 
+    public void SetSpeedMul(float mul)
+    {
+        switch (fsm)
+        {
+            case(FSM_Enemies.Puddle):
+            navAgent.speed = enemyType.GetPuddleSpeed() * mul;
+            break;
+            default:
+            navAgent.speed = enemyType.GetSpeed() * mul;
+            break;
+        }
+    }
+
     public void StopMovement()
     {
         canAttack = false;

@@ -12,52 +12,22 @@ public class EnemiesFlaque : MonoBehaviour
 
     [SerializeField] private Enemies enemie;
 
-    [SerializeField] private float suckTime;
-    [SerializeField] private float suckDuration = 2f;
-    [SerializeField] private bool isInRange;
-    [SerializeField] private Image suckTimerImage;
-
-    // private void OnTriggerEnter(Collider other) {
-    //     if (other.tag == "Player")
-    //     {
-    //         player = other.GetComponent<PlayerController>();
-    //         player.OnSuck += OnSuck;
-    //     }
-    // }
+    private SuckableObject suckableObject;
 
     private void Start() {
-        suckTimerImage.gameObject.SetActive(true);
+        suckableObject = GetComponent<SuckableObject>();
+
+        suckableObject.OnStartSuck += OnStartSuck;
+        suckableObject.OnStopSuck += OnStopSuck;
+        suckableObject.OnSucked += OnSuck;
     }
 
-    private void Update() {
 
-        if(isInRange)
-        {
-            suckTime += Time.deltaTime;
-            if(suckTime >= suckDuration)
-            {
-                isInRange = false;
-                OnSuck(FindObjectOfType<PlayerController>());
-            }
-        }
-        else
-        {
-            if (suckTime > 0)
-            {
-                suckTime -= Time.deltaTime;
-
-                if(suckTime <= 0)
-                {
-                    suckTimerImage.gameObject.SetActive(false);
-                }
-            }
-        }
-
-        suckTimerImage.fillAmount = (suckDuration - suckTime)/suckDuration;
-    }
-
-    private void OnSuck(PlayerController player)
+    private void OnSuck()
     {
+        //GetPlayer
+        PlayerController player = FindObjectOfType<PlayerController>();
+
         //Spawn Fx
         GameObject fxgo =  PoolManager.Instance.Spawn(suckFx,true,transform.position,transform.rotation);
         //Set Fx to go to pim
@@ -67,13 +37,13 @@ public class EnemiesFlaque : MonoBehaviour
             .SetEase(Ease.InOutCubic);
         //Spawn DeathFx
         PoolManager.Instance.Spawn(deathFx,true,transform.position,transform.rotation);
-        //Destroy
         
+        //Destroy
         if(enemie != null)
         {
             enemie.Kill();
         }
-        else
+        else //If no enemie respawn
         {
             gameObject.SetActive(false);
             DebugRespawn();
@@ -88,37 +58,20 @@ public class EnemiesFlaque : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-
-    public void InRange(bool state)
+    private void OnStartSuck()
     {
-        isInRange = state;
-
-        if (isInRange)
+        //slow the enemy while sucking
+        if(enemie != null)
         {
-            suckTimerImage.gameObject.SetActive(true);
+            enemie.SetSpeedMul(0.5f);
         }
     }
-
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag == "SuckRange")
+    private void OnStopSuck()
+    {
+        //reset the enemy speed
+        if(enemie != null)
         {
-            isInRange = true;
-            suckTimerImage.gameObject.SetActive(true);
+            enemie.SetSpeedMul(1);
         }
     }
-
-    private void OnTriggerExit(Collider other) {
-
-        if (other.tag == "SuckRange")
-        {
-            isInRange = false;
-        }
-    }
-
-    // private void OnDisable() {
-    //     if (player!=null)
-    //     {
-    //         player.OnSuck -= OnSuck;
-    //     }
-    // }
 }

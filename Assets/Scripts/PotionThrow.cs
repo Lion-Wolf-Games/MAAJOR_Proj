@@ -9,6 +9,7 @@ public class PotionThrow : MonoBehaviour
 {
     [SerializeField] private PlayerController player;
     [SerializeField] private Potion selectedPotion;
+    [SerializeField] private GameObject camToActivate; 
     private Transform cam;
     [SerializeField] private float maxDistance;
     [SerializeField] private float heigthLaunch = 2f;
@@ -44,7 +45,7 @@ public class PotionThrow : MonoBehaviour
         cam  = Camera.main.transform;
         gravity = Physics.gravity.y;
 
-        cooldowns = new Dictionary<Potion, float>();
+        //cooldowns = new Dictionary<Potion, float>();
         SetPotion(selectedPotion);
         
     }
@@ -91,7 +92,7 @@ public class PotionThrow : MonoBehaviour
     }
 
     #region LaunchCalculation
-    LaunchData CalculateLauchData()
+    LaunchData CalculateLaunchData()
     {
         Vector3 endPos = aimTarget.transform.position;
         Vector3 startPos = launchPos.transform.position;
@@ -115,7 +116,7 @@ public class PotionThrow : MonoBehaviour
 
     private void DrawPath()
     {
-        LaunchData launchData = CalculateLauchData();
+        LaunchData launchData = CalculateLaunchData();
         lineVisual.positionCount = visualresolution;
 
         for (int i = 0; i < visualresolution; i++)
@@ -136,7 +137,7 @@ public class PotionThrow : MonoBehaviour
             var go = PoolManager.Instance.Spawn(potionPrefab,true,launchPos.position,transform.rotation);
             Rigidbody potionRb = go.GetComponent<Rigidbody>();
 
-            potionRb.velocity = CalculateLauchData().initialVelocity;
+            potionRb.velocity = CalculateLaunchData().initialVelocity;
             potionRb.angularVelocity = go.transform.forward * 10f;
 
             go.GetComponent<PotionBehavior>().SetUpPotion(selectedPotion);
@@ -159,6 +160,7 @@ public class PotionThrow : MonoBehaviour
         aimTarget.SetActive(true);
         player.OnThrow += Launch;
         lineVisual.enabled = true;
+        camToActivate.SetActive(true);
     }
 
     private void StopAim()
@@ -166,6 +168,7 @@ public class PotionThrow : MonoBehaviour
         aimTarget.SetActive(false);
         player.OnThrow -= Launch;
         lineVisual.enabled = false;
+        camToActivate.SetActive(false);
     }
 
     public void SetPotion(Potion newPotion)
@@ -178,6 +181,11 @@ public class PotionThrow : MonoBehaviour
         Debug.Log(selectedPotion.name + " selected");
 
         visualMaterial.DOColor(selectedPotion.launchPreviewColor,"_Emission",0.2f);
+
+        if(cooldowns == null)
+        {
+            cooldowns = new Dictionary<Potion, float>();
+        }
 
         if(!cooldowns.ContainsKey(selectedPotion))
         { 

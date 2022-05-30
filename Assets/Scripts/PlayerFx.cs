@@ -10,6 +10,7 @@ public class PlayerFx : MonoBehaviour
     [SerializeField] private GameObject jumpFx;
     [SerializeField] private GameObject landingFx;
     [SerializeField] private GameObject dashFx;
+    [SerializeField] private GameObject suckFx;
 
     [SerializeField] private Transform smokeSpawnPoint;
     [SerializeField] private Transform grassSpawnPoint;
@@ -36,7 +37,15 @@ public class PlayerFx : MonoBehaviour
         //player.OnThrow += onThrowFX;
         player.OnHit += onHitFX;
         player.OnLanding += OnLandingFx;
-        player.OnStartSuck += OnSuckFx;
+        
+        //SuckFx
+        player.OnStartSuck += OnSuckFxOn;
+        player.OnStopSuck += OnSuckFxOff;
+        if(suckFx != null)
+        {
+            suckFx.SetActive(false);
+        }
+
         PotionThrow potionThrow = GetComponent<PotionThrow>();
         potionThrow.OnThrowPotion += onThrowFX;
 
@@ -86,9 +95,16 @@ public class PlayerFx : MonoBehaviour
         onStepSFX.Post(gameObject);
     }
 
-    private void OnSuckFx()
+    private void OnSuckFxOn()
     {
         onSuckSFX.Post(gameObject);
+        suckFx.SetActive(true);
+    }
+
+    private void OnSuckFxOff()
+    {
+        //onSuckSFX.Post(gameObject);
+        suckFx.SetActive(false);
     }
 
     private void onThrowFX(float _)

@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 3449362444147946880}
   - component: {fileID: 3449362444147946883}
   - component: {fileID: 335498922367327572}
+  - component: {fileID: 7043232056751756361}
   m_Layer: 0
   m_Name: EnemyFlaque
   m_TagString: Untagged
@@ -253,10 +254,6 @@ MonoBehaviour:
   suckFx: {fileID: 945846004697533808, guid: 262ec466fc8a6634db1ba7eaf71a825a, type: 3}
   deathFx: {fileID: 1127158512636336115, guid: d01619a869322d04db2463bfc529b9c1, type: 3}
   enemie: {fileID: 0}
-  suckTime: 0
-  suckDuration: 2
-  isInRange: 0
-  suckTimerImage: {fileID: 4405745537701118371}
 --- !u!54 &3449362444147946883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -286,6 +283,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.89
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7043232056751756361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449362444147946882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252632da8cf42b04b85a91fe54da3332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  suckTime: 0
+  suckDuration: 2
+  isInRange: 0
+  suckTimerImage: {fileID: 4405745537701118371}
 --- !u!1 &4279367024055642465
 GameObject:
   m_ObjectHideFlags: 0
