@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 8d2698fb08256b4893ba5438f8e87ff6
     GuidInternal: 
-    m_lastTime: -8585571303974968442
+    m_lastTime: -8585512638240895640
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fbf3588fdb41bd49897c85e19de4d51e
     GuidInternal: 
-    m_lastTime: -8585495179889578483
+    m_lastTime: -8585477240419504205
     List:
     - name: AMB
       guid: 035581ea9b145a4bba20803b78eb61a2
@@ -505,7 +505,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a91c831e1c440041a72a7be24c8ac7de
     GuidInternal: 
-    m_lastTime: -8585495179888581158
+    m_lastTime: -8585477240419274131
     List:
     - name: FOREST_Bank
       guid: f96f3d7e8bf2b046b6600f9e0040df35
@@ -575,7 +575,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c8a5b76bfd504b49a6762764bda6d51d
     GuidInternal: 
-    m_lastTime: -8585495179890405812
+    m_lastTime: -8585477240419593967
     List:
     - name: AMB
       guid: 50acd9e1b911c14fa5b00b99ce19cea1
@@ -1552,7 +1552,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0a1e684c492fd648aac7b7093d1756ab
     GuidInternal: 
-    m_lastTime: -8585547005775759990
+    m_lastTime: -8585512638247736357
     List:
     - name: SET_MainVolume
       guid: 09754e944be68b4bab1f803633feb484
@@ -1608,7 +1608,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 9d38a78685f1ed408d28e1abcd25557e
     GuidInternal: 
-    m_lastTime: -8585565019332576653
+    m_lastTime: -8585512638240895640
     List:
     - name: New_State_Group
       guid: da53548254d4924fa9fdc0b4083e09a9
@@ -1656,7 +1656,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: b6dbd5f68ea3184ca68e266f77b9d9eb
     GuidInternal: 
-    m_lastTime: -8585559885207795977
+    m_lastTime: -8585512638240895640
     List:
     - name: PIM_Footsteps_Material
       guid: 848fb2d4063253468625359f3f3def73
@@ -1720,11 +1720,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 954262407010ae4382596bd8e765ea66
     GuidInternal: 
-    m_lastTime: -8585571303976168830
+    m_lastTime: -8585512638240895640
     List: []
-  ExpandedFileSystemItemIds: 0300000004000000050000001200000013000000180000001c0000001d0000001e0000001f00000025000000
+  ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
