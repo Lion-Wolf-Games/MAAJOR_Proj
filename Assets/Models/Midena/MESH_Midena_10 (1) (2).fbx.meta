@@ -6,7 +6,47 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bandages_Midena
+    second: {fileID: 2100000, guid: 2a1beaf586abb4d419a1dfb8597cc95f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bracelet_Midena
+    second: {fileID: 2100000, guid: 81fce050688f6a443b23caceee686efd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceinture_Midena
+    second: {fileID: 2100000, guid: a03f5e809dfe4e945a63114ad2909750, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cheveux_Midena
+    second: {fileID: 2100000, guid: b8ee0b64adf66e146b4bba7c5a6a2f00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Noir
+    second: {fileID: 2100000, guid: 470f7e71f1756bf4599ea8c0f423ff80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pantalon_Midena
+    second: {fileID: 2100000, guid: 3c4d04bee58456144b3a9b961fe470de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Peau_Midena
+    second: {fileID: 2100000, guid: b890d0c0a1d12484c8c06cddf0cc24fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Truffe_Midena
+    second: {fileID: 2100000, guid: 319c2526f74d2ad41967b560465f49c7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
