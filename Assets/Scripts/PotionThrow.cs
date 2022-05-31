@@ -160,7 +160,7 @@ public class PotionThrow : MonoBehaviour
         aimTarget.SetActive(true);
         player.OnThrow += Launch;
         lineVisual.enabled = true;
-        camToActivate.SetActive(true);
+        //camToActivate.SetActive(true);
     }
 
     private void StopAim()
@@ -168,7 +168,7 @@ public class PotionThrow : MonoBehaviour
         aimTarget.SetActive(false);
         player.OnThrow -= Launch;
         lineVisual.enabled = false;
-        camToActivate.SetActive(false);
+        //camToActivate.SetActive(false);
     }
 
     public void SetPotion(Potion newPotion)

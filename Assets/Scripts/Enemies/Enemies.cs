@@ -377,11 +377,14 @@ public class Enemies : FightingObject
         navAgent.SetDestination(transform.position);
         DG.Tweening.DOTween.Kill(transform);
 
-        anim.SetBool("IsMoving", false);
+        //anim.SetBool("IsMoving", false);
+        anim.enabled = false;
     }
 
     public void ResumeMovement()
     {
+        anim.enabled = true;
+
         canAttack = true;
         navAgent.speed = enemyType.GetSpeed();
         navAgent.angularSpeed = enemyType.GetTurningSpeed();
