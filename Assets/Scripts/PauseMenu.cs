@@ -40,6 +40,7 @@ public class PauseMenu : MonoBehaviour
         pauseCanvas.transform.GetChild(0).gameObject.SetActive(true);
 
         EventSystem.current.SetSelectedGameObject(ResumeButton);
+        ResumeButton.GetComponent<Selectable>().OnSelect(null);
 
         //PlayOpen Animation
     }

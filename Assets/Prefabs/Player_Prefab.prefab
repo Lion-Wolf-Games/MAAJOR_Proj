@@ -935,7 +935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1566719009374224600
 Transform:
   m_ObjectHideFlags: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 9
+  m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 871977685}
@@ -1018,6 +1018,7 @@ GameObject:
   - component: {fileID: 2574313690388964390}
   - component: {fileID: 8205052288101743276}
   - component: {fileID: 1327211748}
+  - component: {fileID: 905544680}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1281,7 +1282,19 @@ MonoBehaviour:
     m_ActionId: 324f833e-9e9b-44d9-8617-28613fd3a0a3
     m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueSystem, Assembly-CSharp
+        m_MethodName: SkipWriting
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0f101a84-b6a9-4eea-8930-c26d39867472
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
@@ -1472,31 +1485,33 @@ MonoBehaviour:
   onStepSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 0f8d0a80ecb95254c94483ba5179acbb, type: 2}
   onDashSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 63cf52b0eac537045944f04d3cdf41e1, type: 2}
   onJumpSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 923c15a38601ce14f8dfb0d64b5844e4, type: 2}
   onLandingSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 869a245ad655522489c57a52dce3b375, type: 2}
   onThrowSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 31e779acc6a267a4c9ff762b23442cfd, type: 2}
   onHitSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: eeda8d618fa47f64cb41bf90feceec7a, type: 2}
   onSuckSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: a7d6f4cd598eca843925fce68a8656a8, type: 2}
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
+  playerMaterials: []
 --- !u!114 &1922009542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,7 +1548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1566719009391129380}
   selectedPotion: {fileID: 11400000, guid: 76218380acc6b9c419a513533c0ccb2d, type: 2}
-  camToActivate: {fileID: 0}
+  camToActivate: {fileID: 1566719009374224606}
   maxDistance: 20
   heigthLaunch: 2
   launchPos: {fileID: 4028626051348630083}
@@ -1602,6 +1617,90 @@ MonoBehaviour:
   suckRangDisplay: {fileID: 1087478101}
   maxSuckRange: 6
   expandTime: 2
+--- !u!114 &905544680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566719009391129384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 96a2c6d1f92a5a74dbbc65e003339cdc, type: 2}
+    - {fileID: 0}
+    - {fileID: 11400000, guid: b88e0860ee4fd5a43b604f13406820fe, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1566719009391129380}
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_MethodName: DisableInput
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1566719009391129380}
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_MethodName: EnableInput
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1566719009391129386}
+          m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+          m_MethodName: SwitchCurrentActionMap
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: UI
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1566719009391129380}
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_MethodName: EnableInput
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1566719009391129386}
+          m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+          m_MethodName: SwitchCurrentActionMap
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: UI
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1566719009494421175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,9 +2620,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
---- !u!1 &1837314110636068298 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
+--- !u!4 &1262616781507115523 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 305028607164943000, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
   m_PrefabInstance: {fileID: 1566719008245002395}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1311853567026845552 stripped
@@ -2531,9 +2630,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
   m_PrefabInstance: {fileID: 1566719008245002395}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1262616781507115523 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 305028607164943000, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
+--- !u!1 &1837314110636068298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0fad005e1c324014197dcfd09ba92dbb, type: 3}
   m_PrefabInstance: {fileID: 1566719008245002395}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1566719009269462419
