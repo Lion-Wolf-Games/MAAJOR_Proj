@@ -26,7 +26,7 @@ MonoBehaviour:
   onCollisionSfx:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 86a4edbcb09abe545a195bfdc0749eef, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: bcc86744603c9a6408404cdedac9b25b, type: 2}
   targetLayer:
     serializedVersion: 2
     m_Bits: 512

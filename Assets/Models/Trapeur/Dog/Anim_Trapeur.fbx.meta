@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Noir_Trape_01
-    second: {fileID: 2100000, guid: 895070ded8ea91f45a2442e3aad00550, type: 2}
+    second: {fileID: -2509067768327746709, guid: a5cfa97938985fa46b5edb7079f2642a, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -100,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.009
+    globalScale: 0.9
     rootMotionBoneName: root
     hasTranslationDoF: 0
     hasExtraRoot: 1

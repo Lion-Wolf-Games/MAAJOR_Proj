@@ -26,7 +26,7 @@ MonoBehaviour:
   onCollisionSfx:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b40fe5646db360944976acaabb7b11ce, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 415aca02ee28b544d81dd7588c347898, type: 2}
   wallTospawn: {fileID: 8447291994174976828, guid: 161d3a085e65c4c42bfaa9f36423c6cb, type: 3}
   timeActive: 5
   layer:

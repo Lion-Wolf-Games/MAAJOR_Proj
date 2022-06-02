@@ -1,8 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	4255064110	MIDENA_VO_ATK			\Default Work Unit\MIDENA\VO\MIDENA_VO_ATK	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	171626939	SFX_Midena_Atk_03-003	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\SFX_Midena_Atk_03-003_FB011085.wem		\Actor-Mixer Hierarchy\MIDENA\MIDENA\MIDENA_VO\MIDENA_Atk\SFX_Midena_Atk_03-003		2853
-	349513922	SFX_Midena_Atk_03-002	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\SFX_Midena_Atk_03-002_FB011085.wem		\Actor-Mixer Hierarchy\MIDENA\MIDENA\MIDENA_VO\MIDENA_Atk\SFX_Midena_Atk_03-002		2384
-	522158923	SFX_Midena_Atk_03-001	C:\Users\doria\Proto_MAAJOR\MAAJOR_Proj\MAAJOR_Proj_WwiseProject\.cache\Windows\SFX\SFX_Midena_Atk_03-001_FB011085.wem		\Actor-Mixer Hierarchy\MIDENA\MIDENA\MIDENA_VO\MIDENA_Atk\SFX_Midena_Atk_03-001		2598
-

@@ -20,6 +20,7 @@ public class Dialogue
     public bool _isQuestion;
     public string _optionA, _optionB;
     public float _textSpeed = -1f;
+    public AK.Wwise.Event startSound;
 
     public Dialogue(string speaker,string text)
     {
