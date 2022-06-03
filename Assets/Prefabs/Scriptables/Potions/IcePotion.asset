@@ -9,20 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98b79c2328961134793be26dfaa70890, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4e9ff029b63a54a8c29f110c873f52, type: 3}
   m_Name: IcePotion
   m_EditorClassIdentifier: 
   useType: 0
   effectRange: 5
   useTime: 0
-  useDuration: 0
+  useDuration: 3
   launchRange: 10
   cooldown: 5
-  Icon: {fileID: 21300000, guid: c9a08ab49db34984ab6789042d63d58f, type: 3}
+  Icon: {fileID: 21300000, guid: 6dc801ced1ad3bb4482930fd7707e3a4, type: 3}
   spawnFx: {fileID: 7102394456590244652, guid: de969d661a1d7ae42948e667604d47c6, type: 3}
   trailFx: {fileID: 0}
   liquidMat: {fileID: 2100000, guid: 46473283f8a28f241ae79d5f44696216, type: 2}
-  launchPreviewColor: {r: 0, g: 1, b: 0.9720595, a: 1}
+  launchPreviewColor: {r: 0, g: 1, b: 0.972549, a: 1}
   onCollisionSfx:
     idInternal: 0
     valueGuidInternal: 
@@ -30,4 +30,4 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 512
-  pushDistance: 10
+  iceBlock: {fileID: 5208838868964722343, guid: 31ae952eb450dce41a486a3913358690, type: 3}

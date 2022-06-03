@@ -41,7 +41,7 @@ public class PotionBehavior : MonoBehaviour
 
         potionType.onCollisionSfx.Post(gameObject);
         CinemachineCamshake.Instance.ShakeCam(1,0.2f);
-        UnityEngine.InputSystem.Gamepad.current?.SetMotorSpeeds(0f,0.05f);
+        //UnityEngine.InputSystem.Gamepad.current?.SetMotorSpeeds(0f,0.05f);
 
         gameObject.SetActive(false);
     }

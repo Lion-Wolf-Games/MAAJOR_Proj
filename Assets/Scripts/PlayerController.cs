@@ -221,10 +221,10 @@ public class PlayerController : LivingObject
         //trhowValue = context.ReadValue<float>();
         //Debug.Log(trhowValue);
 
-        if (context.started && isAiming)
+        if (context.performed && isAiming)
         {
             Debug.Log("Start");
-            OnThrow.Invoke();
+            OnThrow?.Invoke();
             //animator.SetTrigger("Throw");
         }
         else if(context.canceled)
