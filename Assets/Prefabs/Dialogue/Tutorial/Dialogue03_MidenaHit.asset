@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue03_MidenaHit
   m_EditorClassIdentifier: 
   stopInput: 0
-  readTime: 2
+  readTime: 1.5
   _dialogue:
   - _speakerName: ???
     _speakerPortrait: {fileID: 21300000, guid: b53c48a339e615f4ea9cae0ec4714572, type: 3}
@@ -23,3 +23,7 @@ MonoBehaviour:
     _optionA: 
     _optionB: 
     _textSpeed: 0.01
+    startSound:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
