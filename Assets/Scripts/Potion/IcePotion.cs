@@ -6,6 +6,7 @@ using DG.Tweening;
 [CreateAssetMenu(fileName = "IcePotion", menuName = "Potion/IcePotion", order = 0)]
 public class IcePotion : Potion
 {
+    [Header("Ice Potion")]
     [SerializeField] LayerMask targetLayer;
     [SerializeField] GameObject iceBlock;
     public override void OnExplosion(Transform target)

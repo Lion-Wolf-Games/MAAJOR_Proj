@@ -123,7 +123,7 @@ public class DialogueSystem : MonoBehaviour
     }
     public void SkipWriting(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if(context.started)
         {
             SkipWriting();
         }

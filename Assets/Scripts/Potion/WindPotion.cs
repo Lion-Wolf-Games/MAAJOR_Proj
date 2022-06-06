@@ -6,6 +6,7 @@ using DG.Tweening;
 [CreateAssetMenu(fileName = "WindPotion", menuName = "Potion/WindPotion", order = 0)]
 public class WindPotion : Potion
 {
+    [Header("Wind Potion")]
     [SerializeField] LayerMask targetLayer;
     [SerializeField] float pushDistance;
     public override void OnExplosion(Transform target)

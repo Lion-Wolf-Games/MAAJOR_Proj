@@ -32,6 +32,11 @@ public class PoolManager : MonoBehaviour
 
     public GameObject Spawn(GameObject obj, bool activateOnSpawn)
     {
+        if (_pools == null)
+        {
+            _pools = new Dictionary<GameObject, Pool>();
+        }
+
         if (_pools.TryGetValue(obj,out Pool pool))
         {
             return pool.GetFromPool(activateOnSpawn);

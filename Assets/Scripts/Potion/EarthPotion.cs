@@ -6,6 +6,7 @@ using DG.Tweening;
 [CreateAssetMenu(fileName = "EarthPotion", menuName = "Potion/EarthPotion", order = 0)]
 public class EarthPotion : Potion
 {
+    [Header("Earth Potion")]
     [SerializeField] private GameObject wallTospawn;
     [SerializeField] private float timeActive;
     [SerializeField] private LayerMask layer;
